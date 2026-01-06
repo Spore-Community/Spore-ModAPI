@@ -49,45 +49,65 @@ namespace Simulator
 		typedef eastl::sp_fixed_hash_map<int, UnkStruct, 32> UnkStructPool;
 		ASSERT_SIZE(UnkStructPool, 0x4E0);
 
-		/* 00h */	UnkStructPool field_0;
-		/* 4E0h */	ResourceKey field_4E0[3];	//what is this?
-		/* 504h */	ResourceKey mSpeciesKey;
+		enum HuntingStyle
+		{
+			kSolo = 0,
+			kPack = 1,
+		};
+
+		enum StrafeMode
+		{
+			kNoStrafe = 0,
+			kScaledStrafe = 1,
+			kFullStrafe = 3,
+		};
+
+		enum DominantAbilityType
+		{
+			kAbilityTypeEqual = 0,
+			kAbilityTypeSocial = 1,
+			kAbilityTypeAttack = 2,
+		};
+
+		/* 00h */	UnkStructPool capsInfos;
+		/* 4E0h */	ResourceKey mSkinColors[3];	//what is this?
+		/* 504h */	ResourceKey mCreatureKey;
 		/* 510h */	ResourceKey mBabyKey;
-		/* 51Ch */	eastl::string16 mName;
-		/* 52Ch */	eastl::string16 field_52C;
-		/* 53Ch */	int field_53C;
+		/* 51Ch */	eastl::string16 mCreatureName;
+		/* 52Ch */	eastl::string16 mCreatureDesc;
+		/* 53Ch */	uint32_t creatureSeq;
 		/* 540h */	int mCost;
-		/* 544h */	int field_544;
+		/* 544h */	int mCreatureBaseSpeedGear;
 		/* 548h */	float mCreatureAbilityJumping;
 		/* 54Ch */	float mCreatureAbilityGliding;
 		/* 550h */	float mCreatureAbilityFlapping;
 		/* 554h */	Math::Vector3 mBoundingBoxUpper;
 		/* 560h */	Math::Vector3 mBoundingBoxLower;
 		/* 56Ch */	float mAdditionalHealth;  // 100.0
-		/* 570h */	float field_570;  // 200.0
-		/* 574h */	float field_574;	//CreatureSize?
+		/* 570h */	float mSatiety;  // 200.0
+		/* 574h */	float mCreatureMass;
 		/* 578h */	bool mHasPlantRoot;
 		/* 57Ch */	ModelTypes mModelType;
-		/* 580h */	int field_580;  // not initialized
+		/* 580h */	HuntingStyle mHuntingStyle;  // not initialized
 		/* 584h */	int field_584;  // not initialized
-		/* 588h */	int field_588;  // 1
-		/* 58Ch */	float mNumFoot;
-		/* 590h */	float mNumGrasper;
-		/* 594h */	float mNumMouth;
-		/* 598h */	float mNumEar;
+		/* 588h */	StrafeMode field_588;  // 1	//need check it
+		/* 58Ch */	float mNumFeet;
+		/* 590h */	float mNumGraspers;
+		/* 594h */	float mNumMouths;
+		/* 598h */	float mNumEars;
 		/* 59Ch */	float mNumEye;
-		/* 5A0h */	float mCuteness1;
-		/* 5A4h */	float mCuteness2;
-		/* 5A8h */	float field_5A8;
+		/* 5A0h */	float mSumCutenessParts;
+		/* 5A4h */	float mNumCutenessParts;
+		/* 5A8h */	float mCutenessSum;
 		/* 5ACh */	float mSocialSum;
 		/* 5B0h */	float mAttackSum;
 		/* 5B4h */	float mAttackMaxLevel;
 		/* 5B8h */	float mSocialMaxLevel;
 		/* 5BCh */	float mMeanness;
-		/* 5C0h */	float field_5C0;	//itemUnlockLevel?
-		/* 5C4h */	float field_5C4;	//itemUnlockLevel?
-		/* 5C8h */	int mDuration;  // 5000
-		/* 5CCh */	float mRefillAbilityBars;  // 1.0	cCreatureAbility->mDuration / cCreatureAbility->mRecharge
+		/* 5C0h */	float mMaxPartLevel;
+		/* 5C4h */	float mAveragePartLevel;
+		/* 5C8h */	int mAbilityTime;  // 5000
+		/* 5CCh */	float mAbilityRecharge;  // 1.0	cCreatureAbility->mDuration / cCreatureAbility->mRecharge
 		/* 5D0h */	int mSprintBuff;  // 2
 		/* 5D4h */	int mBiteLevel;
 		/* 5D8h */	int mChargeLevel;
@@ -98,7 +118,7 @@ namespace Simulator
 		/* 5ECh */	int mCharmLevel;
 		/* 5F0h */	int mPoseLevel;
 		/* 5F4h */	int mStealthLevel;
-		/* 5F8h */	int field_5F8;
+		/* 5F8h */	int mBlockLevel;
 		/* 5FCh */	int mMatingCall;
 		/* 600h */	int mCreatureSpeedLevel;
 		/* 604h */	int mHealthLevel;
@@ -108,14 +128,14 @@ namespace Simulator
 		/* 614h */	int mSprintLevel;
 		/* 618h */	int mSight;	//Sense
 		/* 61Ch */	int mGlideLevel;
-		/* 620h */	int field_620;
-		/* 624h */	int field_624;
+		/* 620h */	int mPreferredSocialType;
+		/* 624h */	int mPreferredCombatType;
 		/* 628h */	int mTribeAttackLevel;
 		/* 62Ch */	int mTribeSocialLevel;
 		/* 630h */	int mTribeArmorLevel;
 		/* 634h */	int mTribeGatherLevel;
 		/* 638h */	int mTribeFishingLevel;
-		/* 63Ch */	float mDamage;
+		/* 63Ch */	float mAdditionalDamage;
 		/* 640h */	float mEnergyRecoveryRate;
 		/* 644h */	float mMaxEnergy;
 		/* 648h */	int mShieldGenerator;
@@ -145,20 +165,20 @@ namespace Simulator
 		/* 6A8h */	int mStunningDanceLevel;
 		/* 6ACh */	int mConfettiPoseLevel;
 		/* 6B0h */	float mAdventurerEnergyCost;
-		/* 6B4h */	int field_6B4;
-		/* 6B8h */	eastl::vector<int> mFruits;	//unk type
+		/* 6B4h */	DominantAbilityType mDominantAbilityType;
+		/* 6B8h */	eastl::vector<Transform> mFruits;
 		/* 6CCh */	bool mIsGameMode;	//true if cSpeciesProfile was called in gameMode, false otherwise
 		/* 6D0h */	uint32_t mFootWeaponOrMouthType;
 		/* 6D4h */	eastl::fixed_vector<cCreatureAbility*, 20> mActiveAbilities;  //TODO abilities
 		/* 73Ch */	eastl::fixed_vector<cCreatureAbility*, 20> mPassiveAbilities;
-		/* 7A4h */	eastl::fixed_vector<int, 20> mSocialAbilityIndexes;
-		/* 80Ch */	bool field_80C;
-		/* 80Dh */	bool field_80D;
-		/* 810h */	eastl::fixed_vector<int, 20> mFruitIndexes;
-		/* 878h */	eastl::fixed_vector<int, 20> mMouthIndexes;
-		/* 8E0h */	eastl::fixed_vector<int, 20> mGraspersIndexes;
-		/* 948h */	eastl::fixed_vector<int, 20> mMouthsIndexes2;
-		/* 9B0h */	eastl::fixed_vector<int, 20> mGraspersIndexes2;
+		/* 7A4h */	eastl::fixed_vector<unsigned long, 20> mSocialAbilityIndexes;
+		/* 80Ch */	bool mIsPlant;	//need check it
+		/* 80Dh */	bool mBIndexesConverted;	//need check it
+		/* 810h */	eastl::fixed_vector<unsigned long, 20> mFruitIndexes;
+		/* 878h */	eastl::fixed_vector<unsigned long, 20> mMouthIndexes;
+		/* 8E0h */	eastl::fixed_vector<unsigned long, 20> mGraspersIndexes;
+		/* 948h */	eastl::fixed_vector<unsigned long, 20> mMouthsIndexes2;
+		/* 9B0h */	eastl::fixed_vector<unsigned long, 20> mGraspersIndexes2;
 	};
 	ASSERT_SIZE(cSpeciesProfile, 0xA18);
 

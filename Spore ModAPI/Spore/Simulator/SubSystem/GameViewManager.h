@@ -137,6 +137,8 @@ namespace Simulator
 		/* ACh */	eastl::vector<int> field_AC;
 		/* C0h */	bool field_C0;
 		/* C1h */	bool field_C1;  // visible?
+		/* C2h */	bool field_C2;
+		/* C3h */	bool field_C3;
 		/* C4h */	eastl::intrusive_ptr<int> field_C4;  // release at 8
 		/* C8h */	eastl::map<int, int> field_C8;  // actually might be a set, of object TYPEs that are not visible?
 		/* E4h */	IModelWorldPtr field_E4;  // IModelWorld?
