@@ -21,6 +21,7 @@
 #include <Spore\Editors\cEditorAnimWorld.h>
 #include <Spore\Editors\cEditorSkinMesh.h>
 #include <Spore\Editors\cCreatureDataResource.h>
+#include <Spore\Editors\VerbIconData.h>
 
 #ifdef SDK_TO_GHIDRA
 namespace Editors
@@ -85,6 +86,7 @@ namespace Editors
 		DefineAddress(GetEditorForAssetType, SelectAddress(0x00433010, 0x004333e0));
 		DefineAddress(GetNameForAssetType, SelectAddress(0x004badc0, 0x004bba50));
 		DefineAddress(GetTypeIDForAssetType, SelectAddress(0x004bb110, 0x004bbda0));
+		DefineAddress(ComputeCreatureVerbIcons, SelectAddress(0x004e8860, 0x004e8860));
 	}
 
 	namespace Addresses(EditorCamera)
@@ -249,6 +251,20 @@ namespace Editors
 		DefineAddress(HandleUIMessage, SelectAddress(0x6374B0, 0x6377B0));
 		DefineAddress(SetWindowVisible, SelectAddress(0x635450, 0x635750));
 		DefineAddress(FindWindowByID, SelectAddress(0x634AB0, 0x634DB0));
+	}
+
+	namespace Addresses(VerbIconData)
+	{
+		DefineAddress(AddRef, SelectAddress(0xc6ab00, 0xc6ab00));
+		DefineAddress(Release, SelectAddress(0x7b87b0, 0x7b87b0));
+		DefineAddress(Dispose, SelectAddress(0x59eff0, 0x59eff0));
+		DefineAddress(AsInterface, SelectAddress(0x5e4d70, 0x5e4d70));
+		DefineAddress(Init, SelectAddress(0x5e54a0, 0x5e54a0));
+		DefineAddress(Shutdown, SelectAddress(0x5e5920, 0x5e5920));
+		DefineAddress(SetArrayIndex, SelectAddress(0x5e4d90, 0x5e4d90));
+		DefineAddress(SetHotKey, SelectAddress(0x5e5c30, 0x5e5c30));
+		DefineAddress(GetIconName, SelectAddress(0x5e5cb0, 0x5e5cb0));
+		DefineAddress(GetIconDescription, SelectAddress(0x5e5d70, 0x5e5d70));
 	}
 }
 #endif

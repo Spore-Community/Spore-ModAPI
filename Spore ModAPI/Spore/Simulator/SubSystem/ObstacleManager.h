@@ -20,7 +20,7 @@ namespace Simulator
 		static cObstacleManager* Get();
 
 	public:
-		/* 20h */	int mFlags;
+		/* 20h */	uint32_t mFlags;
 		/* 24h */	int field_24;
 		/* 28h */	int field_28;
 		/* 2Ch */	int field_2C;
@@ -41,17 +41,18 @@ namespace Simulator
 		/* 5498h */	float field_5498;
 		/* 549Ch */	float field_549C;
 		/* 54A0h */	float field_54A0;
-		/* 54A4h */	float field_54A4;
+		/* 54A4h */	float field_54A4;	//the ptr?
 		/* 54A8h */	eastl::hash_map<int, int> field_54A8;
 		/* 54C8h */	eastl::hash_map<int, int> field_54C8;
 		/* 54E8h */	eastl::hash_map<int, int> field_54E8;
 		/* 5508h */	eastl::fixed_vector<int, 32> field_5508;
+		/* 550ch */	eastl::fixed_vector<int, 32> field_550C;	//i am not sure
 		/* 55A0h */	uint32_t mPickObstacleTypes;
 		/* 55A4h */	int field_55A4;
 		/* 55A8h */	eastl::fixed_vector<ModelPtr, 64> mObstaclesToAdd;
 		/* 56C0h */	eastl::hash_map<ResourceKey, ResourceKey> mTerrainModelReplacements;
 	};
-	ASSERT_SIZE(cObstacleManager, 0x56E0);
+	ASSERT_SIZE(cObstacleManager, 0x5778);
 
 	namespace Addresses(cObstacleManager) {
 		DeclareAddress(Get);  // 0xB3D320 0xB3D4C0

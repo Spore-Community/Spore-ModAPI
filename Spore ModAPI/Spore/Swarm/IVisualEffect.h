@@ -146,7 +146,7 @@ namespace Swarm
 		/* 58h */	virtual const int* GetIntParams(IntParams param, int* dstCount = nullptr) = 0;
 		/* 5Ch */	virtual Object* GetUnknownParam(ObjectParams params) = 0;
 
-		/* 60h */	virtual ResourceID GetEffectID() = 0;
+		/* 60h */	virtual uint32_t GetEffectID() = 0;
 
 		/* 64h */	virtual void SetNotifyMessage(int, int) = 0;
 	};

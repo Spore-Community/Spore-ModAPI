@@ -41,6 +41,126 @@ namespace Editors
 	class EditorRigblock;
 	class EditorModel;
 
+	enum modelCapability
+	{
+		kModelCapabilityPerch = 0x0551bf16,
+		kModelCapabilitySpine = 0x100f0f5a,
+		kModelCapabilityLimb = 0xb00f0fdf,
+		kModelCapabilityNoStretch = 0x06F079DF,
+		kModelCapabilityGrasper = 0xb00f0fe2,
+		kModelCapabilityEar = 0xb00f0fe5,
+		kModelCapabilityEye = 0xb00f0fe9,
+		kModelCapabilityMouth = 0xb00f0fec,
+		kModelCapabilityFoot = 0xb00f0fef,
+		kModelCapabilitySlash = 0xb00f0ff2,
+		kModelCapabilityPoke = 0xb00f0ff4,
+		kModelCapabilityBash = 0xb00f0ff7,
+		kModelCapabilityFruit = 0xd00f0ffb,
+		kModelCapabilityFin = 0xd00f0ffe,
+		kModelCapabilityLiquid = 0x02294de1,
+		kModelCapabilityDayVision = 0x022e7977,
+		kModelCapabilityNightVision = 0x022e7777,
+		kModelCapabilityCarnivorous = 0x022e7847,
+		kModelCapabilityHerbivorous = 0x022e785c,
+		kModelCapabilityDetail = 0x025c6878,
+		kModelCapabilitySocial = 0x91a570ba,
+		kModelCapabilityHealth = 0x31c3e5b2,
+		kModelCapabilityStealth = 0x51c3e5b4,
+		kModelCapabilityCuteness = 0xb1c3e5b5,
+		kModelCapabilityJump = 0x330c117a,
+		kModelCapabilityBlock = 0xf354a879,
+		kModelCapabilityCall = 0xf354a87a,
+		kModelCapabilityCreatureSpeed = 0xb354a87c,
+		kModelCapabilitySprint = 0x3386c531,
+		kModelCapabilityWing = 0x04f4d188,
+		kModelCapabilitySense = 0xb3e30313,
+
+		kModelCapabilityMean = 0xb1c3e5b6,
+		kModelCapabilityBite = 0xb1c3e5b7,
+		kModelCapabilityCharge = 0xb1c3e5b8,
+		kModelCapabilitySpit = 0xb1c3e5b9,
+		kModelCapabilityStrike = 0xb1c3e5c0,
+		kModelCapabilityDance = 0xb1c3e5c1,
+		kModelCapabilityVocalize = 0xb1c3e5c2,
+		kModelCapabilityFlaunt = 0xb1c3e5c3,
+		kModelCapabilityPosture = 0xb1c3e5c4,
+		kModelCapabilityGlide = 0x04f4e1b4,
+
+		kModelCapabilityTribeAttack = 0x055d370e,
+		kModelCapabilityTribeSocial = 0x055d3747,
+		kModelCapabilityTribeArmor = 0x055d374c,
+		kModelCapabilityTribeGather = 0x055d3750,
+		kModelCapabilityTribeFishing = 0x055d3754,
+
+		kModelCapabilityEnergyRegen = 0x073ce5dd,
+		kModelCapabilityAdventurerMissile = 0x0732c356,
+		kModelCapabilityAdventurerEnergyBlade = 0x073930ea,
+		kModelCapabilityAdventurerShieldGenerator = 0x073e33c7,
+		kModelCapabilityAdventurerHoloCharm = 0x074260ec,
+		kModelCapabilityAdventurerLightningSword = 0x075f5ba0,
+		kModelCapabilityAdventurerPulseGun = 0x075f5ba6,
+		kModelCapabilityAdventurerBattleArmor = 0x075f5bab,
+		kModelCapabilityAdventurerPoweredArmor = 0x075f5baf,
+		kModelCapabilityAdventurerAbsorptionShield = 0x075f5bb4,
+		kModelCapabilityAdventurerHealthRegen = 0x075f5bb7,
+		kModelCapabilityAdventurerHealthBonus = 0x075f5bbc,
+		kModelCapabilityAdventurerSummonSwarm = 0x075f5bbf,
+		kModelCapabilityAdventurerMindMeld = 0x075f5bc3,
+		kModelCapabilityAdventurerPoisonBlade = 0x075f5bc8,
+		kModelCapabilityAdventurerFreeze = 0x075f5bcb,
+		kModelCapabilityAdventurerGracefulWaltz = 0x075f5bcf,
+		kModelCapabilityAdventurerHarmoniousSong = 0x075f5bd2,
+		kModelCapabilityAdventurerRoyalCharm = 0x075f5bd6,
+		kModelCapabilityAdventurerRadiantPose = 0x075f5bda,
+		kModelCapabilityAdventurerSprintBurst = 0x075f5bde,
+		kModelCapabilityAdventurerHover = 0x075f5be3,
+		kModelCapabilityAdventurerStealthField = 0x075f5be6,
+		kModelCapabilityAdventurerJumpJet = 0x075f5bea,
+		kModelCapabilityAdventurerInspiringSong = 0x075f5bee,
+		kModelCapabilityAdventurerStunningDance = 0x075f5bf2,
+		kModelCapabilityAdventurerConfettiPose = 0x075f5bf7,
+		kModelCapabilityAdventurerEnergyStorage = 0x075f5bfa,
+
+		kModelCapabilityVehicleSpeed = 0x11b78a70,
+		kModelCapabilityVehicleDefense = 0x11b78a71,
+		kModelCapabilityVehiclePower = 0x11b78a72,
+		kModelCapabilityVehicleMilitaryPower = 0x06329468,
+		kModelCapabilityVehicleReligiousPower = 0x06329469,
+		kModelCapabilityVehicleEconomicPower = 0x0632946a,
+
+		kModelCapabilityCellFilter = 0x11b79a70,
+		kModelCapabilityCellSpike = 0x11b79a71,
+		kModelCapabilityCellJet = 0x11b79a72,
+		kModelCapabilityCellFlagella = 0x032f92e6,
+		kModelCapabilityCellJaw = 0x11b79a74,
+		kModelCapabilityCellElectric = 0x11b79a75,
+		kModelCapabilityCellPoison = 0x11b79a76,
+		kModelCapabilityCellCilia = 0x11b79a77,
+		kModelCapabilityCellPoker = 0x11b79a78,
+
+		kModelCapabilityCellEye = 0x11b79a73,
+		kModelCapabilityCellMouth = 0x11b79301,
+		kModelCapabilityCellMovement = 0x11b79302,
+		kModelCapabilityCellWeapon = 0x11b79303,
+		kModelCapabilityCellWeaponCharging = 0x11b79304,
+		kModelCapabilityCellGameSpeed = 0x066783b4,
+
+		kModelCapabilityCellCarnivore = 0x4d192a1,
+		kModelCapabilityCellOmnivore = 0x4d18972,
+		kModelCapabilityCellStarvivore = 0x4d18c4c,
+		kModelCapabilityCellStarvivore2 = 0x4d192a14,
+		kModelCapabilityCellHealth = 0x4d18efd,
+		kModelCapabilityCellHerbivore = 0x4d192a2,
+		kModelCapabilityCellProboscis = 0x4d192a3,
+
+		kModelCapabilityCell_herbivore_carnivore_proboscis = 0x50c34699,
+		kModelCapabilityCell_herbivore_carnivore = 0x177209ee,
+		kModelCapabilityCell_herbivore_proboscis = 0x64e7222b,
+		kModelCapabilityCell_carnivore_proboscis = 0xf613df04,
+		
+		kModelCapabilityEyeOverlayEffect = 0xF354A870,
+	};
+
 	struct EditorRigblockCapability
 	{
 		/// Property ID used to check the capability, such as `modelCapabilityAdventurerMissile`
@@ -78,6 +198,17 @@ namespace Editors
 		/* 34h */	int mIndex;
 	};
 	ASSERT_SIZE(UnkEditorRigblockStruct1, 0x38);
+
+
+	enum eBlockUIState
+	{
+		kSPUIStateDefault = 0,
+		kSPUIStateInvalid = 1,
+		kSPUIStateGhost = 2,
+		kSPUIStatePaintMode = 3,
+		kSPUIStateBadLocation = 4,
+		kSPUIStatePrevent = 5,
+	};
 
 	//TODO related with display? check SetShadedDisplay()
 	struct UnkEditorRigblockStruct2
@@ -215,26 +346,26 @@ namespace Editors
 		/* 2Ch */	int field_2C;
 		/* 30h */	float field_30;
 		/* 34h */	bool field_34;  // true
-		/* 38h */	UnkEditorRigblockStruct2 field_38;
-		/* 40h */	UnkEditorRigblockStruct2 field_40;
+		/* 38h */	UnkEditorRigblockStruct2 mUIState;
+		/* 40h */	UnkEditorRigblockStruct2 mLastUIState;
 		/* 48h */	Vector3 mPosition;
-		/* 54h */	Vector3 lastPos;  // updated when the part is clicked
+		/* 54h */	Vector3 mHistoryPosition;  // updated when the part is clicked
 		/// Combination of mUserOrientation and mOrientation
 		/* 60h */	Matrix3 mTotalOrientation;
-		/* 84h */	Matrix3 field_84;
+		/* 84h */	Matrix3 mHistoryTotalOrientation;
 		/* A8h */	Matrix3 mOrientation;
-		/* CCh */	Matrix3 field_CC;
+		/* CCh */	Matrix3 mHistoryBaseOrientation;
 		/* F0h */	Matrix3 mUserOrientation;
-		/* 114h */	Matrix3 field_114;
-		/* 138h */	Vector3 field_138; // position relative to parent?
-		/* 144h */	Vector3 field_144;
-		/* 150h */	int field_150;  // -2
+		/* 114h */	Matrix3 mHistoryUserOrientation;
+		/* 138h */	Vector3 mSurfaceNormal; // position relative to parent?
+		/* 144h */	Vector3 mReplacePartDisplacement;
+		/* 150h */	int mSnapType;  // -2
 		/* 154h */	EditorBaseHandlePtr mAxisHandles[3];  //TODO  sub_483CE0
 		/* 160h */	EditorBaseHandlePtr mpRotationBallHandle;  //TODO a handle, sub_482F30
-		/* 164h */	int field_164;
-		/* 168h */	int field_168;
-		/* 16Ch */	float field_16C;
-		/* 170h */	Clock field_170;
+		/* 164h */	int mRotationRingHandleAnimID;
+		/* 168h */	int mVertebraAnimID;
+		/* 16Ch */	float mRotationRingHandleCurrentUnscaledRadius;
+		/* 170h */	Clock mTimer;
 		/* 188h */	int field_188;
 		/* 18Ch */	int field_18C;
 		/* 190h */	int field_190;
