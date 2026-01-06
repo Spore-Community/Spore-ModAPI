@@ -70,20 +70,20 @@ namespace Editors
 	public:
 		/* 0Ch */	ResourceKey mKey;
 		/* 18h */	eastl::vector<EditorRigblockPtr> mRigblocks;
-		/* 2Ch */	bool mbAllBlocksLoaded;
-		/* 30h */	int mPhysicsWorld;  // intrusive_ptr, but not to an Object
-		/* 34h */	bool mUseDynamics;
-		/* 38h */	float mBounds;
-		/* 3Ch */	float mFeetBounds;
-		/* 40h */	float mMinHeight;  // -2.0
-		/* 44h */	float mMaxHeight;  // 2.0
-		/* 48h */	float mMinimumLeglessCreatureHeight;
-		/* 4Ch */	bool mShowHiddenHandles;
-		/* 4Dh */	bool mShowBoneLengthHandles;
-		/* 4Eh */	bool mUseBoundsForDelete;  // true
-		/* 4Fh */	bool mUsingSymmetry;  //TODO allows symmetry?
-		/* 50h */	bool mSkinNeedsUpdating;
-		/* 51h */	bool mChanged;
+		/* 2Ch */	bool field_2C;
+		/* 30h */	int field_30;  // intrusive_ptr, but not to an Object
+		/* 34h */	bool field_34;
+		/* 38h */	float field_38;
+		/* 3Ch */	float field_3C;
+		/* 40h */	float field_40;  // -2.0
+		/* 44h */	float field_44;  // 2.0
+		/* 48h */	float field_48; 
+		/* 4Ch */	bool field_4C;
+		/* 4Dh */	bool field_4D;
+		/* 4Eh */	bool field_4E;  // true
+		/* 4Fh */	bool field_4F;  //TODO allows symmetry?
+		/* 50h */	bool field_50;
+		/* 51h */	bool field_51;
 		/* 54h */	int mTranslationOptions;
 		/* 58h */	uint32_t mModelType;
 		/* 5Ch */	eastl::string16 mName;
@@ -92,7 +92,7 @@ namespace Editors
 		/* 8Ch */	uint32_t mSkinEffectIDs[3];	// Skinpaint IDs
 		/* 98h */	int mSkinEffectSeeds[3];  // 1234
 		/* A4h */	ColorRGB mColors[3];	// Skinpaint Colors
-		/* C8h */	eastl::vector<BoundingBox> mBBoxesOverride;
+		/* C8h */	eastl::vector<BoundingBox> field_C8;
 		/* DCh */	int mZCorpScore;  // not initialized
 	};
 	ASSERT_SIZE(EditorModel, 0xE0);

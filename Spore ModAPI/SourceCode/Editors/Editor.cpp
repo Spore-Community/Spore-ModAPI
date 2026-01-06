@@ -59,20 +59,20 @@ namespace Editors
 		: mnRefCount(0)
 		, mKey()
 		, mRigblocks()
-		, mbAllBlocksLoaded()
-		, mPhysicsWorld()
-		, mUseDynamics()
-		, mBounds()
-		, mFeetBounds()
-		, mMinHeight(-2.0f)
-		, mMaxHeight(2.0f)
-		, mMinimumLeglessCreatureHeight()
-		, mShowHiddenHandles()
-		, mShowBoneLengthHandles()
-		, mUseBoundsForDelete(true)
-		, mUsingSymmetry()
-		, mSkinNeedsUpdating()
-		, mChanged()
+		, field_2C()
+		, field_30()
+		, field_34()
+		, field_38()
+		, field_3C()
+		, field_40(-2.0f)
+		, field_44(2.0f)
+		, field_48()
+		, field_4C()
+		, field_4D()
+		, field_4E(true)
+		, field_4F()
+		, field_50()
+		, field_51()
 		, mTranslationOptions()
 		, mModelType()
 		, mName()
@@ -81,7 +81,7 @@ namespace Editors
 		, mSkinEffectIDs()
 		, mSkinEffectSeeds{1234, 1234, 1234}
 		, mColors {ColorRGB(1.0f, 1.0f, 1.0f), ColorRGB(1.0f, 1.0f, 1.0f), ColorRGB(1.0f, 1.0f, 1.0f)}
-		, mBBoxesOverride()
+		, field_C8()
 	{
 	}
 
@@ -90,8 +90,8 @@ namespace Editors
 		Dispose();
 
 		// field_30 is a pointer, but I don't know what kind so we manually Release it
-		if (mPhysicsWorld != 0) {
-			int* pointer = (int*)mPhysicsWorld;
+		if (field_30 != 0) {
+			int* pointer = (int*)field_30;
 			pointer[1]--;
 			if (pointer[1] == 0) {
 				pointer[1] = 1;
@@ -198,7 +198,5 @@ namespace Editors
 	auto_STATIC_METHOD(cEditor, uint32_t, GetTypeIDForAssetType, Args(uint32_t assetTypeID), Args(assetTypeID));
 
 	auto_STATIC_METHOD(cEditor, const char16_t*, GetNameForAssetType, Args(uint32_t assetTypeID), Args(assetTypeID));
-
-	auto_STATIC_METHOD(cEditor, void, ComputeCreatureVerbIcons, Args(cCreatureDataResource* creatureData, int VerbTrayCollection, int brainLevel, float param_4), Args(creatureData, VerbTrayCollection, brainLevel, param_4));
 }
 #endif

@@ -38,11 +38,10 @@ namespace Simulator
 
 		enum AbilityTypes
 		{
-			kNone = 0,
 			kTribeHorn = 5,
 			kTribeMaraca = 6,
 			kTribeDidgeridoo = 7,
-			kWeakBite = 8,
+			kAutoAttack = 8,
 			kStealth = 13,
 			kSpeed = 14,
 			kBlock = 15,
@@ -63,7 +62,7 @@ namespace Simulator
 			kSprint = 39,
 			kSight = 40,
 			kStomp = 41,
-			kTribeWeaponAttack = 42,
+			kTribeAttackUnk = 42,
 			kTribeSpear = 43,
 			kTribeAttack = 44,
 			kTribeSocial = 45,
@@ -110,15 +109,6 @@ namespace Simulator
 			kEnergyStorage = 87,
 		};
 
-		enum AbilityCategory
-		{
-			kCategorySocial = 0,
-			kCategoryAttack = 1,
-			kCategoryNeutral = 2,
-			kCategoryPassive = 3,
-			kCategorySuperPower = 4,
-		};
-
 		//PLACEHOLDER loc_D1E9D0 uses ability type?
 
 		/// Returns the animation ID at the given index, or 0x4330667 if there are no animation IDs in this ability or
@@ -126,7 +116,7 @@ namespace Simulator
 		/// @param
 		uint32_t GetAnimationID(int index);
 
-		/* 08h */	AbilityTypes mType;
+		/* 08h */	int mType;
 		/* 0Ch */	int mCategory;
 		/* 10h */	int mSocialCategory;
 		/* 14h */	LocalizedString nName;

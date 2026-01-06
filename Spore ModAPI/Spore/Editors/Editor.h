@@ -216,8 +216,6 @@ namespace Editors
 
 		static uint32_t GetTypeIDForAssetType(uint32_t assetTypeID);
 
-		static void ComputeCreatureVerbIcons(cCreatureDataResource* creatureData, int VerbTrayCollection, int brainLevel, float param_4);
-
 	public:
 
 		int vftable_1C;
@@ -289,9 +287,9 @@ namespace Editors
 		/* CCh */	EditorRigblockPtr mpActivePart;
 		/* D0h */	EditorRigblockPtr mpMovingPart;  // the part that is being moved, only when mouse is being clicked
 		/* D4h */	EditorRigblockPtr mpSelectedPart;  // also valid for spines
-		/* D8h */	EditorRigblockPtr mPreviousSelectedBlock;
-		/* DCh */	EditorRigblockPtr mToBeSelectedBlock;
-		/* E0h */	bool mToBeSelectedTorso;
+		/* D8h */	EditorRigblockPtr field_D8;
+		/* DCh */	EditorRigblockPtr field_DC;
+		/* E0h */	bool field_E0;
 		/* E4h */	EditorBaseHandle* mpActiveHandle;  // morph handles
 		/// Is the mouse over the skin of the creature?
 		/* E8h */	bool mbMouseIsInSkin;
@@ -395,18 +393,18 @@ namespace Editors
 		/* 290h */	int field_290;
 		/* 294h */	IShadowWorldPtr mpShadowWorld;
 		/* 298h */	Graphics::ShadowMapInfo* mpShadowMapInfo;
-		/* 29Ch */	int mDefaultPaintTheme;
-		/* 2A0h */	int mCurrentPaintTheme;
-		/* 2A4h */	int mVerbIconTray;
+		/* 29Ch */	int field_29C;
+		/* 2A0h */	int field_2A0;
+		/* 2A4h */	int field_2A4;
 		/// The save extension key which will be parsed both into a key and a three letter extension.
 		/* 2A8h */	uint32_t mSaveExtension;
 		/// The save directory key, Resource::SaveAreaID
 		/* 2ACh */	uint32_t mSaveDirectory;
 		/* 2B0h */	bool mIsActive;
-		/* 2B1h */	bool mManipulatedBlockFromPalette;  // not initialized
+		/* 2B1h */	char field_2B1;  // not initialized
 		/* 2B2h */	bool mbShowVertebrae;  // true
-		/* 2B3h */	bool mIgnoreMouseMove;
-		/* 2B4h */	bool mUnselectCurrentBlock;
+		/* 2B3h */	char field_2B3;
+		/* 2B4h */	char field_2B4;
 		/* 2B5h */	bool mbDisableCreatureAnimIK;  // not initialized
 		/// The width of the space that the model skin is constrained to.
 		/* 2B8h */	float mBoundSize;  // 2.0
@@ -645,7 +643,6 @@ namespace Editors
 		DeclareAddress(GetEditorForAssetType);
 		DeclareAddress(GetNameForAssetType);
 		DeclareAddress(GetTypeIDForAssetType);
-		DeclareAddress(ComputeCreatureVerbIcons);
 	}
 
 #ifdef SDK_TO_GHIDRA

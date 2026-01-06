@@ -96,7 +96,7 @@ namespace Editors
 		/* 11h */	bool mVerbIconShowZeroLevel;
 		/* 14h */	int mVerbIconTriggerKey;  // -1
 		/* 18h */	float mVerbIconLevel;  // not initialized
-		/* 1Ch */	eVerbIconCategory mVerbIconMaxLevel;
+		/* 1Ch */	float mVerbIconMaxLevel;
 		/* 20h */	int field_20;  // not initialized
 		/* 24h */	eVerbIconCategory mVerbIconCategory;
 		/* 28h */	uint32_t mVerbIconRepresentativeAnimation;  // -1

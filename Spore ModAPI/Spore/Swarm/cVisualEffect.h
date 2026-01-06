@@ -77,7 +77,7 @@ namespace Swarm
 		/* 170h */	float field_170;
 		/* 174h */	int field_174;
 		/* 178h */	int field_178;
-		/* 17Ch */	int field_17C;	//EffectParams*
+		/* 17Ch */	int field_17C;
 		/* 180h */	int32_t mnSeed;
 		/* 184h */	int field_184;  // not initialized
 	};
