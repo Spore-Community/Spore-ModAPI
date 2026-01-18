@@ -83,10 +83,13 @@ namespace Editors
 		DefineAddress(HandleMessage, SelectAddress(0x591C80, 0x591FA0));
 
 
-		DefineAddress(GetEditorForAssetType, SelectAddress(0x00433010, 0x004333e0));
-		DefineAddress(GetNameForAssetType, SelectAddress(0x004badc0, 0x004bba50));
-		DefineAddress(GetTypeIDForAssetType, SelectAddress(0x004bb110, 0x004bbda0));
-		DefineAddress(ComputeCreatureVerbIcons, SelectAddress(0x004e8860, 0x004e8860));
+		DefineAddress(GetEditorForAssetType, SelectAddress(0x433010, 0x4333e0));
+		DefineAddress(GetNameForAssetType, SelectAddress(0x4badc0, 0x4bba50));
+		DefineAddress(GetTypeIDForAssetType, SelectAddress(0x4bb110, 0x4bbda0));
+
+		DefineAddress(ComputeCreatureVerbIcons, SelectAddress(0x4e2a50, 0x4e8860));
+
+		DefineAddress(LoadCreatureData, SelectAddress(0x4b5760, 0x4bb500));
 	}
 
 	namespace Addresses(EditorCamera)
@@ -255,16 +258,16 @@ namespace Editors
 
 	namespace Addresses(VerbIconData)
 	{
-		DefineAddress(AddRef, SelectAddress(0xc6ab00, 0xc6ab00));
-		DefineAddress(Release, SelectAddress(0x7b87b0, 0x7b87b0));
-		DefineAddress(Dispose, SelectAddress(0x59eff0, 0x59eff0));
-		DefineAddress(AsInterface, SelectAddress(0x5e4d70, 0x5e4d70));
-		DefineAddress(Init, SelectAddress(0x5e54a0, 0x5e54a0));
-		DefineAddress(Shutdown, SelectAddress(0x5e5920, 0x5e5920));
-		DefineAddress(SetArrayIndex, SelectAddress(0x5e4d90, 0x5e4d90));
-		DefineAddress(SetHotKey, SelectAddress(0x5e5c30, 0x5e5c30));
-		DefineAddress(GetIconName, SelectAddress(0x5e5cb0, 0x5e5cb0));
-		DefineAddress(GetIconDescription, SelectAddress(0x5e5d70, 0x5e5d70));
+		DefineAddress(AddRef, SelectAddress(0x6520a0, 0xc6ab00));
+		DefineAddress(Release, SelectAddress(0x5cd9f0, 0x7b87b0));
+		DefineAddress(Dispose, SelectAddress(0x597710, 0x59eff0));
+		DefineAddress(AsInterface, SelectAddress(0x5db940, 0x5e4d70));
+		DefineAddress(Init, SelectAddress(0x5dc070, 0x5e54a0));
+		DefineAddress(Shutdown, SelectAddress(0x5dc4f0, 0x5e5920));
+		DefineAddress(SetArrayIndex, SelectAddress(0x5db960, 0x5e4d90));
+		DefineAddress(SetHotKey, SelectAddress(0x5dc800, 0x5e5c30));
+		DefineAddress(GetIconName, SelectAddress(0x5dc880, 0x5e5cb0));
+		DefineAddress(GetIconDescription, SelectAddress(0x5dc940, 0x5e5d70));
 	}
 }
 #endif

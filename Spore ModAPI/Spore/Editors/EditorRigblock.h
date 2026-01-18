@@ -219,6 +219,14 @@ namespace Editors
 	};
 	ASSERT_SIZE(UnkEditorRigblockStruct2, 0x8);
 
+	enum eLimbType
+	{
+		kLimbTypeMuscle = 0,
+		kLimbTypeTentacle = 1,
+		kLimbTypeRigblock = 2,
+		kLimbTypeNA = 3,
+	};
+
 	enum EditorRigblockBoolAttributes
 	{
 		kEditorRigblockModelOrientToSurfaces = 0,
@@ -345,7 +353,7 @@ namespace Editors
 		/* 28h */	EditorModel* mpEditorModel;
 		/* 2Ch */	int field_2C;
 		/* 30h */	float field_30;
-		/* 34h */	bool field_34;  // true
+		/* 34h */	bool mIsVisible;  // true
 		/* 38h */	UnkEditorRigblockStruct2 mUIState;
 		/* 40h */	UnkEditorRigblockStruct2 mLastUIState;
 		/* 48h */	Vector3 mPosition;
@@ -384,7 +392,7 @@ namespace Editors
 		/* 1C0h */	int field_1C0;  // -2
 		/* 1C4h */	int field_1C4;  // 1
 		/* 1C8h */	int field_1C8;  // 1
-		/* 1CCh */	int mLimbType;  // 3, sub_44F2B0
+		/* 1CCh */	eLimbType mLimbType;  // 3, sub_44F2B0
 		/* 1D0h */	float mMuscleScale;  // 0.5
 		/* 1D4h */	float mBaseMuscleScale;  // 1.0
 		/* 1D8h */	float size;  // 1.0

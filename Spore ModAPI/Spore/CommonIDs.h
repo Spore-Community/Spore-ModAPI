@@ -119,6 +119,13 @@ enum Difficulty
 	kDifficultyHard = 2,
 };
 
+enum InterfaceId
+{
+	kIIDMin = 0,
+	kIIDFactory = 1,
+	kIIDMax = 0xffffffff,
+};
+
 /// Contains the ID of some important file types.
 namespace TypeIDs
 {

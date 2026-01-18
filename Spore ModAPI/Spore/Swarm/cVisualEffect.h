@@ -27,6 +27,7 @@
 #include <Spore\MathUtils.h>
 #include <Spore\Transform.h>
 #include <EASTL\intrusive_ptr.h>
+#include <EASTL\bitset.h>
 
 namespace Swarm
 {
@@ -47,37 +48,42 @@ namespace Swarm
 			kFlagHidden = 2,
 			kFlagTransformed = 4
 		};
+		enum tTransitionType
+		{
+			kSoftTransition = 0,
+			kHardTransition = 1
+		};
 
 		/* 10h */	int field_10;
 		/* 14h */	IEffectsManagerPtr mpManager;
 		/* 18h */	uint32_t mInstanceID;
 		/* 1Ch */	uint32_t mGroupID;
 		/* 20h */	uint32_t mEffectIndex;  // & 0xFF000000 is the EffectDirectory index
-		/* 24h */	int field_24;
+		/* 24h */	tTransitionType mStartTransition;
 		/* 28h */	cVisualEffectDescription* mpDescription;
-		/* 2Ch */	int mFlags;
-		/* 30h */	Math::Vector3 field_30;
-		/* 3Ch */	Math::Vector3 field_3C;
-		/* 48h */	int field_48;
-		/* 4Ch */	float field_4C;
-		/* 50h */	Math::Vector3 field_50;
+		/* 2Ch */	eastl::bitset<13> mFlags;
+		/* 30h */	Math::Vector3 mWorldPosition;
+		/* 3Ch */	Math::Vector3 mWorldUp;
+		/* 48h */	int mCurrentLOD;
+		/* 4Ch */	float mCurrentLODLerp;
+		/* 50h */	Math::Vector2 mCurrentRange;
+		/* 58h */	float mLODDistanceScale;
 		/* 5Ch */	uint32_t mNotifyMessageID;
-		/* 60h */	int field_60;
+		/* 60h */	uint32_t mNotifyMessageUserData;
 		/* 64h */	Transform mRigidTransform;
 		/* 9Ch */	Transform mSourceTransform;
-		/* D4h */	Transform field_D4;
-		/* 10Ch */	Transform field_10C;
-		/* 144h */	eastl::vector<int> field_144;
-		/* 158h */	int mpBone0;
-		/* 15Ch */	int field_15C;
-		/* 160h */	int mpBone1;
-		/* 164h */	int field_164;
-		/* 168h */	float field_168;
-		/* 16Ch */	float field_16C;
-		/* 170h */	float field_170;
-		/* 174h */	int field_174;
-		/* 178h */	int field_178;
-		/* 17Ch */	int field_17C;	//EffectParams*
+		/* D4h */	Transform mCmptRigidTransform;
+		/* 10Ch */	Transform mCmptSourceTransform;
+		/* 144h */	eastl::vector<int> mComponentRecs;
+		/* 158h */	int mRigidBone;	//cIBonePtr
+		/* 15Ch */	uint32_t mRigidBoneModCount;
+		/* 160h */	int mSourceBone;	//cIBonePtr
+		/* 164h */	uint32_t mSourceBoneModCount;
+		/* 168h */	Math::Vector2 mLODSizeScale;
+		/* 170h */	float mSizeScaleLOD;
+		/* 174h */	int mWorld;	//cIEffectsWorld *
+		/* 178h */	int mGlobalParams;	//cGlobalParams *
+		/* 17Ch */	int mParams;	//cEffectParams *
 		/* 180h */	int32_t mnSeed;
 		/* 184h */	int field_184;  // not initialized
 	};

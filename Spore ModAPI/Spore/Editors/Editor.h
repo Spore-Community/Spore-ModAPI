@@ -216,7 +216,11 @@ namespace Editors
 
 		static uint32_t GetTypeIDForAssetType(uint32_t assetTypeID);
 
+		///Show creature abilities in verbtrayCollection
 		static void ComputeCreatureVerbIcons(cCreatureDataResource* creatureData, int VerbTrayCollection, int brainLevel, float param_4);
+
+		///return cCreatureDataResource*
+		static bool LoadCreatureData(ResourceKey* creation, cCreatureDataResource** dst);
 
 	public:
 
@@ -258,7 +262,7 @@ namespace Editors
 		/* 80h */	ILightingWorldPtr mpLightingWorld;
 		/// The model world that contains the pedestal and test environment model, and also editor rigblocks
 		/* 84h */	IModelWorldPtr mpMainModelWorld;
-		/* 88h */	IModelWorldPtr field_88;
+		/* 88h */	IModelWorldPtr mSaveModelWorld;
 		/// The model world that contains the background model.
 		/* 8Ch */	IModelWorldPtr mpBackgroundModelWorld;
 		/* 90h */	int field_90;  // related with havok world?
@@ -268,7 +272,7 @@ namespace Editors
 		// you can get it with virtual function 40h
 		/* 98h */	EditorModel* mpEditorModel;	// TODO is it intrusive_ptr?
 
-		/* 9Ch */	int field_9C;  // another editor model?
+		/* 9Ch */	EditorModel* mEditorSaveModel;  // another editor model?
 		/// The model to be used for the pedestal in the editor. It belongs to mpPedestalModelWorld.
 		/* A0h */	ModelPtr mpPedestalModel;
 		/// The model to be used for the test environment in the editor. It belongs mpPedestalModelWorld.
@@ -392,7 +396,7 @@ namespace Editors
 		/* 288h */	float field_288;  // 1.2
 		/// Briefly set when saving a creature, then immediately unset.
 		/* 28Ch */	TexturePtr mpThumbnailTexture; 
-		/* 290h */	int field_290;
+		/* 290h */	TexturePtr field_290;
 		/* 294h */	IShadowWorldPtr mpShadowWorld;
 		/* 298h */	Graphics::ShadowMapInfo* mpShadowMapInfo;
 		/* 29Ch */	int mDefaultPaintTheme;
@@ -646,6 +650,7 @@ namespace Editors
 		DeclareAddress(GetNameForAssetType);
 		DeclareAddress(GetTypeIDForAssetType);
 		DeclareAddress(ComputeCreatureVerbIcons);
+		DeclareAddress(LoadCreatureData);
 	}
 
 #ifdef SDK_TO_GHIDRA

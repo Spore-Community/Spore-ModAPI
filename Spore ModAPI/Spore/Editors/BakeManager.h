@@ -1272,10 +1272,10 @@ namespace Editors
 		DeclareAddress(Get);
 	}
 
-	inline BakeParameters::BakeParameters(int16_t _mFlag, int16_t _mPriority, uint32_t mTag)
+	inline BakeParameters::BakeParameters(int16_t _mFlag, int16_t _mPriority, uint32_t _mTag)
 		: mFlag(_mFlag)
 		, mPriority(_mPriority)
-		, mTag(mTag)
+		, mTag(_mTag)
 	{
 
 	}

@@ -61,8 +61,8 @@ namespace Sporepedia
 			/* 68h */	virtual void func68h();
 			/* 6Ch */	virtual void func6Ch(uint32_t param_1, uint32_t param_2); //App::Property
 			/* 70h */	virtual bool func70h(const ResourceKey& creation);
-			/* 74h */	virtual bool DeleteCreationSummary(const ResourceKey& creation, bool param);
-			/* 78h */	virtual void DeleteCreation(const ResourceKey& creation, bool param);
+			/* 74h */	virtual bool PurgeAssetSummarizer(const ResourceKey& creation, bool param);
+			/* 78h */	virtual void PurgeAsset(const ResourceKey& creation, bool param);
 
 			/* 7Ch */	virtual bool AddSummarizer(ISummarizer* pSummarizer);
 

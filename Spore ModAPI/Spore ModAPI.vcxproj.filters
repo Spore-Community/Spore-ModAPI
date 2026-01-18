@@ -2250,6 +2250,18 @@
     <ClInclude Include="Spore\UTFWin\cSPUIBehaviorEventBase.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Spore\Sporepedia\cSPUILargeAssetView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spore\Editors\cSPVerbTrayCollection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spore\Sporepedia\ISPUILargeAssetView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spore\Graphics\cThumbnailManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SourceCode\Allocator.cpp">
@@ -2736,9 +2748,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SourceCode\OpenSSL.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="SourceCode\Editors\VerbIconData.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

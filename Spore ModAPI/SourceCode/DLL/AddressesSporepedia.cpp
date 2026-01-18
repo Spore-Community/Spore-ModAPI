@@ -5,6 +5,8 @@
 #include <Spore\Sporepedia\AssetData.h>
 #include <Spore\Sporepedia\ObjectTemplateDB.h>
 #include <Spore\Sporepedia\AssetViewManager.h>
+#include <Spore\Sporepedia\cSPUILargeAssetView.h>
+#include <Spore\Sporepedia\ISPUILargeAssetView.h>
 
 namespace Sporepedia
 {
@@ -77,6 +79,25 @@ namespace Sporepedia
 		{
 			DefineAddress(Get, SelectAddress(0x67CC90, 0x67CB00));
 		}
+	}
+
+	namespace Addresses(ISPUILargeAssetView)
+	{
+		DefineAddress(AddRef, SelectAddress(0x734c00, 0xf11ae0));
+		DefineAddress(Release, SelectAddress(0x734c10, 0x7505f0));
+		DefineAddress(Dispose, SelectAddress(0x6623c0, 0x66ccd0));
+		DefineAddress(AsInterface, SelectAddress(0x661490, 0x66bce0));
+		DefineAddress(GetPriority, SelectAddress(0xce9820, 0xe310c0));
+		DefineAddress(GetEventMask, SelectAddress(0xdb8a50, 0x5f0e70));
+		DefineAddress(func18h, SelectAddress(0xdb8a50, 0x66d400));
+		DefineAddress(LoadAssetViewLarge, SelectAddress(0x664630, 0x66efb0));
+	}
+	namespace Addresses(cSPUILargeAssetViewSmh)
+	{
+		DefineAddress(Dispose, SelectAddress(0x661ab0, 0x66c310));
+		DefineAddress(func04h, SelectAddress(0x661c00, 0x66c460));
+		DefineAddress(AddRef, SelectAddress(0x6023b0, 0xeb2890));
+		DefineAddress(Release, SelectAddress(0x6023a0, 0xeb28a0));
 	}
 }
 

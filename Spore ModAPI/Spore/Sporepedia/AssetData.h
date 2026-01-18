@@ -9,6 +9,7 @@
 
 #define cSPAssetDataOTDBPtr eastl::intrusive_ptr<Sporepedia::cSPAssetDataOTDB>
 #define cSPSpaceAssetDataOTDBPtr eastl::intrusive_ptr<Sporepedia::cSPSpaceAssetDataOTDB>
+#define IAssetDataPtr eastl::intrusive_ptr<Sporepedia::IAssetData>
 
 namespace Sporepedia
 {

@@ -327,6 +327,8 @@
     <ClInclude Include="Spore\App\IDGenerator.h" />
     <ClInclude Include="Spore\App\JobManager.h" />
     <ClInclude Include="Spore\App\Thumbnail_cImportExport.h" />
+    <ClInclude Include="Spore\Editors\cSPVerbTrayCollection.h" />
+    <ClInclude Include="Spore\Graphics\cThumbnailManager.h" />
     <ClInclude Include="Spore\Graphics\LayerSequence.h" />
     <ClInclude Include="Spore\OpenSSL.h" />
     <ClInclude Include="Spore\Resource\FakeRecord.h" />
@@ -504,6 +506,8 @@
     <ClInclude Include="Spore\Skinner\cSkinPainterJobCopyTex1AlphaToTex0.h" />
     <ClInclude Include="Spore\Skinner\cSkinPainterJob.h" />
     <ClInclude Include="Spore\Sporepedia\AssetViewManager.h" />
+    <ClInclude Include="Spore\Sporepedia\cSPUILargeAssetView.h" />
+    <ClInclude Include="Spore\Sporepedia\ISPUILargeAssetView.h" />
     <ClInclude Include="Spore\Sporepedia\ObjectTemplateDB.h" />
     <ClInclude Include="Spore\Sporepedia\OTDBParameters.h" />
     <ClInclude Include="Spore\Simulator\cCivilization.h" />
@@ -974,7 +978,6 @@
     <ClCompile Include="SourceCode\DLL\SpaceToolIconOverride.cpp" />
     <ClCompile Include="SourceCode\DLL\stdafx.cpp" />
     <ClCompile Include="SourceCode\DLL\TextureOverride.cpp" />
-    <ClCompile Include="SourceCode\Editors\VerbIconData.cpp" />
     <ClCompile Include="SourceCode\EASTL\allocator_eastl.cpp" />
     <ClCompile Include="SourceCode\EASTL\assert.cpp" />
     <ClCompile Include="SourceCode\EASTL\EAMemory.cpp" />

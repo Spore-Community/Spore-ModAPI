@@ -56,6 +56,32 @@ namespace Graphics
 
 	namespace Addresses(IThumbnailManager) {
 		DefineAddress(Get, SelectAddress(0x67DED0, 0x67DD70));
+		DefineAddress(AddRef, SelectAddress(0xfee650, 0x671f20));
+		DefineAddress(Release, SelectAddress(0xf1aae0, 0xae0620));
+		DefineAddress(Dispose, SelectAddress(0x794410, 0x7b6df0));
+		DefineAddress(Init, SelectAddress(0x79e020, 0x7c14c0));
+		DefineAddress(Shutdown, SelectAddress(0x79ad90, 0x7bdef0));
+		DefineAddress(FrameBoundingBoxPalette, SelectAddress(0x792a90, 0x7b53d0));
+		DefineAddress(GetThumbRectID, SelectAddress(0x7903c0, 0x7b2740));
+		DefineAddress(CapturePaletteThumbnail, SelectAddress(0x79b3a0, 0x7be500));
+		DefineAddress(CaptureEditorsThumbnail, SelectAddress(0x79b8e0, 0x7bead0));
+		DefineAddress(CaptureCSAPhotos, SelectAddress(0x79bc20, 0x7bee80));
+		DefineAddress(CaptureGameThumbnail, SelectAddress(0x79c120, 0x7bf3d0));
+		DefineAddress(func2ch, SelectAddress(0x794c10, 0x7b7600));
+		DefineAddress(func30h, SelectAddress(0x793240, 0x7b5b80));
+		DefineAddress(RenderPlanetThumbnail, SelectAddress(0x797430, 0x7ba180));
+		DefineAddress(CaptureBESplatter, SelectAddress(0x79e790, 0x7c1ce0));
+		DefineAddress(CaptureAO, SelectAddress(0x79cc40, 0x7bffb0));
+		DefineAddress(CaptureAOCE, SelectAddress(0x79d430, 0x7c0850));
+		DefineAddress(func44h, SelectAddress(0x7988a0, 0x7bb740));
+		DefineAddress(GenerateTimelineImages, SelectAddress(0x79cc30, 0x7bff80));
+		DefineAddress(FrameBoundingBoxThumbnail, SelectAddress(0x792d60, 0x7b56a0));
+		DefineAddress(FrameBBoxes, SelectAddress(0x794950, 0x7b7340));
+		DefineAddress(DownsampleGIF, SelectAddress(0x7972c0, 0x7ba000));
+		DefineAddress(DownSampleRT, SelectAddress(0x796be0, 0x7b98a0));
+		DefineAddress(func5Ch, SelectAddress(0x796d80, 0x7b9a60));
+		DefineAddress(TerrainBlurFilterDraw, SelectAddress(0x7923b0, 0x7b4bd0));
+		DefineAddress(GatherAOPasses, SelectAddress(0x7940f0, 0x7b69b0));
 	}
 
 	namespace Addresses(IGraphicsManager) {
