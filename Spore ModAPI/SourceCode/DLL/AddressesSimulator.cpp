@@ -114,6 +114,7 @@
 #include <Spore\Simulator\SubSystem\GamePlantManager.h>
 #include <Spore\Simulator\SubSystem\UIAssetDiscoveryManager.h>
 #include <Spore\Simulator\SubSystem\ObstacleManager.h>
+#include <Spore\Simulator\SubSystem\cSpeciesRelationshipManager.h>
 #include <Spore\Simulator\NounClassFactories.h>
 
 namespace Addresses(Simulator)
@@ -1213,6 +1214,44 @@ namespace Simulator
 
 	namespace Addresses(cNpcTribeController) {
 		DefineAddress(Get, SelectAddress(0xCC8330, 0xCC8C90));
+	}
+
+	namespace Addresses(IGonzagoSubsystem) {
+		DefineAddress(AddRef, SelectAddress(0xebb180, 0x76e620));
+		DefineAddress(Release, SelectAddress(0x74f1a0, 0xb0bc60));
+		DefineAddress(InitGonzagoSubsystem, SelectAddress(0xb78fc0, 0xba3160));
+		DefineAddress(ShutdownGonzagoSubsystem, SelectAddress(0xb78640, 0xba28a0));
+		DefineAddress(GetGonzagoSubsystemName, SelectAddress(0xb78670, 0xba28e0));
+		DefineAddress(PreGameModeTransition, SelectAddress(0xb31a40, 0xb5ba40));
+		DefineAddress(PostGameModeTransition, SelectAddress(0xb31a10, 0xb5ba10));
+		DefineAddress(GetPreModeTransitionState, SelectAddress(0x69f450, 0xfc7e10));
+		DefineAddress(GetPostModeTransitionState, SelectAddress(0xf5c360, 0x7f55c0));
+		DefineAddress(CheckGonzagoSubsystemInitState, SelectAddress(0x100b4a0, 0xba28d0));
+		DefineAddress(Write, SelectAddress(0xb78560, 0xba27c0));
+		DefineAddress(Read, SelectAddress(0xb785d0, 0xba2830));
+		DefineAddress(PostLoad, SelectAddress(0x105fec0, 0x1082a20));
+		DefineAddress(DisposeAttributeToXML, SelectAddress(0xb79920, 0xba3980));
+		DefineAddress(PreUpdateTick, SelectAddress(0xb32f60, 0xb267d0));
+		DefineAddress(PostUpdateTick, SelectAddress(0xb32f60, 0xb267d0));
+		DefineAddress(BeginPreGameModeTransition, SelectAddress(0xb31990, 0xb5b990));
+		DefineAddress(BeginPostGameModeTransition, SelectAddress(0xb319b0, 0xb5b9b0));
+		DefineAddress(EndPreGameModeTransition, SelectAddress(0xb319d0, 0xb5b9d0));
+		DefineAddress(EndPostGameModeTransition, SelectAddress(0xb319f0, 0xb5b9f0));
+	}
+
+	namespace Addresses(cSpeciesRelationshipManager) {
+		DefineAddress(Get, SelectAddress(0xb141b0, 0xb3d5c0));
+
+		DefineAddress(Dispose, SelectAddress(0xb7a0d0, 0xba40c0));
+		DefineAddress(HandleMessage, SelectAddress(0xb78b00, 0xba2dc0));
+		DefineAddress(AddRef, SelectAddress(0xfee650, 0x671f20));
+		DefineAddress(Release, SelectAddress(0xf1aae0, 0xae0620));
+		DefineAddress(GetType, SelectAddress(0xb78500, 0xba2760));
+		DefineAddress(GetFieldValue, SelectAddress(0xb78520, 0xba2780));
+		DefineAddress(GetClassID, SelectAddress(0xb78680, 0xba28f0));
+	}
+	namespace Addresses(cSpeciesRelationshipManagerDispose) {
+		DefineAddress(Dispose, SelectAddress(0xb7a0d0, 0xba40c0));
 	}
 }
 
