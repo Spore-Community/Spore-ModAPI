@@ -27,7 +27,6 @@ namespace Sporepedia
 		static cAssetViewManager* Get();
 
 	public:
-		char padding_0[0xB8];
 		char padding_0[0x88];
 		int mCurrentLargeAssetView;
 		char padding_1[0x18];
