@@ -9,6 +9,7 @@
 #include <Spore\UI\GameSettings.h>
 #include <Spore\UI\EditorNamePanel.h>
 #include <Spore\UI\SimulatorRollovers.h>
+#include <Spore\UI\cSPUIPropertyLayout.h>
 
 namespace UI
 {
@@ -44,6 +45,11 @@ namespace UI
 	{
 		DefineAddress(ctor, SelectAddress(0x834E10, 0x8346A0));
 		DefineAddress(Initialize, SelectAddress(0x835800, 0x835080));
+	}
+
+	namespace Addresses(cSPUIPropertyLayout)
+	{
+		DefineAddress(SetProperty, SelectAddress(0x801640, 0x828d10));
 	}
 
 	namespace Addresses(GameSettings)

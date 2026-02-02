@@ -255,13 +255,13 @@ namespace Editors
 		DefineAddress(SetWindowVisible, SelectAddress(0x635450, 0x635750));
 		DefineAddress(FindWindowByID, SelectAddress(0x634AB0, 0x634DB0));
 	}
-
+	
 	namespace Addresses(VerbIconData)
 	{
 		DefineAddress(AddRef, SelectAddress(0x6520a0, 0xc6ab00));
 		DefineAddress(Release, SelectAddress(0x5cd9f0, 0x7b87b0));
 		DefineAddress(Dispose, SelectAddress(0x597710, 0x59eff0));
-		DefineAddress(AsInterface, SelectAddress(0x5db940, 0x5e4d70));
+		DefineAddress(Cast, SelectAddress(0x5db940, 0x5e4d70));
 		DefineAddress(Init, SelectAddress(0x5dc070, 0x5e54a0));
 		DefineAddress(Shutdown, SelectAddress(0x5dc4f0, 0x5e5920));
 		DefineAddress(SetArrayIndex, SelectAddress(0x5db960, 0x5e4d90));

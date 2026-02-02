@@ -5,6 +5,7 @@
 #include <Spore\App\IMessageListener.h>
 #include <Spore\Sporepedia\AssetData.h>
 #include <Spore\Sporepedia\ISPUILargeAssetView.h>
+#include <Spore\Editors\cSPEditorVerbTrayCollection.h>
 #include <Spore\UI\cSPAssetView.h>
 #include <Spore\App\MessageListenerData.h>
 #include <EASTL\intrusive_ptr.h>
@@ -50,7 +51,7 @@ namespace Sporepedia
     /* 5Ch */   int field_5C;
     /* 60h */   int mCommentsBrowserPtr;
     /* 64h */   int mExpansionPackBrowserPtr;
-    /* 68h */   int mVerbIcons;
+    /* 68h */   cSPEditorVerbTrayCollectionPtr mVerbIcons;
     /* 6Ch */   IWindowPtr mWinAssetVerbs;
     /* 70h */   int mAssetVerbsPtr;
     /* 74h */   IAssetDataPtr mAssetData;

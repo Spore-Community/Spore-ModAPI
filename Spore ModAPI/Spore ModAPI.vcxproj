@@ -327,7 +327,14 @@
     <ClInclude Include="Spore\App\IDGenerator.h" />
     <ClInclude Include="Spore\App\JobManager.h" />
     <ClInclude Include="Spore\App\Thumbnail_cImportExport.h" />
+    <ClInclude Include="Spore\Editors\cSPEditorVerbTrayCollection.h" />
+    <ClInclude Include="Spore\Editors\cSPEditorVerbIcon.h" />
+    <ClInclude Include="Spore\Editors\cSPEditorVerbIconTray.h" />
+    <ClInclude Include="Spore\UI\cSPUIPropertyLayout.h" />
+    <ClInclude Include="Spore\Editors\cSPVerbIconRollover.h" />
     <ClInclude Include="Spore\Editors\cSPVerbTrayCollection.h" />
+    <ClInclude Include="Spore\Editors\VerbIconEnums.h" />
+    <ClInclude Include="Spore\Editors\VerbIconStructs.h" />
     <ClInclude Include="Spore\Graphics\cThumbnailManager.h" />
     <ClInclude Include="Spore\Graphics\LayerSequence.h" />
     <ClInclude Include="Spore\OpenSSL.h" />
@@ -340,6 +347,10 @@
     <ClInclude Include="Spore\Simulator\cTribeToolData.h" />
     <ClInclude Include="Spore\Simulator\SubSystem\BundleManager.h" />
     <ClInclude Include="Spore\Simulator\SubSystem\CinematicManager.h" />
+    <ClInclude Include="Spore\Simulator\SubSystem\cSpeciesRelationshipManager.h">
+      <SubType>
+      </SubType>
+    </ClInclude>
     <ClInclude Include="Spore\Simulator\SubSystem\GamePlantManager.h" />
     <ClInclude Include="Spore\Simulator\SubSystem\ObstacleManager.h" />
     <ClInclude Include="Spore\Simulator\SubSystem\UIAssetDiscoveryManager.h" />
@@ -1072,6 +1083,7 @@
     <ClCompile Include="SourceCode\Swarm\SwarmManager.cpp" />
     <ClCompile Include="SourceCode\Clock.cpp" />
     <ClCompile Include="SourceCode\Terrain\Terrain.cpp" />
+    <ClCompile Include="SourceCode\UI\cSPUIPropertyLayout.cpp" />
     <ClCompile Include="SourceCode\UI\HintManager.cpp" />
     <ClCompile Include="SourceCode\UI\LayerManager.cpp" />
     <ClCompile Include="SourceCode\UI\ScrollFrame.cpp" />
@@ -1098,6 +1110,10 @@
     <ClCompile Include="SourceCode\Object.cpp" />
     <ClCompile Include="SourceCode\ResourceKey.cpp" />
     <ClCompile Include="SourceCode\UTFWin\WindowManager.cpp" />
+    <ClCompile Include="SourceCode\Simulator\cSpeciesRelationshipManager.cpp">
+      <SubType>
+      </SubType>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Natvis Include="EASTL.natvis" />

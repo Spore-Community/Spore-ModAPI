@@ -198,8 +198,9 @@ namespace Editors
 	auto_STATIC_METHOD(cEditor, uint32_t, GetTypeIDForAssetType, Args(uint32_t assetTypeID), Args(assetTypeID));
 
 	auto_STATIC_METHOD(cEditor, const char16_t*, GetNameForAssetType, Args(uint32_t assetTypeID), Args(assetTypeID));
+	
+	auto_STATIC_METHOD_VOID(cEditor, ComputeCreatureVerbIcons, Args(cCreatureDataResource* creatureData, cSPVerbTrayCollection* VerbTrayCollection, int brainLevel, float param_4), Args(creatureData, VerbTrayCollection, brainLevel, param_4));
 
-	auto_STATIC_METHOD_VOID(cEditor, ComputeCreatureVerbIcons, Args(cCreatureDataResource* creatureData, int VerbTrayCollection, int brainLevel, float param_4), Args(creatureData, VerbTrayCollection, brainLevel, param_4));
 
 	auto_STATIC_METHOD(cEditor, bool, LoadCreatureData,Args(ResourceKey* creation, cCreatureDataResource** dst), Args(creation, dst));
 

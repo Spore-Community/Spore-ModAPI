@@ -129,10 +129,12 @@ namespace Simulator
 
 	public:
 		/* 1Ch */ int mNumOfKnowSpecies;
+		/* 1Ch */ int _padding_;
+		/* 1Ch */ int _padding_2;
 		/* 20h */ hash_map<ResourceKey, tRelationshipData> mSpeciesRelationshipMap;	//hash_map<ResourceKey, tRelationshipData>
 		/* 40h */ hash_map<ResourceKey, tRelationshipData> mSpeciesRelationshipMap2;
 	};
-	ASSERT_SIZE(cSpeciesRelationshipManager, 0x60);
+	ASSERT_SIZE(cSpeciesRelationshipManager, 0x68);
 
 	namespace Addresses(cSpeciesRelationshipManager) {
 		DeclareAddress(Get);

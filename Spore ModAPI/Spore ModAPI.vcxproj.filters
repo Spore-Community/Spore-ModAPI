@@ -2262,6 +2262,30 @@
     <ClInclude Include="Spore\Graphics\cThumbnailManager.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Spore\Simulator\SubSystem\cSpeciesRelationshipManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spore\Editors\cSPEditorVerbIconTray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spore\Editors\cSPEditorVerbIcon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spore\Editors\cSPEditorVerbTrayCollection.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spore\Editors\VerbIconEnums.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spore\Editors\VerbIconStructs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spore\Editors\cSPVerbIconRollover.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Spore\UI\cSPUIPropertyLayout.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SourceCode\Allocator.cpp">
@@ -2750,7 +2774,10 @@
     <ClCompile Include="SourceCode\OpenSSL.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="SourceCode\Editors\VerbIconData.cpp">
+    <ClCompile Include="SourceCode\Simulator\cSpeciesRelationshipManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="SourceCode\UI\cSPUIPropertyLayout.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

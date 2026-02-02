@@ -41,6 +41,7 @@
 #include <Spore\Editors\cEditorAnimEvent.h>
 #include <Spore\Editors\cEditorAnimWorld.h>
 #include <Spore\Editors\BakeManager.h>
+#include <Spore\Editors\cSPVerbTrayCollection.h>
 
 #include <Spore\Graphics\Model.h>
 #include <Spore\Graphics\ILayer.h>
@@ -217,10 +218,19 @@ namespace Editors
 		static uint32_t GetTypeIDForAssetType(uint32_t assetTypeID);
 
 		///Show creature abilities in verbtrayCollection
-		static void ComputeCreatureVerbIcons(cCreatureDataResource* creatureData, int VerbTrayCollection, int brainLevel, float param_4);
+		static void ComputeCreatureVerbIcons(cCreatureDataResource* creatureData, cSPVerbTrayCollection* VerbTrayCollection, int brainLevel, float param_4);
+
+		///Show vehicle abilities in verbtrayCollection
+		static void ComputeVehicleVerbIcons(cCreatureDataResource* creatureData, cSPVerbTrayCollection* VerbTrayCollection);
+
+		///get HeaderVerbTray icon by creation type
+		static void GetHeaderIcon(int unk, uint32_t modelType);
 
 		///return cCreatureDataResource*
 		static bool LoadCreatureData(ResourceKey* creation, cCreatureDataResource** dst);
+
+		///return cCreatureDataResource*
+		void CaptureThumbnail(EditorModel* editorModel, Graphics::IModelWorld* modelWorld, int textureSize, uint32_t mCameraThumbnailID, uint32_t messageID, Graphics::Texture* thumbTexture);
 
 	public:
 
@@ -401,7 +411,7 @@ namespace Editors
 		/* 298h */	Graphics::ShadowMapInfo* mpShadowMapInfo;
 		/* 29Ch */	int mDefaultPaintTheme;
 		/* 2A0h */	int mCurrentPaintTheme;
-		/* 2A4h */	int mVerbIconTray;
+		/* 2A4h */	cSPVerbTrayCollectionPtr mVerbIconTray;
 		/// The save extension key which will be parsed both into a key and a three letter extension.
 		/* 2A8h */	uint32_t mSaveExtension;
 		/// The save directory key, Resource::SaveAreaID
@@ -531,11 +541,11 @@ namespace Editors
 		/* 42Ch */	int field_42C;
 		/* 430h */	bool field_430;
 		/* 434h */	StdEditorLimitsPtr mpEditorLimits;
-		/* 438h */	int field_438;
+		/* 438h */	int field_438;	//ulong64 mnActivateTime
 		/* 43Ch */	int field_43C;
-		/* 440h */	int field_440;
+		/* 440h */	int field_440;	//ulong64 mnModelStartTime
 		/* 444h */	int field_444;
-		/* 448h */	int field_448;
+		/* 448h */	int field_448;	//ulong64 mnTotalTime
 		/* 44Ch */	int field_44C;
 		/* 450h */	int field_450;  // 1
 		/* 454h */	eastl::map<int, int> field_454;

@@ -81,8 +81,7 @@ namespace Simulator
 		/* 548h */	float mCreatureAbilityJumping;
 		/* 54Ch */	float mCreatureAbilityGliding;
 		/* 550h */	float mCreatureAbilityFlapping;
-		/* 554h */	Math::Vector3 mBoundingBoxUpper;
-		/* 560h */	Math::Vector3 mBoundingBoxLower;
+		/* 554h */	Math::BoundingBox mBoundingBox;
 		/* 56Ch */	float mAdditionalHealth;  // 100.0
 		/* 570h */	float mSatiety;  // 200.0
 		/* 574h */	float mCreatureMass;

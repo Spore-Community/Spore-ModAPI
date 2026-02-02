@@ -66,17 +66,20 @@ namespace Editors
     public:
         static const uint32_t TYPE = 0x4AA0ACD;
 
-        /* 00h */	virtual int AddRef();
-        /* 04h */	virtual int Release();
-        /* 08h */	virtual void* Dispose();
-        /* 0Ch */	virtual void* AsInterface(InterfaceId interfaceID);
+        /* 00h */	virtual int AddRef() override;
+        /* 04h */	virtual int Release() override;
+        /* 08h */	virtual ~VerbIconData();
+        /* 0Ch */	virtual void* Cast(uint32_t) const override;
         /* 10h */	virtual void Init(App::PropertyList* propList);
         /* 14h */	virtual void Shutdown();
         /* 18h */	virtual void SetArrayIndex(int arrayIndex);
         /// Used to generate text
+        /* 20h */	virtual void SetKey(int verbIconTriggerKey);
+        /* 24h */	virtual eastl::string16 GetName(bool includeLevel);
+        /* 28h */	virtual eastl::string16 GetDescription();
         /* 1Ch */	virtual void SetHotKey(int verbIconTriggerKey);
         /* 20h */	virtual eastl::string16 GetIconName(eastl::string16* iconName, bool includeLevel);
-        /* 24h */	virtual eastl::string16 GetIconDescription(eastl::string16* iconDesc);
+        /* 24h */	virtual eastl::string16* GetIconDescription();
 	public:
     /* 0Ch */   bool mVerbIconUseDescription;
     /* 0Dh */   bool mVerbIconShowLevel;
@@ -88,7 +91,7 @@ namespace Editors
     /* 18h */   float mVerbIconLevel;
     /* 1Ch */   float mVerbIconMaxLevel;
     /* 20h */   int field_20;
-    /* 24h */   eVerbIconCategory mVerbIconCategory;
+    /* 24h */   uint32_t mVerbIconCategory;
     /* 28h */   uint32_t mVerbIconRepresentativeAnimation;
     /* 2Ch */   Math::ColorRGBA mVerbIconColor;
     /* 3Ch */   uint32_t mVerbIconRolloverLevelImageID;
@@ -119,7 +122,7 @@ namespace Editors
         DeclareAddress(AddRef);
         DeclareAddress(Release);
         DeclareAddress(Dispose);
-        DeclareAddress(AsInterface);
+        DeclareAddress(Cast);
         DeclareAddress(Init);
         DeclareAddress(Shutdown);
         DeclareAddress(SetArrayIndex);
