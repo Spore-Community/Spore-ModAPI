@@ -643,6 +643,8 @@ namespace Editors
 		DeclareAddress(GetEditorForAssetType);
 		DeclareAddress(GetNameForAssetType);
 		DeclareAddress(GetTypeIDForAssetType);
+		DeclareAddress(ComputeCreatureVerbIcons);
+		DeclareAddress(LoadCreatureData);
 	}
 
 #ifdef SDK_TO_GHIDRA

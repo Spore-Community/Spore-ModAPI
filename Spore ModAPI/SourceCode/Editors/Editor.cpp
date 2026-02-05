@@ -198,5 +198,16 @@ namespace Editors
 	auto_STATIC_METHOD(cEditor, uint32_t, GetTypeIDForAssetType, Args(uint32_t assetTypeID), Args(assetTypeID));
 
 	auto_STATIC_METHOD(cEditor, const char16_t*, GetNameForAssetType, Args(uint32_t assetTypeID), Args(assetTypeID));
+	
+	auto_STATIC_METHOD_VOID(cEditor, ComputeCreatureVerbIcons, Args(cCreatureDataResource* creatureData, cSPVerbTrayCollection* VerbTrayCollection, int brainLevel, float param_4), Args(creatureData, VerbTrayCollection, brainLevel, param_4));
+
+	auto_STATIC_METHOD(cEditor, bool, LoadCreatureData,Args(ResourceKey* creation, cCreatureDataResource** dst), Args(creation, dst));
+
+	auto_METHOD(EditorModel, int, GetSkinEffect, Args(int skinLayout), Args(skinLayout));
+
+	auto_METHOD(EditorModel, int, GetSkinEffectSeed, Args(int skinLayout), Args(skinLayout));
+
+	auto_METHOD_VOID(EditorModel, SetSkinEffect, Args(int skinLayout, uint32_t effectID), Args(skinLayout, effectID));
+	auto_METHOD_VOID(EditorModel, SetSkinEffectSeed, Args(int skinLayout, uint32_t seed), Args(skinLayout, seed));
 }
 #endif

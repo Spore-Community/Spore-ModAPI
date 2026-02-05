@@ -81,10 +81,21 @@ namespace Editors
 
 		DefineAddress(HandleMessage, SelectAddress(0x591C80, 0x591FA0));
 
+		DefineAddress(GetEditorForAssetType, SelectAddress(0x433010, 0x4333e0));
+		DefineAddress(GetNameForAssetType, SelectAddress(0x4badc0, 0x4bba50));
+		DefineAddress(GetTypeIDForAssetType, SelectAddress(0x4bb110, 0x4bbda0));
 
-		DefineAddress(GetEditorForAssetType, SelectAddress(0x00433010, 0x004333e0));
-		DefineAddress(GetNameForAssetType, SelectAddress(0x004badc0, 0x004bba50));
-		DefineAddress(GetTypeIDForAssetType, SelectAddress(0x004bb110, 0x004bbda0));
+		DefineAddress(ComputeCreatureVerbIcons, SelectAddress(0x4e2a50, 0x4e8860));
+
+		DefineAddress(LoadCreatureData, SelectAddress(0x4b5760, 0x4bb500));
+	}
+
+	namespace Addresses(EditorModel)
+	{
+		DefineAddress(GetSkinEffect, SelectAddress(0x4a8790, 0x4ae180));
+		DefineAddress(SetSkinEffect, SelectAddress(0x4a8820, 0x4ae210));
+		DefineAddress(GetSkinEffectSeed, SelectAddress(0x4a87b0, 0x4ae1a0));
+		DefineAddress(SetSkinEffectSeed, SelectAddress(0x4a8840, 0x4ae230));
 	}
 
 	namespace Addresses(EditorCamera)
