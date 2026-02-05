@@ -92,6 +92,14 @@ namespace Editors
 		DefineAddress(LoadCreatureData, SelectAddress(0x4b5760, 0x4bb500));
 	}
 
+	namespace Addresses(EditorModel)
+	{
+		DefineAddress(GetSkinEffect, SelectAddress(0x4a8790, 0x4ae180));
+		DefineAddress(SetSkinEffect, SelectAddress(0x4a8820, 0x4ae210));
+		DefineAddress(GetSkinEffectSeed, SelectAddress(0x4a87b0, 0x4ae1a0));
+		DefineAddress(SetSkinEffectSeed, SelectAddress(0x4a8840, 0x4ae230));
+	}
+
 	namespace Addresses(EditorCamera)
 	{
 		DefineAddress(AddRef, SelectAddress(0xCF91C0, 0x671F20));

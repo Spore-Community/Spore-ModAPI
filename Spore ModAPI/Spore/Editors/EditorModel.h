@@ -64,6 +64,16 @@ namespace Editors
 		int GetRigblocksCount() const;
 		EditorRigblock* GetRigblock(int index);
 
+
+		/// skinLayout: 0 — base, 1 — coat, 2 — detail
+		int GetSkinEffect(int skinLayout);
+
+		void SetSkinEffect(int skinLayout, uint32_t effectID);
+
+		int GetSkinEffectSeed(int skinLayout);
+
+		void SetSkinEffectSeed(int skinLayout, uint32_t seed);
+
 	protected:
 		/* 08h */	int mnRefCount;
 
@@ -106,6 +116,10 @@ namespace Editors
 		DeclareAddress(Load);  // 0x4AE240, 0x4AE8D0
 		DeclareAddress(Save);  // 0x4AF0F0, 0x4AF780
 		DeclareAddress(Dispose);  // 0x4AD1F0, 0x4AD850
+		DeclareAddress(GetSkinEffect);
+		DeclareAddress(SetSkinEffect);
+		DeclareAddress(GetSkinEffectSeed);
+		DeclareAddress(SetSkinEffectSeed);
 	}
 
 #ifndef SDK_TO_GHIDRA

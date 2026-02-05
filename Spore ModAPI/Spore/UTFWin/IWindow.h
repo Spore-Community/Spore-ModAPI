@@ -63,6 +63,7 @@ namespace UTFWin
 		kStateEnabled = 1,
 		kStateClicked = 2,
 
+		kStateSelected = 5,
 		kStateHover = 8,
 	};
 

@@ -204,5 +204,11 @@ namespace Editors
 
 	auto_STATIC_METHOD(cEditor, bool, LoadCreatureData,Args(ResourceKey* creation, cCreatureDataResource** dst), Args(creation, dst));
 
+	auto_METHOD(EditorModel, int, GetSkinEffect, Args(int skinLayout), Args(skinLayout));
+
+	auto_METHOD(EditorModel, int, GetSkinEffectSeed, Args(int skinLayout), Args(skinLayout));
+
+	auto_METHOD_VOID(EditorModel, SetSkinEffect, Args(int skinLayout, uint32_t effectID), Args(skinLayout, effectID));
+	auto_METHOD_VOID(EditorModel, SetSkinEffectSeed, Args(int skinLayout, uint32_t seed), Args(skinLayout, seed));
 }
 #endif
