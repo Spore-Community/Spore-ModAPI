@@ -109,14 +109,12 @@ namespace Editors
 	public:
 		/* 08h */	int mBudget;
 		/* 0Ch */	Mode mMode;
-		/* 10h */	int field_10;	//mThemeID
-		/* 14h */	bool field_14;	//mIsPainted
-		/* 15h */	bool field_15;	//mIsModelDirty
-		/* 18h */	int field_18;	//mPainLikeThisKey
-		/* 1Ch */	int field_1C;
-		/* 20h */	int field_20;
-		/* 24h */	int field_24;	//mPaintLikeThisGroupID
-		/* 28h */	int field_28;	//mPaintLikeThisItemID
+		/* 10h */	int mThemeID;
+		/* 14h */	bool mIsPainted;
+		/* 15h */	bool mIsModelDirty;
+		/* 18h */	ResourceKey mPainLikeThisKey;
+		/* 24h */	uint32_t mPaintLikeThisGroupID;
+		/* 28h */	uint32_t mPaintLikeThisItemID;
 	};
 	ASSERT_SIZE(EditorStateEditHistory, 0x2C);
 
