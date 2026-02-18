@@ -81,35 +81,35 @@ namespace Editors
         /* 20h */	virtual eastl::string16 GetIconName(eastl::string16* iconName, bool includeLevel);
         /* 24h */	virtual eastl::string16* GetIconDescription();
 	public:
-    /* 0Ch */   bool mVerbIconUseDescription;
-    /* 0Dh */   bool mVerbIconShowLevel;
-    /* 0Eh */   bool mPaletteItemRolloverShowLevel;
-    /* 0Fh */   bool mVerbIconRolloverShowLevel;
+    /* 0Ch */   bool mVerbIconUseDescription;  // true
+    /* 0Dh */   bool mVerbIconShowLevel;  // true
+    /* 0Eh */   bool mPaletteItemRolloverShowLevel;  // true
+    /* 0Fh */   bool mVerbIconRolloverShowLevel;  // true
     /* 10h */   bool mShowHotKey;
     /* 11h */   bool mVerbIconShowZeroLevel;
-    /* 14h */   int mVerbIconTriggerKey;
-    /* 18h */   float mVerbIconLevel;
+    /* 14h */   int mVerbIconTriggerKey;  // -1
+    /* 18h */   float mVerbIconLevel;  // not initialized
     /* 1Ch */   float mVerbIconMaxLevel;
-    /* 20h */   int field_20;
+    /* 20h */   int field_20;  // not initialized
     /* 24h */   uint32_t mVerbIconCategory;
-    /* 28h */   uint32_t mVerbIconRepresentativeAnimation;
+    /* 28h */   uint32_t mVerbIconRepresentativeAnimation;  // -1
     /* 2Ch */   Math::ColorRGBA mVerbIconColor;
     /* 3Ch */   uint32_t mVerbIconRolloverLevelImageID;
     /* 40h */   ResourceKey mVerbIconRolloverLevelLayoutID;
-    /* 4Ch */   bool mVerbIconRolloverShowIcon;
+    /* 4Ch */   bool mVerbIconRolloverShowIcon  // not initialized;
     /* 4Dh */   bool mVerbIconEnforceMaxLevel;
-    /* 50h */   uint32_t mCreatureAbilityCategory;
+    /* 50h */   uint32_t mCreatureAbilityCategory;  // not initialized
     /* 54h */   LocalizedString mCreatureAbilityName;
     /* 68h */   eastl::string16 field_68;
     /* 78h */   uint32_t mTriggerKeyForLocalization;
-    /* 7Ch */   int field_7C;
-    /* 80h */   int field_80;
+    /* 7Ch */   int field_7C;  // -1
+    /* 80h */   int field_80;  // -1
     /* 84h */   int field_84;
     /* 88h */   int field_88;
     /* 8Ch */   int field_8C;
-    /* 90h */   uint32_t mVerbIconImageID;
+    /* 90h */   uint32_t mVerbIconImageID;  // not initialized
     /* 94h */   uint32_t mVerbIconTrayOverrideImageID;
-    /* 98h */   uint32_t mVerbIconTraySmallCardOverrideImageID;
+    /* 98h */   uint32_t mVerbIconTraySmallCardOverrideImageID;  // not initialized
     /* 9Ch */   ResourceKey mVerbIconLayout;
     /* A8h */   ResourceKey mVerbIconGameLayout;
     /* B4h */   ResourceKey mVerbIconStaticLayout;
