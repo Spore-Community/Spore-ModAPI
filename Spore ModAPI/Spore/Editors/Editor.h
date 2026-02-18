@@ -541,12 +541,9 @@ namespace Editors
 		/* 42Ch */	int field_42C;
 		/* 430h */	bool field_430;
 		/* 434h */	StdEditorLimitsPtr mpEditorLimits;
-		/* 438h */	int field_438;	//ulong64 mnActivateTime
-		/* 43Ch */	int field_43C;
-		/* 440h */	int field_440;	//ulong64 mnModelStartTime
-		/* 444h */	int field_444;
-		/* 448h */	int field_448;	//ulong64 mnTotalTime
-		/* 44Ch */	int field_44C;
+		/* 438h */	ulong64 mnActivateTime;
+		/* 440h */	ulong64 mnModelStartTime;
+		/* 448h */	ulong64 mnTotalTime;
 		/* 450h */	int field_450;  // 1
 		/* 454h */	eastl::map<int, int> field_454;
 		/* 470h */	bool field_470;  // property 0x46082CA
