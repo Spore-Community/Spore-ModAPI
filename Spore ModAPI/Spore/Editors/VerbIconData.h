@@ -96,7 +96,7 @@ namespace Editors
     /* 2Ch */   Math::ColorRGBA mVerbIconColor;
     /* 3Ch */   uint32_t mVerbIconRolloverLevelImageID;
     /* 40h */   ResourceKey mVerbIconRolloverLevelLayoutID;
-    /* 4Ch */   bool mVerbIconRolloverShowIcon  // not initialized;
+    /* 4Ch */   bool mVerbIconRolloverShowIcon;  // not initialized
     /* 4Dh */   bool mVerbIconEnforceMaxLevel;
     /* 50h */   uint32_t mCreatureAbilityCategory;  // not initialized
     /* 54h */   LocalizedString mCreatureAbilityName;
