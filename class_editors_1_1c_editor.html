@@ -108,6 +108,28 @@
               <span class="m-doc-wrap-bumper">static auto <a href="#a8b8b86b069ed93009406ee228d31faaf" class="m-doc-self">GetTypeIDForAssetType</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> assetTypeID) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a></span>
             </dt>
             <dd><span></span></dd>
+            <dt id="a52985ed7bc877291add670ece10a6c21">
+              <span class="m-doc-wrap-bumper">static auto <a href="#a52985ed7bc877291add670ece10a6c21" class="m-doc-self">ComputeCreatureVerbIcons</a>(</span><span class="m-doc-wrap"><a href="class_editors_1_1c_creature_data_resource.html" class="m-doc">cCreatureDataResource</a>* creatureData,
+              <a href="class_editors_1_1c_s_p_verb_tray_collection.html" class="m-doc">cSPVerbTrayCollection</a>* VerbTrayCollection,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> brainLevel,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> param_4) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a></span>
+            </dt>
+            <dd>Show creature abilities in verbtrayCollection.</dd>
+            <dt id="a0192c0a1413229d21cdbd83228b02a48">
+              <span class="m-doc-wrap-bumper">static auto <a href="#a0192c0a1413229d21cdbd83228b02a48" class="m-doc-self">ComputeVehicleVerbIcons</a>(</span><span class="m-doc-wrap"><a href="class_editors_1_1c_creature_data_resource.html" class="m-doc">cCreatureDataResource</a>* creatureData,
+              <a href="class_editors_1_1c_s_p_verb_tray_collection.html" class="m-doc">cSPVerbTrayCollection</a>* VerbTrayCollection) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a></span>
+            </dt>
+            <dd>Show vehicle abilities in verbtrayCollection.</dd>
+            <dt id="a1eb2e54a4a0415129703a522b0c852a2">
+              <span class="m-doc-wrap-bumper">static auto <a href="#a1eb2e54a4a0415129703a522b0c852a2" class="m-doc-self">GetHeaderIcon</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> unk,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> modelType) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a></span>
+            </dt>
+            <dd>get HeaderVerbTray icon by creation type</dd>
+            <dt id="aa04f9cf86ec60b5ea8df7daf24671821">
+              <span class="m-doc-wrap-bumper">static auto <a href="#aa04f9cf86ec60b5ea8df7daf24671821" class="m-doc-self">LoadCreatureData</a>(</span><span class="m-doc-wrap"><a href="struct_resource_key.html" class="m-doc">ResourceKey</a>* creation,
+              <a href="class_editors_1_1c_creature_data_resource.html" class="m-doc">cCreatureDataResource</a>** dst) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a></span>
+            </dt>
+            <dd>return cCreatureDataResource*</dd>
           </dl>
         </section>
         <section id="pub-methods">
@@ -249,6 +271,15 @@
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> = 0.0f) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a></span>
             </dt>
             <dd><span></span></dd>
+            <dt id="a1e542560ecba0034ac990fdb5c23bc80">
+              <span class="m-doc-wrap-bumper">auto <a href="#a1e542560ecba0034ac990fdb5c23bc80" class="m-doc-self">CaptureThumbnail</a>(</span><span class="m-doc-wrap"><a href="class_editors_1_1_editor_model.html" class="m-doc">EditorModel</a>* editorModel,
+              <a href="class_graphics_1_1_i_model_world.html" class="m-doc">Graphics::<wbr />IModelWorld</a>* modelWorld,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> textureSize,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> mCameraThumbnailID,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> messageID,
+              <a href="class_graphics_1_1_texture.html" class="m-doc">Graphics::<wbr />Texture</a>* thumbTexture) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a></span>
+            </dt>
+            <dd>return cCreatureDataResource*</dd>
           </dl>
         </section>
         <section id="pub-attribs">
@@ -358,8 +389,8 @@
               <a href="_i_model_world_8h.html#ac806a1f42e226576db417e69309943f5" class="m-doc">IModelWorldPtr</a> <a href="#a682c05334e63c614cb0d58479b9e4068" class="m-doc-self">mpMainModelWorld</a>
             </dt>
             <dd>The model world that contains the pedestal and test environment model, and also editor rigblocks.</dd>
-            <dt id="ac090c3e8022f20c4cc0c97cbad39c12d">
-              <a href="_i_model_world_8h.html#ac806a1f42e226576db417e69309943f5" class="m-doc">IModelWorldPtr</a> <a href="#ac090c3e8022f20c4cc0c97cbad39c12d" class="m-doc-self">field_88</a>
+            <dt id="abf34657782ad29b5a3f44aaf1d31ba76">
+              <a href="_i_model_world_8h.html#ac806a1f42e226576db417e69309943f5" class="m-doc">IModelWorldPtr</a> <a href="#abf34657782ad29b5a3f44aaf1d31ba76" class="m-doc-self">mSaveModelWorld</a>
             </dt>
             <dd><span></span></dd>
             <dt id="a128bb8d7ee6a4509aea734fd0a86e5e8">
@@ -378,8 +409,8 @@
               <a href="class_editors_1_1_editor_model.html" class="m-doc">EditorModel</a>* <a href="#acb04aef9f9986afb5035815887eceb8c" class="m-doc-self">mpEditorModel</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a0c5bde816b3190615bd99de81ee6089b">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a0c5bde816b3190615bd99de81ee6089b" class="m-doc-self">field_9C</a>
+            <dt id="ace1fedffdc42518bcb18b64676ec1d26">
+              <a href="class_editors_1_1_editor_model.html" class="m-doc">EditorModel</a>* <a href="#ace1fedffdc42518bcb18b64676ec1d26" class="m-doc-self">mEditorSaveModel</a>
             </dt>
             <dd><span></span></dd>
             <dt id="a192691f0907f9b14894b2410b9148c98">
@@ -426,16 +457,16 @@
               <a href="_editor_rigblock_8h.html#ac23466b995d482a0e4ba9c16fb9b3ac7" class="m-doc">EditorRigblockPtr</a> <a href="#a0a25eb9a3753c57681e8ca4fd6270240" class="m-doc-self">mpSelectedPart</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="aefd7a19f1360e4e5f9049541ee7308b5">
-              <a href="_editor_rigblock_8h.html#ac23466b995d482a0e4ba9c16fb9b3ac7" class="m-doc">EditorRigblockPtr</a> <a href="#aefd7a19f1360e4e5f9049541ee7308b5" class="m-doc-self">field_D8</a>
+            <dt id="a0b1a038ad814a3151a513895d5ee6860">
+              <a href="_editor_rigblock_8h.html#ac23466b995d482a0e4ba9c16fb9b3ac7" class="m-doc">EditorRigblockPtr</a> <a href="#a0b1a038ad814a3151a513895d5ee6860" class="m-doc-self">mPreviousSelectedBlock</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="ae46a67948e5c091daa833a328e18f0af">
-              <a href="_editor_rigblock_8h.html#ac23466b995d482a0e4ba9c16fb9b3ac7" class="m-doc">EditorRigblockPtr</a> <a href="#ae46a67948e5c091daa833a328e18f0af" class="m-doc-self">field_DC</a>
+            <dt id="a29414ba5bf81682580f388f0a7fc3d47">
+              <a href="_editor_rigblock_8h.html#ac23466b995d482a0e4ba9c16fb9b3ac7" class="m-doc">EditorRigblockPtr</a> <a href="#a29414ba5bf81682580f388f0a7fc3d47" class="m-doc-self">mToBeSelectedBlock</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a85a6d608593d4ef24261010b17f49eea">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <a href="#a85a6d608593d4ef24261010b17f49eea" class="m-doc-self">field_E0</a>
+            <dt id="a06cec2e6d6e540424a10e0940a58948b">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <a href="#a06cec2e6d6e540424a10e0940a58948b" class="m-doc-self">mToBeSelectedTorso</a>
             </dt>
             <dd><span></span></dd>
             <dt id="a2790ed6afb96d62b72a4fc6540b55326">
@@ -742,8 +773,8 @@
               <a href="_texture_8h.html#affea3369120131ed058702d2945a10b4" class="m-doc">TexturePtr</a> <a href="#a5dc163175ad17393a9a3c9bf6e2274e0" class="m-doc-self">mpThumbnailTexture</a>
             </dt>
             <dd>Briefly set when saving a creature, then immediately unset.</dd>
-            <dt id="af2771bf9daa4782413f81672741c0d8e">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#af2771bf9daa4782413f81672741c0d8e" class="m-doc-self">field_290</a>
+            <dt id="abbec17e0b64079a0cbf592fc73728c1d">
+              <a href="_texture_8h.html#affea3369120131ed058702d2945a10b4" class="m-doc">TexturePtr</a> <a href="#abbec17e0b64079a0cbf592fc73728c1d" class="m-doc-self">field_290</a>
             </dt>
             <dd><span></span></dd>
             <dt id="af57b13603080d2c21f4d7aa5643940f3">
@@ -754,16 +785,16 @@
               <a href="struct_graphics_1_1_shadow_map_info.html" class="m-doc">Graphics::<wbr />ShadowMapInfo</a>* <a href="#ac986f39676658c6276756fffb59c2bfa" class="m-doc-self">mpShadowMapInfo</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="ab5a40d5975937910e87e1b4523654983">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ab5a40d5975937910e87e1b4523654983" class="m-doc-self">field_29C</a>
+            <dt id="a514c935efe17a962e5d5657cd99b4245">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a514c935efe17a962e5d5657cd99b4245" class="m-doc-self">mDefaultPaintTheme</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="ae9cd2d61ae19192548c5c5dd1fd04b90">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ae9cd2d61ae19192548c5c5dd1fd04b90" class="m-doc-self">field_2A0</a>
+            <dt id="abe5ead955fb3e8f335a744b03d691031">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#abe5ead955fb3e8f335a744b03d691031" class="m-doc-self">mCurrentPaintTheme</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a95aefc2a4424e8cde8a96ca52c54cdc8">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a95aefc2a4424e8cde8a96ca52c54cdc8" class="m-doc-self">field_2A4</a>
+            <dt id="a7e0cf7c4f08bcceb16d61d3897db6d59">
+              <a href="c_s_p_verb_tray_collection_8h.html#a58c74a08bf8cc4226e5c288c4c6b7da6" class="m-doc">cSPVerbTrayCollectionPtr</a> <a href="#a7e0cf7c4f08bcceb16d61d3897db6d59" class="m-doc-self">mVerbIconTray</a>
             </dt>
             <dd><span></span></dd>
             <dt id="ac3d7a62a4c558229d223aa3620a35613">
@@ -778,20 +809,20 @@
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <a href="#add5e13bbeb6d5a99d2d0f9e74207fd03" class="m-doc-self">mIsActive</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a02b87735f855d97e69cca9ae25007a99">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">char</a> <a href="#a02b87735f855d97e69cca9ae25007a99" class="m-doc-self">field_2B1</a>
+            <dt id="a4bad59e87ec4c8e886153880f301824a">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <a href="#a4bad59e87ec4c8e886153880f301824a" class="m-doc-self">mManipulatedBlockFromPalette</a>
             </dt>
             <dd><span></span></dd>
             <dt id="a8b83ec0e901cdf0b555663d5a6440dcf">
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <a href="#a8b83ec0e901cdf0b555663d5a6440dcf" class="m-doc-self">mbShowVertebrae</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a8d1b265f710a553b16fa71de98985d35">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">char</a> <a href="#a8d1b265f710a553b16fa71de98985d35" class="m-doc-self">field_2B3</a>
+            <dt id="afa6b8a844f6971e93f92609a694862ef">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <a href="#afa6b8a844f6971e93f92609a694862ef" class="m-doc-self">mIgnoreMouseMove</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="ab0618531126fd092af450e9e53d674df">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">char</a> <a href="#ab0618531126fd092af450e9e53d674df" class="m-doc-self">field_2B4</a>
+            <dt id="a601f6bf692521030588e6ad4d5055aa1">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <a href="#a601f6bf692521030588e6ad4d5055aa1" class="m-doc-self">mUnselectCurrentBlock</a>
             </dt>
             <dd><span></span></dd>
             <dt id="a8e31d5f6803a95438251d206c7b861c3">
@@ -1182,28 +1213,16 @@
               <a href="_editor_limits_8h.html#a4bd70713c044c1036d28ec55a3b55648" class="m-doc">StdEditorLimitsPtr</a> <a href="#afc2dd6189ff04e4b48069f9b10b199d1" class="m-doc-self">mpEditorLimits</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a474aa368fd0c360284c832cffef4fa46">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a474aa368fd0c360284c832cffef4fa46" class="m-doc-self">field_438</a>
+            <dt id="a1b2e6c5670825178f4a42a3516353543">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">ULONG64</a> <a href="#a1b2e6c5670825178f4a42a3516353543" class="m-doc-self">mnActivateTime</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a0218087f0cbae23631020a8534804d92">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a0218087f0cbae23631020a8534804d92" class="m-doc-self">field_43C</a>
+            <dt id="a2b3b20d20c51328b7cf009d425a80f71">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">ULONG64</a> <a href="#a2b3b20d20c51328b7cf009d425a80f71" class="m-doc-self">mnModelStartTime</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a95e074292d9c42ae9722618dd6834b20">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a95e074292d9c42ae9722618dd6834b20" class="m-doc-self">field_440</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a3f1a6865aecf873725e8ae9bd95eb23a">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a3f1a6865aecf873725e8ae9bd95eb23a" class="m-doc-self">field_444</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a5b4a9599bf02cf86aa388540f4002a29">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a5b4a9599bf02cf86aa388540f4002a29" class="m-doc-self">field_448</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="aae8484125117d33cacbe371c42916bda">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#aae8484125117d33cacbe371c42916bda" class="m-doc-self">field_44C</a>
+            <dt id="a49cd8015af6171486b04a5d13858fa55">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">ULONG64</a> <a href="#a49cd8015af6171486b04a5d13858fa55" class="m-doc-self">mnTotalTime</a>
             </dt>
             <dd><span></span></dd>
             <dt id="a5f09ba1763fda536bfee46dff1b4a2aa">

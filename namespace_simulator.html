@@ -463,6 +463,10 @@
             </dt>
             <dd><span></span></dd>
             <dt>
+              class <a href="class_simulator_1_1c_gonzago_subsystem.html" class="m-doc">cGonzagoSubsystem</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
               class <a href="class_simulator_1_1c_gonzago_timer.html" class="m-doc">cGonzagoTimer</a>
             </dt>
             <dd>A class for measuring time inside <a href="namespace_simulator.html" class="m-doc">Simulator</a> modes.</dd>
@@ -928,6 +932,14 @@
             </dt>
             <dd><span></span></dd>
             <dt>
+              class <a href="class_simulator_1_1c_species_relationship_manager.html" class="m-doc">cSpeciesRelationshipManager</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              class <a href="class_simulator_1_1c_species_relationship_manager_dispose.html" class="m-doc">cSpeciesRelationshipManagerDispose</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
               class <a href="class_simulator_1_1c_star.html" class="m-doc">cStar</a>
             </dt>
             <dd><span></span></dd>
@@ -1096,6 +1108,10 @@
             </dt>
             <dd><span></span></dd>
             <dt>
+              class <a href="class_simulator_1_1_i_gonzago_subsystem.html" class="m-doc">IGonzagoSubsystem</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
               class <a href="class_simulator_1_1_i_message_parameters.html" class="m-doc">IMessageParameters</a>
             </dt>
             <dd><span></span></dd>
@@ -1214,6 +1230,10 @@
             <dd>Called when a space tool hits a target. Called by <a href="class_simulator_1_1c_tool_strategy.html#a2561e73287e748536c5de8ae994dfec3" class="m-doc">cToolStrategy::<wbr />OnHit</a>.</dd>
             <dt>
               struct <a href="struct_simulator_1_1t_player_death_data.html" class="m-doc">tPlayerDeathData</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              struct <a href="struct_simulator_1_1t_relationship_data.html" class="m-doc">tRelationshipData</a>
             </dt>
             <dd><span></span></dd>
             <dt>
@@ -2119,6 +2139,23 @@
               <a href="#af5751e59e63531a81c4b045d78547e74a258a591d0e3cc468c5247ca9dbbe8864" class="m-doc">kBtnDecline</a> = 0x05E4F770,
               <a href="#af5751e59e63531a81c4b045d78547e74ac780ba5ccceac0130506f1add84f4a46" class="m-doc">kBtnTradeBuy</a> = 0x04C1510A,
               <a href="#af5751e59e63531a81c4b045d78547e74a2b641f3a094c9a97a3746227eb4f0654" class="m-doc">kBtnTradeSell</a> = 0x04C1510C }</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">enum <a href="#a2b4297d85ed4bf1a6029a9703a2ea506" class="m-doc">eRelationshipStatus</a> { </span><span class="m-doc-wrap"><a href="#a2b4297d85ed4bf1a6029a9703a2ea506ad52c29eb78618306495742271209708e" class="m-doc">kRelationshipNone</a> = 0,
+              <a href="#a2b4297d85ed4bf1a6029a9703a2ea506a6a1be17e6d590eea71b6e1215215b530" class="m-doc">kRelationshipFeared</a> = 1,
+              <a href="#a2b4297d85ed4bf1a6029a9703a2ea506a5acb8f4e0e1e617c3d91515aea72ede2" class="m-doc">kRelationshipHated</a> = 2,
+              <a href="#a2b4297d85ed4bf1a6029a9703a2ea506af5ff95ab12dab973edf0779789166a6b" class="m-doc">kRelationshipNeutral</a> = 3,
+              <a href="#a2b4297d85ed4bf1a6029a9703a2ea506ae0390e9125289a179c1709fcdecc2c98" class="m-doc">kRelationshipFriendly</a> = 4,
+              <a href="#a2b4297d85ed4bf1a6029a9703a2ea506a5c842736fe61cdece3bc8bef42fdfff5" class="m-doc">kRelationshipHostile</a> = 5,
+              <a href="#a2b4297d85ed4bf1a6029a9703a2ea506ad7e49f0d725aa158b1636c1ee1f51533" class="m-doc">kRelationshipBestFriends</a> = 6,
+              <a href="#a2b4297d85ed4bf1a6029a9703a2ea506adfc7bf7b3e27078a5121c2f964e140c1" class="m-doc">kRelationshipLover</a> = 7 }</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">enum <a href="#abcd3eb160c2ce2af002ed28fd452eb10" class="m-doc">eGameModeTransitionStatus</a> { </span><span class="m-doc-wrap"><a href="#abcd3eb160c2ce2af002ed28fd452eb10aee19ac2eaa719b7ffa2d1c14aa801399" class="m-doc">kTransitionEnd</a> = 0,
+              <a href="#abcd3eb160c2ce2af002ed28fd452eb10a98a9c37a1d10aa2b80ce5a311e0a7854" class="m-doc">kTransitionPrepare</a> = 1,
+              <a href="#abcd3eb160c2ce2af002ed28fd452eb10a15d045ac8c8a5c319e47ccdc69d4823b" class="m-doc">kTransitionPost</a> = 2 }</span>
             </dt>
             <dd><span></span></dd>
             <dt>
@@ -3768,6 +3805,28 @@
             </dt>
             <dd><span></span></dd>
             <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a3f1e5c3deac080379891e7ebd7e26209" class="m-doc">Addresses</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1_i_gonzago_subsystem.html" class="m-doc">IGonzagoSubsystem</a>) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">namespace</a></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#a61af5e47f181997d17d89d60e58d3f2b" class="m-doc">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1c_gonzago_subsystem.html" class="m-doc">cGonzagoSubsystem</a>,
+              0x18)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a59467c75aff46e8696faaa5f6691a279" class="m-doc">Addresses</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1c_species_relationship_manager_dispose.html" class="m-doc">cSpeciesRelationshipManagerDispose</a>) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">namespace</a></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#a19043a90e5fed6a9d0ccb560c1b59dff" class="m-doc">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1c_species_relationship_manager.html" class="m-doc">cSpeciesRelationshipManager</a>,
+              0x68)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a240322a9df8204d252164d81dfcb3473" class="m-doc">Addresses</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1c_species_relationship_manager.html" class="m-doc">cSpeciesRelationshipManager</a>) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">namespace</a></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
               <span class="m-doc-wrap-bumper"><a href="#aec351348ffa4319f0bc4027cbfbdf994" class="m-doc">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1c_strategy.html" class="m-doc">cStrategy</a>,
               0x1C)</span>
             </dt>
@@ -3921,8 +3980,8 @@
             </dt>
             <dd><span></span></dd>
             <dt>
-              <span class="m-doc-wrap-bumper"><a href="#a20999abd5084c3ec6cdb6cbf1a834933" class="m-doc">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1c_obstacle_manager.html" class="m-doc">cObstacleManager</a>,
-              0x56E0)</span>
+              <span class="m-doc-wrap-bumper"><a href="#ae4638184e74d9f14a935e4462be28a7d" class="m-doc">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1c_obstacle_manager.html" class="m-doc">cObstacleManager</a>,
+              0x5778)</span>
             </dt>
             <dd><span></span></dd>
             <dt>
@@ -5674,6 +5733,20 @@
             <h3>
               enum Simulator::<wbr /><a href="#af5751e59e63531a81c4b045d78547e74" class="m-doc-self">CommButtonIDs</a>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_comm_manager_8h.html">&lt;Spore ModAPI/Spore/Simulator/SubSystem/CommManager.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a2b4297d85ed4bf1a6029a9703a2ea506"><div>
+            <h3>
+              enum Simulator::<wbr /><a href="#a2b4297d85ed4bf1a6029a9703a2ea506" class="m-doc-self">eRelationshipStatus</a>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="c_species_relationship_manager_8h.html">&lt;Spore ModAPI/Spore/Simulator/SubSystem/cSpeciesRelationshipManager.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="abcd3eb160c2ce2af002ed28fd452eb10"><div>
+            <h3>
+              enum Simulator::<wbr /><a href="#abcd3eb160c2ce2af002ed28fd452eb10" class="m-doc-self">eGameModeTransitionStatus</a>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="c_species_relationship_manager_8h.html">&lt;Spore ModAPI/Spore/Simulator/SubSystem/cSpeciesRelationshipManager.h&gt;</a></div>
             </h3>
             <p><span></span></p>
           </div></section>
@@ -8643,6 +8716,43 @@
             </h3>
             <p><span></span></p>
           </div></section>
+          <section class="m-doc-details" id="a3f1e5c3deac080379891e7ebd7e26209"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">namespace</a> Simulator::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a3f1e5c3deac080379891e7ebd7e26209" class="m-doc-self">Addresses</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1_i_gonzago_subsystem.html" class="m-doc">IGonzagoSubsystem</a>)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="c_species_relationship_manager_8h.html">&lt;Spore ModAPI/Spore/Simulator/SubSystem/cSpeciesRelationshipManager.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a61af5e47f181997d17d89d60e58d3f2b"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"> Simulator::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a61af5e47f181997d17d89d60e58d3f2b" class="m-doc-self">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1c_gonzago_subsystem.html" class="m-doc">cGonzagoSubsystem</a>,
+              0x18)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="c_species_relationship_manager_8h.html">&lt;Spore ModAPI/Spore/Simulator/SubSystem/cSpeciesRelationshipManager.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a59467c75aff46e8696faaa5f6691a279"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">namespace</a> Simulator::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a59467c75aff46e8696faaa5f6691a279" class="m-doc-self">Addresses</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1c_species_relationship_manager_dispose.html" class="m-doc">cSpeciesRelationshipManagerDispose</a>)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="c_species_relationship_manager_8h.html">&lt;Spore ModAPI/Spore/Simulator/SubSystem/cSpeciesRelationshipManager.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a19043a90e5fed6a9d0ccb560c1b59dff"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"> Simulator::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a19043a90e5fed6a9d0ccb560c1b59dff" class="m-doc-self">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1c_species_relationship_manager.html" class="m-doc">cSpeciesRelationshipManager</a>,
+              0x68)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="c_species_relationship_manager_8h.html">&lt;Spore ModAPI/Spore/Simulator/SubSystem/cSpeciesRelationshipManager.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a240322a9df8204d252164d81dfcb3473"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">namespace</a> Simulator::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a240322a9df8204d252164d81dfcb3473" class="m-doc-self">Addresses</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1c_species_relationship_manager.html" class="m-doc">cSpeciesRelationshipManager</a>)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="c_species_relationship_manager_8h.html">&lt;Spore ModAPI/Spore/Simulator/SubSystem/cSpeciesRelationshipManager.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
           <section class="m-doc-details" id="aec351348ffa4319f0bc4027cbfbdf994"><div>
             <h3>
               <span class="m-doc-wrap-bumper"> Simulator::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aec351348ffa4319f0bc4027cbfbdf994" class="m-doc-self">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1c_strategy.html" class="m-doc">cStrategy</a>,
@@ -8910,10 +9020,10 @@
             </h3>
             <p><span></span></p>
           </div></section>
-          <section class="m-doc-details" id="a20999abd5084c3ec6cdb6cbf1a834933"><div>
+          <section class="m-doc-details" id="ae4638184e74d9f14a935e4462be28a7d"><div>
             <h3>
-              <span class="m-doc-wrap-bumper"> Simulator::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a20999abd5084c3ec6cdb6cbf1a834933" class="m-doc-self">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1c_obstacle_manager.html" class="m-doc">cObstacleManager</a>,
-              0x56E0)</span></span>
+              <span class="m-doc-wrap-bumper"> Simulator::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ae4638184e74d9f14a935e4462be28a7d" class="m-doc-self">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1c_obstacle_manager.html" class="m-doc">cObstacleManager</a>,
+              0x5778)</span></span>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_obstacle_manager_8h.html">&lt;Spore ModAPI/Spore/Simulator/SubSystem/ObstacleManager.h&gt;</a></div>
             </h3>
             <p><span></span></p>

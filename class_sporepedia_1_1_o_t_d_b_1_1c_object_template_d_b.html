@@ -58,6 +58,7 @@
                 <li><a href="#base-classes">Base classes</a></li>
                 <li><a href="#pub-static-methods">Public static functions</a></li>
                 <li><a href="#pub-methods">Public functions</a></li>
+                <li><a href="#pub-attribs">Public variables</a></li>
               </ul>
             </li>
           </ul>
@@ -83,12 +84,28 @@
         <section id="pub-methods">
           <h2><a href="#pub-methods">Public functions</a></h2>
           <dl class="m-doc">
-            <dt id="a73a45535512ce02351af9aad7934fd7a">
-              <span class="m-doc-wrap-bumper">auto <a href="#a73a45535512ce02351af9aad7934fd7a" class="m-doc-self">Initialize</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="a001775b1426f490c963d060da7f55ddb">
+              <span class="m-doc-wrap-bumper">auto <a href="#a001775b1426f490c963d060da7f55ddb" class="m-doc-self">AddRef</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="a0c9a49a98476d81336f65e1b15dadbd9">
-              <span class="m-doc-wrap-bumper">auto <a href="#a0c9a49a98476d81336f65e1b15dadbd9" class="m-doc-self">Dispose</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="a85c3ac042619a7cd83cd50c4ff7ed215">
+              <span class="m-doc-wrap-bumper">auto <a href="#a85c3ac042619a7cd83cd50c4ff7ed215" class="m-doc-self">Release</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a72506e473d9fb4490e44b40d067f51e3">
+              <span class="m-doc-wrap-bumper">auto <a href="#a72506e473d9fb4490e44b40d067f51e3" class="m-doc-self">Dispose</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a>* <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ad1bfea23f9133a39d308de45a5771146">
+              <span class="m-doc-wrap-bumper">auto <a href="#ad1bfea23f9133a39d308de45a5771146" class="m-doc-self">AsInterface</a>(</span><span class="m-doc-wrap"><a href="namespace_sporepedia_1_1_o_t_d_b.html#a341927a04d95fdb9e19713ced72f18b4" class="m-doc">InterfaceId</a> mID) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a>* <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a3bb9712def277bdc54247846eb31c85d">
+              <span class="m-doc-wrap-bumper">auto <a href="#a3bb9712def277bdc54247846eb31c85d" class="m-doc-self">Init</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ac6ffc3662cf32e7da21e3cc61bfefefe">
+              <span class="m-doc-wrap-bumper">auto <a href="#ac6ffc3662cf32e7da21e3cc61bfefefe" class="m-doc-self">Shutdown</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
             <dt id="ae7de92fd7c6764d99cb05f77aefa57d9">
@@ -104,101 +121,772 @@
               <span class="m-doc-wrap-bumper">auto <a href="#a3db87da2f5565b151cb4607d8aa8e1d6" class="m-doc-self">func20h</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="a17defd4094b5d5814e133cec6d5e4da7">
-              <span class="m-doc-wrap-bumper">auto <a href="#a17defd4094b5d5814e133cec6d5e4da7" class="m-doc-self">func24h</a>(</span><span class="m-doc-wrap">eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; dstKeys,
+            <dt id="a269914ed965a4db71302589499d83209">
+              <span class="m-doc-wrap-bumper">auto <a href="#a269914ed965a4db71302589499d83209" class="m-doc-self">func24h</a>(</span><span class="m-doc-wrap">eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; creation,
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>,
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> eastl::vector&lt;<a href="struct_sporepedia_1_1_o_t_d_b_1_1_query_parameter.html" class="m-doc">QueryParameter</a>&gt;&amp; parameters) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="a2e607bb354057a787ddf379a89a80ec1">
-              <span class="m-doc-wrap-bumper">auto <a href="#a2e607bb354057a787ddf379a89a80ec1" class="m-doc-self">func28h</a>(</span><span class="m-doc-wrap">eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; dstKeys,
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>,
+            <dt id="a00aadec59c86462e808bac13cf914b46">
+              <span class="m-doc-wrap-bumper">auto <a href="#a00aadec59c86462e808bac13cf914b46" class="m-doc-self">func28h</a>(</span><span class="m-doc-wrap">eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; dstKeys) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a5fd2066090de0dae31e29673ac2002a5">
+              <span class="m-doc-wrap-bumper">auto <a href="#a5fd2066090de0dae31e29673ac2002a5" class="m-doc-self">FindObjects</a>(</span><span class="m-doc-wrap">eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; dst,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> eastl::vector&lt;<a href="struct_sporepedia_1_1_o_t_d_b_1_1_parameter.html" class="m-doc">Parameter</a>&gt;&amp; parameters) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a6744d3b9be415e3f20e3a9d3b2f494e9">
+              <span class="m-doc-wrap-bumper">auto <a href="#a6744d3b9be415e3f20e3a9d3b2f494e9" class="m-doc-self">func30h</a>(</span><span class="m-doc-wrap">eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; creations,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> param_2,
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> eastl::vector&lt;<a href="struct_sporepedia_1_1_o_t_d_b_1_1_query_parameter.html" class="m-doc">QueryParameter</a>&gt;&amp; parameters) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="aaa0a63d4580b816e2c9fe146f215f5c8">
-              <span class="m-doc-wrap-bumper">auto <a href="#aaa0a63d4580b816e2c9fe146f215f5c8" class="m-doc-self">FindObjects</a>(</span><span class="m-doc-wrap">eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; dst,
+            <dt id="a651fff4aa6bf75f0d3d98435a69537bd">
+              <span class="m-doc-wrap-bumper">auto <a href="#a651fff4aa6bf75f0d3d98435a69537bd" class="m-doc-self">func34h</a>(</span><span class="m-doc-wrap">eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; creations) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="af392d8714dbeba72585f7f3196ab01f3">
+              <span class="m-doc-wrap-bumper">auto <a href="#af392d8714dbeba72585f7f3196ab01f3" class="m-doc-self">func38h</a>(</span><span class="m-doc-wrap">eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; creations,
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> eastl::vector&lt;<a href="struct_sporepedia_1_1_o_t_d_b_1_1_query_parameter.html" class="m-doc">QueryParameter</a>&gt;&amp; parameters) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="aa6e58432337610908334c1e54c53b24e">
-              <span class="m-doc-wrap-bumper">auto <a href="#aa6e58432337610908334c1e54c53b24e" class="m-doc-self">func30h</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="aac8dbb4d2a9a89cc629acce25fe1de7a">
+              <span class="m-doc-wrap-bumper">auto <a href="#aac8dbb4d2a9a89cc629acce25fe1de7a" class="m-doc-self">func3Ch</a>(</span><span class="m-doc-wrap">eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; creations,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> param_2,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&amp; creation,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> eastl::vector&lt;<a href="struct_sporepedia_1_1_o_t_d_b_1_1_query_parameter.html" class="m-doc">QueryParameter</a>&gt;&amp; parameters) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="a5026a7b33e7d074fd0191adf6d5f274b">
-              <span class="m-doc-wrap-bumper">auto <a href="#a5026a7b33e7d074fd0191adf6d5f274b" class="m-doc-self">func34h</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="ad785da089829e2ca938fae5efa58ec01">
+              <span class="m-doc-wrap-bumper">auto <a href="#ad785da089829e2ca938fae5efa58ec01" class="m-doc-self">func40h</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> param1,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>* param2) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="a6c1d1e41f27b244c4f7b16f48c92e705">
-              <span class="m-doc-wrap-bumper">auto <a href="#a6c1d1e41f27b244c4f7b16f48c92e705" class="m-doc-self">func38h</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="aee1296bdde3dbfac1da084907d6ee87b">
+              <span class="m-doc-wrap-bumper">auto <a href="#aee1296bdde3dbfac1da084907d6ee87b" class="m-doc-self">func44h</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> param1,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>* param2) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="af3556619f8b783398041cdd5f16650b4">
-              <span class="m-doc-wrap-bumper">auto <a href="#af3556619f8b783398041cdd5f16650b4" class="m-doc-self">func3Ch</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="a5553fdc216760c0b0ff029e14add32e1">
+              <span class="m-doc-wrap-bumper">auto <a href="#a5553fdc216760c0b0ff029e14add32e1" class="m-doc-self">func48h</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> param1,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>* param2,
+              eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; creations) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="a965d3447f25d209c764a5ee74688e072">
-              <span class="m-doc-wrap-bumper">auto <a href="#a965d3447f25d209c764a5ee74688e072" class="m-doc-self">func40h</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="a86b25a89ad1692a1063b015485fc9072">
+              <span class="m-doc-wrap-bumper">auto <a href="#a86b25a89ad1692a1063b015485fc9072" class="m-doc-self">func4Ch</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> param1,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>* param2,
+              eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; creations) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="afcd326eb162e70d1989000a9274b66b0">
-              <span class="m-doc-wrap-bumper">auto <a href="#afcd326eb162e70d1989000a9274b66b0" class="m-doc-self">func44h</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="a1b86e440364a57368ac43944823c2dee">
+              <span class="m-doc-wrap-bumper">auto <a href="#a1b86e440364a57368ac43944823c2dee" class="m-doc-self">func50h</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> param) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="a2ce3f1d808145440efe964bb1b62b48d">
-              <span class="m-doc-wrap-bumper">auto <a href="#a2ce3f1d808145440efe964bb1b62b48d" class="m-doc-self">func48h</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="aa620cd79b448090f8718ebe78682a0a9">
+              <span class="m-doc-wrap-bumper">auto <a href="#aa620cd79b448090f8718ebe78682a0a9" class="m-doc-self">func54h</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="aced1c3eb9af3ef08ce1ea00dfc4494c5">
-              <span class="m-doc-wrap-bumper">auto <a href="#aced1c3eb9af3ef08ce1ea00dfc4494c5" class="m-doc-self">func4Ch</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="aa5018ae0dfaab53d37832aad00d2525f">
+              <span class="m-doc-wrap-bumper">auto <a href="#aa5018ae0dfaab53d37832aad00d2525f" class="m-doc-self">func58h</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&amp; creation,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> param) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="a8376331e49c36028e7535ee6eaf9c772">
-              <span class="m-doc-wrap-bumper">auto <a href="#a8376331e49c36028e7535ee6eaf9c772" class="m-doc-self">func50h</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="a491a9b59683d5a02bb62327888a82d77">
+              <span class="m-doc-wrap-bumper">auto <a href="#a491a9b59683d5a02bb62327888a82d77" class="m-doc-self">func5Ch</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&amp; creation) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="a2ffd5555d45409afab1d76d2ff27f457">
-              <span class="m-doc-wrap-bumper">auto <a href="#a2ffd5555d45409afab1d76d2ff27f457" class="m-doc-self">func54h</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="aefcf786d995a4883b7418fd4a2cbeba8">
+              <span class="m-doc-wrap-bumper">auto <a href="#aefcf786d995a4883b7418fd4a2cbeba8" class="m-doc-self">func60h</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&amp; creation) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="afca5f767f27cbba4c5ae36ce8d859c23">
-              <span class="m-doc-wrap-bumper">auto <a href="#afca5f767f27cbba4c5ae36ce8d859c23" class="m-doc-self">func58h</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="aca00ab05f2e52abb392268f292971dde">
+              <span class="m-doc-wrap-bumper">auto <a href="#aca00ab05f2e52abb392268f292971dde" class="m-doc-self">func64h</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> param1,
+              eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; creations,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> param) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="a68398bd7d54d50cbb55134ae3c59fb2b">
-              <span class="m-doc-wrap-bumper">auto <a href="#a68398bd7d54d50cbb55134ae3c59fb2b" class="m-doc-self">func5Ch</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="a72d401888ca58c6cab39edd03fb6e72b">
+              <span class="m-doc-wrap-bumper">auto <a href="#a72d401888ca58c6cab39edd03fb6e72b" class="m-doc-self">func68h</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="a71e6d76b07387b67d0f29034223ae01e">
-              <span class="m-doc-wrap-bumper">auto <a href="#a71e6d76b07387b67d0f29034223ae01e" class="m-doc-self">func60h</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="ac9f06b83b57e086d1dd3251bd9c1a41f">
+              <span class="m-doc-wrap-bumper">auto <a href="#ac9f06b83b57e086d1dd3251bd9c1a41f" class="m-doc-self">func6Ch</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> param_1,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> param_2) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="af5633a296941c3c2b81da4de55f232ba">
-              <span class="m-doc-wrap-bumper">auto <a href="#af5633a296941c3c2b81da4de55f232ba" class="m-doc-self">func64h</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="ae7ee45ec8e0b431ee05bf36a24769032">
+              <span class="m-doc-wrap-bumper">auto <a href="#ae7ee45ec8e0b431ee05bf36a24769032" class="m-doc-self">func70h</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&amp; creation) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="a8e3020792acbc7d7b7e7c4b411676bca">
-              <span class="m-doc-wrap-bumper">auto <a href="#a8e3020792acbc7d7b7e7c4b411676bca" class="m-doc-self">func68h</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="a785032456fd2b3b231cebc86903d0b2d">
+              <span class="m-doc-wrap-bumper">auto <a href="#a785032456fd2b3b231cebc86903d0b2d" class="m-doc-self">PurgeAssetSummarizer</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&amp; creation,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> param) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="a0d3bde009be801d0d93a54c84ca20712">
-              <span class="m-doc-wrap-bumper">auto <a href="#a0d3bde009be801d0d93a54c84ca20712" class="m-doc-self">func6Ch</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="a481b20d398c9b53bfe0ce2274d8046e4">
+              <span class="m-doc-wrap-bumper">auto <a href="#a481b20d398c9b53bfe0ce2274d8046e4" class="m-doc-self">PurgeAsset</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&amp; creation,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> param) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="ad47e8b9598e40217fe52ac3687350d3d">
-              <span class="m-doc-wrap-bumper">auto <a href="#ad47e8b9598e40217fe52ac3687350d3d" class="m-doc-self">func70h</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="a4d6ea5d566edcbae1561e9be67e5e033">
+              <span class="m-doc-wrap-bumper">auto <a href="#a4d6ea5d566edcbae1561e9be67e5e033" class="m-doc-self">AddSummarizer</a>(</span><span class="m-doc-wrap"><a href="class_sporepedia_1_1_o_t_d_b_1_1_i_summarizer.html" class="m-doc">ISummarizer</a>* pSummarizer) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="a35a5bce0bb05e332502b0f642cf20ea1">
-              <span class="m-doc-wrap-bumper">auto <a href="#a35a5bce0bb05e332502b0f642cf20ea1" class="m-doc-self">func74h</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="af63faffcc1929a2d7563f74f23f9f192">
+              <span class="m-doc-wrap-bumper">auto <a href="#af63faffcc1929a2d7563f74f23f9f192" class="m-doc-self">func80h</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&amp; creation,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>* param) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="ae0456ab1f8988eda1431cdc44cd28aef">
-              <span class="m-doc-wrap-bumper">auto <a href="#ae0456ab1f8988eda1431cdc44cd28aef" class="m-doc-self">func78h</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="a4e2f636a9e46756548c9df3cb5008fd1">
+              <span class="m-doc-wrap-bumper">auto <a href="#a4e2f636a9e46756548c9df3cb5008fd1" class="m-doc-self">func84h</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&amp; creation,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a>* param_2) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="a2b07edde21e71cd6d290741e3f1af6f0">
-              <span class="m-doc-wrap-bumper">auto <a href="#a2b07edde21e71cd6d290741e3f1af6f0" class="m-doc-self">AddSummarizer</a>(</span><span class="m-doc-wrap"><a href="class_sporepedia_1_1_o_t_d_b_1_1_i_summarizer.html" class="m-doc">ISummarizer</a>* pSummarizer) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            <dt id="a4e1a136e4fd974a960c13d918df66396">
+              <span class="m-doc-wrap-bumper">auto <a href="#a4e1a136e4fd974a960c13d918df66396" class="m-doc-self">func88h</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="pub-attribs">
+          <h2><a href="#pub-attribs">Public variables</a></h2>
+          <dl class="m-doc">
+            <dt id="a96cf57b3e603e91890cc5558b7eaf36e">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a96cf57b3e603e91890cc5558b7eaf36e" class="m-doc-self">field_04</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="af2d919980c8c99f349006793536233ce">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#af2d919980c8c99f349006793536233ce" class="m-doc-self">field_08</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ad764a7f7c0a95b6849dfe1a44f3c1af8">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ad764a7f7c0a95b6849dfe1a44f3c1af8" class="m-doc-self">field_0C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a245e85f80fdb264bde6091f634c2c956">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a245e85f80fdb264bde6091f634c2c956" class="m-doc-self">field_10</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a5b451292aae1f8fba56266674f74201f">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a5b451292aae1f8fba56266674f74201f" class="m-doc-self">field_14</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a17cc600616ecfd2e0148ad6da35e1805">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a17cc600616ecfd2e0148ad6da35e1805" class="m-doc-self">field_18</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a23fda701c6b696348a4d372f4c97ca5c">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a23fda701c6b696348a4d372f4c97ca5c" class="m-doc-self">field_1C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a094f1c3d6ce298d4ffe7e60405ce2362">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a094f1c3d6ce298d4ffe7e60405ce2362" class="m-doc-self">field_20</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a72099054f55262a07d5b38eb91bedd5f">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a72099054f55262a07d5b38eb91bedd5f" class="m-doc-self">field_24</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aa4d1cbca474382bba533e58db3955c75">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#aa4d1cbca474382bba533e58db3955c75" class="m-doc-self">field_28</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ae12b0870f8252af94e29ddf30b0b47ae">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ae12b0870f8252af94e29ddf30b0b47ae" class="m-doc-self">field_2C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a11a86b8d04f652af5ef073b73c878c36">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a11a86b8d04f652af5ef073b73c878c36" class="m-doc-self">field_30</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a7f12662f86e15ff8b2795ddf5cbd3c5a">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a7f12662f86e15ff8b2795ddf5cbd3c5a" class="m-doc-self">field_34</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a83fa05b6aafbac5c55fb636a41d8142a">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a83fa05b6aafbac5c55fb636a41d8142a" class="m-doc-self">field_38</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a35b782dd4262442f581e281ff42002e1">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a35b782dd4262442f581e281ff42002e1" class="m-doc-self">field_3C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a51619a3cd51564eaa8f97987acbcdda4">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <a href="#a51619a3cd51564eaa8f97987acbcdda4" class="m-doc-self">field_40</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a1014a942f99b88b7cc11a3a401c0221a">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <a href="#a1014a942f99b88b7cc11a3a401c0221a" class="m-doc-self">field_41</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ab2dbc4d71dab20f4368915bd2110847c">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <a href="#ab2dbc4d71dab20f4368915bd2110847c" class="m-doc-self">field_42</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a2c679fe01a45c54a9aed4c5ac37d49a0">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <a href="#a2c679fe01a45c54a9aed4c5ac37d49a0" class="m-doc-self">field_43</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a6f0d0ee9b5643af161330e10de7b3d92">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a6f0d0ee9b5643af161330e10de7b3d92" class="m-doc-self">field_44</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="abac5717c29f45b541805ed9fafe9535a">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#abac5717c29f45b541805ed9fafe9535a" class="m-doc-self">field_48</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ad45dd5e1959d3e0803b27a46f8e04f08">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ad45dd5e1959d3e0803b27a46f8e04f08" class="m-doc-self">field_4C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aaa1cba9bdc34bb2ed2551a0bf0b38c57">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#aaa1cba9bdc34bb2ed2551a0bf0b38c57" class="m-doc-self">field_50</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a3a6aa6187408a05774ffbb06fa0e0499">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a3a6aa6187408a05774ffbb06fa0e0499" class="m-doc-self">field_54</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="abb0b89f6d27930dc12d8f90fdb8cc245">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#abb0b89f6d27930dc12d8f90fdb8cc245" class="m-doc-self">field_58</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="adde3d4fc11f45ac4bbda7eae85136756">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#adde3d4fc11f45ac4bbda7eae85136756" class="m-doc-self">field_5C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a5efed2b9167e3275b9cad2186e754ff0">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a5efed2b9167e3275b9cad2186e754ff0" class="m-doc-self">field_60</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ab2d4b849248666f54794f2bdcb32e364">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ab2d4b849248666f54794f2bdcb32e364" class="m-doc-self">field_64</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a7c0c28ea3317841090c43053418f9d23">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a7c0c28ea3317841090c43053418f9d23" class="m-doc-self">field_68</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ad2d4fee9cbf9b868fde8206c22951641">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ad2d4fee9cbf9b868fde8206c22951641" class="m-doc-self">field_6C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a036fc31dae3c638510889b77a87e9bba">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a036fc31dae3c638510889b77a87e9bba" class="m-doc-self">field_70</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a43430e28403168362a8913592576c8b2">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a43430e28403168362a8913592576c8b2" class="m-doc-self">field_74</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a531d02b40776563cc2aabea52cc874a0">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a531d02b40776563cc2aabea52cc874a0" class="m-doc-self">field_78</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a22d4070d4191919bb8712cbea8efda0c">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a22d4070d4191919bb8712cbea8efda0c" class="m-doc-self">field_7C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ac9f86fc0496ada43a81974664e21c9b5">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ac9f86fc0496ada43a81974664e21c9b5" class="m-doc-self">field_80</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aedb051be731b25c968559e9cdfdbc26b">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#aedb051be731b25c968559e9cdfdbc26b" class="m-doc-self">field_84</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a4dc785d9dddd7d063ca7e814863d0302">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a4dc785d9dddd7d063ca7e814863d0302" class="m-doc-self">field_88</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ae43e41d9ae598289afc123769c5d5662">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ae43e41d9ae598289afc123769c5d5662" class="m-doc-self">field_8C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a46d3d4aa910bafdac89dc7f761bc26bd">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a46d3d4aa910bafdac89dc7f761bc26bd" class="m-doc-self">field_90</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a349116e8ba7c8ab28d16c06197299822">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a349116e8ba7c8ab28d16c06197299822" class="m-doc-self">field_94</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a6802eff2bb2897d0c710f20090492875">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a6802eff2bb2897d0c710f20090492875" class="m-doc-self">field_98</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a22208c54ec91e6883e7a494af777bef5">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a22208c54ec91e6883e7a494af777bef5" class="m-doc-self">field_9C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ad8ed9a27640b8c414b5dd27e67c0558a">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ad8ed9a27640b8c414b5dd27e67c0558a" class="m-doc-self">field_A0</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a589dbc3c3dab28083d908d2e0e95f0be">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a589dbc3c3dab28083d908d2e0e95f0be" class="m-doc-self">field_A4</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a425c195d5a99d069e1afd020fc51a078">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a425c195d5a99d069e1afd020fc51a078" class="m-doc-self">field_A8</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a59664bc849f206bcbf5d221f2d2ed66a">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a59664bc849f206bcbf5d221f2d2ed66a" class="m-doc-self">field_AC</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ad547ddf4d2bc2816de95d5100b3993aa">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ad547ddf4d2bc2816de95d5100b3993aa" class="m-doc-self">field_B0</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a9dc20a101e8dcbfe378902af68cd0e42">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a9dc20a101e8dcbfe378902af68cd0e42" class="m-doc-self">field_B4</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ab5372f55b331b72940cabf0bf9df2d22">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ab5372f55b331b72940cabf0bf9df2d22" class="m-doc-self">field_B8</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a2597d8fc830a8912c08d6b028f29c009">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a2597d8fc830a8912c08d6b028f29c009" class="m-doc-self">field_BC</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ac51fd9672bab092a5fa654f0abc68660">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ac51fd9672bab092a5fa654f0abc68660" class="m-doc-self">field_C0</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a3d71ea95b095895330a1f50d953eb78e">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a3d71ea95b095895330a1f50d953eb78e" class="m-doc-self">field_C4</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a2ba81092a801bce2d354ecefce7ad30e">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a2ba81092a801bce2d354ecefce7ad30e" class="m-doc-self">field_C8</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a4f8fec7c06ba7970b7a460589e5301e9">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a4f8fec7c06ba7970b7a460589e5301e9" class="m-doc-self">field_CC</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a93e1ba5bf1c5c5951f1f68d71f17128e">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a93e1ba5bf1c5c5951f1f68d71f17128e" class="m-doc-self">field_D0</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a7be9cd94786447338a245b935b5eae37">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a7be9cd94786447338a245b935b5eae37" class="m-doc-self">field_D4</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ab02fb372ed65bf74758e4f9ae6e09d31">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ab02fb372ed65bf74758e4f9ae6e09d31" class="m-doc-self">field_D8</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a57d3e0a63dd3b0c8cfab61f6e0fa04de">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a57d3e0a63dd3b0c8cfab61f6e0fa04de" class="m-doc-self">field_DC</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ae75024af18c2a2735456c461a6804251">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ae75024af18c2a2735456c461a6804251" class="m-doc-self">field_E0</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a555ceeba587c075b1b197050ba31fee5">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a555ceeba587c075b1b197050ba31fee5" class="m-doc-self">field_E4</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a6ca03565f2aff6ecc2ac7fc988467cee">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a6ca03565f2aff6ecc2ac7fc988467cee" class="m-doc-self">field_E8</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a94ac4f6b3f4183823d15fe1e7d72bd2d">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a94ac4f6b3f4183823d15fe1e7d72bd2d" class="m-doc-self">field_EC</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a780cd1c07ddb5a546358eb2934b2c3bd">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a780cd1c07ddb5a546358eb2934b2c3bd" class="m-doc-self">field_F0</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="afa86e81cae54f958a35632c3ed422592">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#afa86e81cae54f958a35632c3ed422592" class="m-doc-self">field_F4</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="acaf2a3fce3f65f752f2c84ca8b45354a">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#acaf2a3fce3f65f752f2c84ca8b45354a" class="m-doc-self">field_F8</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a48d02625541af10dfba0b40cdbf2b826">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a48d02625541af10dfba0b40cdbf2b826" class="m-doc-self">field_FC</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a6e9033248f8427fd7a7e8126d7413e9e">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a6e9033248f8427fd7a7e8126d7413e9e" class="m-doc-self">field_100</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a7e64d4dc18ef7405fc5748f57c4ec60f">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a7e64d4dc18ef7405fc5748f57c4ec60f" class="m-doc-self">field_104</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a904a9ebd86e9805895b29eceea7780f1">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a904a9ebd86e9805895b29eceea7780f1" class="m-doc-self">field_108</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a1e8ca9da5345ea9a2664606dae1093e7">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a1e8ca9da5345ea9a2664606dae1093e7" class="m-doc-self">field_10C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a38ac81426d842a2cadb5e5a9fe3669e5">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a38ac81426d842a2cadb5e5a9fe3669e5" class="m-doc-self">field_110</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a67f6fd99f38a84a1d00d806af605ccef">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a67f6fd99f38a84a1d00d806af605ccef" class="m-doc-self">field_114</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a6252562eedf1ae3d528e9d7c9d7dfed2">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a6252562eedf1ae3d528e9d7c9d7dfed2" class="m-doc-self">field_118</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ac60bf21259dd8d49b36fff4c7428cf64">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ac60bf21259dd8d49b36fff4c7428cf64" class="m-doc-self">field_11C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a153f5bd169a87796ce6fc491176ea684">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a153f5bd169a87796ce6fc491176ea684" class="m-doc-self">field_120</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a316db7a3e89238637459c8e837e1c919">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a316db7a3e89238637459c8e837e1c919" class="m-doc-self">field_124</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a826c6e240c0106c60e1346e55f27bbc1">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a826c6e240c0106c60e1346e55f27bbc1" class="m-doc-self">field_128</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a742c3bc51bb1fa775dcd543701486ddb">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a742c3bc51bb1fa775dcd543701486ddb" class="m-doc-self">field_12C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a4cea525040140e54a9df7e3948356fcb">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a4cea525040140e54a9df7e3948356fcb" class="m-doc-self">field_130</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ae3704352774ea80f4e787910049afe7f">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ae3704352774ea80f4e787910049afe7f" class="m-doc-self">field_134</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a5cf14484175bf84adad379d8a536df28">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a5cf14484175bf84adad379d8a536df28" class="m-doc-self">field_138</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a64d54a395bbf35929e295adb719d9bbe">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a64d54a395bbf35929e295adb719d9bbe" class="m-doc-self">field_13C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a4347c62aeea522b691f679b07a635f5b">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a4347c62aeea522b691f679b07a635f5b" class="m-doc-self">field_140</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a4c18be65219b48d9deb91425607d3d2e">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a4c18be65219b48d9deb91425607d3d2e" class="m-doc-self">field_144</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a44fae6ffaa7dc24dffc3117b008a297d">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a44fae6ffaa7dc24dffc3117b008a297d" class="m-doc-self">field_148</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a197891b1c880de70c97d32c3fbbb5a2a">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a197891b1c880de70c97d32c3fbbb5a2a" class="m-doc-self">field_14C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aaa6c980512aab880af45745269152a4e">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#aaa6c980512aab880af45745269152a4e" class="m-doc-self">field_150</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a972da330fedfdf0a0b220108a6a1a3ae">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a972da330fedfdf0a0b220108a6a1a3ae" class="m-doc-self">field_154</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="af4dd931bb1c84af798c24c295599de69">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#af4dd931bb1c84af798c24c295599de69" class="m-doc-self">field_158</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ab17495d768519a28a39a84f1aaf6f030">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ab17495d768519a28a39a84f1aaf6f030" class="m-doc-self">field_15C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a0e9ee05a3ca5c42abf76cfe341500524">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a0e9ee05a3ca5c42abf76cfe341500524" class="m-doc-self">field_160</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a35a7544ca16e57c9b5cc0715bf906b11">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a35a7544ca16e57c9b5cc0715bf906b11" class="m-doc-self">field_164</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a4c025b055d59fe6deb3506276bb31ace">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a4c025b055d59fe6deb3506276bb31ace" class="m-doc-self">field_168</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a58446f7320589808492bb584cf19965f">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a58446f7320589808492bb584cf19965f" class="m-doc-self">field_16C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a5aa4dd1cbcea01ddc0b7c1f5e1c0a9b5">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a5aa4dd1cbcea01ddc0b7c1f5e1c0a9b5" class="m-doc-self">field_170</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a3d3e6554480b1e2cdff24ef668367253">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a3d3e6554480b1e2cdff24ef668367253" class="m-doc-self">field_174</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a5ababfd85a015a5295d5cb3a08aae6f5">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a5ababfd85a015a5295d5cb3a08aae6f5" class="m-doc-self">field_178</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ac7f889f5dc72029bb86bac4932987244">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ac7f889f5dc72029bb86bac4932987244" class="m-doc-self">field_17C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a7a084eea6aca074673bc6dbd34d08ed4">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a7a084eea6aca074673bc6dbd34d08ed4" class="m-doc-self">field_180</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a5a33fcb4f419b0f949123134a9317761">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a5a33fcb4f419b0f949123134a9317761" class="m-doc-self">field_184</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a62be16dae18b7adc3980c59ca1228dec">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a62be16dae18b7adc3980c59ca1228dec" class="m-doc-self">field_188</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="afb9d3782845fdb14c9c4ba55ef12cd02">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#afb9d3782845fdb14c9c4ba55ef12cd02" class="m-doc-self">field_18C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ac74e7d8199e454c67560fcb40f38cad2">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ac74e7d8199e454c67560fcb40f38cad2" class="m-doc-self">field_190</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="abd86c655123cc9593edda4337cda3f10">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#abd86c655123cc9593edda4337cda3f10" class="m-doc-self">field_194</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="afaa6ae62f043bb527be67e8b5f8f599c">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#afaa6ae62f043bb527be67e8b5f8f599c" class="m-doc-self">field_198</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a502686d4d0e3dcad5faf69b451a5410a">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a502686d4d0e3dcad5faf69b451a5410a" class="m-doc-self">field_19C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a913e2503246d03c45300482157348581">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a913e2503246d03c45300482157348581" class="m-doc-self">field_1A0</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ac4730631c6f0f185a86aa00cf4e22b5d">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ac4730631c6f0f185a86aa00cf4e22b5d" class="m-doc-self">field_1A4</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a3c5104944db6ed217a8cc5becb06f9fe">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a3c5104944db6ed217a8cc5becb06f9fe" class="m-doc-self">field_1A8</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ae6cb572c9491722166dd4d7325090c59">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ae6cb572c9491722166dd4d7325090c59" class="m-doc-self">field_1AC</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a42d158a5b2d9621fa27c4af0abcbb800">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a42d158a5b2d9621fa27c4af0abcbb800" class="m-doc-self">field_1B0</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a206739f5287399d7679ffd904f4e7477">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a206739f5287399d7679ffd904f4e7477" class="m-doc-self">field_1B4</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a9ae301cf11e459cf9cac00929b3d8c98">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a9ae301cf11e459cf9cac00929b3d8c98" class="m-doc-self">field_1B8</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a05fd56f3835f9744298b957816ec7566">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a05fd56f3835f9744298b957816ec7566" class="m-doc-self">field_1BC</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a6843927937455e08c2537b648a9c172b">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a6843927937455e08c2537b648a9c172b" class="m-doc-self">field_1C0</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a0aeb1fc1a530e5cfda5025ea22530c09">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a0aeb1fc1a530e5cfda5025ea22530c09" class="m-doc-self">field_1C4</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a548a2d5c4fabcd1bc0677b29a6f63816">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a548a2d5c4fabcd1bc0677b29a6f63816" class="m-doc-self">field_1C8</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aa03e8bc08249482a9060cc5eed68990f">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#aa03e8bc08249482a9060cc5eed68990f" class="m-doc-self">field_1CC</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a2ac40f3038f951b8f94b868b7478eab9">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a2ac40f3038f951b8f94b868b7478eab9" class="m-doc-self">field_1D0</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="adcd7989f665cd6481cefc78b57e5eaa0">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#adcd7989f665cd6481cefc78b57e5eaa0" class="m-doc-self">field_1D4</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a57516e87544f3339099ea95d4c04a69d">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a57516e87544f3339099ea95d4c04a69d" class="m-doc-self">field_1D8</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a638466f5dc03d4ab10de54a358c96d04">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a638466f5dc03d4ab10de54a358c96d04" class="m-doc-self">field_1DC</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a31a1afda5367b9b477efbb25627cf97e">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a31a1afda5367b9b477efbb25627cf97e" class="m-doc-self">field_1E0</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aa6b4971eeacb1af104d160f99415ce9f">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#aa6b4971eeacb1af104d160f99415ce9f" class="m-doc-self">field_1E4</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aabe300371b8dc1b4bac5a274ab19492b">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#aabe300371b8dc1b4bac5a274ab19492b" class="m-doc-self">field_1E8</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ad1bf9fe93e7917556c604e9bece0888e">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ad1bf9fe93e7917556c604e9bece0888e" class="m-doc-self">field_1EC</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="afb5b892b36a776d54e33f60d40c53355">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#afb5b892b36a776d54e33f60d40c53355" class="m-doc-self">field_1F0</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a5b08edc2100455420e0535ce4fa88be5">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a5b08edc2100455420e0535ce4fa88be5" class="m-doc-self">field_1F4</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a71bc5393570122d3c3fa10e97c308ebc">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a71bc5393570122d3c3fa10e97c308ebc" class="m-doc-self">field_1F8</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a207e3e4af10a40738b6e102db9fcf18c">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a207e3e4af10a40738b6e102db9fcf18c" class="m-doc-self">field_1FC</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a42a35fd86263ff73acb3cfb0133a37c3">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a42a35fd86263ff73acb3cfb0133a37c3" class="m-doc-self">field_200</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a606da8c39cd82b44cf83b2f22f032c5a">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a606da8c39cd82b44cf83b2f22f032c5a" class="m-doc-self">field_204</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a4d286c202ac112dfe370a3df9a6cbe4c">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a4d286c202ac112dfe370a3df9a6cbe4c" class="m-doc-self">field_208</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="afac2930bc7cea52d54a5cb211cb85421">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#afac2930bc7cea52d54a5cb211cb85421" class="m-doc-self">field_20C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a26f81dad721792127deac4ba9a5fe0f6">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a26f81dad721792127deac4ba9a5fe0f6" class="m-doc-self">field_210</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a4e027f6849911419ca20f4a106239e36">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a4e027f6849911419ca20f4a106239e36" class="m-doc-self">field_214</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a9d2819837f26cd04775b2dd94a7ad5b9">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a9d2819837f26cd04775b2dd94a7ad5b9" class="m-doc-self">field_218</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a2db39610d0933bead920307f32245f54">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a2db39610d0933bead920307f32245f54" class="m-doc-self">field_21C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="afb7ae02ab40a8712ec47791d8993d0a8">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#afb7ae02ab40a8712ec47791d8993d0a8" class="m-doc-self">field_220</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aa629744b2ff0a65278a35c799c3f7f0a">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#aa629744b2ff0a65278a35c799c3f7f0a" class="m-doc-self">field_224</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aa7421ca7780eca461f509a9b04920ecb">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#aa7421ca7780eca461f509a9b04920ecb" class="m-doc-self">field_228</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a0eb2a05d80b1ae0b3e9819b3ec7aede0">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a0eb2a05d80b1ae0b3e9819b3ec7aede0" class="m-doc-self">field_22C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="af6c2671d9b41ecf20ded7f834569a8f6">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#af6c2671d9b41ecf20ded7f834569a8f6" class="m-doc-self">field_230</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a04274ba921af92e459c2aa3a05efbd1e">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a04274ba921af92e459c2aa3a05efbd1e" class="m-doc-self">field_234</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a7c03cf7c94cdaa831f98531c3ee664e8">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a7c03cf7c94cdaa831f98531c3ee664e8" class="m-doc-self">field_238</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="af96873f2e132f0f3980afea52e2ce767">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#af96873f2e132f0f3980afea52e2ce767" class="m-doc-self">field_23C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aeb0dbf9bcceb7914b92443e57e0383f1">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#aeb0dbf9bcceb7914b92443e57e0383f1" class="m-doc-self">field_240</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ac6e21de737bfc69a0f58e4aca112f39e">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ac6e21de737bfc69a0f58e4aca112f39e" class="m-doc-self">field_244</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aa91e117fc7edefbbd55fa6d6fd24bc7c">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#aa91e117fc7edefbbd55fa6d6fd24bc7c" class="m-doc-self">field_248</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a0d556d348f8f790ce24c04f7be6577f0">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a0d556d348f8f790ce24c04f7be6577f0" class="m-doc-self">field_24C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aec9f589c8ccf757c666af6885324a61e">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#aec9f589c8ccf757c666af6885324a61e" class="m-doc-self">field_250</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a4df23b4ae41f53dafb71ff07cf32284c">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a4df23b4ae41f53dafb71ff07cf32284c" class="m-doc-self">field_254</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a1d321597602e76f21c6dfe07344ab381">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a1d321597602e76f21c6dfe07344ab381" class="m-doc-self">field_258</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aedca387b74fd37269a295918a4b589ac">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#aedca387b74fd37269a295918a4b589ac" class="m-doc-self">field_25C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a9ae52b3a4921e5820629596c6a95b642">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a9ae52b3a4921e5820629596c6a95b642" class="m-doc-self">field_260</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ade21a24dd1cde35abc6460308fdb88f5">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ade21a24dd1cde35abc6460308fdb88f5" class="m-doc-self">field_264</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a77ec59c931bd8221baa29889c9c59591">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a77ec59c931bd8221baa29889c9c59591" class="m-doc-self">field_268</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a1ccd1ae4f2e142721b3edef4d6a24e43">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a1ccd1ae4f2e142721b3edef4d6a24e43" class="m-doc-self">field_26C</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a5c2f081c4547dae421e97a61143a50f1">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a5c2f081c4547dae421e97a61143a50f1" class="m-doc-self">field_270</a>
             </dt>
             <dd><span></span></dd>
           </dl>

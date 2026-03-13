@@ -78,10 +78,11 @@
           <h2><a href="#pub-types">Public types</a></h2>
           <dl class="m-doc">
             <dt id="ad3ea41386dcd1e1e80283e38605bb417">
-              <span class="m-doc-wrap-bumper">enum <a href="#ad3ea41386dcd1e1e80283e38605bb417" class="m-doc-self">AbilityTypes</a> { </span><span class="m-doc-wrap"><a href="#ad3ea41386dcd1e1e80283e38605bb417aae64a27102f7116944a933cb642b8ff0" class="m-doc">kTribeHorn</a> = 5,
+              <span class="m-doc-wrap-bumper">enum <a href="#ad3ea41386dcd1e1e80283e38605bb417" class="m-doc-self">AbilityTypes</a> { </span><span class="m-doc-wrap"><a href="#ad3ea41386dcd1e1e80283e38605bb417a09f6e03d1d46d84f5096abfec11b6f80" class="m-doc">kNone</a> = 0,
+              <a href="#ad3ea41386dcd1e1e80283e38605bb417aae64a27102f7116944a933cb642b8ff0" class="m-doc">kTribeHorn</a> = 5,
               <a href="#ad3ea41386dcd1e1e80283e38605bb417a83bfd3989a21bd1e08148022ca785613" class="m-doc">kTribeMaraca</a> = 6,
               <a href="#ad3ea41386dcd1e1e80283e38605bb417a3687679093bc8bcfbea60a229f5cb86e" class="m-doc">kTribeDidgeridoo</a> = 7,
-              <a href="#ad3ea41386dcd1e1e80283e38605bb417a5c85b361d0ca3b03903c3a345917919e" class="m-doc">kAutoAttack</a> = 8,
+              <a href="#ad3ea41386dcd1e1e80283e38605bb417a87cdd1611f3850114d7e4b1346bc5c69" class="m-doc">kWeakBite</a> = 8,
               <a href="#ad3ea41386dcd1e1e80283e38605bb417a64c1fa66a38185dd49beaf8c0ac255b0" class="m-doc">kStealth</a> = 13,
               <a href="#ad3ea41386dcd1e1e80283e38605bb417aa6eca9b0c996a37f12a54810e2e31c52" class="m-doc">kSpeed</a> = 14,
               <a href="#ad3ea41386dcd1e1e80283e38605bb417a84c608199071a07bc8cec421a104506e" class="m-doc">kBlock</a> = 15,
@@ -102,7 +103,7 @@
               <a href="#ad3ea41386dcd1e1e80283e38605bb417a571ef27b821db6cd25a954822bfa6376" class="m-doc">kSprint</a> = 39,
               <a href="#ad3ea41386dcd1e1e80283e38605bb417a5b67e222c12a03dcd82c59ce6ff5a379" class="m-doc">kSight</a> = 40,
               <a href="#ad3ea41386dcd1e1e80283e38605bb417a2e8a1ca08915f73fd22083a204dcfefe" class="m-doc">kStomp</a> = 41,
-              <a href="#ad3ea41386dcd1e1e80283e38605bb417ad398912cd98d66d40b422a8f3afea7b5" class="m-doc">kTribeAttackUnk</a> = 42,
+              <a href="#ad3ea41386dcd1e1e80283e38605bb417a448f9bef3016585920db010447e19a8a" class="m-doc">kTribeWeaponAttack</a> = 42,
               <a href="#ad3ea41386dcd1e1e80283e38605bb417a99a9b7ce71b9399e73558568993fe913" class="m-doc">kTribeSpear</a> = 43,
               <a href="#ad3ea41386dcd1e1e80283e38605bb417ae253c8c913957acbbc706e2057588f67" class="m-doc">kTribeAttack</a> = 44,
               <a href="#ad3ea41386dcd1e1e80283e38605bb417a89f8f338434e13e9c75367e4145a7bf5" class="m-doc">kTribeSocial</a> = 45,
@@ -149,6 +150,14 @@
               <a href="#ad3ea41386dcd1e1e80283e38605bb417ac7b26857107229ac9f81707e27353eb1" class="m-doc">kEnergyStorage</a> = 87 }</span>
             </dt>
             <dd><span></span></dd>
+            <dt id="a5b65110e11c2de6c409dab5dc36529d1">
+              <span class="m-doc-wrap-bumper">enum <a href="#a5b65110e11c2de6c409dab5dc36529d1" class="m-doc-self">AbilityCategory</a> { </span><span class="m-doc-wrap"><a href="#a5b65110e11c2de6c409dab5dc36529d1af8322a228fef405617e2ee5d635104f0" class="m-doc">kCategorySocial</a> = 0,
+              <a href="#a5b65110e11c2de6c409dab5dc36529d1acfabb0f0e35e521b23346a58309bedf6" class="m-doc">kCategoryAttack</a> = 1,
+              <a href="#a5b65110e11c2de6c409dab5dc36529d1a8d65714c24736d55e2f93c699cc6d5f5" class="m-doc">kCategoryNeutral</a> = 2,
+              <a href="#a5b65110e11c2de6c409dab5dc36529d1a8c4ba433adca0f503c31cb71c2023303" class="m-doc">kCategoryPassive</a> = 3,
+              <a href="#a5b65110e11c2de6c409dab5dc36529d1a355b756ea3cf3941fb5f218a750b12b6" class="m-doc">kCategorySuperPower</a> = 4 }</span>
+            </dt>
+            <dd><span></span></dd>
           </dl>
         </section>
         <section id="pub-static-methods">
@@ -182,8 +191,8 @@
         <section id="pub-attribs">
           <h2><a href="#pub-attribs">Public variables</a></h2>
           <dl class="m-doc">
-            <dt id="a32f181f36cc8bc7d3881698049dc00c0">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a32f181f36cc8bc7d3881698049dc00c0" class="m-doc-self">mType</a>
+            <dt id="abf7b0217802e0d71b97fecda8c873ed5">
+              <a href="class_simulator_1_1c_creature_ability.html#ad3ea41386dcd1e1e80283e38605bb417" class="m-doc">AbilityTypes</a> <a href="#abf7b0217802e0d71b97fecda8c873ed5" class="m-doc-self">mType</a>
             </dt>
             <dd><span></span></dd>
             <dt id="a25eb12f340762c5faf8225fa631c2c55">

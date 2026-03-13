@@ -70,6 +70,23 @@
               struct <a href="struct_simulator_1_1c_species_profile_1_1_unk_struct.html" class="m-doc">UnkStruct</a>
             </dt>
             <dd><span></span></dd>
+            <dt id="aba2ca78ce94d93e9ac2e2d06924ff442">
+              <span class="m-doc-wrap-bumper">enum <a href="#aba2ca78ce94d93e9ac2e2d06924ff442" class="m-doc-self">HuntingStyle</a> { </span><span class="m-doc-wrap"><a href="#aba2ca78ce94d93e9ac2e2d06924ff442af185e5e88974941996bd934965638d7b" class="m-doc">kSolo</a> = 0,
+              <a href="#aba2ca78ce94d93e9ac2e2d06924ff442a42b52802e6ca6af27c014e7583c32b4b" class="m-doc">kPack</a> = 1 }</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a0c7564ae8cce208338af865b1f91bd94">
+              <span class="m-doc-wrap-bumper">enum <a href="#a0c7564ae8cce208338af865b1f91bd94" class="m-doc-self">StrafeMode</a> { </span><span class="m-doc-wrap"><a href="#a0c7564ae8cce208338af865b1f91bd94a4eaff0e2974aff3fc97d453d2cd07ee2" class="m-doc">kNoStrafe</a> = 0,
+              <a href="#a0c7564ae8cce208338af865b1f91bd94a8cbbf752189bfa301eea0f07f4a59268" class="m-doc">kScaledStrafe</a> = 1,
+              <a href="#a0c7564ae8cce208338af865b1f91bd94a5ebb3e65131595f004c9d521401af9b6" class="m-doc">kFullStrafe</a> = 3 }</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="afce47761a997f49343ab3cd16f525e39">
+              <span class="m-doc-wrap-bumper">enum <a href="#afce47761a997f49343ab3cd16f525e39" class="m-doc-self">DominantAbilityType</a> { </span><span class="m-doc-wrap"><a href="#afce47761a997f49343ab3cd16f525e39a518e0792e2e1ca3015743a1c55bbc7ef" class="m-doc">kAbilityTypeEqual</a> = 0,
+              <a href="#afce47761a997f49343ab3cd16f525e39aac0a5e758825345ce4d388c667459247" class="m-doc">kAbilityTypeSocial</a> = 1,
+              <a href="#afce47761a997f49343ab3cd16f525e39a903795169868fca23a1aed8c46c9bffd" class="m-doc">kAbilityTypeAttack</a> = 2 }</span>
+            </dt>
+            <dd><span></span></dd>
             <dt id="af5978597a3c81c46077fa8aa27dbdca5">
               using <a href="#af5978597a3c81c46077fa8aa27dbdca5" class="m-doc-self">UnkStructPool</a> = eastl::sp_fixed_hash_map&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>, <a href="struct_simulator_1_1c_species_profile_1_1_unk_struct.html" class="m-doc">UnkStruct</a>, 32&gt;
             </dt>
@@ -107,40 +124,40 @@
         <section id="pub-attribs">
           <h2><a href="#pub-attribs">Public variables</a></h2>
           <dl class="m-doc">
-            <dt id="abc51da69290061ce68394c7f85e6e7d4">
-              <a href="class_simulator_1_1c_species_profile.html#af5978597a3c81c46077fa8aa27dbdca5" class="m-doc">UnkStructPool</a> <a href="#abc51da69290061ce68394c7f85e6e7d4" class="m-doc-self">field_0</a>
+            <dt id="ae8c51b7832a7be4986585c1d16dd0448">
+              <a href="class_simulator_1_1c_species_profile.html#af5978597a3c81c46077fa8aa27dbdca5" class="m-doc">UnkStructPool</a> <a href="#ae8c51b7832a7be4986585c1d16dd0448" class="m-doc-self">capsInfos</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="aeddc5e87de4be406e34f68ac32fc59fd">
-              <a href="struct_resource_key.html" class="m-doc">ResourceKey</a> <a href="#aeddc5e87de4be406e34f68ac32fc59fd" class="m-doc-self">field_4E0</a>
+            <dt id="ada466230d58034058ad8299fe76fdff9">
+              <a href="struct_resource_key.html" class="m-doc">ResourceKey</a> <a href="#ada466230d58034058ad8299fe76fdff9" class="m-doc-self">mSkinColors</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="ab850299d617eafaec825a89d46c0d09e">
-              <a href="struct_resource_key.html" class="m-doc">ResourceKey</a> <a href="#ab850299d617eafaec825a89d46c0d09e" class="m-doc-self">mSpeciesKey</a>
+            <dt id="aaa19110276499aefcaea3bbcc8eecc3c">
+              <a href="struct_resource_key.html" class="m-doc">ResourceKey</a> <a href="#aaa19110276499aefcaea3bbcc8eecc3c" class="m-doc-self">mCreatureKey</a>
             </dt>
             <dd><span></span></dd>
             <dt id="aad5c6a15472ff9dd64954ad44695fc78">
               <a href="struct_resource_key.html" class="m-doc">ResourceKey</a> <a href="#aad5c6a15472ff9dd64954ad44695fc78" class="m-doc-self">mBabyKey</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a9cb9e6d4593f9c574a3b63b3cf2cf929">
-              eastl::string16 <a href="#a9cb9e6d4593f9c574a3b63b3cf2cf929" class="m-doc-self">mName</a>
+            <dt id="a94af9b480d4c426aea804a458cd2ebf5">
+              eastl::string16 <a href="#a94af9b480d4c426aea804a458cd2ebf5" class="m-doc-self">mCreatureName</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a64ffd00ddfe895ea913542c4d66fd78c">
-              eastl::string16 <a href="#a64ffd00ddfe895ea913542c4d66fd78c" class="m-doc-self">field_52C</a>
+            <dt id="ae949ab2a90275a0b082ae5e785a89aa2">
+              eastl::string16 <a href="#ae949ab2a90275a0b082ae5e785a89aa2" class="m-doc-self">mCreatureDesc</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a3271c07f955b3949cba109e06e04a856">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a3271c07f955b3949cba109e06e04a856" class="m-doc-self">field_53C</a>
+            <dt id="aa3b3f932717737caa16ccd6502b30b23">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> <a href="#aa3b3f932717737caa16ccd6502b30b23" class="m-doc-self">creatureSeq</a>
             </dt>
             <dd><span></span></dd>
             <dt id="a8f5dcada6b1475883c7b4612c42ec9e4">
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a8f5dcada6b1475883c7b4612c42ec9e4" class="m-doc-self">mCost</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a4305038a22d078c04d764cecbf757c82">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a4305038a22d078c04d764cecbf757c82" class="m-doc-self">field_544</a>
+            <dt id="a5ea05ee150df0ba154a7555a1b81e2c3">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a5ea05ee150df0ba154a7555a1b81e2c3" class="m-doc-self">mCreatureBaseSpeedGear</a>
             </dt>
             <dd><span></span></dd>
             <dt id="abf6897773de8bdd0c33c1ae10347900c">
@@ -155,24 +172,20 @@
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#abffa48fb3f5dd5da3306f2ffdd2a4a47" class="m-doc-self">mCreatureAbilityFlapping</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a554ce576ff58ddd13634b7ff68791504">
-              <a href="struct_math_1_1_vector3.html" class="m-doc">Math::<wbr />Vector3</a> <a href="#a554ce576ff58ddd13634b7ff68791504" class="m-doc-self">mBoundingBoxUpper</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a6e13646d5ffbd4cb3c78729b9b6e08b5">
-              <a href="struct_math_1_1_vector3.html" class="m-doc">Math::<wbr />Vector3</a> <a href="#a6e13646d5ffbd4cb3c78729b9b6e08b5" class="m-doc-self">mBoundingBoxLower</a>
+            <dt id="a019ab0e52fe234b92bc0b533ebce04a4">
+              <a href="struct_math_1_1_bounding_box.html" class="m-doc">Math::<wbr />BoundingBox</a> <a href="#a019ab0e52fe234b92bc0b533ebce04a4" class="m-doc-self">mBoundingBox</a>
             </dt>
             <dd><span></span></dd>
             <dt id="a0075cc1a5dc2eccf49db4c2daf7f6b13">
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a0075cc1a5dc2eccf49db4c2daf7f6b13" class="m-doc-self">mAdditionalHealth</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a41c3e9ff0f4d017bf514d70dd30b4007">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a41c3e9ff0f4d017bf514d70dd30b4007" class="m-doc-self">field_570</a>
+            <dt id="a762e2e40b852343deca6ac98a8ea5fd0">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a762e2e40b852343deca6ac98a8ea5fd0" class="m-doc-self">mSatiety</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a3f9f0673d2c76cbf2ab85fd988865db8">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a3f9f0673d2c76cbf2ab85fd988865db8" class="m-doc-self">field_574</a>
+            <dt id="aa12725da294f23041579315712f659be">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#aa12725da294f23041579315712f659be" class="m-doc-self">mCreatureMass</a>
             </dt>
             <dd><span></span></dd>
             <dt id="a7b1a8e099b41cc7ef50089183b9485ed">
@@ -183,48 +196,48 @@
               <a href="_common_i_ds_8h.html#a4d54ab231bec0e26b55ea9dbb7706a48" class="m-doc">ModelTypes</a> <a href="#a5ef2b77b354482467205075954f5736d" class="m-doc-self">mModelType</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a503e227fa8d16a928c2434f7843767f1">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a503e227fa8d16a928c2434f7843767f1" class="m-doc-self">field_580</a>
+            <dt id="a613966569a4e56e105203205cc9af2dc">
+              <a href="class_simulator_1_1c_species_profile.html#aba2ca78ce94d93e9ac2e2d06924ff442" class="m-doc">HuntingStyle</a> <a href="#a613966569a4e56e105203205cc9af2dc" class="m-doc-self">mHuntingStyle</a>
             </dt>
             <dd><span></span></dd>
             <dt id="af05056fd04237f20ac576ed79d1656bf">
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#af05056fd04237f20ac576ed79d1656bf" class="m-doc-self">field_584</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="ab243c735f5347cd5085ff57500b38609">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ab243c735f5347cd5085ff57500b38609" class="m-doc-self">field_588</a>
+            <dt id="a2693de4a8472ddd5af2c0f384837d5c5">
+              <a href="class_simulator_1_1c_species_profile.html#a0c7564ae8cce208338af865b1f91bd94" class="m-doc">StrafeMode</a> <a href="#a2693de4a8472ddd5af2c0f384837d5c5" class="m-doc-self">field_588</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a2b3e5d61ac2c02a5b6bacad01a17d756">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a2b3e5d61ac2c02a5b6bacad01a17d756" class="m-doc-self">mNumFoot</a>
+            <dt id="a9ce9fe1a6a3c8b45f7b57a0ea5a3d26b">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a9ce9fe1a6a3c8b45f7b57a0ea5a3d26b" class="m-doc-self">mNumFeet</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a02f21ea61b6c17c576c69372215d382a">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a02f21ea61b6c17c576c69372215d382a" class="m-doc-self">mNumGrasper</a>
+            <dt id="a6d9bd7a32b7afcc9f4fc941fbe1c087b">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a6d9bd7a32b7afcc9f4fc941fbe1c087b" class="m-doc-self">mNumGraspers</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="ad0bff9cbc9164822061430909da67e85">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#ad0bff9cbc9164822061430909da67e85" class="m-doc-self">mNumMouth</a>
+            <dt id="add8973c955209c748cc2bcdfeed86a1f">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#add8973c955209c748cc2bcdfeed86a1f" class="m-doc-self">mNumMouths</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a76ef183eb05395c137bb2dc2f327c6a1">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a76ef183eb05395c137bb2dc2f327c6a1" class="m-doc-self">mNumEar</a>
+            <dt id="a9fdeac113c5dc2ab8b9d33b1616583d5">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a9fdeac113c5dc2ab8b9d33b1616583d5" class="m-doc-self">mNumEars</a>
             </dt>
             <dd><span></span></dd>
             <dt id="a19ae3bdbc5cf3ab1394227b255ad6654">
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a19ae3bdbc5cf3ab1394227b255ad6654" class="m-doc-self">mNumEye</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="adfcde2140f7f5d728bddb834b59e88e6">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#adfcde2140f7f5d728bddb834b59e88e6" class="m-doc-self">mCuteness1</a>
+            <dt id="a92dc77d5ff634687704f020dd2e314b4">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a92dc77d5ff634687704f020dd2e314b4" class="m-doc-self">mSumCutenessParts</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="ae5c4d3da957a3662be937ef788eabc9b">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#ae5c4d3da957a3662be937ef788eabc9b" class="m-doc-self">mCuteness2</a>
+            <dt id="ae659b67de02c9e1711b334ee56f436ed">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#ae659b67de02c9e1711b334ee56f436ed" class="m-doc-self">mNumCutenessParts</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="ab6312f958aad30c7cc12b32b67bd2021">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#ab6312f958aad30c7cc12b32b67bd2021" class="m-doc-self">field_5A8</a>
+            <dt id="a6a62ae71183f8567eeb7a1248544be35">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a6a62ae71183f8567eeb7a1248544be35" class="m-doc-self">mCutenessSum</a>
             </dt>
             <dd><span></span></dd>
             <dt id="a578fd512ce746e462e3afce31d1641d6">
@@ -247,20 +260,20 @@
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#ad53af97c35533fb2bd4ff796646b73d0" class="m-doc-self">mMeanness</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="af250a903503f33c1046e82459fde3561">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#af250a903503f33c1046e82459fde3561" class="m-doc-self">field_5C0</a>
+            <dt id="aa666896e426f0742370a7c57119ae750">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#aa666896e426f0742370a7c57119ae750" class="m-doc-self">mMaxPartLevel</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a492d839f88d061f9e2d7643167a9bbee">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a492d839f88d061f9e2d7643167a9bbee" class="m-doc-self">field_5C4</a>
+            <dt id="ac111c5fdbc9a19bc1a6d68dfaae01306">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#ac111c5fdbc9a19bc1a6d68dfaae01306" class="m-doc-self">mAveragePartLevel</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a9c7c4719f9258378dc6905a2148013e0">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a9c7c4719f9258378dc6905a2148013e0" class="m-doc-self">mDuration</a>
+            <dt id="a83ce42a713f38df45d10c126c364e7f0">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a83ce42a713f38df45d10c126c364e7f0" class="m-doc-self">mAbilityTime</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a868da6ac7f6c20517c08bac0e54ed6a0">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a868da6ac7f6c20517c08bac0e54ed6a0" class="m-doc-self">mRefillAbilityBars</a>
+            <dt id="a5a436b46e1487bacf3369a7c85d097cd">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a5a436b46e1487bacf3369a7c85d097cd" class="m-doc-self">mAbilityRecharge</a>
             </dt>
             <dd><span></span></dd>
             <dt id="ad7445ca54a031d8f324a3880a7607c46">
@@ -303,8 +316,8 @@
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a263088bec4a2a52e0dbec43aca633404" class="m-doc-self">mStealthLevel</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a12e5afabd0e62c9f9034a7ce3d6c21ba">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a12e5afabd0e62c9f9034a7ce3d6c21ba" class="m-doc-self">field_5F8</a>
+            <dt id="a7830f889c3e38e45f1baab35e2bda3c5">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a7830f889c3e38e45f1baab35e2bda3c5" class="m-doc-self">mBlockLevel</a>
             </dt>
             <dd><span></span></dd>
             <dt id="af0aad246372deaacb30e3ad94f9d0670">
@@ -343,12 +356,12 @@
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#afec35c145bf20100a7f472f3fed0ad1a" class="m-doc-self">mGlideLevel</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a9e7e3de0c08419cdbd3debdb9a28c0ed">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a9e7e3de0c08419cdbd3debdb9a28c0ed" class="m-doc-self">field_620</a>
+            <dt id="a68fe86b4ae13be4a1796bb00cc8fc57b">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a68fe86b4ae13be4a1796bb00cc8fc57b" class="m-doc-self">mPreferredSocialType</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a1c8aed715d65c39627297954479679e8">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a1c8aed715d65c39627297954479679e8" class="m-doc-self">field_624</a>
+            <dt id="a0a901349effe90dbd00c79c0ca50cae5">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a0a901349effe90dbd00c79c0ca50cae5" class="m-doc-self">mPreferredCombatType</a>
             </dt>
             <dd><span></span></dd>
             <dt id="ad55e902bf6afc52175d172799abcfe10">
@@ -371,8 +384,8 @@
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ad6706662a7e02b1d54795029d922dfb6" class="m-doc-self">mTribeFishingLevel</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a9b146abdf278502ad81dc5985eaa0e11">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a9b146abdf278502ad81dc5985eaa0e11" class="m-doc-self">mDamage</a>
+            <dt id="a08a76bbee430c20faf0e48b44aafb27c">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a08a76bbee430c20faf0e48b44aafb27c" class="m-doc-self">mAdditionalDamage</a>
             </dt>
             <dd><span></span></dd>
             <dt id="a2c433005bb23a3c08e5bf55146e231ab">
@@ -491,12 +504,12 @@
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a74be103bf72e437d18b23dabc1338539" class="m-doc-self">mAdventurerEnergyCost</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="ac3c09c19a41d046a7d2bd43dd6ec6d13">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ac3c09c19a41d046a7d2bd43dd6ec6d13" class="m-doc-self">field_6B4</a>
+            <dt id="a737910779b318fe0199859b1c86d230a">
+              <a href="class_simulator_1_1c_species_profile.html#afce47761a997f49343ab3cd16f525e39" class="m-doc">DominantAbilityType</a> <a href="#a737910779b318fe0199859b1c86d230a" class="m-doc-self">mDominantAbilityType</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a1038dc154bceae059c25ba2f60ee038a">
-              eastl::vector&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>&gt; <a href="#a1038dc154bceae059c25ba2f60ee038a" class="m-doc-self">mFruits</a>
+            <dt id="a0069dd961c0237a456006de9dfde288d">
+              eastl::vector&lt;<a href="class_transform.html" class="m-doc">Transform</a>&gt; <a href="#a0069dd961c0237a456006de9dfde288d" class="m-doc-self">mFruits</a>
             </dt>
             <dd><span></span></dd>
             <dt id="a5c12393558c3b8c4b43fe1322b366519">
@@ -515,36 +528,36 @@
               eastl::fixed_vector&lt;<a href="class_simulator_1_1c_creature_ability.html" class="m-doc">cCreatureAbility</a>*, 20&gt; <a href="#aba1392474123d415d2171781cde8678f" class="m-doc-self">mPassiveAbilities</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a60ef5b9fb483ebe7c7f8f061988f446f">
-              eastl::fixed_vector&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>, 20&gt; <a href="#a60ef5b9fb483ebe7c7f8f061988f446f" class="m-doc-self">mSocialAbilityIndexes</a>
+            <dt id="adae7092db19da2f64f82a1669f0249d9">
+              eastl::fixed_vector&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">unsigned</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">long</a>, 20&gt; <a href="#adae7092db19da2f64f82a1669f0249d9" class="m-doc-self">mSocialAbilityIndexes</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="acdc801651a57ff657d17306d3679b69b">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <a href="#acdc801651a57ff657d17306d3679b69b" class="m-doc-self">field_80C</a>
+            <dt id="ae3650b02444d16b6cd7cdf8e84433686">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <a href="#ae3650b02444d16b6cd7cdf8e84433686" class="m-doc-self">mIsPlant</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a338d30781913a7dd5ed88e54de34e493">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <a href="#a338d30781913a7dd5ed88e54de34e493" class="m-doc-self">field_80D</a>
+            <dt id="ab62068b35d04319d20bd4de1bdfc534c">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <a href="#ab62068b35d04319d20bd4de1bdfc534c" class="m-doc-self">mBIndexesConverted</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a30d0838438457219b448aadf7707ec74">
-              eastl::fixed_vector&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>, 20&gt; <a href="#a30d0838438457219b448aadf7707ec74" class="m-doc-self">mFruitIndexes</a>
+            <dt id="a6b45ea7c8dd82ddf3d6dcb2527239a94">
+              eastl::fixed_vector&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">unsigned</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">long</a>, 20&gt; <a href="#a6b45ea7c8dd82ddf3d6dcb2527239a94" class="m-doc-self">mFruitIndexes</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a79677fe0e517b443f6fbcd9071e6053e">
-              eastl::fixed_vector&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>, 20&gt; <a href="#a79677fe0e517b443f6fbcd9071e6053e" class="m-doc-self">mMouthIndexes</a>
+            <dt id="ab0bc267dbcb326ce37bd6e83efc40ed5">
+              eastl::fixed_vector&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">unsigned</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">long</a>, 20&gt; <a href="#ab0bc267dbcb326ce37bd6e83efc40ed5" class="m-doc-self">mMouthIndexes</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a275878769cd3e1ea8954610d1bd13607">
-              eastl::fixed_vector&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>, 20&gt; <a href="#a275878769cd3e1ea8954610d1bd13607" class="m-doc-self">mGraspersIndexes</a>
+            <dt id="aa76406892c8e12b732ebeee754bede7b">
+              eastl::fixed_vector&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">unsigned</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">long</a>, 20&gt; <a href="#aa76406892c8e12b732ebeee754bede7b" class="m-doc-self">mGraspersIndexes</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="aa98909bf676c1cce1aec484f0f34c7be">
-              eastl::fixed_vector&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>, 20&gt; <a href="#aa98909bf676c1cce1aec484f0f34c7be" class="m-doc-self">mMouthsIndexes2</a>
+            <dt id="a95a371a66f1b80de47f3339df46fc6ea">
+              eastl::fixed_vector&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">unsigned</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">long</a>, 20&gt; <a href="#a95a371a66f1b80de47f3339df46fc6ea" class="m-doc-self">mMouthsIndexes2</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a0d785db90da39103a26b661e77626d1c">
-              eastl::fixed_vector&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>, 20&gt; <a href="#a0d785db90da39103a26b661e77626d1c" class="m-doc-self">mGraspersIndexes2</a>
+            <dt id="aa14d9d563fad3e08afd69950e6ac55c3">
+              eastl::fixed_vector&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">unsigned</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">long</a>, 20&gt; <a href="#aa14d9d563fad3e08afd69950e6ac55c3" class="m-doc-self">mGraspersIndexes2</a>
             </dt>
             <dd><span></span></dd>
           </dl>

@@ -73,6 +73,10 @@
             </dt>
             <dd><span></span></dd>
             <dt>
+              struct <a href="struct_editors_1_1c_bake_stats.html" class="m-doc">cBakeStats</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
               class <a href="class_editors_1_1c_creature_data_resource.html" class="m-doc">cCreatureDataResource</a>
             </dt>
             <dd><span></span></dd>
@@ -125,6 +129,26 @@
             </dt>
             <dd><span></span></dd>
             <dt>
+              class <a href="class_editors_1_1c_s_p_editor_verb_icon.html" class="m-doc">cSPEditorVerbIcon</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              class <a href="class_editors_1_1c_s_p_editor_verb_icon_tray.html" class="m-doc">cSPEditorVerbIconTray</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              class <a href="class_editors_1_1c_s_p_editor_verb_tray_collection.html" class="m-doc">cSPEditorVerbTrayCollection</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              class <a href="class_editors_1_1c_s_p_verb_icon_rollover.html" class="m-doc">cSPVerbIconRollover</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              class <a href="class_editors_1_1c_s_p_verb_tray_collection.html" class="m-doc">cSPVerbTrayCollection</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
               class <a href="class_editors_1_1c_tuning_spine.html" class="m-doc">cTuningSpine</a>
             </dt>
             <dd><span></span></dd>
@@ -144,10 +168,6 @@
               class <a href="class_editors_1_1_editor_creature_controller.html" class="m-doc">EditorCreatureController</a>
             </dt>
             <dd><span></span></dd>
-            <dt>
-              class <a href="class_editors_1_1_editor_model.html" class="m-doc">EditorModel</a>
-            </dt>
-            <dd>Represents the state of a creation in an editor.</dd>
             <dt>
               class <a href="class_editors_1_1_editor_play_mode.html" class="m-doc">EditorPlayMode</a>
             </dt>
@@ -270,6 +290,132 @@
             </dt>
             <dd><span></span></dd>
             <dt>
+              <span class="m-doc-wrap-bumper">enum <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4" class="m-doc">modelCapability</a> { </span><span class="m-doc-wrap"><a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a6d71dd72eea5448ebb1621b6c0209343" class="m-doc">kModelCapabilityPerch</a> = 0x0551bf16,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4aa889b57040dd3251afc331e39e822758" class="m-doc">kModelCapabilitySpine</a> = 0x100f0f5a,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4af55af303243e80e987f6ae8659b90e1e" class="m-doc">kModelCapabilityLimb</a> = 0xb00f0fdf,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a8cc906b32787836d37613a3a394b3aea" class="m-doc">kModelCapabilityNoStretch</a> = 0x06F079DF,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a962774ddff016e7f41a48887226d8b51" class="m-doc">kModelCapabilityGrasper</a> = 0xb00f0fe2,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a38cd84d9178ed082b8812756b03417b4" class="m-doc">kModelCapabilityEar</a> = 0xb00f0fe5,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a6fa62e5276daf462da74774165b3a994" class="m-doc">kModelCapabilityEye</a> = 0xb00f0fe9,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a1bc20066d1a46f76008b75523b9752bf" class="m-doc">kModelCapabilityMouth</a> = 0xb00f0fec,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a0aafff0972ad45e12564b8451bfe90f2" class="m-doc">kModelCapabilityFoot</a> = 0xb00f0fef,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a000f5bf9c8ee8e0258bcee92b870d419" class="m-doc">kModelCapabilitySlash</a> = 0xb00f0ff2,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a9337d8da12171f701fecf24061a911dc" class="m-doc">kModelCapabilityPoke</a> = 0xb00f0ff4,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a99c99579aae587449a781ceb2b5584a4" class="m-doc">kModelCapabilityBash</a> = 0xb00f0ff7,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a4f53b752b6b50cd449e6289bcd42e1c9" class="m-doc">kModelCapabilityFruit</a> = 0xd00f0ffb,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a1e1f585963066ce49b55cc90ac2a9aa1" class="m-doc">kModelCapabilityFin</a> = 0xd00f0ffe,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a33b2d9ef3cf4b9b4a815bfed771cc6f6" class="m-doc">kModelCapabilityLiquid</a> = 0x02294de1,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4aaa13edf7577e11da7b98027fb54e21e3" class="m-doc">kModelCapabilityDayVision</a> = 0x022e7977,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a5f89a9c06fa7df451cc898202a8c3580" class="m-doc">kModelCapabilityNightVision</a> = 0x022e7777,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a5e3870405d12b15105906a01018e55b4" class="m-doc">kModelCapabilityCarnivorous</a> = 0x022e7847,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a48f0e1a847e634c32d2174ad349e0a67" class="m-doc">kModelCapabilityHerbivorous</a> = 0x022e785c,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4af5b4804a8c0d038e915d9aae12ebd2ad" class="m-doc">kModelCapabilityDetail</a> = 0x025c6878,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a4c86cf9e3dffb7697ea27180691dcfc6" class="m-doc">kModelCapabilitySocial</a> = 0x91a570ba,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a97f136fcd0d4c31ec86efdc217965c00" class="m-doc">kModelCapabilityHealth</a> = 0x31c3e5b2,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a0a023730e03fdfd681995a46606abba8" class="m-doc">kModelCapabilityStealth</a> = 0x51c3e5b4,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4aa62b4d60bd7ad008fb94086c3b5a3df8" class="m-doc">kModelCapabilityCuteness</a> = 0xb1c3e5b5,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ab3f803c24e31a92a54b00db588652c32" class="m-doc">kModelCapabilityJump</a> = 0x330c117a,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4acbc0b8a3070630566fca72694ce97154" class="m-doc">kModelCapabilityBlock</a> = 0xf354a879,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a34f252e6fbde7b50bf83d673cba2a426" class="m-doc">kModelCapabilityCall</a> = 0xf354a87a,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ac65f3e022144115f60ef7d5847bc6e2a" class="m-doc">kModelCapabilityCreatureSpeed</a> = 0xb354a87c,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ab1052b6a0f1fcda1e3daa000a2f679e9" class="m-doc">kModelCapabilitySprint</a> = 0x3386c531,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ae2cac08d2e589ee5b5a3181674c62d52" class="m-doc">kModelCapabilityWing</a> = 0x04f4d188,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4aa0448888d163ce37092775bab3cb87ef" class="m-doc">kModelCapabilitySense</a> = 0xb3e30313,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a07044610f516535e74331319ddee35c4" class="m-doc">kModelCapabilityMean</a> = 0xb1c3e5b6,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4af3a33302a5efefa94aecb38e14d01eff" class="m-doc">kModelCapabilityBite</a> = 0xb1c3e5b7,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a8504369899418039c293b56dbe2f4dd5" class="m-doc">kModelCapabilityCharge</a> = 0xb1c3e5b8,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4aa4da94c8321c5527f4d753fb537e3b51" class="m-doc">kModelCapabilitySpit</a> = 0xb1c3e5b9,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4af0ea08477c559325d01a2fa9d8ea78be" class="m-doc">kModelCapabilityStrike</a> = 0xb1c3e5c0,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a93977f277fa02c6506b5382593357f49" class="m-doc">kModelCapabilityDance</a> = 0xb1c3e5c1,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a70a2b37d2789024d66d43a96227838e6" class="m-doc">kModelCapabilityVocalize</a> = 0xb1c3e5c2,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a34328c8901c9dd07a96747847c4e235e" class="m-doc">kModelCapabilityFlaunt</a> = 0xb1c3e5c3,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ac8bd285f9be137e2203e32cd87857441" class="m-doc">kModelCapabilityPosture</a> = 0xb1c3e5c4,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4acd56ae000b55ac63238b6b125b692e6c" class="m-doc">kModelCapabilityGlide</a> = 0x04f4e1b4,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a1f5da545030266ae9974c04938701960" class="m-doc">kModelCapabilityTribeAttack</a> = 0x055d370e,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ac79eeb557d2ff38c05113299e453b3b9" class="m-doc">kModelCapabilityTribeSocial</a> = 0x055d3747,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4aca3ee98c3f89fa8a9c27a2133576e11d" class="m-doc">kModelCapabilityTribeArmor</a> = 0x055d374c,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4afff58b5aab2ed3453c0a4f8b718d6817" class="m-doc">kModelCapabilityTribeGather</a> = 0x055d3750,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a250af2efd0bce0ca9bee152ed67cce4b" class="m-doc">kModelCapabilityTribeFishing</a> = 0x055d3754,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a820d8469682d7c560f981829a8736ec5" class="m-doc">kModelCapabilityEnergyRegen</a> = 0x073ce5dd,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ad13ca3ecf3f3ad947fcffe9eca631b7d" class="m-doc">kModelCapabilityAdventurerMissile</a> = 0x0732c356,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a66d00750d959ab87d119abd6751de87d" class="m-doc">kModelCapabilityAdventurerEnergyBlade</a> = 0x073930ea,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a856fb2bf470307a8321663691dc12880" class="m-doc">kModelCapabilityAdventurerShieldGenerator</a> = 0x073e33c7,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a7db74023a8f96fc7f9adf3c43c988be5" class="m-doc">kModelCapabilityAdventurerHoloCharm</a> = 0x074260ec,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ab84c5e2aea947f7a3eca79cd98e6ad8a" class="m-doc">kModelCapabilityAdventurerLightningSword</a> = 0x075f5ba0,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a9bb3750a46c552257d778265c73b645f" class="m-doc">kModelCapabilityAdventurerPulseGun</a> = 0x075f5ba6,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ae1f392d31ae4862a43b5b4a660a95b0b" class="m-doc">kModelCapabilityAdventurerBattleArmor</a> = 0x075f5bab,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a5831938b6589cfc1122c076dba53b9e5" class="m-doc">kModelCapabilityAdventurerPoweredArmor</a> = 0x075f5baf,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a890e0db2a83ba0bb46514f79ed17f042" class="m-doc">kModelCapabilityAdventurerAbsorptionShield</a> = 0x075f5bb4,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a42bd308cb9de90230f22464d078a585a" class="m-doc">kModelCapabilityAdventurerHealthRegen</a> = 0x075f5bb7,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4aa56470de08dba5aff35e2ea866421b0a" class="m-doc">kModelCapabilityAdventurerHealthBonus</a> = 0x075f5bbc,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a0362f9e24a6e7c01efa480332456cce5" class="m-doc">kModelCapabilityAdventurerSummonSwarm</a> = 0x075f5bbf,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a31d452ea4520817a0fe4aea12480d053" class="m-doc">kModelCapabilityAdventurerMindMeld</a> = 0x075f5bc3,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a14665afa59ff645a8cf75d5c9c9c5f81" class="m-doc">kModelCapabilityAdventurerPoisonBlade</a> = 0x075f5bc8,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4aec7d0b05d6df592dbc4366738011a01a" class="m-doc">kModelCapabilityAdventurerFreeze</a> = 0x075f5bcb,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a1baf734c60de73d785984e36adea80d1" class="m-doc">kModelCapabilityAdventurerGracefulWaltz</a> = 0x075f5bcf,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a5aabd8feb6918742f0108b40efd4ec58" class="m-doc">kModelCapabilityAdventurerHarmoniousSong</a> = 0x075f5bd2,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4aa802eca2dd3a430f89766b33a965b0e4" class="m-doc">kModelCapabilityAdventurerRoyalCharm</a> = 0x075f5bd6,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ae6fe87c505de68f714f9e134d76687bc" class="m-doc">kModelCapabilityAdventurerRadiantPose</a> = 0x075f5bda,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ab1b9731863d4e6cd3d085c1154868200" class="m-doc">kModelCapabilityAdventurerSprintBurst</a> = 0x075f5bde,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a433dd574272cd52edeecd3ee9d8b0b61" class="m-doc">kModelCapabilityAdventurerHover</a> = 0x075f5be3,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a06e9297d8575d16409891633fdbe0d1b" class="m-doc">kModelCapabilityAdventurerStealthField</a> = 0x075f5be6,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ac29df99dbbbdcd178ead7f38bf78025e" class="m-doc">kModelCapabilityAdventurerJumpJet</a> = 0x075f5bea,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4abd1b2bb6ea9919f403eeae13f353f4dd" class="m-doc">kModelCapabilityAdventurerInspiringSong</a> = 0x075f5bee,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4aa61a8cc5bfd7de6225d8bc7afd1d7704" class="m-doc">kModelCapabilityAdventurerStunningDance</a> = 0x075f5bf2,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ae42ec22d9951c6a5800f7e2e4f900cc4" class="m-doc">kModelCapabilityAdventurerConfettiPose</a> = 0x075f5bf7,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ae2ea91690ea1ca97e390c1be2adae65b" class="m-doc">kModelCapabilityAdventurerEnergyStorage</a> = 0x075f5bfa,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a7cf6baeaab73a6e3321f5a777b868205" class="m-doc">kModelCapabilityVehicleSpeed</a> = 0x11b78a70,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a8caa8dc8df163d9220bf1b481c4ccb6b" class="m-doc">kModelCapabilityVehicleDefense</a> = 0x11b78a71,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a9e1a9b07efb5391aa2541b7ceef30b60" class="m-doc">kModelCapabilityVehiclePower</a> = 0x11b78a72,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ac3440a2c8518f2bec8fb6630b7f048ce" class="m-doc">kModelCapabilityVehicleMilitaryPower</a> = 0x06329468,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4aa4b62ac355ce7b7625702ee9dae46b0e" class="m-doc">kModelCapabilityVehicleReligiousPower</a> = 0x06329469,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a0777fdd89bd5b26af615150cb860cbf0" class="m-doc">kModelCapabilityVehicleEconomicPower</a> = 0x0632946a,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ab1065e0407f37b99db6b6bd275171937" class="m-doc">kModelCapabilityCellFilter</a> = 0x11b79a70,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a9714a603aa3a5cb8cfc454f70a8d88f3" class="m-doc">kModelCapabilityCellSpike</a> = 0x11b79a71,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a385eaef2c50f0bfde1c2ae939b4d146c" class="m-doc">kModelCapabilityCellJet</a> = 0x11b79a72,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4aa001a8c41f870b14ede7b03e01064b2e" class="m-doc">kModelCapabilityCellFlagella</a> = 0x032f92e6,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a86be55d84ec013df2b88e1ef58c3fb7d" class="m-doc">kModelCapabilityCellJaw</a> = 0x11b79a74,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a5022dc894cc2e548969eb3ba5eeadd4f" class="m-doc">kModelCapabilityCellElectric</a> = 0x11b79a75,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a040b74e8002f5596de9c321fa6fa4326" class="m-doc">kModelCapabilityCellPoison</a> = 0x11b79a76,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ade1eef92f34811bbae044e4f16f4d349" class="m-doc">kModelCapabilityCellCilia</a> = 0x11b79a77,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ac4c90066b0a81267b8fd5eddc0e0e01e" class="m-doc">kModelCapabilityCellPoker</a> = 0x11b79a78,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4aae4da7f3984c82617aa7f956d3d7ed99" class="m-doc">kModelCapabilityCellEye</a> = 0x11b79a73,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ab97452d8f4662716500348765c8409da" class="m-doc">kModelCapabilityCellMouth</a> = 0x11b79301,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a9d0dc769882a251808fff7f6652322d5" class="m-doc">kModelCapabilityCellMovement</a> = 0x11b79302,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a377ab763b84f947ed5ba8f182889110f" class="m-doc">kModelCapabilityCellWeapon</a> = 0x11b79303,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a8775b4be68537c69785931bf2a338ea5" class="m-doc">kModelCapabilityCellWeaponCharging</a> = 0x11b79304,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a0843087974ff8ddfd56bbbd195fd6c22" class="m-doc">kModelCapabilityCellGameSpeed</a> = 0x066783b4,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a164c9aa5ca668d9f136f1e13edeedd09" class="m-doc">kModelCapabilityCellCarnivore</a> = 0x4d192a1,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ad2151e7a6a2c39f43791d2d74653ccef" class="m-doc">kModelCapabilityCellOmnivore</a> = 0x4d18972,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ae7c1cd1839e44c815b727b6fb53d15d9" class="m-doc">kModelCapabilityCellStarvivore</a> = 0x4d18c4c,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ab66ab86825d454011835201c36e83659" class="m-doc">kModelCapabilityCellStarvivore2</a> = 0x4d192a14,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a30d56320d368c514b1463a5e942963e2" class="m-doc">kModelCapabilityCellHealth</a> = 0x4d18efd,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a0c3d03b8052ac80e75074268bde6a5d4" class="m-doc">kModelCapabilityCellHerbivore</a> = 0x4d192a2,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a1ba283c08daf30c5c9da54422ab9363e" class="m-doc">kModelCapabilityCellProboscis</a> = 0x4d192a3,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4ab6cf7a245d87c97092b5a328dca8b358" class="m-doc">kModelCapabilityCell_herbivore_carnivore_proboscis</a> = 0x50c34699,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a47e8efe12704a342a6ed585843144642" class="m-doc">kModelCapabilityCell_herbivore_carnivore</a> = 0x177209ee,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a1a8d0479fee1634825d107abcdfe122d" class="m-doc">kModelCapabilityCell_herbivore_proboscis</a> = 0x64e7222b,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a553d421c8b97335178afa04efc6625d0" class="m-doc">kModelCapabilityCell_carnivore_proboscis</a> = 0xf613df04,
+              <a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4a9bcb3181c5415d54403214d26190c51c" class="m-doc">kModelCapabilityEyeOverlayEffect</a> = 0xF354A870 }</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">enum <a href="#ac17ec0308b1088a4ba973a8e5d6109e6" class="m-doc">eBlockUIState</a> { </span><span class="m-doc-wrap"><a href="#ac17ec0308b1088a4ba973a8e5d6109e6a2b6fd7b88f718940601e5bde33e707e5" class="m-doc">kSPUIStateDefault</a> = 0,
+              <a href="#ac17ec0308b1088a4ba973a8e5d6109e6a84ccfaa0827a213631b9b75f32728fe5" class="m-doc">kSPUIStateInvalid</a> = 1,
+              <a href="#ac17ec0308b1088a4ba973a8e5d6109e6a27ebc3bc9469f2e4567e45a23ba63c37" class="m-doc">kSPUIStateGhost</a> = 2,
+              <a href="#ac17ec0308b1088a4ba973a8e5d6109e6aae52759b45bd4adca7a70900087d36de" class="m-doc">kSPUIStatePaintMode</a> = 3,
+              <a href="#ac17ec0308b1088a4ba973a8e5d6109e6ab83061a7185e97e27e262dbc1140d386" class="m-doc">kSPUIStateBadLocation</a> = 4,
+              <a href="#ac17ec0308b1088a4ba973a8e5d6109e6ae27c76a1f89695e1be69dcdd41470406" class="m-doc">kSPUIStatePrevent</a> = 5 }</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">enum <a href="#a317095ffca16758aab21296164476549" class="m-doc">eLimbType</a> { </span><span class="m-doc-wrap"><a href="#a317095ffca16758aab21296164476549ad56b7f28c4b551a75176c3eba6e29d2c" class="m-doc">kLimbTypeMuscle</a> = 0,
+              <a href="#a317095ffca16758aab21296164476549a8e9b2959981832331768002cf0dda485" class="m-doc">kLimbTypeTentacle</a> = 1,
+              <a href="#a317095ffca16758aab21296164476549ab6298209a1642b4560ae43511f6f8280" class="m-doc">kLimbTypeRigblock</a> = 2,
+              <a href="#a317095ffca16758aab21296164476549a36fc9ac2963932222c2ed1b0f70e5ec3" class="m-doc">kLimbTypeNA</a> = 3 }</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
               <span class="m-doc-wrap-bumper">enum <a href="#a9c1cc19f70f537f5174ddc14e7c585ff" class="m-doc">EditorRigblockBoolAttributes</a> { </span><span class="m-doc-wrap"><a href="#a9c1cc19f70f537f5174ddc14e7c585ffaa1758cec59ae1a277627cfecdb4240cf" class="m-doc">kEditorRigblockModelOrientToSurfaces</a> = 0,
               <a href="#a9c1cc19f70f537f5174ddc14e7c585ffaf126fbe19db7bd60f0e00d5c4c6221f3" class="m-doc">kEditorRigblockModelOrientWhenSnapped</a> = 4,
               <a href="#a9c1cc19f70f537f5174ddc14e7c585ffa2c1c9bac41cac5072e8660d6b9db061e" class="m-doc">kEditorRigblockModelUseDummyBlocks</a> = 5,
@@ -321,11 +467,66 @@
               <a href="#a9c1cc19f70f537f5174ddc14e7c585ffa6cb647c14198d5a2b6d94332f3456bec" class="m-doc">kEditorRigblockModelStartAsymmetric</a> = 0x3B }</span>
             </dt>
             <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">enum <a href="#a4f2eb9776424396e4ea87dfafceafd07" class="m-doc">eVerbIconCategory</a> { </span><span class="m-doc-wrap"><a href="#a4f2eb9776424396e4ea87dfafceafd07af934a7c20c4fee0d2edcca4fa5235313" class="m-doc">kVerbCategoryNULL</a> = 0,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07adaab052311e84caf3200b9cc8e455e58" class="m-doc">kVerbCategoryTribeAttack</a> = 180661997,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07aca7c379d5bae8cba1850ec8340da6ccb" class="m-doc">kVerbCategoryVehiclePower</a> = 360359141,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a77189b9b695dd6a8d4bc305e6d3a0bf4" class="m-doc">kVerbCategorySpeed</a> = 640949982,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a73e3336d56b304784967b11ba4dbac85" class="m-doc">kVerbCategoryTribeArmor</a> = 662199250,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a180c6ba1f8b471c6c17b79ae8712e951" class="m-doc">kVerbCategoryHerbivore</a> = 771444639,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a34c0654bd28563fdefbe536a9dcb9d4a" class="m-doc">kVerbCategorySpit</a> = 823131355,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07aae96055f6b31273372955c5a6081196e" class="m-doc">kVerbCategoryCellCilia</a> = 835506386,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a5432e1d693e6530fa3dad3d98035a24d" class="m-doc">kVerbCategoryVehicleDefense</a> = 886488350,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07add7d52886266ebbc3069074e1a9aaeb8" class="m-doc">kVerbCategoryCellJaw</a> = 1101458518,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a58890bbd15ff5c46fbeaa3edba76ed6a" class="m-doc">kVerbCategoryCellJet</a> = 1168568857,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a2bd0ac75070221f2efda3d7b6656a526" class="m-doc">kVerbCategorySprint</a> = 1296465089,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a9c977f8dd2224b0f5263a692dca47632" class="m-doc">kVerbCategoryCellOmnivore</a> = 1377441237,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07adfbfe5b8cd2fb653346940b4f2147d28" class="m-doc">kVerbCategoryCellElectric</a> = 1470348634,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a155b0aa63ad78a93f989e1c4dda36235" class="m-doc">kVerbCategoryVehicleSpeed</a> = 1501155019,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a7648404cafd2feedfd39fec67fdce3e9" class="m-doc">kVerbCategoryOmnivore</a> = 1557282664,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a8ec08d39bb9356c3d6d6d17cba42e5ec" class="m-doc">kVerbCategoryTribeSocial</a> = 1589650888,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07aafbbe15c074acc9c254a4c05655c6b5d" class="m-doc">kVerbCategoryCellPoison</a> = 1601154124,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a93c8b68a4cba9254c566dd36bf146e91" class="m-doc">kVerbCategoryBite</a> = 1645043423,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a5715ee3269e11ba7f755ddd5d98d8326" class="m-doc">kVerbCategoryDance</a> = 1924791374,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07aedcc0244c46b644ca064ffe3cfd27eb7" class="m-doc">kVerbCategoryStarvivore</a> = 2095425492,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a8fce67e5ff3daafbfd2e3b9871773fa3" class="m-doc">kVerbCategoryCellFlagella</a> = 2165516464,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07aab3759262cc4444f7167ab178c052c34" class="m-doc">kVerbCategoryGesture</a> = 2167648234,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a91ec03228f771e6f23e109f8eaa4fb86" class="m-doc">kVerbCategoryPower</a> = 2391494160,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a21e18aa79b92df72c2a4e0e8670776fa" class="m-doc">kVerbCategoryDefense</a> = 2564315215,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a454dfff4c4f9030323e20e3fe106d109" class="m-doc">kVerbCategoryCarnivore</a> = 2726979560,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07ae8ddfc40162981b5242f28a3a5123bce" class="m-doc">kVerbCategoryStealth</a> = 2909291642,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a644b1a4340253399ccbbce7b9c8d7943" class="m-doc">kVerbCategoryPosture</a> = 2909789983,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07ad74d9b112ee964fe6a5d290c63c63b94" class="m-doc">kVerbCategoryCellHealth</a> = 2964572918,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07ac0fb85aee7d51f285411775c4898580f" class="m-doc">kVerbCategoryGlide</a> = 2968795556,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a374d5f807d6df487f2c61f612397413a" class="m-doc">kVerbCategoryCellPoker</a> = 3013574067,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a07c79c7b28fb786442773973bdf68100" class="m-doc">kVerbCategoryCellFilter</a> = 3020374546,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a7f41b2645ab564edab9f680e92b5a856" class="m-doc">kVerbCategoryTribeFishing</a> = 3188984297,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a47ea7fb62fd4d1dda5720838eedbe523" class="m-doc">kVerbCategoryTribeGather</a> = 3253334812,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a1d61d6b155b2335ab40451bea60894bd" class="m-doc">kVerbCategoryVocalize</a> = 3478552014,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07ae705d4fd5ed79557c668b73af637ec3f" class="m-doc">kVerbCategoryCellStarvivore</a> = 3610717237,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07aefa662b075cef982f7a8021e7f43d7be" class="m-doc">kVerbCategoryCellSpike</a> = 3634179486,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a87b09ecc79447a6e27b65c2e21062620" class="m-doc">kVerbCategoryCellHerbivore</a> = 3653024240,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a296635972631e3cd29bb8fc7a5552ffc" class="m-doc">kVerbCategoryHealth</a> = 3677180323,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a2904b9a0d8772f50dfc7eda97bd0377a" class="m-doc">kVerbCategoryCellCarnivore</a> = 3751859903,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a56f746d3f8b0028104ad905b39c16e30" class="m-doc">kVerbCategoryCall</a> = 3753286133,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a92e215da5ec8cac025bf3a3de8bfa8c8" class="m-doc">kVerbCategoryJump</a> = 3833651337,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a2a8ecb02dfb975b53f258af3b73d91e4" class="m-doc">kVerbCategoryBlock</a> = 4001580976,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a5860355216eb00775a75273945a40c57" class="m-doc">kVerbCategorySense</a> = 4069948569,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07ad47844f5ae5a27f94458369b2ca082ea" class="m-doc">kVerbCategoryStrike</a> = 4110605575,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a79dc0bedebe16712261d809f134b3ebd" class="m-doc">kVerbCategoryGrasp</a> = 4248645338,
+              <a href="#a4f2eb9776424396e4ea87dfafceafd07a4317fbc6a61dab826db68506cb430ad9" class="m-doc">kVerbCategoryCharge</a> = 4285247397 }</span>
+            </dt>
+            <dd><span></span></dd>
           </dl>
         </section>
         <section id="func-members">
           <h2><a href="#func-members">Functions</a></h2>
           <dl class="m-doc">
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#a600138c55c5a00a40ae7713534eefb80" class="m-doc">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_editors_1_1_i_bake_manager.html" class="m-doc">IBakeManager</a>,
+              0x1248)</span>
+            </dt>
+            <dd><span></span></dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a1aa5950753776c28b4b1bdc13416ab0b" class="m-doc">Addresses</a>(</span><span class="m-doc-wrap"><a href="class_editors_1_1_i_bake_manager.html" class="m-doc">IBakeManager</a>) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">namespace</a></span>
             </dt>
@@ -397,6 +598,31 @@
             <dd><span></span></dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a0f2a2e1aef130be676a8fd91fd918b68" class="m-doc">Addresses</a>(</span><span class="m-doc-wrap"><a href="struct_editors_1_1_content_validation.html" class="m-doc">ContentValidation</a>) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">namespace</a></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#a6e6e2cb6f4303f92af61153fdaf4ddf3" class="m-doc">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_editors_1_1c_s_p_editor_verb_icon.html" class="m-doc">cSPEditorVerbIcon</a>,
+              0x184)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#ae1390668bf97152db00896a97796aeb3" class="m-doc">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_editors_1_1c_s_p_editor_verb_icon_tray.html" class="m-doc">cSPEditorVerbIconTray</a>,
+              0x120)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#ab38183264118695183668cadf6e5b0df" class="m-doc">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_editors_1_1c_s_p_editor_verb_tray_collection.html" class="m-doc">cSPEditorVerbTrayCollection</a>,
+              0x58)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#ae7f9d890225246706b7dad57778a6ed9" class="m-doc">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_editors_1_1c_s_p_verb_icon_rollover.html" class="m-doc">cSPVerbIconRollover</a>,
+              0x78)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#a73670af831d89eb9da764d323161c62a" class="m-doc">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_editors_1_1c_s_p_verb_tray_collection.html" class="m-doc">cSPVerbTrayCollection</a>,
+              0x58)</span>
             </dt>
             <dd><span></span></dd>
             <dt>
@@ -593,6 +819,10 @@
               0xC4)</span>
             </dt>
             <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ae4907658a9d3b681e347a107dad4d501" class="m-doc">Addresses</a>(</span><span class="m-doc-wrap"><a href="class_editors_1_1_verb_icon_data.html" class="m-doc">VerbIconData</a>) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">namespace</a></span>
+            </dt>
+            <dd><span></span></dd>
           </dl>
         </section>
         <section>
@@ -671,6 +901,27 @@
               </tbody>
             </table>
           </div></section>
+          <section class="m-doc-details" id="ad3d6f04d7895ef86b4ea34a9a0cbe3d4"><div>
+            <h3>
+              enum Editors::<wbr /><a href="#ad3d6f04d7895ef86b4ea34a9a0cbe3d4" class="m-doc-self">modelCapability</a>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_editor_rigblock_8h.html">&lt;Spore ModAPI/Spore/Editors/EditorRigblock.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="ac17ec0308b1088a4ba973a8e5d6109e6"><div>
+            <h3>
+              enum Editors::<wbr /><a href="#ac17ec0308b1088a4ba973a8e5d6109e6" class="m-doc-self">eBlockUIState</a>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_editor_rigblock_8h.html">&lt;Spore ModAPI/Spore/Editors/EditorRigblock.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a317095ffca16758aab21296164476549"><div>
+            <h3>
+              enum Editors::<wbr /><a href="#a317095ffca16758aab21296164476549" class="m-doc-self">eLimbType</a>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_editor_rigblock_8h.html">&lt;Spore ModAPI/Spore/Editors/EditorRigblock.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
           <section class="m-doc-details" id="a9c1cc19f70f537f5174ddc14e7c585ff"><div>
             <h3>
               enum Editors::<wbr /><a href="#a9c1cc19f70f537f5174ddc14e7c585ff" class="m-doc-self">EditorRigblockBoolAttributes</a>
@@ -678,9 +929,24 @@
             </h3>
             <p><span></span></p>
           </div></section>
+          <section class="m-doc-details" id="a4f2eb9776424396e4ea87dfafceafd07"><div>
+            <h3>
+              enum Editors::<wbr /><a href="#a4f2eb9776424396e4ea87dfafceafd07" class="m-doc-self">eVerbIconCategory</a>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_verb_icon_data_8h.html">&lt;Spore ModAPI/Spore/Editors/VerbIconData.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
         </section>
         <section>
           <h2>Function documentation</h2>
+          <section class="m-doc-details" id="a600138c55c5a00a40ae7713534eefb80"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"> Editors::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a600138c55c5a00a40ae7713534eefb80" class="m-doc-self">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_editors_1_1_i_bake_manager.html" class="m-doc">IBakeManager</a>,
+              0x1248)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_bake_manager_8h.html">&lt;Spore ModAPI/Spore/Editors/BakeManager.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
           <section class="m-doc-details" id="a1aa5950753776c28b4b1bdc13416ab0b"><div>
             <h3>
               <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">namespace</a> Editors::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a1aa5950753776c28b4b1bdc13416ab0b" class="m-doc-self">Addresses</a>(</span><span class="m-doc-wrap"><a href="class_editors_1_1_i_bake_manager.html" class="m-doc">IBakeManager</a>)</span></span>
@@ -799,6 +1065,46 @@
             <h3>
               <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">namespace</a> Editors::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a0f2a2e1aef130be676a8fd91fd918b68" class="m-doc-self">Addresses</a>(</span><span class="m-doc-wrap"><a href="struct_editors_1_1_content_validation.html" class="m-doc">ContentValidation</a>)</span></span>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_content_validation_8h.html">&lt;Spore ModAPI/Spore/Editors/ContentValidation.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a6e6e2cb6f4303f92af61153fdaf4ddf3"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"> Editors::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a6e6e2cb6f4303f92af61153fdaf4ddf3" class="m-doc-self">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_editors_1_1c_s_p_editor_verb_icon.html" class="m-doc">cSPEditorVerbIcon</a>,
+              0x184)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="c_s_p_editor_verb_icon_8h.html">&lt;Spore ModAPI/Spore/Editors/cSPEditorVerbIcon.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="ae1390668bf97152db00896a97796aeb3"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"> Editors::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ae1390668bf97152db00896a97796aeb3" class="m-doc-self">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_editors_1_1c_s_p_editor_verb_icon_tray.html" class="m-doc">cSPEditorVerbIconTray</a>,
+              0x120)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="c_s_p_editor_verb_icon_tray_8h.html">&lt;Spore ModAPI/Spore/Editors/cSPEditorVerbIconTray.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="ab38183264118695183668cadf6e5b0df"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"> Editors::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab38183264118695183668cadf6e5b0df" class="m-doc-self">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_editors_1_1c_s_p_editor_verb_tray_collection.html" class="m-doc">cSPEditorVerbTrayCollection</a>,
+              0x58)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="c_s_p_editor_verb_tray_collection_8h.html">&lt;Spore ModAPI/Spore/Editors/cSPEditorVerbTrayCollection.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="ae7f9d890225246706b7dad57778a6ed9"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"> Editors::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ae7f9d890225246706b7dad57778a6ed9" class="m-doc-self">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_editors_1_1c_s_p_verb_icon_rollover.html" class="m-doc">cSPVerbIconRollover</a>,
+              0x78)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="c_s_p_verb_icon_rollover_8h.html">&lt;Spore ModAPI/Spore/Editors/cSPVerbIconRollover.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a73670af831d89eb9da764d323161c62a"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"> Editors::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a73670af831d89eb9da764d323161c62a" class="m-doc-self">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_editors_1_1c_s_p_verb_tray_collection.html" class="m-doc">cSPVerbTrayCollection</a>,
+              0x58)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="c_s_p_verb_tray_collection_8h.html">&lt;Spore ModAPI/Spore/Editors/cSPVerbTrayCollection.h&gt;</a></div>
             </h3>
             <p><span></span></p>
           </div></section>
@@ -1118,6 +1424,13 @@
             <h3>
               <span class="m-doc-wrap-bumper"> Editors::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ae615ac0b1a5fb8929c5991c37f5fcb30" class="m-doc-self">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_editors_1_1_verb_icon_data.html" class="m-doc">VerbIconData</a>,
               0xC4)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_verb_icon_data_8h.html">&lt;Spore ModAPI/Spore/Editors/VerbIconData.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="ae4907658a9d3b681e347a107dad4d501"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">namespace</a> Editors::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ae4907658a9d3b681e347a107dad4d501" class="m-doc-self">Addresses</a>(</span><span class="m-doc-wrap"><a href="class_editors_1_1_verb_icon_data.html" class="m-doc">VerbIconData</a>)</span></span>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_verb_icon_data_8h.html">&lt;Spore ModAPI/Spore/Editors/VerbIconData.h&gt;</a></div>
             </h3>
             <p><span></span></p>
