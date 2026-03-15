@@ -56,6 +56,7 @@
               Reference
               <ul>
                 <li><a href="#pub-static-attribs">Public static variables</a></li>
+                <li><a href="#pub-static-methods">Public static functions</a></li>
                 <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
                 <li><a href="#pub-methods">Public functions</a></li>
               </ul>
@@ -83,6 +84,29 @@
             <dd><span></span></dd>
             <dt id="a704382495bc5f2873b207671b43cf6b1">
               static <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_math_1_1_color.html" class="m-doc">Color</a> <a href="#a704382495bc5f2873b207671b43cf6b1" class="m-doc-self">BLACK</a>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="pub-static-methods">
+          <h2><a href="#pub-static-methods">Public static functions</a></h2>
+          <dl class="m-doc">
+            <dt id="a66ac99b17535fbff3c5a5fc76f741dab">
+              <span class="m-doc-wrap-bumper">static auto <a href="#a66ac99b17535fbff3c5a5fc76f741dab" class="m-doc-self">RGBToHSV</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint8_<wbr />t</a> r,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint8_<wbr />t</a> g,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint8_<wbr />t</a> b,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a>&amp; h,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a>&amp; s,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a>&amp; v) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a87c4d316ef26d53bbace30315cccb532">
+              <span class="m-doc-wrap-bumper">static auto <a href="#a87c4d316ef26d53bbace30315cccb532" class="m-doc-self">HSVToRGB</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> h,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> s,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> v,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint8_<wbr />t</a>&amp; r,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint8_<wbr />t</a>&amp; g,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint8_<wbr />t</a>&amp; b) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a></span>
             </dt>
             <dd><span></span></dd>
           </dl>
@@ -122,6 +146,26 @@
               <span class="m-doc-wrap-bumper">auto <a href="#a32cb79a9cae7f1c4e994c3d0465a88c8" class="m-doc-self">operator!=</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_math_1_1_color.html" class="m-doc">Color</a>&amp; b) const -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a></span>
             </dt>
             <dd><span></span></dd>
+            <dt id="af048b7120ff40ad8fdd7596f929a9c92">
+              <span class="m-doc-wrap-bumper">auto <a href="#af048b7120ff40ad8fdd7596f929a9c92" class="m-doc-self">Color::operator+=</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_math_1_1_color.html" class="m-doc">Color</a>&amp; b) -&gt; <a href="struct_math_1_1_color.html" class="m-doc">Color</a>&amp;</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ad570134d4cc0f5949dbf936568435e7a">
+              <span class="m-doc-wrap-bumper">auto <a href="#ad570134d4cc0f5949dbf936568435e7a" class="m-doc-self">Color::operator-=</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_math_1_1_color.html" class="m-doc">Color</a>&amp; b) -&gt; <a href="struct_math_1_1_color.html" class="m-doc">Color</a>&amp;</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a8c1934c8ae118f416b6f0aef8ed6c93c">
+              <span class="m-doc-wrap-bumper">auto <a href="#a8c1934c8ae118f416b6f0aef8ed6c93c" class="m-doc-self">operator+</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_math_1_1_color.html" class="m-doc">Color</a>&amp; b) -&gt; <a href="struct_math_1_1_color.html" class="m-doc">Color</a></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ab69d54a3e237107a2b6471cbfdfab487">
+              <span class="m-doc-wrap-bumper">auto <a href="#ab69d54a3e237107a2b6471cbfdfab487" class="m-doc-self">operator-</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_math_1_1_color.html" class="m-doc">Color</a>&amp; b) -&gt; <a href="struct_math_1_1_color.html" class="m-doc">Color</a></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aa7a03a6806732562cf5981b21adbd30c">
+              <span class="m-doc-wrap-bumper">auto <a href="#aa7a03a6806732562cf5981b21adbd30c" class="m-doc-self">Clamp</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a></span>
+            </dt>
+            <dd>Multiplies the brightness (value) by the given factor.</dd>
           </dl>
         </section>
       </div>

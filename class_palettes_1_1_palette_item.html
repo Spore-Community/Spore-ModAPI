@@ -84,6 +84,7 @@
           <dl class="m-doc">
             <dt>
               <span class="m-doc-wrap-bumper">enum <a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2" class="m-doc">ItemType</a> { </span><span class="m-doc-wrap"><a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2a40530a468d5c522e432f5cc3f1fca2f7" class="m-doc">kItemBlock</a> = 0xA2E50993,
+              <a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2a17193317e4f424139f831f1147962a9e" class="m-doc">kItemBlockAssembly</a> = 0xC9DB779B,
               <a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2af50b619f71f35cf75dd9d6d6b0eba3fe" class="m-doc">kItemCreation</a> = 0x674AB27,
               <a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2aedaa334e0414bf5ec97035d17d3979ef" class="m-doc">kItemBlockPaint</a> = 0xBD110A25,
               <a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2a74d0f6f3869dda4004f06ff56e1e9f41" class="m-doc">kItemBlockPaintTheme</a> = 0x17D37D90,
@@ -91,10 +92,16 @@
               <a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2a69ad57c7586d5e7799a854bf75b2cd4e" class="m-doc">kItemSkinPaintTheme</a> = 0xDEE3D8A8,
               <a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2a10797cacf96eef11b95a629963c70fb8" class="m-doc">kItemPaintLikeThis</a> = 0x800B7988,
               <a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2a7715341f3eb54c7f87aea52df969743a" class="m-doc">kItemTribeTool</a> = 0x0FCAFD26,
+              <a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2ac4c399f493132b91c07306cb05a3029a" class="m-doc">kItemTribeHutStyle</a> = 0x7B67F192,
               <a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2a1562da9a8c41221219e3e35716f23de9" class="m-doc">kItemOutfitter</a> = 0x42BF8C1D,
               <a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2a38ac44fc4fe72afb464efa5414a576ea" class="m-doc">kItemCityStyle</a> = 0x2B885DF4,
+              <a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2a310e1b67219b617751c497c88070530e" class="m-doc">kItemTrait</a> = 0x4D7D9BE4,
+              <a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2a42e30ff00c4b98a6640145c1eab52109" class="m-doc">kItemTool</a> = 0x0E03DB96,
               <a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2ac72f4d7f5dffd94885b42ed04f28686e" class="m-doc">kItemCityVehicle</a> = 0x8BFAC054,
-              <a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2aa53a205de74cfa44f4a9fa02c863179d" class="m-doc">kItemCityBuilding</a> = 0x81C74DBC }</span>
+              <a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2aa53a205de74cfa44f4a9fa02c863179d" class="m-doc">kItemCityBuilding</a> = 0x81C74DBC,
+              <a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2aa7b7d0dd59782b09cf8275eb25429ddd" class="m-doc">kItemCityTurret</a> = 0x0142462A,
+              <a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2a51f0831c9afce5ee2b1f66893d6fb569" class="m-doc">kItemCityCivicObject</a> = 0x4D863C8B,
+              <a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2a97a3c7accd37b70394682afc5a67a3ac" class="m-doc">kItemScenarioObject</a> = 0xE73759F3 }</span>
             </dt>
             <dd>The supported types of palette items, which are selected depending on the file extension or the value of the &#x27;paletteItemType&#x27; property.</dd>
           </dl>
@@ -207,6 +214,12 @@
                   </td>
                 </tr>
                 <tr>
+                  <td><a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2a17193317e4f424139f831f1147962a9e" class="m-doc-self" id="aabbf4fe9e3393f54352d37d2a2ff2bf2a17193317e4f424139f831f1147962a9e">kItemBlockAssembly</a></td>
+                  <td>
+                  <p>The item used for limb assemblies and other creations used as block assemblies.</p>
+                  </td>
+                </tr>
+                <tr>
                   <td><a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2af50b619f71f35cf75dd9d6d6b0eba3fe" class="m-doc-self" id="aabbf4fe9e3393f54352d37d2a2ff2bf2af50b619f71f35cf75dd9d6d6b0eba3fe">kItemCreation</a></td>
                   <td>
                   <p>The item used when the item is a creation (that is .vcl, .crt, .cll, etc files).</p>
@@ -245,19 +258,37 @@
                 <tr>
                   <td><a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2a7715341f3eb54c7f87aea52df969743a" class="m-doc-self" id="aabbf4fe9e3393f54352d37d2a2ff2bf2a7715341f3eb54c7f87aea52df969743a">kItemTribeTool</a></td>
                   <td>
-                  <p><span></span></p>
+                  <p>The item used for tribal tools in the tribe planner.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2ac4c399f493132b91c07306cb05a3029a" class="m-doc-self" id="aabbf4fe9e3393f54352d37d2a2ff2bf2ac4c399f493132b91c07306cb05a3029a">kItemTribeHutStyle</a></td>
+                  <td>
+                  <p>Not used.</p>
                   </td>
                 </tr>
                 <tr>
                   <td><a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2a1562da9a8c41221219e3e35716f23de9" class="m-doc-self" id="aabbf4fe9e3393f54352d37d2a2ff2bf2a1562da9a8c41221219e3e35716f23de9">kItemOutfitter</a></td>
                   <td>
-                  <p><span></span></p>
+                  <p>The item used for outfitter editor previews in planners.</p>
                   </td>
                 </tr>
                 <tr>
                   <td><a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2a38ac44fc4fe72afb464efa5414a576ea" class="m-doc-self" id="aabbf4fe9e3393f54352d37d2a2ff2bf2a38ac44fc4fe72afb464efa5414a576ea">kItemCityStyle</a></td>
                   <td>
-                  <p><span></span></p>
+                  <p>The item used for city walls in cities/colonies.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2a310e1b67219b617751c497c88070530e" class="m-doc-self" id="aabbf4fe9e3393f54352d37d2a2ff2bf2a310e1b67219b617751c497c88070530e">kItemTrait</a></td>
+                  <td>
+                  <p>The item used for space game traits for captains.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2a42e30ff00c4b98a6640145c1eab52109" class="m-doc-self" id="aabbf4fe9e3393f54352d37d2a2ff2bf2a42e30ff00c4b98a6640145c1eab52109">kItemTool</a></td>
+                  <td>
+                  <p>The item used for space game tools for captains.</p>
                   </td>
                 </tr>
                 <tr>
@@ -270,6 +301,24 @@
                   <td><a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2aa53a205de74cfa44f4a9fa02c863179d" class="m-doc-self" id="aabbf4fe9e3393f54352d37d2a2ff2bf2aa53a205de74cfa44f4a9fa02c863179d">kItemCityBuilding</a></td>
                   <td>
                   <p>The item used to select buildings in cities/colonies.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2aa7b7d0dd59782b09cf8275eb25429ddd" class="m-doc-self" id="aabbf4fe9e3393f54352d37d2a2ff2bf2aa7b7d0dd59782b09cf8275eb25429ddd">kItemCityTurret</a></td>
+                  <td>
+                  <p>The item used to select turrets in cities/colonies.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2a51f0831c9afce5ee2b1f66893d6fb569" class="m-doc-self" id="aabbf4fe9e3393f54352d37d2a2ff2bf2a51f0831c9afce5ee2b1f66893d6fb569">kItemCityCivicObject</a></td>
+                  <td>
+                  <p>The item used to select decorations in cities/colonies.</p>
+                  </td>
+                </tr>
+                <tr>
+                  <td><a href="#aabbf4fe9e3393f54352d37d2a2ff2bf2a97a3c7accd37b70394682afc5a67a3ac" class="m-doc-self" id="aabbf4fe9e3393f54352d37d2a2ff2bf2a97a3c7accd37b70394682afc5a67a3ac">kItemScenarioObject</a></td>
+                  <td>
+                  <p>The item used for scenario objects in the adventure editor.</p>
                   </td>
                 </tr>
               </tbody>

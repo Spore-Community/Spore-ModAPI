@@ -328,6 +328,26 @@
           <h2><a href="#enum-members">Enums</a></h2>
           <dl class="m-doc">
             <dt>
+              <span class="m-doc-wrap-bumper">enum <a href="#aa8811ac35b4fc63d0b89cedee08e664f" class="m-doc">RenderType</a> { </span><span class="m-doc-wrap"><a href="#aa8811ac35b4fc63d0b89cedee08e664fa8e1f8667923caecbd3a2c5b93c1b8294" class="m-doc">kRenderTypeDefault</a> = 0,
+              <a href="#aa8811ac35b4fc63d0b89cedee08e664fadbbdbd44c6e6b8a2971226a469daee62" class="m-doc">kRenderTypeShadowRender</a> = 1,
+              <a href="#aa8811ac35b4fc63d0b89cedee08e664fa1c02b977578837143adac8489847af20" class="m-doc">kRenderTypeShadowMap</a> = 2,
+              <a href="#aa8811ac35b4fc63d0b89cedee08e664fa69e7914fe957c38ec0375f22003ea9c3" class="m-doc">kRenderTypeSplatter</a> = 3,
+              <a href="#aa8811ac35b4fc63d0b89cedee08e664fae1196894d53be4215208ab685733f3cf" class="m-doc">kRenderTypeNonMRTShadows</a> = 4,
+              <a href="#aa8811ac35b4fc63d0b89cedee08e664fabc2f28ad955a39303f0c4d4650d75f54" class="m-doc">kRenderTypeImpostorDiffuse</a> = 5,
+              <a href="#aa8811ac35b4fc63d0b89cedee08e664fa49588ea6275dd994072531a8a5420409" class="m-doc">kRenderTypeImpostorNormal</a> = 6,
+              <a href="#aa8811ac35b4fc63d0b89cedee08e664fa9a7aecc34235121cd2ee19e443bc36d3" class="m-doc">kRenderTypeImpostorSpec</a> = 7,
+              <a href="#aa8811ac35b4fc63d0b89cedee08e664fa326af0099f8fb9c65f183286b9ae484b" class="m-doc">kRenderTypeAmbOccShadowMap</a> = 8,
+              <a href="#aa8811ac35b4fc63d0b89cedee08e664fae92a79fbac9cbde1232f34bc64767434" class="m-doc">kRenderTypeAmbOccSplatter</a> = 9,
+              <a href="#aa8811ac35b4fc63d0b89cedee08e664fa734099861b5c394b11d2d8c222dad89f" class="m-doc">kRenderTypeStandardShadow</a> = 10,
+              <a href="#aa8811ac35b4fc63d0b89cedee08e664faebbd94b39cdda7ed447c97b970629623" class="m-doc">kRenderTypeDepth</a> = 11,
+              <a href="#aa8811ac35b4fc63d0b89cedee08e664fa2d0c4559ad3da792cfd5365094acf492" class="m-doc">kRenderTypeRegionOutline</a> = 12,
+              <a href="#aa8811ac35b4fc63d0b89cedee08e664faaf53ee809b5f7b86937136096118268f" class="m-doc">kRenderTypeShowLOD</a> = 13,
+              <a href="#aa8811ac35b4fc63d0b89cedee08e664fa33dea445079d37d668ab9cb0b89e6cc8" class="m-doc">kRenderTypeSolidWhite</a> = 13,
+              <a href="#aa8811ac35b4fc63d0b89cedee08e664facae0f08d2d3b6d04319f3a394f0a08de" class="m-doc">kRenderTypeCreatureEffects</a> = 15,
+              <a href="#aa8811ac35b4fc63d0b89cedee08e664fae6fcfcede4c65a20903e8fd75d46080b" class="m-doc">kMaxRenderTypes</a> = 16 }</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
               <span class="m-doc-wrap-bumper">enum <a href="#a33bc13e7bf4fbe97cd50afd32b423a72" class="m-doc">GameModeManagerMessageIDs</a> { </span><span class="m-doc-wrap"><a href="#a33bc13e7bf4fbe97cd50afd32b423a72aab99bde69d5a451b5a8d0a9949662434" class="m-doc">kMsgAddRef</a> = 1,
               <a href="#a33bc13e7bf4fbe97cd50afd32b423a72a58f34ed3e76d5d3fcbebf4a0dbfc81ed" class="m-doc">kMsgRelease</a> = 2,
               <a href="#a33bc13e7bf4fbe97cd50afd32b423a72a3c5da5adc2e58824ebc94b284a8d6c79" class="m-doc">kMsgOnModeExit</a> = 0x212D3E7,
@@ -642,12 +662,27 @@
             </dt>
             <dd>Executes a function after a certain time (measured in seconds) has passed from ths call.</dd>
             <dt>
+              <div class="m-doc-template">template&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">typename</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">Func</a>, typename... Args&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#afa712e6ccc238dc4ad70cfa62e168ac1" class="m-doc">ScheduleTaskWithArgs</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">Func</a>&amp;&amp; function,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> scheduleTime,
+              <a href="_cpp_rev_eng_base_8h.html#aff12ecf140cc31d5335c3c978808c268" class="m-doc">Args</a> &amp;&amp; ... args) -&gt; <a href="_i_message_manager_8h.html#a8398855010ed2cf21fa27d1c29cf64e9" class="m-doc">ScheduledTaskListenerPtr</a></span>
+            </dt>
+            <dd></dd>
+            <dt>
               <div class="m-doc-template">template&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">class</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">T</a>&gt;</div>
               <span class="m-doc-wrap-bumper">auto <a href="#aa61da6efea014433d0876a4ec80005b0" class="m-doc">ScheduleTask</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">T</a>* object,
               <a href="namespace_app.html#adf650d2c1852a6bd9fa7e8d49af6fae4" class="m-doc">VoidMethod_<wbr />T</a>&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">T</a>&gt; method,
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> scheduleTime) -&gt; <a href="_i_message_manager_8h.html#a8398855010ed2cf21fa27d1c29cf64e9" class="m-doc">ScheduledTaskListenerPtr</a></span>
             </dt>
             <dd>Executes a class method after a certain time (measured in seconds) has passed from ths call.</dd>
+            <dt>
+              <div class="m-doc-template">template&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">class</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">ObjT</a>, <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">class</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">MethodT</a>, class... MethodArgs, class... CallArgs&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#ab564d9397239fe9e223a44616ed264a8" class="m-doc">ScheduleTaskWithArgs</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">ObjT</a>* object,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a>(MethodT::*)(MethodArgs...) method,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> scheduleTime,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">CallArgs</a> &amp;&amp; ... args) -&gt; <a href="_i_message_manager_8h.html#a8398855010ed2cf21fa27d1c29cf64e9" class="m-doc">ScheduledTaskListenerPtr</a></span>
+            </dt>
+            <dd></dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#abb247ce86a07e289885ac6db8e0235fc" class="m-doc">ScheduleRepeatedTask</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="namespace_app.html#a0792416baaa2251d68963db97d021cda" class="m-doc">VoidFunction_<wbr />T</a>&amp; function,
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> scheduleTime,
@@ -1264,6 +1299,13 @@
         </section>
         <section>
           <h2>Enum documentation</h2>
+          <section class="m-doc-details" id="aa8811ac35b4fc63d0b89cedee08e664f"><div>
+            <h3>
+              enum App::<wbr /><a href="#aa8811ac35b4fc63d0b89cedee08e664f" class="m-doc-self">RenderType</a>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="c_viewer_8h.html">&lt;Spore ModAPI/Spore/App/cViewer.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
           <section class="m-doc-details" id="a33bc13e7bf4fbe97cd50afd32b423a72"><div>
             <h3>
               enum App::<wbr /><a href="#a33bc13e7bf4fbe97cd50afd32b423a72" class="m-doc-self">GameModeManagerMessageIDs</a>
@@ -1811,7 +1853,7 @@
               <tbody>
                 <tr>
                   <td style="width: 1%">function</td>
-                  <td>A void function with no parameters, that will be executed every frame.</td>
+                  <td>A void function with no parameters, that will be executed after the scheduled time.</td>
                 </tr>
                 <tr>
                   <td>scheduleTime</td>
@@ -1820,6 +1862,36 @@
               </tbody>
             </table>
 <p>The function is executed only once, and the time starts counting since this ScheduleTask method has been called.</p><p>The method returns the object that holds the scheduled task. If you want to remove the task before it is called, you can do it by calling App::RemoveScheduledTask(...) with the returned object as parameter.</p><p>Internally, this is implemented by adding a message listener that listens to the kMsgAppUpdate message. Every frame uses a <a href="class_clock.html" class="m-doc">Clock</a> object to compare the elapsed time since this task as scheduled. The listener is removed once the task has finished executing.</p>
+          </div></section>
+          <section class="m-doc-details" id="afa712e6ccc238dc4ad70cfa62e168ac1"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="_i_message_manager_8h.html">&lt;Spore ModAPI/Spore/App/IMessageManager.h&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">typename</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">Func</a>, typename... Args&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"><a href="_i_message_manager_8h.html#a8398855010ed2cf21fa27d1c29cf64e9" class="m-doc">ScheduledTaskListenerPtr</a> App::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#afa712e6ccc238dc4ad70cfa62e168ac1" class="m-doc-self">ScheduleTaskWithArgs</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">Func</a>&amp;&amp; function,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> scheduleTime,
+              <a href="_cpp_rev_eng_base_8h.html#aff12ecf140cc31d5335c3c978808c268" class="m-doc">Args</a> &amp;&amp; ... args)</span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">function</td>
+                  <td>A void function with parameters, that will be executed after the scheduled time.</td>
+                </tr>
+                <tr>
+                  <td>scheduleTime</td>
+                  <td>The time that has to pass, in seconds, since the task is scheduled for it to be executed.</td>
+                </tr>
+                <tr>
+                  <td>args</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
           </div></section>
           <section class="m-doc-details" id="aa61da6efea014433d0876a4ec80005b0"><div>
             <h3>
@@ -1843,7 +1915,7 @@
                 </tr>
                 <tr>
                   <td>method</td>
-                  <td>A void method with no parameters, that will be executed every frame.</td>
+                  <td>A void method with no parameters, that will be executed after the scheduled time.</td>
                 </tr>
                 <tr>
                   <td>scheduleTime</td>
@@ -1852,6 +1924,41 @@
               </tbody>
             </table>
 <p>The method is executed only once, and the time starts counting since this ScheduleTask method has been called.</p><p>The method returns the object that holds the scheduled task. If you want to remove the task before it is called, you can do it by calling App::RemoveScheduledTask(...) with the returned object as parameter.</p><p>Internally, this is implemented by adding a message listener that listens to the kMsgAppUpdate message. Every frame uses a <a href="class_clock.html" class="m-doc">Clock</a> object to compare the elapsed time since this task as scheduled. The listener is removed once the task has finished executing.</p>
+          </div></section>
+          <section class="m-doc-details" id="ab564d9397239fe9e223a44616ed264a8"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="_i_message_manager_8h.html">&lt;Spore ModAPI/Spore/App/IMessageManager.h&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">class</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">ObjT</a>, <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">class</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">MethodT</a>, class... MethodArgs, class... CallArgs&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"><a href="_i_message_manager_8h.html#a8398855010ed2cf21fa27d1c29cf64e9" class="m-doc">ScheduledTaskListenerPtr</a> App::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab564d9397239fe9e223a44616ed264a8" class="m-doc-self">ScheduleTaskWithArgs</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">ObjT</a>* object,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a>(MethodT::*)(MethodArgs...) method,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> scheduleTime,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">CallArgs</a> &amp;&amp; ... args)</span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">object</td>
+                  <td>The object to which the method will be called.</td>
+                </tr>
+                <tr>
+                  <td>method</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>scheduleTime</td>
+                  <td>The time that has to pass, in seconds, since the task is scheduled for it to be executed.</td>
+                </tr>
+                <tr>
+                  <td>args</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
           </div></section>
           <section class="m-doc-details" id="abb247ce86a07e289885ac6db8e0235fc"><div>
             <h3>

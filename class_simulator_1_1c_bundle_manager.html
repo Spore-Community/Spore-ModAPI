@@ -91,18 +91,30 @@
             </dt>
             <dd>Creates one or more bundles of the given type and adds them to the container.</dd>
             <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ac5bc0b521997c267a3c40cf2ef8c5d3c" class="m-doc">CreateGroundBundles</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> amount,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> bundleType,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_math_1_1_vector3.html" class="m-doc">Vector3</a>&amp; position,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_math_1_1_quaternion.html" class="m-doc">Quaternion</a>&amp; orientation = <a href="struct_math_1_1_quaternion.html" class="m-doc">Quaternion</a>()) -&gt; <a href="class_simulator_1_1c_game_bundle.html" class="m-doc">cGameBundle</a>*</span>
+            </dt>
+            <dd>Creates one or more bundles of the given type and adds them to mpGroundContainer.</dd>
+            <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a7e01dd3db76b922fa45bb96a6a9e364b" class="m-doc">RemoveBundles</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> amount,
               <a href="class_simulator_1_1c_game_bundle_container.html" class="m-doc">cGameBundleContainer</a>* container,
               <a href="class_simulator_1_1c_game_bundle.html" class="m-doc">cGameBundle</a>* bundle = <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">nullptr</a>) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a></span>
             </dt>
             <dd>Removes a certain quantity from a bundle container.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a00b024d507400d411628347943306502" class="m-doc">RemoveGroundBundles</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> amount,
+              <a href="class_simulator_1_1c_game_bundle.html" class="m-doc">cGameBundle</a>* bundle = <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">nullptr</a>) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a></span>
+            </dt>
+            <dd>Removes a certain quantity from mpGroundContainer.</dd>
           </dl>
         </section>
         <section id="pub-attribs">
           <h2><a href="#pub-attribs">Public variables</a></h2>
           <dl class="m-doc">
-            <dt id="aa8ef1e29094e369aa7dc1d58c815ba24">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a>* <a href="#aa8ef1e29094e369aa7dc1d58c815ba24" class="m-doc-self">mpGroundContainer</a>
+            <dt id="ae49dde57a691a054c5093d649518b306">
+              <a href="c_game_bundle_container_8h.html#ac72c4054f75b7d5f3194588a8844c484" class="m-doc">cGameBundleGroundContainerPtr</a> <a href="#ae49dde57a691a054c5093d649518b306" class="m-doc-self">mpGroundContainer</a>
             </dt>
             <dd><span></span></dd>
           </dl>
@@ -143,6 +155,45 @@
             </table>
 <p>The number of bundles created depends on the &#x27;amount&#x27; and how much value each bundle can contain, which depends on the container.</p>
           </div></section>
+          <section class="m-doc-details" id="ac5bc0b521997c267a3c40cf2ef8c5d3c"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="class_simulator_1_1c_game_bundle.html" class="m-doc">cGameBundle</a>* Simulator::<wbr />cBundleManager::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ac5bc0b521997c267a3c40cf2ef8c5d3c" class="m-doc-self">CreateGroundBundles</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> amount,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> bundleType,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_math_1_1_vector3.html" class="m-doc">Vector3</a>&amp; position,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_math_1_1_quaternion.html" class="m-doc">Quaternion</a>&amp; orientation = <a href="struct_math_1_1_quaternion.html" class="m-doc">Quaternion</a>())</span></span>
+            </h3>
+            <p>Creates one or more bundles of the given type and adds them to mpGroundContainer.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">amount</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>bundleType</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>position</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>orientation</td>
+                  <td></td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The last bundle created</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>The number of bundles created depends on the &#x27;amount&#x27; and how much value each bundle can contain, which depends on the container.</p>
+          </div></section>
           <section class="m-doc-details" id="a7e01dd3db76b922fa45bb96a6a9e364b"><div>
             <h3>
               <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> Simulator::<wbr />cBundleManager::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a7e01dd3db76b922fa45bb96a6a9e364b" class="m-doc-self">RemoveBundles</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> amount,
@@ -161,6 +212,35 @@
                 </tr>
                 <tr>
                   <td>container</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>bundle</td>
+                  <td>If not null, removes only that specific bundle</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The actual amount that has been removed.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>This will remove as many bundles as necessary, and change the value of the last remaining bundle. If the amount is small enough, no bundle may be deleted.</p>
+          </div></section>
+          <section class="m-doc-details" id="a00b024d507400d411628347943306502"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> Simulator::<wbr />cBundleManager::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a00b024d507400d411628347943306502" class="m-doc-self">RemoveGroundBundles</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> amount,
+              <a href="class_simulator_1_1c_game_bundle.html" class="m-doc">cGameBundle</a>* bundle = <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">nullptr</a>)</span></span>
+            </h3>
+            <p>Removes a certain quantity from mpGroundContainer.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">amount</td>
                   <td></td>
                 </tr>
                 <tr>

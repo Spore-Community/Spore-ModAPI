@@ -399,6 +399,10 @@
             </dt>
             <dd><span></span></dd>
             <dt>
+              class <a href="class_simulator_1_1c_game_bundle_ground_container.html" class="m-doc">cGameBundleGroundContainer</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
               class <a href="class_simulator_1_1c_game_data.html" class="m-doc">cGameData</a>
             </dt>
             <dd>Base class for most <a href="namespace_simulator.html" class="m-doc">Simulator</a> objects.</dd>
@@ -1274,24 +1278,16 @@
           <h2><a href="#enum-members">Enums</a></h2>
           <dl class="m-doc">
             <dt>
-              <span class="m-doc-wrap-bumper">enum class <a href="#a4d6faccfa952914f8a78789ae8fabb05" class="m-doc">CollectableItemStatusFlags</a>: <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint8_<wbr />t</a> { </span><span class="m-doc-wrap"><a href="#a4d6faccfa952914f8a78789ae8fabb05ac76fd517e45cc95709f4ac106efa4a94" class="m-doc">Unlocked</a> = 1 }</span>
+              <span class="m-doc-wrap-bumper">enum class <a href="#a4d6faccfa952914f8a78789ae8fabb05" class="m-doc">CollectableItemStatusFlags</a>: <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint8_<wbr />t</a> { </span><span class="m-doc-wrap"><a href="#a4d6faccfa952914f8a78789ae8fabb05ac76fd517e45cc95709f4ac106efa4a94" class="m-doc">Unlocked</a> = 1,
+              <a href="#a4d6faccfa952914f8a78789ae8fabb05a128f36ec46f7ca11bafb48cd2022a54c" class="m-doc">Highlighted</a> = 2,
+              <a href="#a4d6faccfa952914f8a78789ae8fabb05a2b5837ca9ab8da71188209eab5a055c3" class="m-doc">NotUnlockable</a> = 4 }</span>
             </dt>
             <dd><span></span></dd>
             <dt>
               <span class="m-doc-wrap-bumper">enum <a href="#a7261d52d6d09867e92220ba6d29fca23" class="m-doc">CreatureFlags</a> { </span><span class="m-doc-wrap"><a href="#a7261d52d6d09867e92220ba6d29fca23af783b715b4e890cfbbf19be00c1bb4e9" class="m-doc">kCreatureFlagIsAlpha</a> = 0x1,
               <a href="#a7261d52d6d09867e92220ba6d29fca23a52b488970a898dbffacb32e6bb025e6c" class="m-doc">kCreatureFlagIsHungry</a> = 0x100,
-              <a href="#a7261d52d6d09867e92220ba6d29fca23ade3f1bae9fa984cf6e5f4b9013df2df9" class="m-doc">kCreatureFlagIsPlayerAvatar</a> = 0x200 }</span>
-            </dt>
-            <dd><span></span></dd>
-            <dt>
-              <span class="m-doc-wrap-bumper">enum class <a href="#a42f6b61beb2e50c2418f7f72377a8077" class="m-doc">DamageType</a> { </span><span class="m-doc-wrap"><a href="#a42f6b61beb2e50c2418f7f72377a8077a696292917787c80d98b42f08245ab5df" class="m-doc">Bribe</a> = 4,
-              <a href="#a42f6b61beb2e50c2418f7f72377a8077a80dd330a5c08653498c49a219a124543" class="m-doc">Healing</a> = 10,
-              <a href="#a42f6b61beb2e50c2418f7f72377a8077a96ebd4aa17e8024c8f2c3e829cc76429" class="m-doc">BlackCloud</a> = 11,
-              <a href="#a42f6b61beb2e50c2418f7f72377a8077a32d61c78fbeeec15a86c5b01eeb7eeba" class="m-doc">_543F8E29</a> = 12,
-              <a href="#a42f6b61beb2e50c2418f7f72377a8077ac49e6d739a7a7356e88aa84503666ee9" class="m-doc">Nuclear</a> = 13,
-              <a href="#a42f6b61beb2e50c2418f7f72377a8077aefa0bff183da4bc574dc82011291f87a" class="m-doc">EMP</a> = 14,
-              <a href="#a42f6b61beb2e50c2418f7f72377a8077a1c318e3baca704a14427914190abe9af" class="m-doc">IField</a> = 15,
-              <a href="#a42f6b61beb2e50c2418f7f72377a8077a8429152ff05835474c8becf02b9d7be9" class="m-doc">Diplomatic</a> = 16 }</span>
+              <a href="#a7261d52d6d09867e92220ba6d29fca23ade3f1bae9fa984cf6e5f4b9013df2df9" class="m-doc">kCreatureFlagIsPlayerAvatar</a> = 0x200,
+              <a href="#a7261d52d6d09867e92220ba6d29fca23a5853a3da262c276d84d0b8881766b520" class="m-doc">kCreatureFlagUnk1</a> = 0x2000 }</span>
             </dt>
             <dd><span></span></dd>
             <dt>
@@ -1619,7 +1615,23 @@
               <a href="#a6ca415fca3af9d430099e490daf3369fa2833047f2deb29355224b8bb15428063" class="m-doc">kHitWater</a> = 2,
               <a href="#a6ca415fca3af9d430099e490daf3369fa827e4fcd60a3248cc9e2a017795ad0cf" class="m-doc">kHitAir</a> = 3 }</span>
             </dt>
-            <dd>Different kinds of surfaces where a tool can hit, usde by <a href="class_simulator_1_1c_space_tool_data.html" class="m-doc">Simulator::<wbr />cSpaceToolData</a>.</dd>
+            <dd>Different kinds of surfaces where a tool can hit, used by <a href="class_simulator_1_1c_space_tool_data.html" class="m-doc">Simulator::<wbr />cSpaceToolData</a>.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">enum <a href="#a42f6b61beb2e50c2418f7f72377a8077" class="m-doc">DamageType</a> { </span><span class="m-doc-wrap"><a href="#a42f6b61beb2e50c2418f7f72377a8077adc5bc5440d8d97259f8554171852a15f" class="m-doc">kExplosive</a> = 0,
+              <a href="#a42f6b61beb2e50c2418f7f72377a8077a5c5feeab4d9942ee372c359a1f5a399f" class="m-doc">kHeat</a> = 1,
+              <a href="#a42f6b61beb2e50c2418f7f72377a8077a4a1f46e812ace2f7a08e97b751338f22" class="m-doc">kMelee</a> = 2,
+              <a href="#a42f6b61beb2e50c2418f7f72377a8077a14b4f2458d85db19008b91b82f8fe3b2" class="m-doc">kCulture</a> = 3,
+              <a href="#a42f6b61beb2e50c2418f7f72377a8077a28221da674606ac32fed90208dbbaa00" class="m-doc">kBribery</a> = 4,
+              <a href="#a42f6b61beb2e50c2418f7f72377a8077acbf1599ebf192b59646721d51745d49e" class="m-doc">kStarvation</a> = 5,
+              <a href="#a42f6b61beb2e50c2418f7f72377a8077a7aa8125ebf67245be8b0b7bf9f5d47cf" class="m-doc">kCrushing</a> = 6,
+              <a href="#a42f6b61beb2e50c2418f7f72377a8077a0fbeac76508427d149b1329056776d4d" class="m-doc">kDamageOverTime</a> = 7,
+              <a href="#a42f6b61beb2e50c2418f7f72377a8077a86ef1d5bcd339253a7ddb969fd22c03b" class="m-doc">kCollision</a> = 8,
+              <a href="#a42f6b61beb2e50c2418f7f72377a8077aca6e89ad07343fca3747d552a9981e61" class="m-doc">kDrowning</a> = 9,
+              <a href="#a42f6b61beb2e50c2418f7f72377a8077aefe234b657d821a58c3e107f8bc8e72f" class="m-doc">kHealing</a> = 10,
+              <a href="#a42f6b61beb2e50c2418f7f72377a8077a067615b929229fc593b44134cdfa9dcf" class="m-doc">kBlackCloud</a> = 11,
+              <a href="#a42f6b61beb2e50c2418f7f72377a8077a53847e64997cd2a6503a444c840249ed" class="m-doc">kAdvertising</a> = 12 }</span>
+            </dt>
+            <dd>Different types of damage a <a href="class_simulator_1_1c_combatant.html" class="m-doc">Simulator::<wbr />cCombatant</a> can take.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">enum <a href="#a105d93876eeeeab92ae1411b8ae59240" class="m-doc">SpaceToolTarget</a> { </span><span class="m-doc-wrap"><a href="#a105d93876eeeeab92ae1411b8ae59240a0dcea9038e1f4079bcdcc246c5af64e6" class="m-doc">kTargetAnimal</a> = 1,
               <a href="#a105d93876eeeeab92ae1411b8ae59240a7a3e775c2cb6d555f49c4c81e002c3ff" class="m-doc">kTargetCitizen</a> = 2,
@@ -1633,7 +1645,7 @@
               <a href="#a105d93876eeeeab92ae1411b8ae59240af160c28eab568520bde24722d71e1b36" class="m-doc">kTargetEnemyOnly</a> = 0x200,
               <a href="#a105d93876eeeeab92ae1411b8ae59240a31b1a0f9c53ed830e69628ba3d474f32" class="m-doc">kTargetColonyObject</a> = 0x400 }</span>
             </dt>
-            <dd>Different kinds of targets that a tool can shoot at, usde by <a href="class_simulator_1_1c_space_tool_data.html" class="m-doc">Simulator::<wbr />cSpaceToolData</a>.</dd>
+            <dd>Different kinds of targets that a tool can shoot at, used by <a href="class_simulator_1_1c_space_tool_data.html" class="m-doc">Simulator::<wbr />cSpaceToolData</a>.</dd>
             <dt>
               <span class="m-doc-wrap-bumper">enum class <a href="#adff5010054571b40e46ba42c949cf1ac" class="m-doc">TribePlanType</a>: <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> { </span><span class="m-doc-wrap"><a href="#adff5010054571b40e46ba42c949cf1acac8a23798f7577fe951f173d3380bee0d" class="m-doc">Raid</a> = 1,
               <a href="#adff5010054571b40e46ba42c949cf1aca0d9175fe89fb80d815e7d03698b6e83a" class="m-doc">Gift</a> = 2,
@@ -1940,7 +1952,7 @@
               <a href="#a275b9181c60a664d8e1d56328862cb6ea53ee1f6d941b631ed8148da497853787" class="m-doc">Raider</a> = 2,
               <a href="#a275b9181c60a664d8e1d56328862cb6ea99ba20386716528ab0c0ace69a1420f5" class="m-doc">Unk3</a> = 3,
               <a href="#a275b9181c60a664d8e1d56328862cb6ea84ac13a9696967dc4dce46369e37e3d7" class="m-doc">Bomber</a> = 4,
-              <a href="#a275b9181c60a664d8e1d56328862cb6eac0d4a5a0eb2b05fa7073761d345aa09f" class="m-doc">Unk5</a> = 5,
+              <a href="#a275b9181c60a664d8e1d56328862cb6ea0fe633c9c8a565d6de9fba00c9caae12" class="m-doc">Abductor</a> = 5,
               <a href="#a275b9181c60a664d8e1d56328862cb6eaee90445284a3f5eb04b08417e16ecb95" class="m-doc">Defender</a> = 6,
               <a href="#a275b9181c60a664d8e1d56328862cb6eab59502bb9741c9cbcf22ba9cddd65cf1" class="m-doc">Unk7</a> = 7,
               <a href="#a275b9181c60a664d8e1d56328862cb6eafc68a9fdd2aa63259667c3287ea694a5" class="m-doc">AmbushPirate</a> = 8,
@@ -1972,9 +1984,14 @@
             </dt>
             <dd><span></span></dd>
             <dt>
-              <span class="m-doc-wrap-bumper">enum <a href="#a26eb75c2b21b60c182b6608cd35852d5" class="m-doc">TribeBundleType</a> { </span><span class="m-doc-wrap"><a href="#a26eb75c2b21b60c182b6608cd35852d5a9e8f6638955939dde44a9a8fe865503d" class="m-doc">kTribeBundleTypeFruit</a> = 1,
-              <a href="#a26eb75c2b21b60c182b6608cd35852d5aea2ea2e8dd3de12ea850f672f73b584b" class="m-doc">kTribeBundleTypeMeat</a> = 2,
-              <a href="#a26eb75c2b21b60c182b6608cd35852d5ae3ebcafb19c7e919fa722310e0fad511" class="m-doc">kTribeBundleTypeFish</a> = 3 }</span>
+              <span class="m-doc-wrap-bumper">enum <a href="#a21a2f88972da49ecab3c43b0f5d961e6" class="m-doc">TribeBundleType</a>: <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> { </span><span class="m-doc-wrap"><a href="#a21a2f88972da49ecab3c43b0f5d961e6a78f87887fe1e0d3c63bd06f316349609" class="m-doc">kTribeBundleTypeSeaweed</a> = 0,
+              <a href="#a21a2f88972da49ecab3c43b0f5d961e6a9e8f6638955939dde44a9a8fe865503d" class="m-doc">kTribeBundleTypeFruit</a> = 1,
+              <a href="#a21a2f88972da49ecab3c43b0f5d961e6aea2ea2e8dd3de12ea850f672f73b584b" class="m-doc">kTribeBundleTypeMeat</a> = 2,
+              <a href="#a21a2f88972da49ecab3c43b0f5d961e6ae3ebcafb19c7e919fa722310e0fad511" class="m-doc">kTribeBundleTypeFish</a> = 3,
+              <a href="#a21a2f88972da49ecab3c43b0f5d961e6aff45b7b746b814aa9e4346a763758336" class="m-doc">kTribeBundleTypeEgg</a> = 4,
+              <a href="#a21a2f88972da49ecab3c43b0f5d961e6a8e0ff28d456e9600bf0f0cce00109bc8" class="m-doc">kTribeBundleTypeGift</a> = 5,
+              <a href="#a21a2f88972da49ecab3c43b0f5d961e6a2b7e6c53802a860cc534ae5d642b4171" class="m-doc">kTribeBundleTypeDomesticate</a> = 6,
+              <a href="#a21a2f88972da49ecab3c43b0f5d961e6a5b8d0d21a0ea2a1eb92f09ea3843f61a" class="m-doc">kTribeBundleTypeSteal</a> = 7 }</span>
             </dt>
             <dd><span></span></dd>
             <dt>
@@ -2260,7 +2277,7 @@
             <dt>
               using <a href="#aa3458fc47f5abfec29ade4cc853d19c2" class="m-doc">UnkPageHashtable</a> = eastl::sp_fixed_hash_map&lt;<a href="struct_simulator_1_1c_collectable_item_i_d.html" class="m-doc">Simulator::<wbr />cCollectableItemID</a>, <a href="struct_simulator_1_1_unk_hashtable_item.html" class="m-doc">UnkHashtableItem</a>, 4&gt;
             </dt>
-            <dd>Map {value, pageindex} to the <a href="struct_simulator_1_1_unk_hashtable_item.html" class="m-doc">UnkHashtableItem</a> Before all parts are unlocked, &#x27;value&#x27; = 0x3e09800e After all parts are unlocked, &#x27;value&#x27; = 0x5c225570.</dd>
+            <dd>Map &quot;cCollectableItemID&quot; {unkvalue, pageindex} to the <a href="struct_simulator_1_1_unk_hashtable_item.html" class="m-doc">UnkHashtableItem</a> Before all parts are unlocked, &#x27;unkvalue&#x27; = 0x3e09800e After all parts are unlocked, &#x27;unkvalue&#x27; = 0x5c225570.</dd>
             <dt>
               using <a href="#a6f9db8678544a7423d9dc677176ce16a" class="m-doc">UnkCategoryHashMap</a> = eastl::sp_fixed_hash_map&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a>, <a href="namespace_simulator.html#aa3458fc47f5abfec29ade4cc853d19c2" class="m-doc">UnkPageHashtable</a>, 8&gt;
             </dt>
@@ -2347,12 +2364,27 @@
             </dt>
             <dd>Executes a function after a certain time (measured in seconds) has passed from ths call.</dd>
             <dt>
+              <div class="m-doc-template">template&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">typename</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">Func</a>, typename... Args&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#aded1b38a19228db5d57444fab282e71d" class="m-doc">ScheduleTaskWithArgs</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">Func</a>&amp;&amp; function,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> scheduleTime,
+              <a href="_cpp_rev_eng_base_8h.html#aff12ecf140cc31d5335c3c978808c268" class="m-doc">Args</a> &amp;&amp; ... args) -&gt; <a href="_i_message_manager_8h.html#a386ef1464a4a3bb2289b0844c570d9cc" class="m-doc">SimScheduledTaskListenerPtr</a></span>
+            </dt>
+            <dd></dd>
+            <dt>
               <div class="m-doc-template">template&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">class</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">T</a>&gt;</div>
               <span class="m-doc-wrap-bumper">auto <a href="#a06b447abf37b860a064aefd81623bd97" class="m-doc">ScheduleTask</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">T</a>* object,
               <a href="namespace_app.html#adf650d2c1852a6bd9fa7e8d49af6fae4" class="m-doc">App::<wbr />VoidMethod_T</a>&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">T</a>&gt; method,
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> scheduleTime) -&gt; <a href="_i_message_manager_8h.html#a386ef1464a4a3bb2289b0844c570d9cc" class="m-doc">SimScheduledTaskListenerPtr</a></span>
             </dt>
             <dd>Executes a class method after a certain time (measured in seconds) has passed from ths call.</dd>
+            <dt>
+              <div class="m-doc-template">template&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">class</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">ObjT</a>, <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">class</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">MethodT</a>, class... MethodArgs, class... CallArgs&gt;</div>
+              <span class="m-doc-wrap-bumper">auto <a href="#a47dd408f54efd495d0dc5ad510534eec" class="m-doc">ScheduleTaskWithArgs</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">ObjT</a>* object,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a>(MethodT::*)(MethodArgs...) method,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> scheduleTime,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">CallArgs</a> &amp;&amp; ... args) -&gt; <a href="_i_message_manager_8h.html#a386ef1464a4a3bb2289b0844c570d9cc" class="m-doc">SimScheduledTaskListenerPtr</a></span>
+            </dt>
+            <dd></dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#ab9d02dd6a6abfbd218f448740d888e59" class="m-doc">ScheduleRepeatedTask</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="namespace_app.html#a0792416baaa2251d68963db97d021cda" class="m-doc">App::<wbr />VoidFunction_T</a>&amp; function,
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> scheduleTime,
@@ -4217,13 +4249,6 @@
             </h3>
             <p><span></span></p>
           </div></section>
-          <section class="m-doc-details" id="a42f6b61beb2e50c2418f7f72377a8077"><div>
-            <h3>
-              enum class Simulator::<wbr /><a href="#a42f6b61beb2e50c2418f7f72377a8077" class="m-doc-self">DamageType</a>
-              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="c_default_tool_projectile_8h.html">&lt;Spore ModAPI/Spore/Simulator/cDefaultToolProjectile.h&gt;</a></div>
-            </h3>
-            <p><span></span></p>
-          </div></section>
           <section class="m-doc-details" id="a4640eb58de06f49c6292aca389ca7192"><div>
             <h3>
               enum Simulator::<wbr /><a href="#a4640eb58de06f49c6292aca389ca7192" class="m-doc-self">EmpireFlags</a>
@@ -4672,14 +4697,21 @@
               enum Simulator::<wbr /><a href="#a6ca415fca3af9d430099e490daf3369f" class="m-doc-self">SpaceToolHit</a>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_simulator_enums_8h.html">&lt;Spore ModAPI/Spore/Simulator/SimulatorEnums.h&gt;</a></div>
             </h3>
-            <p>Different kinds of surfaces where a tool can hit, usde by <a href="class_simulator_1_1c_space_tool_data.html" class="m-doc">Simulator::<wbr />cSpaceToolData</a>.</p>
+            <p>Different kinds of surfaces where a tool can hit, used by <a href="class_simulator_1_1c_space_tool_data.html" class="m-doc">Simulator::<wbr />cSpaceToolData</a>.</p>
+          </div></section>
+          <section class="m-doc-details" id="a42f6b61beb2e50c2418f7f72377a8077"><div>
+            <h3>
+              enum Simulator::<wbr /><a href="#a42f6b61beb2e50c2418f7f72377a8077" class="m-doc-self">DamageType</a>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_simulator_enums_8h.html">&lt;Spore ModAPI/Spore/Simulator/SimulatorEnums.h&gt;</a></div>
+            </h3>
+            <p>Different types of damage a <a href="class_simulator_1_1c_combatant.html" class="m-doc">Simulator::<wbr />cCombatant</a> can take.</p>
           </div></section>
           <section class="m-doc-details" id="a105d93876eeeeab92ae1411b8ae59240"><div>
             <h3>
               enum Simulator::<wbr /><a href="#a105d93876eeeeab92ae1411b8ae59240" class="m-doc-self">SpaceToolTarget</a>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_simulator_enums_8h.html">&lt;Spore ModAPI/Spore/Simulator/SimulatorEnums.h&gt;</a></div>
             </h3>
-            <p>Different kinds of targets that a tool can shoot at, usde by <a href="class_simulator_1_1c_space_tool_data.html" class="m-doc">Simulator::<wbr />cSpaceToolData</a>.</p>
+            <p>Different kinds of targets that a tool can shoot at, used by <a href="class_simulator_1_1c_space_tool_data.html" class="m-doc">Simulator::<wbr />cSpaceToolData</a>.</p>
           </div></section>
           <section class="m-doc-details" id="adff5010054571b40e46ba42c949cf1ac"><div>
             <h3>
@@ -5024,15 +5056,15 @@
                   </td>
                 </tr>
                 <tr>
-                  <td><a href="#a275b9181c60a664d8e1d56328862cb6eac0d4a5a0eb2b05fa7073761d345aa09f" class="m-doc-self" id="a275b9181c60a664d8e1d56328862cb6eac0d4a5a0eb2b05fa7073761d345aa09f">Unk5</a></td>
+                  <td><a href="#a275b9181c60a664d8e1d56328862cb6ea0fe633c9c8a565d6de9fba00c9caae12" class="m-doc-self" id="a275b9181c60a664d8e1d56328862cb6ea0fe633c9c8a565d6de9fba00c9caae12">Abductor</a></td>
                   <td>
-                  <p>Only has weapon &#x27;abduct&#x27;.</p>
+                  <p><span></span></p>
                   </td>
                 </tr>
                 <tr>
                   <td><a href="#a275b9181c60a664d8e1d56328862cb6eaee90445284a3f5eb04b08417e16ecb95" class="m-doc-self" id="a275b9181c60a664d8e1d56328862cb6eaee90445284a3f5eb04b08417e16ecb95">Defender</a></td>
                   <td>
-                  <p><span></span></p>
+                  <p>Only has weapon &#x27;abduct&#x27;. Used in CRG / TRG.</p>
                   </td>
                 </tr>
                 <tr>
@@ -5082,9 +5114,9 @@
             </h3>
             <p><span></span></p>
           </div></section>
-          <section class="m-doc-details" id="a26eb75c2b21b60c182b6608cd35852d5"><div>
+          <section class="m-doc-details" id="a21a2f88972da49ecab3c43b0f5d961e6"><div>
             <h3>
-              enum Simulator::<wbr /><a href="#a26eb75c2b21b60c182b6608cd35852d5" class="m-doc-self">TribeBundleType</a>
+              enum Simulator::<wbr /><a href="#a21a2f88972da49ecab3c43b0f5d961e6" class="m-doc-self">TribeBundleType</a>: <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_simulator_enums_8h.html">&lt;Spore ModAPI/Spore/Simulator/SimulatorEnums.h&gt;</a></div>
             </h3>
             <p><span></span></p>
@@ -5434,7 +5466,8 @@
                 <tr>
                   <td><a href="#a4b1f459203b8dbf8583312aa067c8c54a8f5d9b2b677b1b2b5f5c0e71d28daad4" class="m-doc-self" id="a4b1f459203b8dbf8583312aa067c8c54a8f5d9b2b677b1b2b5f5c0e71d28daad4">kMsgCinematicNewCityAppears</a></td>
                   <td>
-                  <p>Sent when the cutscene for a new city appearing plays in civ stage. Not sent when a city is founded outside of a cutscene.</p>
+                  <p>Sent when the cutscene for a new city appearing plays in civ stage.</p>
+<p>(Cutscene only. Not sent when a city is founded outside of a cutscene.)</p>
                   </td>
                 </tr>
                 <tr>
@@ -5879,7 +5912,7 @@
               typedef eastl::sp_fixed_hash_map&lt;<a href="struct_simulator_1_1c_collectable_item_i_d.html" class="m-doc">Simulator::<wbr />cCollectableItemID</a>, <a href="struct_simulator_1_1_unk_hashtable_item.html" class="m-doc">UnkHashtableItem</a>, 4&gt; Simulator::<wbr /><a href="#aa3458fc47f5abfec29ade4cc853d19c2" class="m-doc-self">UnkPageHashtable</a>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="c_collectable_items_8h.html">&lt;Spore ModAPI/Spore/Simulator/cCollectableItems.h&gt;</a></div>
             </h3>
-            <p>Map {value, pageindex} to the <a href="struct_simulator_1_1_unk_hashtable_item.html" class="m-doc">UnkHashtableItem</a> Before all parts are unlocked, &#x27;value&#x27; = 0x3e09800e After all parts are unlocked, &#x27;value&#x27; = 0x5c225570.</p>
+            <p>Map &quot;cCollectableItemID&quot; {unkvalue, pageindex} to the <a href="struct_simulator_1_1_unk_hashtable_item.html" class="m-doc">UnkHashtableItem</a> Before all parts are unlocked, &#x27;unkvalue&#x27; = 0x3e09800e After all parts are unlocked, &#x27;unkvalue&#x27; = 0x5c225570.</p>
           </div></section>
           <section class="m-doc-details" id="a6f9db8678544a7423d9dc677176ce16a"><div>
             <h3>
@@ -6039,7 +6072,7 @@
               <tbody>
                 <tr>
                   <td style="width: 1%">function</td>
-                  <td>A void function with no parameters, that will be executed every frame.</td>
+                  <td>A void function with no parameters, that will be executed after the scheduled time.</td>
                 </tr>
                 <tr>
                   <td>scheduleTime</td>
@@ -6048,6 +6081,36 @@
               </tbody>
             </table>
 <p>The function is executed only once, and the time starts counting since this ScheduleTask method has been called.</p><p>The method returns the object that holds the scheduled task. If you want to remove the task before it is called, you can do it by calling Simulator::RemoveScheduledTask(...) with the returned object as parameter.</p><p>Internally, this is implemented by adding a message listener that listens to the kMsgAppUpdate message. Every frame uses a <a href="class_simulator_1_1c_gonzago_timer.html" class="m-doc">cGonzagoTimer</a> object to compare the elapsed time since this task as scheduled. The listener is removed once the task has finished executing.</p>
+          </div></section>
+          <section class="m-doc-details" id="aded1b38a19228db5d57444fab282e71d"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="_i_message_manager_8h.html">&lt;Spore ModAPI/Spore/App/IMessageManager.h&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">typename</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">Func</a>, typename... Args&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"><a href="_i_message_manager_8h.html#a386ef1464a4a3bb2289b0844c570d9cc" class="m-doc">SimScheduledTaskListenerPtr</a> Simulator::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aded1b38a19228db5d57444fab282e71d" class="m-doc-self">ScheduleTaskWithArgs</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">Func</a>&amp;&amp; function,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> scheduleTime,
+              <a href="_cpp_rev_eng_base_8h.html#aff12ecf140cc31d5335c3c978808c268" class="m-doc">Args</a> &amp;&amp; ... args)</span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">function</td>
+                  <td>A void function with parameters, that will be executed after the scheduled time.</td>
+                </tr>
+                <tr>
+                  <td>scheduleTime</td>
+                  <td>The time that has to pass, in seconds, since the task is scheduled for it to be executed.</td>
+                </tr>
+                <tr>
+                  <td>args</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
           </div></section>
           <section class="m-doc-details" id="a06b447abf37b860a064aefd81623bd97"><div>
             <h3>
@@ -6071,7 +6134,7 @@
                 </tr>
                 <tr>
                   <td>method</td>
-                  <td>A void method with no parameters, that will be executed every frame.</td>
+                  <td>A void method with no parameters, that will be executed after the scheduled time.</td>
                 </tr>
                 <tr>
                   <td>scheduleTime</td>
@@ -6080,6 +6143,41 @@
               </tbody>
             </table>
 <p>The method is executed only once, and the time starts counting since this ScheduleTask method has been called.</p><p>The method returns the object that holds the scheduled task. If you want to remove the task before it is called, you can do it by calling Simulator::RemoveScheduledTask(...) with the returned object as parameter.</p><p>Internally, this is implemented by adding a message listener that listens to the kMsgAppUpdate message. Every frame uses a <a href="class_simulator_1_1c_gonzago_timer.html" class="m-doc">cGonzagoTimer</a> object to compare the elapsed time since this task as scheduled. The listener is removed once the task has finished executing.</p>
+          </div></section>
+          <section class="m-doc-details" id="a47dd408f54efd495d0dc5ad510534eec"><div>
+            <h3>
+              <div class="m-doc-include m-code m-inverted m-right-m m-text-right"><span class="cp">#include</span> <a class="cpf" href="_i_message_manager_8h.html">&lt;Spore ModAPI/Spore/App/IMessageManager.h&gt;</a></div>
+              <div class="m-doc-template">
+                template&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">class</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">ObjT</a>, <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">class</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">MethodT</a>, class... MethodArgs, class... CallArgs&gt;
+              </div>
+              <span class="m-doc-wrap-bumper"><a href="_i_message_manager_8h.html#a386ef1464a4a3bb2289b0844c570d9cc" class="m-doc">SimScheduledTaskListenerPtr</a> Simulator::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a47dd408f54efd495d0dc5ad510534eec" class="m-doc-self">ScheduleTaskWithArgs</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">ObjT</a>* object,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a>(MethodT::*)(MethodArgs...) method,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> scheduleTime,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">CallArgs</a> &amp;&amp; ... args)</span></span>
+            </h3>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">object</td>
+                  <td>The object to which the method will be called.</td>
+                </tr>
+                <tr>
+                  <td>method</td>
+                  <td>A void method with parameters, that will be executed after the scheduled time.</td>
+                </tr>
+                <tr>
+                  <td>scheduleTime</td>
+                  <td>The time that has to pass, in seconds, since the task is scheduled for it to be executed.</td>
+                </tr>
+                <tr>
+                  <td>args</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
           </div></section>
           <section class="m-doc-details" id="ab9d02dd6a6abfbd218f448740d888e59"><div>
             <h3>
