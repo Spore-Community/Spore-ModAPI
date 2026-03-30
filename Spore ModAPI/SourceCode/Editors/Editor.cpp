@@ -201,7 +201,6 @@ namespace Editors
 	
 	auto_STATIC_METHOD_VOID(cEditor, ComputeCreatureVerbIcons, Args(cCreatureDataResource* creatureData, cSPVerbTrayCollection* VerbTrayCollection, int brainLevel, float param_4), Args(creatureData, VerbTrayCollection, brainLevel, param_4));
 
-
 	auto_STATIC_METHOD(cEditor, bool, LoadCreatureData,Args(ResourceKey* creation, cCreatureDataResource** dst), Args(creation, dst));
 
 	auto_METHOD(EditorModel, int, GetSkinEffect, Args(int skinLayout), Args(skinLayout));

@@ -82,7 +82,6 @@ namespace Editors
 
 		DefineAddress(HandleMessage, SelectAddress(0x591C80, 0x591FA0));
 
-
 		DefineAddress(GetEditorForAssetType, SelectAddress(0x433010, 0x4333e0));
 		DefineAddress(GetNameForAssetType, SelectAddress(0x4badc0, 0x4bba50));
 		DefineAddress(GetTypeIDForAssetType, SelectAddress(0x4bb110, 0x4bbda0));
