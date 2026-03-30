@@ -12,15 +12,11 @@
 
 namespace Editors
 {
-    class cSPVerbTrayCollection
-        : public UTFWin::IWinProc
-        , public DefaultRefCounted
+    class ISPVerbTrayCollection
     {
     public:
-        static const uint32_t TYPE = 0x4976064;
-
-        /* 00h */	virtual int AddRef() override;
-        /* 04h */	virtual int Release() override;
+        //* 00h */	virtual int AddRef();
+        //* 04h */	virtual int Release();
         //* 08h */	virtual ~cSPVerbTrayCollection();
         //* 0Ch */	virtual void* Cast(uint32_t typeID);
         /* 10h */	virtual void Init(App::PropertyList* propList);
@@ -30,10 +26,28 @@ namespace Editors
         /* 20h */	virtual UTFWin::IWindow* GetTrayWindow(uint32_t controlID);
         /* 24h */	virtual void InitTrays(uint32_t instanceID, uint32_t typeID, uint32_t groupID);
         /* 28h */	virtual void LayoutCollection();
+    };
+    class cSPVerbTrayCollection
+        : public ISPVerbTrayCollection
+        , public DefaultRefCounted
+    {
+    public:
+        static const uint32_t TYPE = 0x4976064;
+
+        /* 00h */	virtual int AddRef() override;
+        /* 04h */	virtual int Release() override;
+        //* 08h */	virtual ~cSPVerbTrayCollection();
+        //* 0Ch */	virtual void* Cast(uint32_t typeID);
+        /* 10h */	virtual void Init(App::PropertyList* propList) override;
+        /* 14h */	virtual void SetTrayData(eastl::vector<VerbIconDataPtr>*) override;
+        /* 18h */	virtual void Shutdown() override;
+        /* 1Ch */	virtual void Update(App::PropertyList* propList) override;
+        /* 20h */	virtual UTFWin::IWindow* GetTrayWindow(uint32_t controlID) override;
+        /* 24h */	virtual void InitTrays(uint32_t instanceID, uint32_t typeID, uint32_t groupID) override;
+        /* 28h */	virtual void LayoutCollection() override;
 
     public:
     /* 0Ch */    eastl::vector<cSPEditorVerbIconTrayPtr> mVerbTrays;
-    /* 1Ch */    int field_1C;
     /* 20h */    IWindowPtr mWinParent;
     /* 24h */    IWindowPtr mWinVerbTray;
     /* 28h */    eastl::map<IWindowPtr, cSPEditorVerbIconTrayPtr> mWindowsToVerbTrays;
@@ -42,6 +56,6 @@ namespace Editors
     /* 4Ch */    eLayoutStyle mLayoutStyle; //kFill
     /* 50h */    bool field_50;  //false
     };
-    ASSERT_SIZE(cSPVerbTrayCollection, 0x58);
+    ASSERT_SIZE(cSPVerbTrayCollection, 0x54);
 }
 

@@ -12,5 +12,5 @@ namespace Editors
     public:
         static const uint32_t TYPE = 0x4aa3b42;
     };
-    ASSERT_SIZE(cSPEditorVerbTrayCollection, 0x58);
+    ASSERT_SIZE(cSPEditorVerbTrayCollection, 0x54);
 }
