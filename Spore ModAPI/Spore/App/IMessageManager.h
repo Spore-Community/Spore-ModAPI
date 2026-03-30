@@ -259,13 +259,21 @@ namespace App
 	/// kMsgAppUpdate message. Every frame uses a Clock object to compare the elapsed time since 
 	/// this task as scheduled. The listener is removed once the task has finished executing.
 	///
-	/// @param function A void function with no parameters, that will be executed every frame.
+	/// @param function A void function with no parameters, that will be executed after the scheduled time.
 	/// @param scheduleTime The time that has to pass, in seconds, since the task is scheduled for it to be executed.
 	inline ScheduledTaskListenerPtr ScheduleTask(const VoidFunction_T& function, float scheduleTime) {
 		auto listener = new ScheduledTaskListener(function, scheduleTime, 0.0f);
 		MessageManager.AddListener(listener, kMsgAppUpdate);
 		listener->StartClock();
 		return listener;
+	}
+
+	/// @param function A void function with parameters, that will be executed after the scheduled time.
+	/// @param scheduleTime The time that has to pass, in seconds, since the task is scheduled for it to be executed.
+	template <typename Func, typename... Args>
+	inline ScheduledTaskListenerPtr ScheduleTaskWithArgs(Func&& function, float scheduleTime, Args&&... args) {
+		auto boundFunction = [=]() { function(args...); };
+		return ScheduleTask(boundFunction, scheduleTime);
 	}
 
 	///
@@ -280,13 +288,34 @@ namespace App
 	/// this task as scheduled. The listener is removed once the task has finished executing.
 	///
 	/// @param object The object to which the method will be called.
-	/// @param method A void method with no parameters, that will be executed every frame.
+	/// @param method A void method with no parameters, that will be executed after the scheduled time.
 	/// @param scheduleTime The time that has to pass, in seconds, since the task is scheduled for it to be executed.
 	template <class T>
 	inline ScheduledTaskListenerPtr ScheduleTask(T* object, VoidMethod_T<T> method, float scheduleTime) {
 		return ScheduleTask([object, method]() {
 			(object->*method)();
 		}, scheduleTime);
+	}
+
+	/// @param object The object to which the method will be called.
+	/// @param function A void function with parameters, that will be executed after the scheduled time.
+	/// @param scheduleTime The time that has to pass, in seconds, since the task is scheduled for it to be executed.
+	template <class ObjT, class MethodT, class... MethodArgs, class... CallArgs>
+	inline ScheduledTaskListenerPtr ScheduleTaskWithArgs(
+		ObjT* object,
+		void (MethodT::* method)(MethodArgs...),
+		float scheduleTime,
+		CallArgs&&... args)
+	{
+		static_assert(std::is_base_of_v<MethodT, ObjT>,
+			"Object must derive from method's class");
+
+		// Own the data safely for delayed execution
+		auto boundFunction = [object, method, args...]() {
+			(static_cast<MethodT*>(object)->*method)(args...);
+			};
+
+		return ScheduleTask(boundFunction, scheduleTime);
 	}
 
 	///
@@ -366,13 +395,21 @@ namespace Simulator
 	/// kMsgAppUpdate message. Every frame uses a cGonzagoTimer object to compare the elapsed time since 
 	/// this task as scheduled. The listener is removed once the task has finished executing.
 	///
-	/// @param function A void function with no parameters, that will be executed every frame.
+	/// @param function A void function with no parameters, that will be executed after the scheduled time.
 	/// @param scheduleTime The time that has to pass, in seconds, since the task is scheduled for it to be executed.
 	inline SimScheduledTaskListenerPtr ScheduleTask(const App::VoidFunction_T& function, float scheduleTime) {
 		auto listener = new ScheduledTaskListener(function, scheduleTime, 0.0f);
 		MessageManager.AddListener(listener, App::kMsgAppUpdate);
 		listener->StartClock();
 		return listener;
+	}
+
+	/// @param function A void function with parameters, that will be executed after the scheduled time.
+	/// @param scheduleTime The time that has to pass, in seconds, since the task is scheduled for it to be executed.
+	template <typename Func, typename... Args>
+	inline SimScheduledTaskListenerPtr ScheduleTaskWithArgs(Func&& function, float scheduleTime, Args&&... args) {
+		auto boundFunction = [=]() { function(args...); };
+		return ScheduleTask(boundFunction, scheduleTime);
 	}
 
 	///
@@ -387,13 +424,34 @@ namespace Simulator
 	/// this task as scheduled. The listener is removed once the task has finished executing.
 	///
 	/// @param object The object to which the method will be called.
-	/// @param method A void method with no parameters, that will be executed every frame.
+	/// @param method A void method with no parameters, that will be executed after the scheduled time.
 	/// @param scheduleTime The time that has to pass, in seconds, since the task is scheduled for it to be executed.
 	template <class T>
 	inline SimScheduledTaskListenerPtr ScheduleTask(T* object, App::VoidMethod_T<T> method, float scheduleTime) {
 		return ScheduleTask([object, method]() {
 			(object->*method)();
 		}, scheduleTime);
+	}
+
+	/// @param object The object to which the method will be called.
+	/// @param method A void method with parameters, that will be executed after the scheduled time.
+	/// @param scheduleTime The time that has to pass, in seconds, since the task is scheduled for it to be executed.
+	template <class ObjT, class MethodT, class... MethodArgs, class... CallArgs>
+	inline SimScheduledTaskListenerPtr ScheduleTaskWithArgs(
+		ObjT* object,
+		void (MethodT::* method)(MethodArgs...),
+		float scheduleTime,
+		CallArgs&&... args)
+	{
+		static_assert(std::is_base_of_v<MethodT, ObjT>,
+			"Object must derive from method's class");
+
+		// Own the data safely for delayed execution
+		auto boundFunction = [object, method, args...]() {
+			(static_cast<MethodT*>(object)->*method)(args...);
+			};
+
+		return ScheduleTask(boundFunction, scheduleTime);
 	}
 
 	///

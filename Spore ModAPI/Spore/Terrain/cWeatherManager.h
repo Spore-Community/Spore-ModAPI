@@ -52,10 +52,10 @@ namespace Terrain
 		/* 38h */	uint32_t mLowAtmoEffectID;
 		/* 3Ch */	uint32_t mMidAtmoEffectID;
 		/* 40h */	uint32_t mHighAtmoEffectID;
-		/* 44h */	int field_44;  // not initialized
+		/* 44h */	uint32_t field_44;  // not initialized
 		/* 48h */	uint32_t mLoopBoxAtmoEffectID;
 		/* 4Ch */	uint32_t mLoopBoxGroundEffectID;
-		/* 50h */	int field_50;
+		/* 50h */	uint32_t field_50;
 		/* 54h */	uint32_t mColdStormLoopboxID;
 		/* 58h */	uint32_t mWarmStormLoopboxID;
 		/* 5Ch */	uint32_t mHotStormLoopboxID;
@@ -68,7 +68,7 @@ namespace Terrain
 		/* 78h */	uint32_t mColdStormEffectID;
 		/* 7Ch */	uint32_t mWarmStormEffectID;
 		/* 80h */	uint32_t mHotStormEffectID;
-		/* 84h */	int field_84;
+		/* 84h */	uint32_t field_84;
 		/* 88h */	uint32_t mColdLocalStormEffectID;
 		/* 8Ch */	uint32_t mWarmLocalStormEffectID;
 		/* 90h */	uint32_t mHotLocalStormEffectID;

@@ -298,14 +298,5 @@ namespace Editors
 		DefineAddress(GetOverdrawColor, SelectAddress(0x47b640, 0x47efa0));
 		DefineAddress(GetDefaultScale, SelectAddress(0x47b760, 0x47f0c0));
 	}
-	namespace Addresses(cSPEditorHandleBallConnector)
-	{
-		DefineAddress(Cast, SelectAddress(0x47c0f0, 0x47fa50));
-		DefineAddress(GetTypeID, SelectAddress(0x47c080, 0x47f9e0));
-		DefineAddress(PlaceHandle, SelectAddress(0x47c140, 0x47faa0));
-		DefineAddress(InitBallConnector, SelectAddress(0x47c2c0, 0x47fc20));
-		DefineAddress(GetHandlePosition, SelectAddress(0x47c500, 0x47fe60));
-		DefineAddress(GetTuningFile, SelectAddress(0x47c580, 0x47fee0));
-	}
 }
 #endif

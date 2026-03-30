@@ -115,6 +115,9 @@ namespace Simulator
 
 		// Return a new orientation towards a target pos, preserving the pitch and roll of the current orientation
 		Math::Quaternion GetOrientationYawTowards(const Math::Vector3& targetpos);
+		// Helper funcs for Teleport
+		void Teleport(const Math::Vector3& position);
+		void Teleport(const cSpatialObjectPtr& refobj);
 
 	public:
 

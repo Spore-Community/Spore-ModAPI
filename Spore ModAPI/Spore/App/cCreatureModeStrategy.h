@@ -139,20 +139,20 @@ namespace App
 			void* unk1; // unknown class?
 		};
 
-		struct PickupItem {
-			static const uint32_t ID = 0xD335362C;
-
-			cCreatureBase* creature;
-			cInteractableObject* item;
-			int field_8; // 0
-			void* unk1; // unknown class?
-		};
-		
-		struct PickupCreature {
+		struct Pickup {
 			static const uint32_t ID = 0xD3353636;
 
 			cCreatureBase* creature;
-			cCreatureBase* targetcreature;
+			cGameData* target; // cInteractableObject* or cCreatureBase*
+			int field_8; // 0
+			void* unk1; // unknown class?
+		};
+
+		struct Pickup1 {
+			static const uint32_t ID = 0xD335362C;
+
+			cCreatureBase* creature;
+			cGameData* target; // cInteractableObject* or cCreatureBase*
 			int field_8; // 0
 			void* unk1; // unknown class?
 		};

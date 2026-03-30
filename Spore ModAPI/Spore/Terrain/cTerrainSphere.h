@@ -208,13 +208,13 @@ namespace Terrain
 		/* 6B8h */	Math::Vector4 field_6B8;
 		/* 6C8h */	Math::Vector4 field_6C8;
 		///* 6D8h */	TerrainLighting mTerrainLighting;
-		/* 6D8h */	Math::Vector4 field_6D8[8];  //PLACEHODER what is really this?
+		/* 6D8h */	Math::Vector4 field_6D8[8];  //PLACEHOLDER what is this really?
 		/* 758h */	eastl::vector<int> field_758;
 		/* 76Ch */	bool mAssetsLoaded;  // ambient effects and models
 		/* 770h */	eastl::vector<TerrainModification> mModelFootprints;
 		/* 784h */	eastl::vector<TerrainModification> mModelNeedRelevel;
 		/* 798h */	eastl::vector<TerrainModification> mPlayerEffects;
-		/* 7ACh */	int mNumModels;  // a count of something for 7B0
+		/* 7ACh */	int mNumModels;  // a count of models for 7B0
 		/* 7B0h */	eastl::vector<ResourceKey> mModelKeys;
 		/* 7C4h */	eastl::vector<Transform> mModelTransforms;
 		/* 7D8h */	eastl::vector<ModelPtr> mModels;

@@ -50,5 +50,13 @@ namespace Simulator
 		// Apply the yaw rotation while maintaining the original pitch and roll
 		return (yawRotation * GetOrientation());
 	}
+
+	void cSpatialObject::Teleport(const Math::Vector3& position) {
+		this->Teleport(position, mOrientation);
+	}
+	void cSpatialObject::Teleport(const cSpatialObjectPtr& refobj) {
+		this->Teleport(refobj->GetPosition(), refobj->GetOrientation());
+	}
+
 }
 #endif

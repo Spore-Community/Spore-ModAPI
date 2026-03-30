@@ -19,8 +19,8 @@ namespace Simulator
 		/* 00h */	float mInitialDelay;
 		/// Property `CheckTime`
 		/* 04h */	float mCheckTime;
-		/// Property `0xCD927E7C`
-		/* 08h */	float field_08;
+		/// Property `timeBetweenExecution`
+		/* 08h */	float mTimeBetweenExecution;
 		/// Property `Frequency`
 		/* 0Ch */	float mFrequency;
 		/// Each bit represents a tool index. Property `RequiredTools`.
@@ -31,22 +31,22 @@ namespace Simulator
 		/* 18h */	int mNumRequiredTribeMembers;
 		/// Property `NumDesiredTribeMembers`
 		/* 1Ch */	int mNumDesiredTribeMembers;
-		/// Property `0xF90F8D19`
-		/* 20h */	int field_20;
-		/// Property `0x6CF6D7B7`
-		/* 24h */	int field_24;
-		/// Property `0x2B374411`
-		/* 28h */	int field_28;
-		/// Property `0xE32953B7`
-		/* 2Ch */	int field_2C;
+		/// Property `minTargetPopulation`
+		/* 20h */	int mMinTargetPopulation;
+		/// Property `maxTargetPopulation`
+		/* 24h */	int mMaxTargetPopulation;
+		/// Property `minRelationshipToTarget`
+		/* 28h */	int mMinRelationshipToTarget;
+		/// Property `maxRelationshipToTarget`
+		/* 2Ch */	int mMaxRelationshipToTarget;
 		/// Property `FoodRate`
 		/* 30h */	float mFoodRate;
 		/// Property `RequiredFood`
 		/* 34h */	int mRequiredFood;
 		/// Property `DesiredFood`
 		/* 38h */	int mDesiredFood;
-		/// Property `0x5D153EE8`
-		/* 3Ch */	bool field_3C;
+		/// Property `excludeChieftain`
+		/* 3Ch */	bool mbExcludeChieftain;
 		/* 40h */	PropertyListPtr mpPropList;
 	};
 	ASSERT_SIZE(cTribePlanProperties, 0x44);

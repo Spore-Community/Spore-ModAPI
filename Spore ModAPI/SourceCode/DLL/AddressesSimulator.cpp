@@ -846,7 +846,7 @@ namespace Simulator
 	namespace Addresses(cScenarioPowerup)
 	{
 		DefineAddress(ReactToPowerup, SelectAddress(0xF23FD0, 0xF23BF0));
-		//TODO DefineAddress(ApplyBoost, SelectAddress(0xF20670, 0xF20290));
+		DefineAddress(ApplyBoost, SelectAddress(0xF20670, 0xF20290));
 		DefineAddress(ActivateMedKit, SelectAddress(0xF229C0, 0xF225E0));
 		DefineAddress(ActivateEnergyKit, SelectAddress(0xF22BE0, 0xF22800));
 		DefineAddress(ActivateSpeedBoost, SelectAddress(0xF232B0, 0xF22ED0));
@@ -1190,6 +1190,7 @@ namespace Simulator
 	namespace Addresses(cBundleManager) {
 		DefineAddress(Get, SelectAddress(0xB3D210, 0xB3D3B0));
 		DefineAddress(CreateBundles, SelectAddress(0xAC7810, 0xAC79F0));
+		DefineAddress(RemoveBundles, SelectAddress(0xAC7A70, 0x00ac7c50));
 	}
 
 	namespace Addresses(cTribeInputStrategy) {

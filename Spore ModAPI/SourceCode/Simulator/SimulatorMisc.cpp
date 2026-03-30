@@ -247,6 +247,23 @@ namespace Simulator
 		Args(float amount, cGameBundleContainer* container, int bundleType),
 		Args(amount, container, bundleType));
 
+	
+	auto_METHOD(cBundleManager, float, RemoveBundles,
+		Args(float amount, cGameBundleContainer* container, cGameBundle* bundle),
+		Args(amount, container, bundle));
+	
+
+	cGameBundle* cBundleManager::CreateGroundBundles(float amount, int bundleType, const Vector3& position, const Quaternion& orientation) {
+		cGameBundle* bundles = CreateBundles(amount, mpGroundContainer.get(), bundleType);
+		if (bundles) bundles->Teleport(position, orientation);
+		return bundles;
+	}
+
+	
+	float cBundleManager::RemoveGroundBundles(float amount, cGameBundle* bundle) {
+		return RemoveBundles(amount, mpGroundContainer.get(), bundle);
+	}
+
 	/// GamePlantManager ///
 
 	auto_STATIC_METHOD_(cGamePlantManager, cGamePlantManager*, Get);

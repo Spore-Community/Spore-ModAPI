@@ -231,7 +231,7 @@ namespace Simulator
 		/// @param pOrbitAroundPlanet Optional, if specified orbit will be around this planet instead of the star.
 		void GenerateEllipticalOrbit(cStarRecord* pStarRecord, cEllipticalOrbit& dst, float minDistance, float maxDistance, cPlanetRecord* pOrbitAroundPlanet = nullptr);
 
-		/// Generates the sol system with the Earth and the rest of planets; this does not create a new star record, instead
+		/// Generates the Sol system with the Earth and the rest of the planets; this does not create a new star record, instead
 		/// it modifies the star closest to the `(257.34799, 257.34799)` position.
 		/// This method is called during the galaxy generation (which only happens after a galaxy reset) and before the 
 		/// stars database is saved, so it can be detoured to make changes to other stars as well.

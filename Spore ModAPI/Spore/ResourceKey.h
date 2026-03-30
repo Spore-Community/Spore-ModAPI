@@ -34,6 +34,7 @@ struct ResourceKey {
 	static const uint32_t kWildcardID = 0xFFFFFFFF;
 
 	ResourceKey();
+	ResourceKey(uint32_t nInstanceID);
 	ResourceKey(uint32_t nInstanceID, uint32_t nTypeID, uint32_t nGroupID);
 
 #ifndef SDK_TO_GHIDRA
@@ -102,6 +103,19 @@ inline ResourceKey::ResourceKey()
 	, groupID(0)
 #else
 	: instanceID(0)
+	, typeID((TypeIDs::Names)0)
+	, groupID((GroupIDs::Names)0)
+#endif
+{
+}
+
+inline ResourceKey::ResourceKey(uint32_t _instanceID)
+#ifndef SDK_TO_GHIDRA
+	: instanceID(_instanceID)
+	, typeID(0)
+	, groupID(0)
+#else
+	: instanceID(_instanceID)
 	, typeID((TypeIDs::Names)0)
 	, groupID((GroupIDs::Names)0)
 #endif

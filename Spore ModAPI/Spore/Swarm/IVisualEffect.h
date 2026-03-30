@@ -121,7 +121,7 @@ namespace Swarm
 
 		/* 10h */	virtual int IsRunning() = 0;
 
-		/* 14h */	virtual void SetRigidTransform(const Transform&) = 0;
+		/* 14h */	virtual void SetRigidTransform(const Transform& transform) = 0;
 		/* 18h */	virtual void SetSourceTransform(const Transform& transform) = 0;
 		/* 1Ch */	virtual Transform GetRigidTransform() const = 0;
 		/* 20h */	virtual Transform GetSourceTransform() const = 0;

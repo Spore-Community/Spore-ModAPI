@@ -32,6 +32,7 @@ class alignas(8) ResourceID
 {
 public:
 	ResourceID();
+	ResourceID(uint32_t instanceID);
 	ResourceID(uint32_t instanceID, uint32_t groupID);
 
 	uint32_t groupID;
@@ -43,6 +44,11 @@ public:
 };
 ASSERT_SIZE(ResourceID, 0x8);
 static_assert(alignof(ResourceID) == 8, "ResourceID alignment is not 8");
+
+inline ResourceID::ResourceID(uint32_t _instanceID)
+	: instanceID(_instanceID)
+{
+};
 
 inline ResourceID::ResourceID(uint32_t _instanceID, uint32_t _groupID)
 	: instanceID(_instanceID)

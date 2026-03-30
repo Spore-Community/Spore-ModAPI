@@ -50,4 +50,9 @@ namespace Anim
 		/* 54h */	virtual bool func54h() = 0;
 		/* 58h */	virtual bool func58h() = 0;
 	};
+
+	namespace Addresses(IAnimWorld)
+	{
+		DeclareAddress(LoadCreature);
+	}
 }

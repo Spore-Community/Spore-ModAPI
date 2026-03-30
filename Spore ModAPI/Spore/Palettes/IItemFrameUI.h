@@ -48,7 +48,7 @@ namespace Palettes
 
 	public:
 		PaletteItemPtr mpItem;
-		uint32_t mFrameTypeID;
+		uint32_t mFrameTypeID; // PalettePageUI::DisplayType
 	};
 
 #define IAdvancedItemUIPtr eastl::intrusive_ptr<Palettes::IAdvancedItemUI>

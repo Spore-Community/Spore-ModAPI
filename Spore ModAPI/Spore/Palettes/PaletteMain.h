@@ -57,7 +57,7 @@ namespace Palettes
 		///		'paletteCategoryLayoutFile' property on each category will be ignored.
 		/// @param pageLayoutID An instance ID that points to the layout pages must use. If this is specified, the 
 		///		'palettePageLayoutFile' property on each page will be ignored.
-		/// @param arg_18 A value that will be set in field_2C.
+		/// @param arg_18 A value that will be set in field_2C. May have something to do with captain unlocks?
 		/// @returns True if the .prop file existed and was read, false otherwise.
 		///
 		bool ReadProp(const ResourceKey& name, uint32_t creationTypeID = -1, uint32_t arg_8 = 0, 

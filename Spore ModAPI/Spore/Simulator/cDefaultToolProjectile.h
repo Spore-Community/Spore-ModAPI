@@ -12,19 +12,6 @@
 
 namespace Simulator
 {
-	enum class DamageType
-	{
-		Bribe = 4,
-
-		Healing = 10,
-		BlackCloud = 11,
-		_543F8E29 = 12,
-		Nuclear = 13,
-		EMP = 14,
-		IField = 15,
-		Diplomatic = 16,
-	};
-
 	class cDefaultToolProjectile
 		/* 00h */	: public cGameData
 		/* 34h */	, public cLocomotiveObject
@@ -38,6 +25,7 @@ namespace Simulator
 		using Object::Release;
 		using Object::Cast;
 
+		/// See Simulator::DamageType
 		/* 54h */	virtual void ConfigureProjectile(cSpaceToolData* tool, int minDamage, int maxDamage, float explosionRadius, int damageType, float projectileRadius);
 		/* 58h */	virtual void OnProjetileHit(int strikeType, Object* hitObject);
 
@@ -48,7 +36,7 @@ namespace Simulator
 		/* 52Ch */	int mMinDamage;
 		/* 530h */	int mMaxDamage;
 		/* 534h */	float mExplosionRadius;
-		/// A value in DamageType
+		/// A value in Simulator::DamageType
 		/* 538h */	int mDamageType;
 		/* 53Ch */	float mProjectileScale;  // 1.0
 		/* 540h */	float mCurrentExplosionRadius;

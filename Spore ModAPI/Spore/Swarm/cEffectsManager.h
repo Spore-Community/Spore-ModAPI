@@ -61,6 +61,7 @@ namespace Swarm
 		/* 5Ch */	float field_5C;
 		/* 60h */	float field_60;
 		/* 64h */	float field_64;
+		/// App flags, see Swarm::AppFlags
 		/* 68h */	int mAppFlags;
 		/* 6Ch */	int field_6C;
 		/* 70h */	int field_70;

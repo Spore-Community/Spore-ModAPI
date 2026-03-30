@@ -17,7 +17,7 @@ namespace Simulator
 		static const uint32_t TYPE = 0xF04D0722;
 
 		/// Completely destroys a city in this planet, removing all the walls and buildings and showing a fire effect.
-		/// You can optionally specifiy the empire ID of who destroyed the city, which will apply bad relations with the aggressed community.
+		/// You can optionally specify the empire ID of who destroyed the city, which will apply bad relations with the aggressed community.
 		/// @param pCity The city to be destroyed.
 		/// @param aggressorEmpireID Optional, ID of the empire who attacked the city.
 		void DestroyCity(cCity* pCity, uint32_t agressorEmpireID = -1);

@@ -70,7 +70,7 @@ namespace Simulator
 		inline cCreatureCitizen* GetLeaderCitizen();
 
 		/* 54h */	virtual int func54h();  // returns 0
-		/* 58h */	virtual Vector3	func58h();  // in city, returns walls position
+		/* 58h */	virtual Vector3	GetCityWallsPosition();  // in city, returns walls position
 		/* 5Ch */	virtual Vector3	func5Ch();
 		/* 60h */	virtual float func60h();
 		/* 64h */	virtual Vector3& func64h();

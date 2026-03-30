@@ -53,7 +53,7 @@ namespace Simulator
 
 		/// Generates all data of the solar system for the given star data.
 		/// By default, this generates `mpStar1` (and `mpStar2` if it's a binary system),
-		/// the asteroids, and the planets. This does not any visual effects yet, it only sets up the
+		/// the asteroids, and the planets. This does set not any visual effects yet, it only sets up the
 		/// Simulator classes (cCelestialBody and cPlanet).
 		/// Source code: @ref SourceCode-Simulator-cSolarSystem-Load
 		/// @param pStar

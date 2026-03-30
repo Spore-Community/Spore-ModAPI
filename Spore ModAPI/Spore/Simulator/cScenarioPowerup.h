@@ -43,7 +43,7 @@ namespace Simulator
 		/// @param pFirst
 		/// @param pSecond
 		static void ReactToPowerup(cGameData* pFirst, cGameData* pSecond, void*);
-
+		static void ApplyBoost(/*TODO*/);
 		static void ActivateMedKit(cScenarioPowerup* pPowerup, cCreatureBase* pCreature);
 		static void ActivateEnergyKit(cScenarioPowerup* pPowerup, cCreatureBase* pCreature);
 		static void ActivateSpeedBoost(cScenarioPowerup* pPowerup, cCreatureBase* pCreature);
@@ -75,7 +75,7 @@ namespace Simulator
 	namespace Addresses(cScenarioPowerup)
 	{
 		DeclareAddress(ReactToPowerup);  // 0xF23FD0, 0xF23BF0
-		//TODO DeclareAddress(ApplyBoost);  // 0xF20670, 0xF20290
+		DeclareAddress(ApplyBoost);  // 0xF20670, 0xF20290
 		DeclareAddress(ActivateMedKit);  // 0xF229C0, 0xF225E0
 		DeclareAddress(ActivateEnergyKit);  // 0xF22BE0, 0xF22800
 		DeclareAddress(ActivateSpeedBoost);  // 0xF232B0, 0xF22ED0

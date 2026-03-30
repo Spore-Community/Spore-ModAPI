@@ -125,7 +125,7 @@ namespace App
 
 		///
 		/// Sets the active game mode to nullptr. The IGameMode::OnExit() method will be called on the active context,
-		/// and the messages 0x212D3E7 and 0x22D1ADC will be generated. 
+		/// and the messages kMsgOnModeExit and kMsgOnModeEnter will be generated. 
 		/// @returns True if there was an active context, false otherwise.
 		///
 		/* 1Ch */	virtual bool ClearActiveMode() = 0;
@@ -148,7 +148,7 @@ namespace App
 		///
 		/// Sets the active game mode to be the one with the specified ID. If there's already an active mode, 
 		/// the method IGameMode::OnExit(). The method IGameMode::OnEnter() will be called on
-		/// the mode with the specified ID. A message with ID 0x22D1ADC will be generated.
+		/// the mode with the specified ID. A message with ID kMsgOnModeEnter will be generated.
 		/// @param modeID The ID of the game mode to set as active.
 		/// @returns True if the mode was found and set active, false otherwise.
 		///
@@ -187,7 +187,7 @@ namespace App
 		///
 		/// Sets the active game mode to be the one at the specified index. If there's already an active mode, 
 		/// the method IGameMode::OnExit() will be called on it. The method IGameMode::OnEnter() will be called on
-		/// the mode at the specified index. A message with ID 0x22D1ADC will be generated.
+		/// the mode at the specified index. A message with ID kMsgOnModeEnter will be generated.
 		/// @param index The index of the game mode to set as active.
 		/// @returns True if the mode was found and set active, false otherwise.
 		///
@@ -205,7 +205,7 @@ namespace App
 		///
 		/// Sets the active game mode to be the one with the specified name. If there's already an active mode, 
 		/// the method IGameMode::OnExit() will be called on it. The method IGameMode::OnEnter() will be called on
-		/// the moed at the specified index. A message with ID 0x22D1ADC will be generated.
+		/// the moed at the specified index. A message with ID kMsgOnModeEnter will be generated.
 		/// @param pName The name of the game mode to set as active.
 		/// @returns True if the mode was found and set active, false otherwise.
 		///

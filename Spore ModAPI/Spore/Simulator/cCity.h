@@ -122,7 +122,7 @@ namespace Simulator
 		/* 270h */	cGonzagoTimer field_270;
 		/* 290h */	int field_290;  // not initialized
 		/* 290h */	int field_294;  // not initialized
-		/* 298h */	int field_298;  // intrusive_ptr with release at C0h cSpatialObject/cPlanet
+		/* 298h */	ObjectPtr field_298;  // intrusive_ptr with release at C0h cSpatialObject/cPlanet
 		/* 29Ch */	int field_29C;
 		/* 2A0h */	int field_2A0;
 		/* 2A4h */	eastl::vector<int> field_2A4;

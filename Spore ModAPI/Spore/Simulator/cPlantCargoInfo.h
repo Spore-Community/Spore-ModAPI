@@ -24,7 +24,7 @@ namespace Simulator
 		/* 94h */	float mBaseRadius;
 		/* 98h */	float mCanopyRadius;
 		/* 9Ch */	float mHeight;
-		/* A0h */	cSpeciesProfile* mSpeciesProfile;  //species profile? //TODO what is this type?
+		/* A0h */	cSpeciesProfile* mSpeciesProfile;
 	};
 	ASSERT_SIZE(cPlantCargoInfo, 0xA4);
 }

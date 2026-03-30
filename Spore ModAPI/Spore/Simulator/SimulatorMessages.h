@@ -128,7 +128,8 @@ namespace Simulator
 		// Civ Stage
 		/////////////
 
-		/// Sent when the cutscene for a new city appearing plays in civ stage. Not sent when a city is founded outside of a cutscene.
+		/// Sent when the cutscene for a new city appearing plays in civ stage.
+		/// (Cutscene only. Not sent when a city is founded outside of a cutscene.)
 		kMsgCinematicNewCityAppears = 0x05668f43,
 
 		/// Sent when a vehicle is sent to spice (Cutscene only)

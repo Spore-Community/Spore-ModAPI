@@ -22,6 +22,7 @@
 #include <Spore\ResourceKey.h>
 #include <Spore\Object.h>
 #include <Spore\Editors\ContentValidation.h>
+#include <Spore\Simulator\cCollectableItems.h>
 #include <EASTL\string.h>
 #include <EASTL\vector.h>
 
@@ -81,32 +82,33 @@ namespace Editors
 
 	public:
 		/// The ID of the editor, such as 'id("CreatureEditorExtraLarge")'
-		/* 0Ch */	uint32_t editorID;  // -1
+		/* 0Ch */	uint32_t mEditorName;  // -1
 		/// You can use this field to preload a creation.
-		/* 10h */	ResourceKey creationKey;
-		/* 1Ch */	uint32_t activeModeID;
-		/* 20h */	bool field_20;
-		/* 24h */	ContentValidation editableTests;
+		/* 10h */	ResourceKey mModelKey;
+		/* 1Ch */	uint32_t mCallingGameModeID; // activeModeID / mCallingAppModeID
+		/// If true, display the editor model as a nameless creation
+		/* 20h */	bool mbIsFirstTimeInEditor;
+		/* 24h */	ContentValidation mEditableTests;
 		/// If true, the user can change the editor by selecting a different creation type in the Sporepedia.
 		/// False by default.
-		/* 34h */	bool sporepediaCanSwitch;
+		/* 34h */	bool mbSporepediaCanSwitch; // mCanSwitchEditor
 		/// If true, the creation name cannot be edited. False by default.
-		/* 35h */	bool disableNameEdit;
+		/* 35h */	bool mbDisableNameEdit;
 		/// If true, the user can edit a creation from the Sporepedia. If false, clicking the Sporepedia button
 		/// will show all types of creations, but they won't be editable. False by default.
-		/* 36h */	bool allowSporepedia;
+		/* 36h */	bool mbAllowSporepedia;
 		/// Whether the "Save" button is shown. False by default.
-		/* 37h */	bool hasSaveButton;
+		/* 37h */	bool mShowSaveButton;
 		/// Whether the "Create new" button is shown. False by default.
-		/* 38h */	bool hasCreateNewButton;
+		/* 38h */	bool mShowNewButton;
 		/// Whether the "Exit to main menu" and "Exit game" buttons are enabled.
 		/// True by default.
-		/* 39h */	bool hasExitButton;
+		/* 39h */	bool mShowExitButton;
 		/// Whether the "Publish creation" button is shown.
 		/// False by default.
-		/* 3Ah */	bool hasPublishButton;
+		/* 3Ah */	bool mShowPublishButton;
 		/// Whether the "Cancel" button is shown. True by default.
-		/* 3Bh */	bool hasCancelButton;  // true
+		/* 3Bh */	bool mShowCancelButton;  // true
 		/* 3Ch */	bool field_3C;
 		/* 3Dh */	bool field_3D;  // true
 
@@ -115,27 +117,34 @@ namespace Editors
 
 		/* 60h */	float field_60;
 		/* 64h */	bool field_64;
-		/* 65h */	bool field_65;  // show (unused) play button
+		/// Whether the (unused) "Play" button is shown instead of Accept. False by default.
+		/* 65h */	bool mShowPlayButton;
 		/* 66h */	bool field_66;
 		/* 68h */	int field_68;
+
+		/// Sets the "save" button enabled from editor entry.
+		/// Combined with mbIsFirstTimeInEditor = true, makes the mModelKey creation loaded as a saved-separately creation.
 		/* 6Ch */	bool field_6C;
 		/* 6Dh */	bool field_6D;  // true
 		/* 6Eh */	bool field_6E;  // true
 		/* 6Fh */	bool field_6F;
 
-		/* 70h */	eastl::vector<void*> field_70;
+		/// IDs of groupID "ConsequenceTraits" in order from cell to space.
+		/* 70h */	eastl::vector<uint32_t> mConsequenceTraits;
 		/* 84h */	int field_84;
 		/* 88h */	int field_88;
 		/* 8Ch */	int field_8C;
 		/* 90h */	uint32_t field_90;
-		/* 94h */	ObjectPtr field_94;
-		/* 98h */	EditorRequestPtr next;
+		/// Part unlock data, used to show and hide parts in the editor.
+		/* 94h */	cCollectableItemsPtr mpCollectableItems;
+		/// Next editor to go to. Used to chain a request for creature + outfitter editors.
+		/* 98h */	EditorRequestPtr mpNext;
 	};
 	ASSERT_SIZE(EditorRequest, 0x9C);
 
 #ifndef SDK_TO_GHIDRA
 	inline void EditorRequest::SetDefaultValidation() {
-		editableTests = ContentValidation::ValidationEditableTests();
+		mEditableTests = ContentValidation::ValidationEditableTests();
 	}
 #endif
 

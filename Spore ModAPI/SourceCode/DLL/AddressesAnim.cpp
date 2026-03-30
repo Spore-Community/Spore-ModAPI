@@ -13,6 +13,11 @@ namespace Anim
 	{
 		DefineAddress(Get, SelectAddress(0x67CC70, 0x67CAE0));
 	}
+
+	namespace Addresses(IAnimWorld)
+	{
+		DefineAddress(LoadCreature, SelectAddress(0xA0B1C0, 0xA0B1C0));
+	}
 }
 
 #endif

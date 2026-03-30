@@ -120,7 +120,7 @@ namespace UI
 		/* 1E8h */	LocalizedString mTextSellColony;
 		/* 1FCh */	LocalizedString mTextShow;
 		/* 210h */	LocalizedString mTextHide;
-		/// The main UI of the space stage. It's `0x1E453B88.spui`
+		/// The main UI of the space stage. Uses `GlobalUISpace2-1.spui`
 		/* 224h */	GlobalUI* mpGlobalUI;
 		/* 228h */	int field_228;  // intrusive_ptr  Space UI
 		/* 22Ch */	UILayoutPtr mpSpaceStarRolloverLayout;
@@ -130,7 +130,7 @@ namespace UI
 		/* 23Ch */	uint32_t mActivePaletteID;
 		/// A list of all available IDs of tool palettes (obtained from the `spaceToolPaletteID` property).
 		/* 240h */	eastl::vector<uint32_t> mToolPaletteIDs;
-		/// `0x46FED9C8.spui`, a layout that contains all space tools icons
+		/// `SpaceToolbinIcons.spui`, a layout that contains all space tools icons
 		/* 254h */	UILayoutPtr mInventoryItemIcons;
 		/* 258h */	UILayoutPtr mpCaptainDialogLayout;
 		// paletteID to panel; I'm not sure about this, each palette can have more than one panel
@@ -141,8 +141,8 @@ namespace UI
 		/* 294h */	SpaceToolPanelUIPtr mpCargoPalettePanel;
 		/// Shown over the spaceship thumbnail
 		/* 298h */	SpaceToolPanelUIPtr mpCurrentToolPanel;
-		// actually a subclass; uses spacetoolui~!0xFB82BCBA.prop
-		/* 29Ch */	SpaceToolPanelUIPtr field_29C;
+		// actually a subclass; uses spacetoolui~!ActiveBuffPanel.prop
+		/* 29Ch */	SpaceToolPanelUIPtr mpActiveBuffPanel;
 		// panelID -> ?
 		/* 2A0h */	eastl::hash_map<uint32_t, int> field_2A0;
 		/* 2C0h */	eastl::vector<int> field_2C0;

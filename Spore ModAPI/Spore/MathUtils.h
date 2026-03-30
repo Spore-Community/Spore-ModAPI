@@ -75,6 +75,21 @@ namespace Math
 		inline bool operator!=(const Color& b) const {
 			return value != b.value;
 		}
+
+		inline Color& Color::operator+=(const Color& b) {
+			value += b.value;
+			return *this;
+		}
+		inline Color& Color::operator-=(const Color& b) {
+			value -= b.value;
+			return *this;
+		}
+		inline Color operator+(const Color& b) {
+			return value + b.value;
+		}
+		inline Color operator-(const Color& b) {
+			return value - b.value;
+		}
 #endif
 
 		static const Color RED;
@@ -82,6 +97,25 @@ namespace Math
 		static const Color GREEN;
 		static const Color WHITE;
 		static const Color BLACK;
+
+		// Multiplies the saturation by the given factor (clamped to [0,1])
+		/// @param factor How much to multiply the saturation
+		/// @param clamp Clamp result color range
+		//Color MultiplySaturation(float factor, bool doclamp = true) const;
+
+		/// Multiplies the brightness (value) by the given factor
+		/// @param factor How much to multiply the brightness
+		/// @param clamp Clamp result color range
+		//Color MultiplyBrightness(float factor, bool doclamp = true) const;
+
+		void Clamp();
+
+
+		// Helper: Convert RGB to HSV
+		static void RGBToHSV(uint8_t r, uint8_t g, uint8_t b, float& h, float& s, float& v);
+
+		// Helper: Convert HSV to RGB
+		static void HSVToRGB(float h, float s, float v, uint8_t& r, uint8_t& g, uint8_t& b);
 	};
 	ASSERT_SIZE(Color, 0x4);
 
@@ -111,7 +145,9 @@ namespace Math
 		Vector2& operator+=(float);
 		Vector2& operator-=(const Vector2&);
 		Vector2& operator-=(float);
+		Vector2& operator*=(const Vector2&);
 		Vector2& operator*=(float);
+		Vector2& operator/=(const Vector2&);
 		Vector2& operator/=(float);
 
 		bool operator==(const Vector2& b) const;
@@ -166,7 +202,9 @@ namespace Math
 		Vector3& operator+=(float);
 		Vector3& operator-=(const Vector3&);
 		Vector3& operator-=(float);
+		Vector3& operator*=(const Vector3&);
 		Vector3& operator*=(float);
+		Vector3& operator/=(const Vector3&);
 		Vector3& operator/=(float);
 
 		bool operator==(const Vector3& b) const;
@@ -206,7 +244,9 @@ namespace Math
 		Vector4& operator+=(float);
 		Vector4& operator-=(const Vector4&);
 		Vector4& operator-=(float);
+		Vector4& operator*=(const Vector4&);
 		Vector4& operator*=(float);
+		Vector4& operator/=(const Vector4&);
 		Vector4& operator/=(float);
 
 		bool operator==(const Vector4& b) const;
@@ -735,6 +775,8 @@ namespace Math
 	inline Color::Color(uint32_t color) : value(color) {}
 	inline Color::Color(uint8_t _r, uint8_t _g, uint8_t _b, uint8_t _a)
 		: r(_r), g(_g), b(_b), a(_a) {}
+
+
 #endif
 
 	inline Vector2::Vector2(const Point& other) : Vector2(other.x, other.y) {}
@@ -954,9 +996,19 @@ namespace Math
 		y -= b;
 		return *this;
 	}
+	inline Vector2& Vector2::operator*=(const Vector2& b) {
+		x *= b.x;
+		y *= b.y;
+		return *this;
+	}
 	inline Vector2& Vector2::operator*=(float b) {
 		x *= b;
 		y *= b;
+		return *this;
+	}
+	inline Vector2& Vector2::operator/=(const Vector2& b) {
+		x /= b.x;
+		y /= b.y;
 		return *this;
 	}
 	inline Vector2& Vector2::operator/=(float b) {
@@ -977,8 +1029,14 @@ namespace Math
 	inline Vector2 operator-(Vector2 a, float b) {
 		return a -= b;
 	}
+	inline Vector2 operator*(Vector2 a, const Vector2& b) {
+		return a *= b;
+	}
 	inline Vector2 operator*(Vector2 a, float b) {
 		return a *= b;
+	}
+	inline Vector2 operator/(Vector2 a, const Vector2& b) {
+		return a /= b;
 	}
 	inline Vector2 operator/(Vector2 a, float b) {
 		return a /= b;
@@ -1038,10 +1096,22 @@ namespace Math
 		z -= b;
 		return *this;
 	}
+	inline Vector3& Vector3::operator*=(const Vector3& b) {
+		x *= b.x;
+		y *= b.y;
+		z *= b.z;
+		return *this;
+	}
 	inline Vector3& Vector3::operator*=(float b) {
 		x *= b;
 		y *= b;
 		z *= b;
+		return *this;
+	}
+	inline Vector3& Vector3::operator/=(const Vector3& b) {
+		x /= b.x;
+		y /= b.y;
+		z /= b.z;
 		return *this;
 	}
 	inline Vector3& Vector3::operator/=(float b) {
@@ -1063,8 +1133,14 @@ namespace Math
 	inline Vector3 operator-(Vector3 a, float b) {
 		return a -= b;
 	}
+	inline Vector3 operator*(Vector3 a, const Vector3& b) {
+		return a *= b;
+	}
 	inline Vector3 operator*(Vector3 a, float b) {
 		return a *= b;
+	}
+	inline Vector3 operator/(Vector3 a, const Vector3& b) {
+		return a /= b;
 	}
 	inline Vector3 operator/(Vector3 a, float b) {
 		return a /= b;
@@ -1141,11 +1217,25 @@ namespace Math
 		w -= b;
 		return *this;
 	}
+	inline Vector4& Vector4::operator*=(const Vector4& b) {
+		x *= b.x;
+		y *= b.y;
+		z *= b.z;
+		w *= b.w;
+		return *this;
+	}
 	inline Vector4& Vector4::operator*=(float b) {
 		x *= b;
 		y *= b;
 		z *= b;
 		w *= b;
+		return *this;
+	}
+	inline Vector4& Vector4::operator/=(const Vector4& b) {
+		x /= b.x;
+		y /= b.y;
+		z /= b.z;
+		w /= b.w;
 		return *this;
 	}
 	inline Vector4& Vector4::operator/=(float b) {
@@ -1172,8 +1262,14 @@ namespace Math
 	inline Vector4 operator-(Vector4 a, float b) {
 		return a -= b;
 	}
+	inline Vector4 operator*(Vector4 a, const Vector4& b) {
+		return a *= b;
+	}
 	inline Vector4 operator*(Vector4 a, float b) {
 		return a *= b;
+	}
+	inline Vector4 operator/(Vector4 a, const Vector4& b) {
+		return a /= b;
 	}
 	inline Vector4 operator/(Vector4 a, float b) {
 		return a /= b;
@@ -1187,6 +1283,9 @@ namespace Math
 	}
 	inline Vector4 operator*(float a, const Vector4& b) {
 		return b * a;
+	}
+	inline Vector4 operator/(float a, const Vector4& b) {
+		return b / a;
 	}
 
 #ifndef SDK_TO_GHIDRA
@@ -1373,6 +1472,84 @@ namespace Math
 
 	inline Vector4 Vector4::Lerp(const Vector4& other, float mix) const {
 		return { lerp(x, other.x, mix), lerp(y, other.y, mix), lerp(z, other.z, mix), lerp(w, other.w, mix) };
+	}
+
+	// Color Helper Funcs
+	/*
+	inline Color Color::MultiplySaturation(float factor, bool doclamp) const
+	{
+		float h, s, v;
+		RGBToHSV(r, g, b, h, s, v);
+		if (doclamp) {
+			s = clamp(s * factor, 0.0f, 1.0f);
+		}
+		else {
+			s *= factor;
+		}
+		uint8_t nr, ng, nb;
+		HSVToRGB(h, s, v, nr, ng, nb);
+		return Color(nr, ng, nb, a);
+	}
+	inline Color Color::MultiplyBrightness(float factor, bool doclamp) const {
+		float h, s, v;
+		RGBToHSV(r, g, b, h, s, v);
+		if (doclamp) {
+			v = clamp(v * factor, 0.0f, 1.0f);
+		}
+		else {
+			v *= factor;
+		}
+		uint8_t nr, ng, nb;
+		HSVToRGB(h, s, v, nr, ng, nb);
+		return Color(nr, ng, nb, a);
+	}*/
+	inline void Color::Clamp() {
+		if (b > 255) b = 255;
+		else if (b < 0) b = 0;
+		if (g > 255) g = 255;
+		else if (b < 0) b = 0;
+		if (r > 255) r = 255;
+		else if (r < 0) r = 0;
+	}
+	inline void Color::RGBToHSV(uint8_t r, uint8_t g, uint8_t b, float& h, float& s, float& v) {
+		float fr = r / 255.0f, fg = g / 255.0f, fb = b / 255.0f;
+		float maxf = max_(max_(fr, fg), fb);
+		float minf = min_(min_(fr, fg), fb);
+		v = maxf;
+		float delta = maxf - minf;
+		s = (maxf == 0.0f) ? 0.0f : delta / maxf;
+		if (delta == 0.0f) {
+			h = 0.0f;
+		}
+		else if (maxf == fr) {
+			h = 60.0f * (fmod(((fg - fb) / delta), 6.0f));
+		}
+		else if (maxf == fg) {
+			h = 60.0f * (((fb - fr) / delta) + 2.0f);
+		}
+		else {
+			h = 60.0f * (((fr - fg) / delta) + 4.0f);
+		}
+		if (h < 0.0f) h += 360.0f;
+		h /= 360.0f;
+	}
+	inline void Color::HSVToRGB(float h, float s, float v, uint8_t& r, uint8_t& g, uint8_t& b) {
+		h = clamp(h, 0.0f, 1.0f) * 360.0f;
+		s = clamp(s, 0.0f, 1.0f);
+		v = clamp(v, 0.0f, 1.0f);
+		float c = v * s;
+		float x = c * (1.0f - fabs(fmod(h / 60.0f, 2.0f) - 1.0f));
+		float m = v - c;
+		float fr = 0, fg = 0, fb = 0;
+		if (h < 60) { fr = c; fg = x; fb = 0; }
+		else if (h < 120) { fr = x; fg = c; fb = 0; }
+		else if (h < 180) { fr = 0; fg = c; fb = x; }
+		else if (h < 240) { fr = 0; fg = x; fb = c; }
+		else if (h < 300) { fr = x; fg = 0; fb = c; }
+		else { fr = c; fg = 0; fb = x; }
+		r = static_cast<uint8_t>(clamp((fr + m) * 255.0f, 0.0f, 255.0f));
+		g = static_cast<uint8_t>(clamp((fg + m) * 255.0f, 0.0f, 255.0f));
+		b = static_cast<uint8_t>(clamp((fb + m) * 255.0f, 0.0f, 255.0f));
 	}
 
 }

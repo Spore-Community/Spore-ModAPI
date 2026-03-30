@@ -29,7 +29,7 @@ namespace Simulator
 		using Object::Cast;
 
 		/* 54h */	virtual void func54h(int);  // does nothing
-		/* 58h */	virtual int GetToolType();
+		/* 58h */	virtual int GetToolType(); // see TribeToolClass
 		/* 5Ch */	virtual const char* GetToolName();  // returns only in English, probably unused
 		/* 60h */	virtual void SetToolType(int toolType);
 		/* 64h */	virtual void SetTribe(cTribe*);

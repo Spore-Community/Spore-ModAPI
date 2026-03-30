@@ -341,7 +341,7 @@ namespace Simulator
 		ObjectInstance = 8
 	};
 
-	/// Different kinds of surfaces where a tool can hit, usde by Simulator::cSpaceToolData.
+	/// Different kinds of surfaces where a tool can hit, used by Simulator::cSpaceToolData.
 	enum SpaceToolHit
 	{
 		kHitCombatant = 0,
@@ -350,7 +350,24 @@ namespace Simulator
 		kHitAir = 3
 	};
 
-	/// Different kinds of targets that a tool can shoot at, usde by Simulator::cSpaceToolData.
+	/// Different types of damage a Simulator::cCombatant can take
+	enum DamageType {
+		kExplosive = 0,
+		kHeat = 1,
+		kMelee = 2,
+		kCulture = 3,
+		kBribery = 4,
+		kStarvation = 5,
+		kCrushing = 6,
+		kDamageOverTime = 7,
+		kCollision = 8,
+		kDrowning = 9,
+		kHealing = 10,
+		kBlackCloud = 11,
+		kAdvertising = 12
+	};
+
+	/// Different kinds of targets that a tool can shoot at, used by Simulator::cSpaceToolData.
 	enum SpaceToolTarget
 	{
 		/* shr 0 */	kTargetAnimal = 1,
@@ -752,8 +769,7 @@ namespace Simulator
 		Raider = 2,
 		Unk3 = 3,
 		Bomber = 4,
-		/// Only has weapon 'abduct'
-		Unk5 = 5,
+		Abductor = 5, /// Only has weapon 'abduct'. Used in CRG / TRG
 		Defender = 6,
 		Unk7 = 7,
 		AmbushPirate = 8,
@@ -786,11 +802,16 @@ namespace Simulator
 		kTribeToolClassOther = 3,
 	};
 
-	enum TribeBundleType
+	enum TribeBundleType : int
 	{
-		kTribeBundleTypeFruit = 1,
-		kTribeBundleTypeMeat = 2,
-		kTribeBundleTypeFish = 3,
+		kTribeBundleTypeSeaweed = 0,	// platter_seaweed_0x (always dropped?)
+		kTribeBundleTypeFruit = 1,		// platter_fruit_0x
+		kTribeBundleTypeMeat = 2,		// platter_meat_0x
+		kTribeBundleTypeFish = 3,		// platter_fish_0x
+		kTribeBundleTypeEgg = 4,		// platter_egg_0x
+		kTribeBundleTypeGift = 5,			// tt_gift
+		kTribeBundleTypeDomesticate = 6,	// trg_domesticfeed
+		kTribeBundleTypeSteal = 7,			// 0x57DC9CD4
 	};
 
 	enum TribeInputAction
@@ -809,37 +830,37 @@ namespace Simulator
 
 	enum CitizenAction
 	{
-		//TODO there are more
+		// TODO there are more
 		kCitizenActionEat = 0,
 		kCitizenActionFish = 1,
 		kCitizenActionGather = 2,
 		kCitizenActionGrabTool = 3, // actionObject = cTribeTool
-
 		kCitizenActionWalkTo = 4, // actionObject = nullptr, cannot be manually called via DoAction
-
 		kCitizenActionHeal = 5,
-
 		kCitizenActionSleep = 6, // Sends the creature into the main tribe hut
-
 		kCitizenActionAttack = 7,  // Attack a citizen
 		kCitizenActionRaidFood = 8,
 		kCitizenActionGiftFood = 9,
 		kCitizenActionHunt = 10, // Attack a wild animal
 		kCitizenActionMate = 11,
 		kCitizenActionParty = 12, // Dance around the game object, actionObject = fire pit or other cTribeTool
-		kCitizenActionCollectEgg = 13,
+		kCitizenActionCollectEgg = 13, // Collect eggs from the pigpen
 		kCitizenActionBundle = 14,
-
 		kCitizenActionRaidHuts = 15, // Attack huts or tools of this tribe, starting with the actionObject = cTribeHut or cTribeTool
 
-		kCitizenActionFeedWild = 20,
+		//kCitizenActionFeedBaby = 16,
+		//kCitizenActionStealBaby = 17,
+		//kCitizenActionRetrieveBaby = 18,
+		//kCitizenActionSocialize = 19,
+
+		kCitizenActionFeedWild = 20, // feed wild animal
 		kCitizenActionGiftMember = 21,
 
+		// TODO: Feb 08 values are -1 these. verify these values.
 		kCitizenActionRepair = 24, // actionObject = cTribeHut or cTribeTool
 		kCitizenActionTame = 25,
 		kCitizenActionRecruit = 26, // Begin social minigame
 		kCitizenActionGatherMeat = 27,
-
 		kCitizenActionReturnToTribe = 28, // Sends the creature back to their tribe. actionObject = nullptr
 	};
 

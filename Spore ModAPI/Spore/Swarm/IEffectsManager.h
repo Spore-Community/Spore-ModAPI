@@ -27,6 +27,7 @@
 #include <Spore\Object.h>
 #include <Spore\Internal.h>
 #include <EASTL\vector.h>
+#include <Spore\Swarm\Constants.h>
 
 /// Access the active effects manager.
 #define EffectsManager (*Swarm::IEffectsManager::Get())
@@ -141,6 +142,7 @@ namespace Swarm
 		/// Set the given application flag.
 		/// @param flag The flag to set.
 		/// @param bValue The new value of the flag.
+		/// See Swarm::AppFlags for the list of flags.
 		/* 98h */	virtual void SetAppFlag(int flag, bool bValue) = 0;
 		/* 9Ch */	virtual bool AppFlag(int flag) = 0;
 

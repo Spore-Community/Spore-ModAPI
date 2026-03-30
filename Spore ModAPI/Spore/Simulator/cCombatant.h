@@ -80,6 +80,7 @@ namespace Simulator
 
 		/// Called when the combatant is attacked, takes the damage
 		/// Vector3 may be knockback direction?
+		/// See Simulator::DamageType
 		/* 18h */	virtual int TakeDamage(float damage, uint32_t attackerPoliticalID, int damagetype, const Vector3&, cCombatant* pAttacker);  // used to substract health
 
 		/* 1Ch */	virtual void AddHostileUnit(cCombatant* combatant);

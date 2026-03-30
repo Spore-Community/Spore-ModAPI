@@ -76,7 +76,7 @@ namespace UTFWin
 		///
 		IWindow* FindWindowByID(uint32_t controlID, bool bRecursive = true);
 		
-		// the two args are usually true, 05B598FA (kDefaultParameter)
+		// the bool is usually true, 05B598FA (kDefaultParameter)
 		bool SetParentWindow(IWindow* pParent, bool = true, uint32_t = kDefaultParameter);
 
 		///

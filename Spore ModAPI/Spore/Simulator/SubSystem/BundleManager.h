@@ -22,6 +22,19 @@ namespace Simulator
 		/// @returns The last bundle created
 		cGameBundle* CreateBundles(float amount, cGameBundleContainer* container, int bundleType);
 
+		/// Creates one or more bundles of the given type and adds them to mpGroundContainer.
+		/// The number of bundles created depends on the 'amount' and how much value each bundle
+		/// can contain, which depends on the container.
+		/// @param amount
+		/// @param bundleType
+		/// @param position
+		/// @param orientation
+		/// @returns The last bundle created
+		cGameBundle* CreateGroundBundles(float amount, int bundleType, const Vector3& position, const Quaternion& orientation = Quaternion());
+
+
+		// TODO: The 'Remove' functions have no disk addresses yet!
+
 		/// Removes a certain quantity from a bundle container. This will remove as many bundles as necessary,
 		/// and change the value of the last remaining bundle. If the amount is small enough, no bundle may be deleted.
 		/// @param amount
@@ -30,8 +43,15 @@ namespace Simulator
 		/// @returns The actual amount that has been removed.
 		float RemoveBundles(float amount, cGameBundleContainer* container, cGameBundle* bundle = nullptr);
 
+		/// Removes a certain quantity from mpGroundContainer. This will remove as many bundles as necessary,
+		/// and change the value of the last remaining bundle. If the amount is small enough, no bundle may be deleted.
+		/// @param amount
+		/// @param bundle If not null, removes only that specific bundle
+		/// @returns The actual amount that has been removed.
+		float RemoveGroundBundles(float amount, cGameBundle* bundle = nullptr);
+
 	public:
-		/* 1Ch */	void* mpGroundContainer;  //TODO cGameBundleGroundContainerPtr
+		/* 1Ch */	cGameBundleGroundContainerPtr mpGroundContainer;
 	};
 	ASSERT_SIZE(cBundleManager, 0x20);
 

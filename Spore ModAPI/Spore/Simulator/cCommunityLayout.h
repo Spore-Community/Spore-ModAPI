@@ -38,14 +38,14 @@ namespace Simulator
 	public:
 		/// Local Y axis
 		/* 00h */	Vector3 mDirection;
-		/* 0Ch */	float field_C;  // -1.0
-		/* 10h */	float field_10;  // -1.0
+		/* 0Ch */	float field_C;  // -1.0, 40 for tribes, 50-60 for cities.
+		/* 10h */	float field_10;  // -1.0, 3 for tribes, 4 for cities
 		/* 14h */	Vector3 mOrigin;
 		/* 20h */	float field_20;
-		/* 24h */	int field_24;  // not initialized
+		/* 24h */	int field_24;  // not initialized, 6 for tribes and cities
 		/* 28h */	bool field_28;
 		/* 2Ch */	Quaternion field_2C; // Orientation?
-		/* 3Ch */	eastl::vector<int> field_3C;
+		/* 3Ch */	eastl::vector<int> field_3C; // always empty?
 		/* 50h */	eastl::vector<cLayoutSlot> mSlots;
 	};
 	ASSERT_SIZE(cCommunityLayout, 0x64);

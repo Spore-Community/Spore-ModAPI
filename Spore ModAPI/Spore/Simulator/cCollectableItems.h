@@ -18,9 +18,8 @@ namespace Simulator
 	enum class CollectableItemStatusFlags : uint8_t
 	{
 		Unlocked = 1,
-
-		// Highlighted = 2 ???
-		// NotUnlockable = 4 ???
+		Highlighted = 2,
+		NotUnlockable = 4,
 	};
 
 	struct alignas(8) cCollectableItemID {
@@ -68,9 +67,6 @@ namespace Simulator
 	
 	/// One of these structs per unlockable page
 	struct UnkHashtableItem {
-		//int field_0; // generally stays the same as parts are unlocked, but not always
-		//int field_4; // decreases as parts are unlocked
-
 		uint16_t field_0; // some type of storage size. usually 1 value below some power of 2. generally stays the same as parts are unlocked, but not always
 		uint16_t field_2;
 		uint16_t field_4; // decreases to 0 as parts are unlocked
@@ -78,9 +74,9 @@ namespace Simulator
 	};
 	ASSERT_SIZE(UnkHashtableItem, 8);
 
-	/// Map {value, pageindex} to the UnkHashtableItem
-	/// Before all parts are unlocked, 'value' = 0x3e09800e
-	/// After all parts are unlocked, 'value' = 0x5c225570
+	/// Map "cCollectableItemID" {unkvalue, pageindex} to the UnkHashtableItem
+	/// Before all parts are unlocked, 'unkvalue' = 0x3e09800e
+	/// After all parts are unlocked, 'unkvalue' = 0x5c225570
 	typedef eastl::sp_fixed_hash_map<Simulator::cCollectableItemID, UnkHashtableItem, 4> UnkPageHashtable;
 	ASSERT_SIZE(UnkPageHashtable, 0xDC);
 
@@ -120,12 +116,11 @@ namespace Simulator
 		// Called after UnlockPart and LockPart, then UnlockPart is called again after this to add the highlighted "new" parts
 		void sub_594010();
 
-		// called at the start of creature stage with an int of "1" and a nullptr speciesKey
+		// Called at the start of creature stage with an int of "1" and a nullptr speciesKey
 		// populates the category hash map?
 		void sub_597BC0(UnkCategoryHashMap& dst, int, const ResourceKey& speciesKey);
 
-		// called when cCreatureModeStrategy::ExecuteAction calls with an 'UnlockPart' action
-		// currently cannot be detoured without crashing?
+		// Called when cCreatureModeStrategy::ExecuteAction calls with an 'UnlockPart' action
 		void sub_597390(eastl::vector<int>& dst, struct cCollectableItemID itemID, int);
 
 	public:

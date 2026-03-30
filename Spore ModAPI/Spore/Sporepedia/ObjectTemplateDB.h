@@ -11,6 +11,7 @@
 #define ObjectTemplateDB (*Sporepedia::OTDB::cObjectTemplateDB::Get())
 #define cISummarizerPtr eastl::intrusive_ptr<Sporepedia::OTDB::ISummarizer>
 
+
 namespace Sporepedia
 {
 	namespace OTDB

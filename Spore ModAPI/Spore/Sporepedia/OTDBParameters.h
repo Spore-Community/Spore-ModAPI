@@ -152,11 +152,11 @@ namespace Sporepedia
 				carnivore = 0x2F05C58, // works
 				herbivore = 0x2F05C59, // works
 				cuteness = 0x2F05C5E,
-				totalSocial = 0x2F05C5F, // works
-				social = 0x5B15AA5,
 				meanLookingScore = 0x3FEA210,
 				totalAttack = 0x3FEA1A0, // works
+				totalSocial = 0x2F05C5F, // works
 				attack = 0x5B15A92,
+				social = 0x5B15AA5,
 				numFeet = 0x3FEA1C0,
 				numGraspers = 0x2F05C61,
 				biteCapRange = 0x4AB3BD8,

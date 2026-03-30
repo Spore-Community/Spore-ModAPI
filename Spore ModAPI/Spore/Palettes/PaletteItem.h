@@ -41,6 +41,8 @@ namespace Palettes
 		{
 			/// The item used when the item is a .png image file.
 			kItemBlock = 0xA2E50993,
+			/// The item used for limb assemblies and other creations used as block assemblies.
+			kItemBlockAssembly = 0xC9DB779B,
 			/// The item used when the item is a creation (that is .vcl, .crt, .cll, etc files).
 			kItemCreation = 0x674AB27,
 			/// The item used in paints (not themes) for block creations (building, vehicle and ufo).
@@ -53,13 +55,28 @@ namespace Palettes
 			kItemSkinPaintTheme = 0xDEE3D8A8,
 			/// The 'Paint Like This' item in paint mode.
 			kItemPaintLikeThis = 0x800B7988,
+			/// The item used for tribal tools in the tribe planner.
 			kItemTribeTool = 0x0FCAFD26,
+			/// Not used.
+			kItemTribeHutStyle = 0x7B67F192,
+			/// The item used for outfitter editor previews in planners.
 			kItemOutfitter = 0x42BF8C1D,
+			/// The item used for city walls in cities/colonies.
 			kItemCityStyle = 0x2B885DF4,
+			/// The item used for space game traits for captains.
+			kItemTrait = 0x4D7D9BE4,
+			/// The item used for space game tools for captains.
+			kItemTool = 0x0E03DB96,
 			/// The item used to select vehicles in cities/colonies.
 			kItemCityVehicle = 0x8BFAC054,
 			/// The item used to select buildings in cities/colonies.
-			kItemCityBuilding = 0x81C74DBC
+			kItemCityBuilding = 0x81C74DBC,
+			/// The item used to select turrets in cities/colonies.
+			kItemCityTurret = 0x0142462A,
+			/// The item used to select decorations in cities/colonies.
+			kItemCityCivicObject = 0x4D863C8B,
+			/// The item used for scenario objects in the adventure editor.
+			kItemScenarioObject = 0xE73759F3,
 			//TODO there are missing ones
 		};
 

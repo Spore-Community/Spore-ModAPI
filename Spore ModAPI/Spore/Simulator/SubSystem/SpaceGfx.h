@@ -31,29 +31,29 @@ namespace Simulator
 		/* 24h */	IVisualEffectPtr mpGalaxyScreenEffect;
 		/// The blue-ish image with the shape of the galaxy. `sg_galaxy_ambience`, uses mpGalaxyEffectWorld
 		/* 28h */	IVisualEffectPtr mpGalaxyAmbienceEffect;
-		/// `0xC467B744`, uses mpGalaxyEffectWorld
-		/* 2Ch */	IVisualEffectPtr field_2C;
-		/// `0x840CEA6`, uses field_94
-		/* 30h */	IVisualEffectPtr field_30;
-		/// `0x45846142`, uses field_94
-		/* 34h */	IVisualEffectPtr field_34;
+		/// `SG_galaxy_background_galaxies`, uses mpGalaxyEffectWorld
+		/* 2Ch */	IVisualEffectPtr mpGalaxyBackgroundEffect;
+		/// `SG_galaxy_travel_line`, uses field_94
+		/* 30h */	IVisualEffectPtr mpGalaxyTravelLineEffect;
+		/// `SG_sporepedia_plot_path`, uses field_94
+		/* 34h */	IVisualEffectPtr mpSporepediaPlotPathEffect;
 		/* 38h */	int field_38;
 		/* 3Ch */	eastl::map<int, int> field_3C;
 		/* 58h */	int field_58;  // not initialized
 		/* 5Ch */	int field_5C;  // not initialized
 		/// `0x4CAB5702`, uses field_94
 		/* 60h */	IVisualEffectPtr field_60;
-		/// Some gloom around the sun? `0x4E7A261F`, uses field_94
+		/// Some gloom around the sun? `SG_screen_effect_lava`, uses field_94
 		/* 64h */	IVisualEffectPtr field_64;
 		/// Some gloom around the sun? `0xC150010A`, uses field_94
 		/* 68h */	IVisualEffectPtr field_68;
 		/// `solar_system_skybox`, uses field_94
 		/* 6Ch */	IVisualEffectPtr mpSolarSystemSkybox;
-		/// Some gloom around the sun? `0xF1F7D4DC`, uses field_94
+		/// Some gloom around the sun? `SG_screen_effect_solar`, uses field_94
 		/* 70h */	IVisualEffectPtr field_70;
 		/// `0xBF4763D8`, uses field_94
 		/* 74h */	IVisualEffectPtr field_74;
-		/// "star dust" particles floating around, `0xA0C77D6F`, uses field_94
+		/// "star dust" particles floating around, `SG_solar_system_loopbox`, uses field_94
 		/* 78h */	IVisualEffectPtr field_78;
 		/// Static stars in the sky (that don't move), `0x3EAC08A`, uses field_A4
 		/* 7Ch */	IVisualEffectPtr field_7C;

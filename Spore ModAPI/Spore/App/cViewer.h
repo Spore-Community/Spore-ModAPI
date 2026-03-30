@@ -28,6 +28,27 @@ using namespace Math;
 
 namespace App
 {
+
+	enum RenderType {
+		kRenderTypeDefault = 0,
+		kRenderTypeShadowRender = 1,
+		kRenderTypeShadowMap = 2,
+		kRenderTypeSplatter = 3,
+		kRenderTypeNonMRTShadows = 4,
+		kRenderTypeImpostorDiffuse = 5,
+		kRenderTypeImpostorNormal = 6,
+		kRenderTypeImpostorSpec = 7,
+		kRenderTypeAmbOccShadowMap = 8,
+		kRenderTypeAmbOccSplatter = 9,
+		kRenderTypeStandardShadow = 10,
+		kRenderTypeDepth = 11,
+		kRenderTypeRegionOutline = 12,
+		kRenderTypeShowLOD = 13,
+		kRenderTypeSolidWhite = 13,
+		kRenderTypeCreatureEffects = 15, // 15 : hologram and such
+		kMaxRenderTypes = 16
+	};
+
 	/// This class represents all the camera and viewport configuration used to render a scene.
 	/// This includes the FOV, projection matrix, view matrix (i.e. camera orientation and position),
 	/// as well as the color and depth buffers where the scene will be rendered into.

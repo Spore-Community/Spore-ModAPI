@@ -64,15 +64,15 @@ namespace Editors
 		/* 44h */	UTFWin::UILayout mCameraControlsUI;
 		/* 5Ch */	cEditor* mpEditor;
 		/* 60h */	int field_60;
-		/* 64h */	UTFWin::IWindow* field_64;  // 0x5100B176
-		/* 68h */	UTFWin::IWindow* field_68;  // 0xF006F308
-		/* 6Ch */	UTFWin::IWindow* field_6C;  // 0xF006F309
-		/* 70h */	UTFWin::IWindow* field_70;  // 0xD0353720
-		/* 74h */	int field_74;  // IWinGrid*, editor types
-		/* 78h */	UTFWin::IWindow* field_78;
-		/* 7Ch */	int field_7C;
-		/* 80h */	UTFWin::IWindow* field_80;  // 0x908891A7
-		/* 84h */	UTFWin::IWindow* field_84;  // 0xF383C97D
+		/* 64h */	UTFWin::IWindow* mWinLeftPanelFrame;  // 0x5100B176
+		/* 68h */	UTFWin::IWindow* mWinPartPaletteRoot;  // 0xF006F308
+		/* 6Ch */	UTFWin::IWindow* mWinPaintPaletteRoot;  // 0xF006F309, Also holds verbtray
+		/* 70h */	UTFWin::IWindow* mWinModelTypeBrowser;  // 0xD0353720,  Editor/Asset Type List Window
+		/* 74h */	int mGridTypes;  // IWinGrid*,  Editor Types?
+		/* 78h */	UTFWin::IWindow* mOriginalKeyboardCaptureTarget;
+		/* 7Ch */	UTFWin::IWindow* mOriginalMouseCaptureTarget;
+		/* 80h */	UTFWin::IWindow* mWinBudget;  // 0x908891A7
+		/* 84h */	UTFWin::IWindow* mWinComplexityMeter;  // 0xF383C97D
 		/* 88h */	int field_88;
 		/* 8Ch */	int field_8C;
 		/* 90h */	int field_90;

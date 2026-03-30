@@ -175,7 +175,7 @@ namespace Terrain
 		, field_61C()
 		, field_620()
 		, field_624()
-		, field_7BC()
+		, mbEnableAmbientEffects()
 	{
 		memset(field_628, 0, sizeof(field_628));
 		memset(field_7C0, 0, sizeof(field_7C0));

@@ -333,6 +333,8 @@ namespace eastl
 
 		bool validate() const EA_NOEXCEPT;
 		int  validate_iterator(const_iterator i) const EA_NOEXCEPT;
+	    int find(const value_type& value) const EA_NOEXCEPT;
+	    int find(const value_type& value, const bool reverse) const EA_NOEXCEPT;
 
 		#if EASTL_RESET_ENABLED
 			void reset() EA_NOEXCEPT; // This function name is deprecated; use reset_lose_memory instead.
@@ -1356,6 +1358,34 @@ namespace eastl
 		mpEnd = mpBegin;
 	}
 
+	template <typename T, typename Allocator>
+    inline int vector<T, Allocator>::find(const value_type& value) const EA_NOEXCEPT
+    {
+		const value_type* p = data();
+		const value_type* e = p + size();
+		for (; p != e; ++p)
+			if (*p == value)
+				return int(p - data());
+	    return -1;
+    }
+
+	template <typename T, typename Allocator>
+    inline int vector<T, Allocator>::find(const value_type& value, const bool reverse) const EA_NOEXCEPT
+    {
+	    const value_type* p = data();
+	    const value_type* e = p + size();
+	    if (!reverse) {
+		    for (; p != e; ++p)
+			    if (*p == value)
+				    return int(p - data());
+		}
+		else {
+		    while (p != b)
+			    if (*--p == value)
+				    return int(p - b);
+		}
+		return -1;
+    }
 
 	#if EASTL_RESET_ENABLED
 		// This function name is deprecated; use reset_lose_memory instead.

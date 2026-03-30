@@ -348,8 +348,8 @@ namespace Editors
 		// 18h ModelWorldPtr mpModelWorld;
 		/* 1Ch */	uint32_t mInstanceID;
 		/* 20h */	uint32_t mGroupID;
-		/// Property `0xE305AAFB`
-		/* 24h */	int field_24;
+		/// Property `blockPack`
+		/* 24h */	int mBlockPack;
 		/* 28h */	EditorModel* mpEditorModel;
 		/* 2Ch */	int field_2C;
 		/* 30h */	float field_30;
@@ -431,8 +431,8 @@ namespace Editors
 		/* 3BCh */	int mModelForcePinningType;  // not initialized
 		/* 3C0h */	uint32_t mModelPinningTypeGroup;  // not initialized
 		/* 3C4h */	int field_3C4;  // not initialized
-		/// True if pinning type instanceID is `0x17CFD48F`
-		/* 3C8h */	bool field_3C8;  // not initialized
+		/// True if pinning type instanceID is `PinningAntiAliased`
+		/* 3C8h */	bool mModelPinningAntiAliased;  // not initialized
 		/* 3C9h */	bool field_3C9;
 		/* 3CCh */	int field_3CC;  // not initialized
 		/* 3D0h */	int field_3D0;  // not initialized

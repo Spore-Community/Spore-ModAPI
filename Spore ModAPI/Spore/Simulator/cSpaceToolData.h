@@ -58,7 +58,7 @@ namespace Simulator
 			/// Disable this tool when visiting savegame worlds
 			/* shr 07 */	kFlagDisableOnSaveGames = 0x80,
 			/// If the projectile ignores all collisions
-			/* shr 08 */	kFlagPassTroughAll = 0x100,
+			/* shr 08 */	kFlagPassThroughAll = 0x100,
 			/// If the projectile damages friendlies
 			/* shr 09 */	kFlagDamagesFriendlies = 0x200,
 			/* shr 10 */	kFlagPreventsPlanetExit = 0x400,
@@ -138,7 +138,7 @@ namespace Simulator
 		/* 124h */	cDefaultBeamProjectilePtr mpBeam;
 		/* 128h */	int field_128;
 		/* 12Ch */	ObjectPtr mpAppTarget;  // it really is object
-		/* 130h */	char padding_130[0xC];  // 134h cSpaceToolDAta
+		/* 130h */	char padding_130[0xC];  // 134h cSpaceToolData
 		/* 13Ch */	bool mbInterruptedByDamage;
 		/* 140h */	int field_140;  // effect?
 		/* 144h */	float mDamageMultiplier; // 1.0

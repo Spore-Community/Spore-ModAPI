@@ -38,14 +38,14 @@ namespace Terrain
 			/* 94h */	Math::Vector2 kEffectTemperatureLowRange;
 			/* 9Ch */	Math::Vector2 kEffectTemperatureMedRange;
 			/* A4h */	Math::Vector2 kEffectTemperatureHighRange;
-			/* ACh */	Math::Vector4 kNightLightingTint;  // last value is kNightLumBlend
+			/* ACh */	Math::ColorRGBA kNightLightingTint;  // last value is kNightLumBlend
 			/* BCh */	int field_BC;  // not initialized
-			/* C0h */	Math::Vector3 kDayLightColor;
-			/* CCh */	Math::Vector3 kDayShadowColor;
-			/* D8h */	Math::Vector3 kDuskLightColor;
-			/* E4h */	Math::Vector3 kDuskShadowColor;
-			/* F0h */	Math::Vector3 kNightLightColor;
-			/* FCh */	Math::Vector3 kNightShadowColor;
+			/* C0h */	Math::ColorRGB kDayLightColor;
+			/* CCh */	Math::ColorRGB kDayShadowColor;
+			/* D8h */	Math::ColorRGB kDuskLightColor;
+			/* E4h */	Math::ColorRGB kDuskShadowColor;
+			/* F0h */	Math::ColorRGB kNightLightColor;
+			/* FCh */	Math::ColorRGB kNightShadowColor;
 			/* 108h */	Math::Vector4 kDuskDawnStartEnd;
 			/* 118h */	float kAboveColorRampSeaScaleBaseVal;
 			/* 11Ch */	float kAboveColorRampSeaScaleScaleVal;
@@ -163,7 +163,7 @@ namespace Terrain
 			/* B8h */	Math::ColorRGBA nightShadowColor;
 			/* C8h */	Math::Vector4 duskDawnStartEnd;
 			/* D8h */	char padding_D8[0x60];
-			/* 138h */	Math::Vector4 waterColor;
+			/* 138h */	Math::ColorRGBA waterColor;
 			/* 148h */	Math::Vector4 innerParms;
 			/* 158h */	Math::Vector4 field_158;
 			/* 168h */	Math::Vector4 field_168;
@@ -247,7 +247,7 @@ namespace Terrain
 		/* 620h */	float field_620;
 		/* 624h */	float field_624;
 		/* 628h */	char field_628[0x194];
-		/* 7BCh */	bool field_7BC;
+		/* 7BCh */	bool mbEnableAmbientEffects; // Requires weather level 2
 		/* 7C0h */	char field_7C0[0x180];
 		/* 940h */	char field_940[0x180];
 		/* AC0h */	char field_AC0[0x180];
