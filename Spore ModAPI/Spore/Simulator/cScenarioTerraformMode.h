@@ -33,6 +33,8 @@ namespace Simulator
 		void SetCliffColor(const ColorRGB& color);
 		void SetBeachColor(const ColorRGB& color);
 
+		void SetVisualEffect(const ResourceKey& visuaiEffect);
+
 	public:
 		/* 0Ch */	PropertyListPtr mpPropList;
 		/* 10h */	cScenarioTerraformEconomyPtr mpEconomy;
@@ -90,5 +92,6 @@ namespace Simulator
 		DeclareAddress(SetAtmosphereColor);  // 0xF32190, 0xF31FF0
 		DeclareAddress(SetBeachColor);  // 0xF321E0, 0xF32040
 		DeclareAddress(SetCliffColor);  // 0xF32230, 0xF32090
+		DeclareAddress(SetVisualEffect);  //0xf33a30, 0xf339f0
 	}
 }

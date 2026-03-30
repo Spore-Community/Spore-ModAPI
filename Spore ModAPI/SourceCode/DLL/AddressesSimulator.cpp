@@ -829,6 +829,7 @@ namespace Simulator
 		DefineAddress(SetAtmosphereColor, SelectAddress(0xF32190, 0xF31FF0));
 		DefineAddress(SetBeachColor, SelectAddress(0xF321E0, 0xF32040));
 		DefineAddress(SetCliffColor, SelectAddress(0xF32230, 0xF32090));
+		DefineAddress(SetVisualEffect, SelectAddress(0xf33a30, 0xf339f0));
 	}
 
 	namespace Addresses(cHerd)

@@ -45,6 +45,7 @@ namespace Simulator
 	auto_METHOD_VOID(cScenarioTerraformMode, SetAtmosphereColor, Args(const ColorRGB& color), Args(color));
 	auto_METHOD_VOID(cScenarioTerraformMode, SetCliffColor, Args(const ColorRGB& color), Args(color));
 	auto_METHOD_VOID(cScenarioTerraformMode, SetBeachColor, Args(const ColorRGB& color), Args(color));
+	auto_METHOD_VOID(cScenarioTerraformMode, SetVisualEffect, Args(const ResourceKey& visualEffect), Args(visualEffect));
 
 	auto_STATIC_METHOD(cScenarioClass, ScenarioObjectType, GetObjectType, Args(const ResourceKey& key), Args(key));
 	auto_METHOD_(cScenarioClass, bool, IsConsumible);
