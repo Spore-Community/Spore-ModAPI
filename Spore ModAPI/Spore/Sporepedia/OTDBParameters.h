@@ -65,6 +65,81 @@ namespace Sporepedia
 
 		namespace Parameters
 		{
+			enum eParameterIDs
+			{
+				/// General
+				kParameterIDPublished = 0x05fb4759,
+				kParameterIDFeedID = 0x03cc89b1,	//kParameterIDThemeID
+				kParameterIDContentSource = 0x05dc0b88,
+				kParameterTimeDownloaded = 0x061ef9b1,
+				kParamIDType = 0xdd90af,
+				kParamIDSubType = 0x2dc9d1e,
+				kParameterIDGAProp = 0xcd6e902c,
+				kParameterIDValidationPlayable = 0x54a32960,
+				kParameterIDValidationPollinatable = 0x54a32961,
+				kParameterIDValidationViewableLarge = 0x0665f917,
+				kParameterIDValidationEditable = 0x067b82d8,
+				kParameterIDExpansionPackage = 0x17a1c72d,
+
+				/// Creature
+				kParameterIDCreatureSpeciesArchetype = 0x52def3f,
+				kParameterIDCreatureSpeciesArchetypeQuery = 0x052def4b,
+				kParamIDCreatureCarnivore = 0x2f05c58,
+				kParamIDCreatureHerbivore = 0x2f05c59,
+				kParamIDCreatureTotalAttack = 0x3fea1a0,
+				kParamIDCreatureTotalSocial = 0x2f05c5f,
+
+				/// Vehicle
+				kParameterIDVehicleDefense = 0x0429d47d,
+				kParameterIDVehicleSpeed = 0x0429d47e,
+				kParameterIDVehiclePower = 0x0429d47c,
+				kParameterIDVehicleTotalScore = 0x05b950d7,
+				kParameterIDVehicleType = 0x05c96ff0,
+
+				/// Vehicle/Building
+				// F08 Build
+				kParameterIDBoundingBoxX = 0x05de94e6,
+				kParameterIDBoundingBoxY = 0x05de94e7,
+				kParameterIDBoundingBoxZ = 0x05de94e8,
+				kParameterIDBoundingBoxTotalF08 = 0x05de94e9,
+
+				// Release
+				kParameterIDBoundingBoxHeight = 0x05de94ea, //BoundingBoxMaxZ
+				kParameterIDBoundingBoxTotal = 0x05e62409,
+
+				/// Adventure
+				kParameterIDAdventureCompleted = 0x15e8afc8,	//in Space Stage?
+				kParameterIDAdventureCannotEdit = 0xb91fba14,
+				kParameterIDAdventureMissingAsset = 0xd22f5e35,
+				kParameterIDAdventureAvatarLocked = 0x5a3584a7,
+				kParameterIDAdventureInvalidVersion = 0xdb4675dd
+			};
+
+			enum eFeedIDs
+			{
+				kFeedIDShippingContent = 0x913b23be,	//Assembled
+				kFeedIDLocalContent = 0x5a3b873d,
+				kFeedIDPollinatedContent = 0x058669b4	//Imported
+			};
+
+			enum eContentSourceIDs
+			{
+				kContentSourceAssembled = 0,
+				kContentSourceMatched = 1,
+				kContentSourceImported = 2
+			};
+
+			enum eExpansionPackageIDs
+			{
+				kExpansionPackageCoreGame = 1,
+			};
+
+			enum eVehicleTypes
+			{
+				kVehicleTypeWater = 0x05c972ee,
+				kVehicleTypeLand = 0x05c972ea,
+				kVehicleTypeAir = 0x05c972f1,
+			};
 			// TODO: Some of these don't seem to work; the ones that are verified to work are commented.
 			enum Parameters : uint32_t
 			{
