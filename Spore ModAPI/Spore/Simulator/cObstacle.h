@@ -2,6 +2,7 @@
 
 #include <Spore\Simulator\cGameData.h>
 #include <Spore\Graphics\Model.h>
+#include <EASTL\bitset.h>
 
 #define cObstaclePtr eastl::intrusive_ptr<Simulator::cObstacle>
 
@@ -26,22 +27,22 @@ namespace Simulator
 		};
 
 	public:
-		/* 34h */	int field_34;
+		/* 34h */	eastl::bitset<3> mFlags;
 		/* 38h */	Math::Vector3 mPosition;
 		/* 44h */	float mObstacleBaseCollisionRadius;
 		/* 48h */	float mObstacleCanopyCollisionRadius;
 		/* 4Ch */	float mObstacleCollisionHeight;
-		/* 50h */	int field_50;  // -1
-		/* 54h */	int field_54;
-		/* 58h */	int field_58;
-		/* 5Ch */	int field_5C;  // -1
-		/* 60h */	int field_60;  // not initialized
-		/* 64h */	int field_64;  // -1
-		/* 68h */	int field_68;  // 1.0
-		/* 6Ch */	int field_6C;  // not initialized
+		/* 50h */	int mSeqID;  // -1
+		/* 54h */	int mDistributeEffect;
+		/* 58h */	int mDistributeSamples;
+		/* 5Ch */	int mSequenceNumIdx;  // -1
+		/* 60h */	uint32_t mID;  // not initialized
+		/* 64h */	uint32_t mGridID;  // -1
+		/* 68h */	float mAlpha;  // 1.0
+		/* 6Ch */	uint32_t mModelID;  // not initialized
 		/* 70h */	ModelPtr mModel;
-		/* 74h */	int field_74;
-		/* 78h */	int field_78;
+		/* 74h */	uint32_t mAlphaModelID;
+		/* 78h */	ModelPtr mAlphaModel;
 		/* 7Ch */	ResourceKey mSpeciesKey;
 		/* 88h */	PlantType mPlantType;
 	};
