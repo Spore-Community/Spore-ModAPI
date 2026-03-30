@@ -136,14 +136,14 @@ namespace Terrain
 		, mpTextureCliff()
 		, mpAtmospherePackedCurves()
 		, mpAboveColorRamp()
-		, field_38()
-		, field_3C()
-		, field_40()
-		, field_44()
-		, field_48()
+		, mpAbovePackedDetailNoise()
+		, mpAboveDeadColorRamp()
+		, mpAboveLiveColorRamp()
+		, mpAboveColorRampsIce()
+		, mpAboveColorRampsLava()
 		, field_4C()
 		, field_50()
-		, field_54()
+		, mpWaterPCATextureResource()
 	{
 
 	}
