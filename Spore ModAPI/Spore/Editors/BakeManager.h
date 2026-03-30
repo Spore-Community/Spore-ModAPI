@@ -62,8 +62,8 @@ namespace Editors
 		/* 00h */	virtual int AddRef();
 		/* 04h */	virtual void Release();
 		/* 08h */	virtual bool Init();
-		/* 0Ch */	virtual void Shutdown();
-		/* 10h */	virtual void PreShutdown();
+		/* 0Ch */	virtual void PreShutdown();
+		/* 10h */	virtual void Shutdown();
 		/* 14h */	virtual void Update();
 		/* 18h */	virtual bool IsBakingOrBaked(const ResourceKey& nameKey);
 		/* 1Ch */	virtual bool IsBaked(const ResourceKey& nameKey, bool param);
