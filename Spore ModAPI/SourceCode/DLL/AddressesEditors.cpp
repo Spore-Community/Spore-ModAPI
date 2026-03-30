@@ -277,5 +277,36 @@ namespace Editors
 		DefineAddress(GetIconName, SelectAddress(0x5dc880, 0x5e5cb0));
 		DefineAddress(GetIconDescription, SelectAddress(0x5dc940, 0x5e5d70));
 	}
+
+	namespace Addresses(EditorBaseHandle)
+	{
+		DefineAddress(AddRef, SelectAddress(0x4ad110, 0x51e350));
+		DefineAddress(Release, SelectAddress(0x517960, 0x51e390));
+		DefineAddress(Cast, SelectAddress(0x47a4d0, 0x47de10));
+		DefineAddress(GetTypeID, SelectAddress(0x47a3f0, 0x47dd30));
+		DefineAddress(PlaceHandle, SelectAddress(0x459650, 0x4ae770));
+		DefineAddress(Init, SelectAddress(0x47a6f0, 0x47e030));
+		DefineAddress(Shutdown, SelectAddress(0x47ae80, 0x47e7c0));
+		DefineAddress(SetScale, SelectAddress(0x47bf80, 0x47f8e0));
+		DefineAddress(GetHandlePosition, SelectAddress(0x47b1c0, 0x47eb00));
+		DefineAddress(SetUIState, SelectAddress(0x47b070, 0x47e9b0));
+		DefineAddress(AnimateOn, SelectAddress(0x47bf50, 0x47f8b0));
+		DefineAddress(SetState, SelectAddress(0x47b7e0, 0x47f140));
+		DefineAddress(GetTuningFile, SelectAddress(0x47b780, 0x47f0e0));
+		DefineAddress(GetAlpha, SelectAddress(0x47b280, 0x47ebe0));
+		DefineAddress(GetOverdrawAlpha, SelectAddress(0x47b3d0, 0x47ed30));
+		DefineAddress(GetColor, SelectAddress(0x47b520, 0x47ee80));
+		DefineAddress(GetOverdrawColor, SelectAddress(0x47b640, 0x47efa0));
+		DefineAddress(GetDefaultScale, SelectAddress(0x47b760, 0x47f0c0));
+	}
+	namespace Addresses(cSPEditorHandleBallConnector)
+	{
+		DefineAddress(Cast, SelectAddress(0x47c0f0, 0x47fa50));
+		DefineAddress(GetTypeID, SelectAddress(0x47c080, 0x47f9e0));
+		DefineAddress(PlaceHandle, SelectAddress(0x47c140, 0x47faa0));
+		DefineAddress(InitBallConnector, SelectAddress(0x47c2c0, 0x47fc20));
+		DefineAddress(GetHandlePosition, SelectAddress(0x47c500, 0x47fe60));
+		DefineAddress(GetTuningFile, SelectAddress(0x47c580, 0x47fee0));
+	}
 }
 #endif
