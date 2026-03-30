@@ -60,6 +60,7 @@
 #include <EASTL\map.h>
 #include <EASTL\string.h>
 #include <EASTL\vector.h>
+#include <EASTL\bitset.h>
 
 /// Access the active editor object; check Editors::cEditor
 #define Editor (*Editors::GetEditor())
@@ -75,6 +76,38 @@ typedef void UnkClass4;
 namespace Editors
 {
 	class EditorUI;
+
+	enum eValidityTests {
+		kValidityTooComplex = 0,
+		kValidityOverBudget = 1,
+		kValidityIncomplete = 2,
+		kValidityUnloadableTextures = 3,
+		kValidityInvalidName = 4,
+		kValidityInvalidParts = 5,
+		kValidityInvalidParents = 6,
+		kValidityInvalidScales = 7,
+		kValidityOutOfBounds = 8,
+		kValidityTooSmall = 9,
+		kValidityNoMouth = 0xa,
+		kValidityNotPainted = 0xb,
+		kValidityStatsOutOfRange = 0xc,
+		kValidityHasFloatingParts = 0xd,
+		kValidityUnloadableBlocks = 0xe,
+		kValidityInvalidSymmetry = 0xf,
+		kValidityMissingPacks = 0x10,
+		kValidityHasZeroBlocks = 0x11,
+		kValidityInvalidPaint = 0x12,
+		kValidityIntersectingEndEffectors = 0x13,
+		kValidityBlankName = 0x14,
+		kValidityBadCharacters = 0x15,
+		kValidityTooSmallX = 0x16,
+		kValidityTooSmallY = 0x17,
+		kValidityTooSmallZ = 0x18,
+		kValidityTooSmallAbsoluteZ = 0x19,
+		kValidityFailedLoad = 0x1a,
+		kValidityInvalidLimb = 0x1b,
+		kValidityNoReason = 0x1c
+	};
 
 	enum class Mode : int
 	{
@@ -244,22 +277,16 @@ namespace Editors
 		/* 30h */	int mMouseFlags;
 		/* 34h */	MouseState mMouseState;
 
-		/* 38h */	bool field_38;
-		/* 3Ch */	int field_3C;
-		/* 40h */	int field_40;  // not initialized
-		/* 44h */	int field_44;  // not initialized
-		/* 48h */	int field_48;
-		/* 4Ch */	int field_4C;
-		/* 50h */	int field_50;
-		/* 54h */	int field_54;
-		/* 58h */	int field_58;
-		/* 5Ch */	int field_5C;
-		/* 60h */	int field_60;
-		/* 64h */	int field_64;
-		/* 68h */	float field_68;  // Set to 0 when mouse click, and when changing mode
+		/* 38h */	bool mMouseMoved;
+		/* 3Ch */	int mModeModifiers;
+		/* 40h */	int mControlModifierMode;  // not initialized
+		/* 44h */	int mEyeDropperModiferMode;  // not initialized
+		/* 48h */	eastl::bitset<128> mModelValidity;
+		/* 58h */	eastl::bitset<128> mModelSaveValidity;
+		/* 68h */	float mIdleTime;  // Set to 0 when mouse click, and when changing mode
 		/// Time to wait before starting animated creature (in milliseconds).
 		/* 6Ch */	float mCreatureIdleActivationTime;
-		/* 70h */	float field_70;
+		/* 70h */	float mSwapToModelTime;
 		/* 74h */	bool field_74;
 
 		//TODO ManagedPtr
@@ -289,12 +316,11 @@ namespace Editors
 		/* A8h */	ModelPtr mpBackgroundModel;  // used in loc_5874D8
 		/// A background model used in accessories editors. It belongs to mpBackgroundModelWorld.
 		/* ACh */	ModelPtr mpAccBackgroundModel;
-		/* B0h */	eastl::string16 field_B0;
+		/* B0h */	eastl::string16 mOriginalTag;
 		// /* B9h */	bool editorShowAbilityIcons;  // might also be 4B6h ?
 
-		/* C0h */	int field_C0;  // not initialized  // lastMouseClick[2] ?
-		/* C4h */	int field_C4;  // not initialized
-		/* C8h */	int field_C8;  // not initialized
+		/* C0h */	int mMouseDownPosition[2];  // not initialized  // lastMouseClick[2] ?
+		/* C8h */	float mRolloverTime;  // not initialized
 
 		// also valid for spines
 		/// Rigblock that is being hovered, and where actions like mouse wheel scaling will be applied
