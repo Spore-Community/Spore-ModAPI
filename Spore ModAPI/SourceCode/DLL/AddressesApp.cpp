@@ -416,7 +416,8 @@ namespace App
 
 	namespace Addresses(PngEncoder)
 	{
-		DefineAddress(EncodePNG, SelectAddress(0x68E660, 0x68e190));
+		DefineAddress(WriteImageToStream, SelectAddress(0x68E660, 0x68e190));
+		DefineAddressAlias(EncodePNG, WriteImageToStream);
 	}
 
 	namespace Addresses(cLocaleManager)

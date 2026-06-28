@@ -24,6 +24,7 @@
 #include <Spore\IO\StreamFixedMemory.h>
 #include <Spore\IO\StreamMemory.h>
 #include <Spore\IO\StreamNull.h>
+#include <Spore\IO\StreamCompressionZLib.h>
 
 namespace IO
 {
@@ -395,5 +396,101 @@ namespace IO
 	auto_METHOD(StreamNull, int, Write, Args(const void* pData, size_t nSize), Args(pData, nSize));
 
 	//////////////////////
+
+
+	/////////////////////////////////
+	//// StreamCompressionZLib.h ////
+	/////////////////////////////////
+
+	StreamCompressionZLib::StreamCompressionZLib(IStream* pOutputStream, int nHint)
+		: mpOutputStream(NULL),
+		mbOpen(false),
+		mbInited(false),
+		mpZLibStream(NULL),
+		mFormat(kCompressedFormatZLib),
+		mHint(nHint),
+		mpOutputBuffer(NULL),
+		mnOutputBufferSize(0x2000)
+	{
+		if (pOutputStream)
+			StreamCompressionZLib::Open(pOutputStream, nHint);
+	}
+
+	StreamCompressionZLib::~StreamCompressionZLib()
+	{
+		Dispose();
+	}
+
+	auto_METHOD_(StreamCompressionZLib, int, AddRef);
+	auto_METHOD_(StreamCompressionZLib, int, Release);
+
+	auto_METHOD_const_(StreamCompressionZLib, uint32_t, GetType);
+	auto_METHOD_const_(StreamCompressionZLib, AccessFlags, GetAccessFlags);
+	auto_METHOD_const_(StreamCompressionZLib, FileError, GetState);
+	auto_METHOD_(StreamCompressionZLib, bool, Close);
+
+	auto_METHOD_const_(StreamCompressionZLib, size_type, GetSize);
+	auto_METHOD(StreamCompressionZLib, bool, SetSize, Args(size_type size), Args(size));
+	auto_METHOD_const(StreamCompressionZLib, int, GetPosition, Args(PositionType positionType), Args(positionType));
+	auto_METHOD(StreamCompressionZLib, bool, SetPosition, Args(int distance, PositionType positionType), Args(distance, positionType));
+	auto_METHOD_const_(StreamCompressionZLib, int, GetAvailable);
+
+	auto_METHOD(StreamCompressionZLib, int, Read, Args(void* pData, size_t nSize), Args(pData, nSize));
+	auto_METHOD_(StreamCompressionZLib, bool, Flush);
+	auto_METHOD(StreamCompressionZLib, int, Write, Args(const void* pData, size_t nSize), Args(pData, nSize));
+
+	auto_METHOD(StreamCompressionZLib, bool, SetCompressedFormat, Args(CompressedFormat format), Args(format));
+	auto_METHOD(StreamCompressionZLib, bool, SetBufferSize, Args(size_t nOutputBufferSize), Args(nOutputBufferSize));
+	auto_METHOD(StreamCompressionZLib, bool, SetCompressionHint, Args(int hint), Args(hint));
+
+	auto_METHOD(StreamCompressionZLib, bool, Open, Args(IStream* pOutputStream, int nHint), Args(pOutputStream, nHint));
+
+	// destructor, private for ModAPI
+	auto_METHOD_VOID_(StreamCompressionZLib, Dispose);
+
+	StreamDecompressionZLib::StreamDecompressionZLib(IStream* pInputStream)
+		: mpInputStream(NULL),
+		mFormat(kCompressedFormatZLib),
+		mbOpen(false),
+		mbEOF(false),
+		mbInited(false),
+		mpZLibStream(NULL),
+		mpInputBuffer(NULL),
+		mnInputBufferSize(0x2000)
+	{}
+
+	StreamDecompressionZLib::~StreamDecompressionZLib()
+	{
+		Dispose();
+	}
+
+	auto_METHOD_(StreamDecompressionZLib, int, AddRef);
+	auto_METHOD_(StreamDecompressionZLib, int, Release);
+
+	auto_METHOD_const_(StreamDecompressionZLib, uint32_t, GetType);
+	auto_METHOD_const_(StreamDecompressionZLib, AccessFlags, GetAccessFlags);
+	auto_METHOD_const_(StreamDecompressionZLib, FileError, GetState);
+	auto_METHOD_(StreamDecompressionZLib, bool, Close);
+
+	auto_METHOD_const_(StreamDecompressionZLib, size_type, GetSize);
+	auto_METHOD(StreamDecompressionZLib, bool, SetSize, Args(size_type size), Args(size));
+	auto_METHOD_const(StreamDecompressionZLib, int, GetPosition, Args(PositionType positionType), Args(positionType));
+	auto_METHOD(StreamDecompressionZLib, bool, SetPosition, Args(int distance, PositionType positionType), Args(distance, positionType));
+	auto_METHOD_const_(StreamDecompressionZLib, int, GetAvailable);
+
+	auto_METHOD(StreamDecompressionZLib, int, Read, Args(void* pData, size_t nSize), Args(pData, nSize));
+	auto_METHOD_(StreamDecompressionZLib, bool, Flush);
+	auto_METHOD(StreamDecompressionZLib, int, Write, Args(const void* pData, size_t nSize), Args(pData, nSize));
+
+	auto_METHOD(StreamDecompressionZLib, bool, SetCompressedFormat, Args(CompressedFormat format), Args(format));
+	auto_METHOD(StreamDecompressionZLib, bool, SetBufferSize, Args(size_t nInputBufferSize), Args(nInputBufferSize));
+
+	auto_METHOD(StreamDecompressionZLib, bool, Open, Args(IStream* pInputStream), Args(pInputStream));
+
+	// destructor, private for ModAPI
+	auto_METHOD_VOID_(StreamDecompressionZLib, Dispose);
+
+	/////////////////////////////////
+
 #endif
 }

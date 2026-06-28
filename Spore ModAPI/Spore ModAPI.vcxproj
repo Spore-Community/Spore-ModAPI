@@ -330,6 +330,7 @@
     <ClInclude Include="Spore\Editors\cSPEditorVerbTrayCollection.h" />
     <ClInclude Include="Spore\Editors\cSPEditorVerbIcon.h" />
     <ClInclude Include="Spore\Editors\cSPEditorVerbIconTray.h" />
+    <ClInclude Include="Spore\IO\StreamCompressionZLib.h" />
     <ClInclude Include="Spore\UI\cSPUIPropertyLayout.h" />
     <ClInclude Include="Spore\Editors\cSPVerbIconRollover.h" />
     <ClInclude Include="Spore\Editors\cSPVerbTrayCollection.h" />

@@ -15,7 +15,13 @@ namespace App
 {
 	struct PngEncoder {
 
-		bool EncodePNG(IO::IStream* outputStream, int mode);
+		enum Format {
+			kImageFormatPNG,
+			kImageFormatTGA,
+			kImageFormatBMP
+		};
+
+		bool WriteImageToStream(IO::IStream* outputStream, Format format);
 
 		/* 00h */	eastl::vector<int> mPixelBuf;
 		/* 14h */	uint32_t mnImageWidth;
@@ -83,11 +89,11 @@ namespace App
 		/// @param[out] dst The eastl::string where the path will be written.
 		bool GetFolderPath(uint32_t creationType, eastl::string16& dst);
 
-		/// Used to obtain a path from a locale file, by default `0x19F76D11.locale`, similar to the one that would
+		/// Used to obtain a path from a locale file, by default `SaveDataFolders.locale`, similar to the one that would
 		/// return GetFolderPath()
 		bool FolderPathFromLocale(uint32_t instanceID, eastl::string16& dst, uint32_t tableID = 0xFFFFFFFF);
 
-		/// Encodes the given resource into a `.png` image and saves it, both in the given package and in the
+		/// Encodes the given resource into a `.png` Model-in-Picture and saves it, both in the given package and in the
 		/// "My Spore Creations" in the user Documents folder. 
 		/// 
 		/// In the package, the image will be saved using the same ResourceKey as the resource, but with a TypeIDs::png type.
@@ -110,7 +116,7 @@ namespace App
 		/// @returns 'true' on success, 'false' if something failed.
 		bool ImportPNG(const char16_t* path, ResourceKey& key);
 
-		/// Extracts information from a PNG file. It extracts both the metadata, and the data encoded within the image.
+		/// Extracts information from a Model-in-Picture PNG file. It extracts both the metadata, and the data encoded within the image.
 		/// @param[out] dstMetadata 
 		/// @param[out] dstDataStream
 		/// @returns true on success, false if something failed
@@ -168,6 +174,6 @@ namespace App
 
 	namespace Addresses(PngEncoder)
 	{
-		DeclareAddress(EncodePNG);  // 0x68E660 0x68e190
+		DeclareAddress(WriteImageToStream);  // 0x68E660 0x68e190
 	}
 }

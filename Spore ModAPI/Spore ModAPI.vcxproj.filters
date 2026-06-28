@@ -2286,6 +2286,9 @@
     <ClInclude Include="Spore\UI\cSPUIPropertyLayout.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Spore\IO\StreamCompressionZLib.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SourceCode\Allocator.cpp">
