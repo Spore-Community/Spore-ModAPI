@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>IO::StreamCompressionZLib class | Spore ModAPI SDK for creating C++ mods for Spore</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark.css" />
+  <link rel="stylesheet" href="m-documentation.css" />
+  <link rel="icon" href="Spore_ModAPI_Icon.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m"><img src="Spore_ModAPI_Icon.png" alt="" />Spore ModAPI <span class="m-thin">SDK for creating C++ mods for Spore</span></a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Tutorials</a></li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          <span class="m-breadcrumb"><a href="namespace_i_o.html">IO</a>::<wbr/></span>StreamCompressionZLib <span class="m-thin">class</span>
+          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_stream_compression_z_lib_8h.html">&lt;Spore ModAPI/Spore/IO/StreamCompressionZLib.h&gt;</a></div>
+        </h1>
+        <p><span></span></p>
+        <nav class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#base-classes">Base classes</a></li>
+                <li><a href="#pub-types">Public types</a></li>
+                <li><a href="#pub-static-attribs">Public static variables</a></li>
+                <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
+                <li><a href="#pub-methods">Public functions</a></li>
+                <li><a href="#pro-attribs">Protected variables</a></li>
+                <li><a href="#pri-methods">Private functions</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+        <section id="base-classes">
+          <h2><a href="#base-classes">Base classes</a></h2>
+          <dl class="m-doc">
+            <dt>
+              class <a href="class_i_o_1_1_i_stream.html" class="m-doc">IStream</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              class <a href="class_ref_count_template_atomic.html" class="m-doc">RefCountTemplateAtomic</a>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="pub-types">
+          <h2><a href="#pub-types">Public types</a></h2>
+          <dl class="m-doc">
+            <dt id="a0f43d6ad877682b0491f50c3efd907c8">
+              <span class="m-doc-wrap-bumper">enum <a href="#a0f43d6ad877682b0491f50c3efd907c8" class="m-doc-self">CompressionHint</a> { </span><span class="m-doc-wrap"><a href="#a0f43d6ad877682b0491f50c3efd907c8a65939b82455ed00cc9d12da5b2a8fab2" class="m-doc">kCompressionHintNone</a> = 0,
+              <a href="#a0f43d6ad877682b0491f50c3efd907c8a5c66e1184348ab3b170a88c24afaf1c2" class="m-doc">kCompressionHintSpeed</a> = 1,
+              <a href="#a0f43d6ad877682b0491f50c3efd907c8a19bc151a813904bd636e272faaef87dd" class="m-doc">kCompressionHintSize</a> = 9,
+              <a href="#a0f43d6ad877682b0491f50c3efd907c8acf1509a4804d79468d7cfb0e4a8b5f93" class="m-doc">kCompressionHintDefault</a> = -1 }</span>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="pub-static-attribs">
+          <h2><a href="#pub-static-attribs">Public static variables</a></h2>
+          <dl class="m-doc">
+            <dt id="a9a2f25f11731dcae8522202517ff26a1">
+              static <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> <a href="#a9a2f25f11731dcae8522202517ff26a1" class="m-doc-self">TYPE</a>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="typeless-methods">
+          <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
+          <dl class="m-doc">
+            <dt id="a10a1f0a9998404920dd9dede7ab06a6d">
+              <span class="m-doc-wrap-bumper"><a href="#a10a1f0a9998404920dd9dede7ab06a6d" class="m-doc-self">StreamCompressionZLib</a>(</span><span class="m-doc-wrap"><a href="class_i_o_1_1_i_stream.html" class="m-doc">IStream</a>* pOutputStream,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> nHint)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a7680b1d655999873e24f2149ef0fc5f6">
+              <span class="m-doc-wrap-bumper"><a href="#a7680b1d655999873e24f2149ef0fc5f6" class="m-doc-self">~StreamCompressionZLib</a>(</span><span class="m-doc-wrap">)</span>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt id="a8581809e74f55fd912da40668b02c425">
+              <span class="m-doc-wrap-bumper">auto <a href="#a8581809e74f55fd912da40668b02c425" class="m-doc-self">AddRef</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ae616d98dd98d75d63cc86b39e8713cb9">
+              <span class="m-doc-wrap-bumper">auto <a href="#ae616d98dd98d75d63cc86b39e8713cb9" class="m-doc-self">Release</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a5f30d92cd402450cd6e891ad35705a78" class="m-doc">GetType</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Returns the type of the stream, which is different for each Stream subclass.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a60db4b1af0251101d2e7d65a991ff494" class="m-doc">GetAccessFlags</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="namespace_i_o.html#ab7db8d079d037a7b288d7d79b2d052db" class="m-doc">AccessFlags</a> <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Returns one of enum AccessFlags.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a36c8989c9063b0ed5a4fb288ad7557c2" class="m-doc">GetState</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="namespace_i_o.html#a5e58fc53b7c9d1ef2c2c8f0ce59d659d" class="m-doc">FileError</a> <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Returns the error state of the stream.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#aedefb83cde8365a4f8998c518e902ec3" class="m-doc">Close</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Closes the stream and releases resouces associated with it.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#aac75b084972eaec0db4ec1888141f5b8" class="m-doc">GetSize</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="namespace_i_o.html#a93e482d5d18014e9184bfabe5a1a6e07" class="m-doc">size_<wbr />type</a> <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Returns the size of the stream, which is not the same as the size of bytes remaining to be read from the stream.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a864436642ef9bb71420309e943f5469e" class="m-doc">SetSize</a>(</span><span class="m-doc-wrap"><a href="namespace_i_o.html#a93e482d5d18014e9184bfabe5a1a6e07" class="m-doc">size_<wbr />type</a> size) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Sets the size of the stream, if possible.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ac517df93963801ba0d3472207607bb34" class="m-doc">GetPosition</a>(</span><span class="m-doc-wrap"><a href="namespace_i_o.html#a3548a9e9ef60c2653c6cdba408e817fc" class="m-doc">PositionType</a> positionType = <a href="namespace_i_o.html#a3548a9e9ef60c2653c6cdba408e817fca1a06729125544cab7cee73195fc044f0" class="m-doc">PositionType::<wbr />Begin</a>) const -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Gets the current read/write position within the stream.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a1686c19e7d96eb0ad9aa602e22a93111" class="m-doc">SetPosition</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> distance,
+              <a href="namespace_i_o.html#a3548a9e9ef60c2653c6cdba408e817fc" class="m-doc">PositionType</a> positionType = <a href="namespace_i_o.html#a3548a9e9ef60c2653c6cdba408e817fca1a06729125544cab7cee73195fc044f0" class="m-doc">PositionType::<wbr />Begin</a>) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Sets the read/write position of the stream.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a17f5bc7e6a582f87f9a386e4855be9b7" class="m-doc">GetAvailable</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Returns the number of bytes available for reading.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#abf88c52e2b807c63b2177a03abab8689" class="m-doc">Read</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a>* pData,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">size_<wbr />t</a> nSize) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Reads bytes from the stream given by the input count &#x27;nSize&#x27;.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a7f59ef9f1553a45d716c3f1511d5599d" class="m-doc">Flush</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Flush any non-empty stream write buffers.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#aa325b11aff7e2569a417003192a07e11" class="m-doc">Write</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a>* pData,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">size_<wbr />t</a> nSize) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">override</span></span>
+            </dt>
+            <dd>Writes bytes to the stream.</dd>
+            <dt id="a41ea7c83086e64a4c39d53bac221988a">
+              <span class="m-doc-wrap-bumper">auto <a href="#a41ea7c83086e64a4c39d53bac221988a" class="m-doc-self">SetCompressedFormat</a>(</span><span class="m-doc-wrap"><a href="namespace_i_o.html#ab185a5a501678d25187503de1c6e5686" class="m-doc">CompressedFormat</a> format) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ab0832a6f23c374d9687a2db56e92aa2e">
+              <span class="m-doc-wrap-bumper">auto <a href="#ab0832a6f23c374d9687a2db56e92aa2e" class="m-doc-self">SetBufferSize</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">size_<wbr />t</a> nOutputBufferSize) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a517da0517aff140a180116c085e421c7">
+              <span class="m-doc-wrap-bumper">auto <a href="#a517da0517aff140a180116c085e421c7" class="m-doc-self">SetCompressionHint</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> hint) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a2bee1409547b5392673e2933fb4d6f1a">
+              <span class="m-doc-wrap-bumper">auto <a href="#a2bee1409547b5392673e2933fb4d6f1a" class="m-doc-self">Open</a>(</span><span class="m-doc-wrap"><a href="class_i_o_1_1_i_stream.html" class="m-doc">IStream</a>* pOutputStream,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> nHint) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="pro-attribs">
+          <h2><a href="#pro-attribs">Protected variables</a></h2>
+          <dl class="m-doc">
+            <dt id="add2ed53d776ab8f76dfbf67649628526">
+              <a href="class_i_o_1_1_i_stream.html" class="m-doc">IStream</a>* <a href="#add2ed53d776ab8f76dfbf67649628526" class="m-doc-self">mpOutputStream</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aab299bc5292498d891c9fdce7ec8a63f">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <a href="#aab299bc5292498d891c9fdce7ec8a63f" class="m-doc-self">mbOpen</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="adef0b311211e27dae1f34e1101344524">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <a href="#adef0b311211e27dae1f34e1101344524" class="m-doc-self">mbInited</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aa4240f1b086d87629a4bd28695dc74ef">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a>* <a href="#aa4240f1b086d87629a4bd28695dc74ef" class="m-doc-self">mpZLibStream</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a5d38c72d7ce7620a7d0dc6c56f15815f">
+              <a href="namespace_i_o.html#ab185a5a501678d25187503de1c6e5686" class="m-doc">CompressedFormat</a> <a href="#a5d38c72d7ce7620a7d0dc6c56f15815f" class="m-doc-self">mFormat</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ace77daac25c8a2acb5e003119c844b34">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ace77daac25c8a2acb5e003119c844b34" class="m-doc-self">mHint</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a07786c3bcf1a6557b4232993e9d660b5">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint8_<wbr />t</a>* <a href="#a07786c3bcf1a6557b4232993e9d660b5" class="m-doc-self">mpOutputBuffer</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ae515c5c68b234b1193adbff3aaa5cd7c">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">size_<wbr />t</a> <a href="#ae515c5c68b234b1193adbff3aaa5cd7c" class="m-doc-self">mnOutputBufferSize</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ab21d76e5988196ff34081a3248dfdf1c">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> <a href="#ab21d76e5988196ff34081a3248dfdf1c" class="m-doc-self">mInputCRC</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aeeca48026b20c710cf3e9a6a7b4b8051">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">size_<wbr />t</a> <a href="#aeeca48026b20c710cf3e9a6a7b4b8051" class="m-doc-self">mInputSize</a>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="pri-methods">
+          <h2><a href="#pri-methods">Private functions</a></h2>
+          <dl class="m-doc">
+            <dt id="a146f8e2db9240c877381f7f12b519bb8">
+              <span class="m-doc-wrap-bumper">auto <a href="#a146f8e2db9240c877381f7f12b519bb8" class="m-doc-self">Dispose</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="a5f30d92cd402450cd6e891ad35705a78"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> IO::<wbr />StreamCompressionZLib::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a5f30d92cd402450cd6e891ad35705a78" class="m-doc-self">GetType</a>(</span><span class="m-doc-wrap">) const <span class="m-label m-warning">override</span></span></span>
+            </h3>
+            <p>Returns the type of the stream, which is different for each Stream subclass.</p>
+<p>This function can be used for run-time type identification. A type of zero means the type is unknown or invalid.</p>
+          </div></section>
+          <section class="m-doc-details" id="a60db4b1af0251101d2e7d65a991ff494"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="namespace_i_o.html#ab7db8d079d037a7b288d7d79b2d052db" class="m-doc">AccessFlags</a> IO::<wbr />StreamCompressionZLib::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a60db4b1af0251101d2e7d65a991ff494" class="m-doc-self">GetAccessFlags</a>(</span><span class="m-doc-wrap">) const <span class="m-label m-warning">override</span></span></span>
+            </h3>
+            <p>Returns one of enum AccessFlags.</p>
+<p>This function also tells you if the stream is open, as a return value of zero means the stream is not open. It is not allowed that a stream<br />be open with no type of access.</p>
+          </div></section>
+          <section class="m-doc-details" id="a36c8989c9063b0ed5a4fb288ad7557c2"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="namespace_i_o.html#a5e58fc53b7c9d1ef2c2c8f0ce59d659d" class="m-doc">FileError</a> IO::<wbr />StreamCompressionZLib::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a36c8989c9063b0ed5a4fb288ad7557c2" class="m-doc-self">GetState</a>(</span><span class="m-doc-wrap">) const <span class="m-label m-warning">override</span></span></span>
+            </h3>
+            <p>Returns the error state of the stream.</p>
+<p>Returns <a href="namespace_i_o.html#a5e58fc53b7c9d1ef2c2c8f0ce59d659da505a83f220c02df2f85c3810cd9ceb38" class="m-doc">FileError::<wbr />Success</a> if OK, else an error code. This function is similar to &#x27;errno&#x27; or a &#x27;get last error&#x27; facility.</p>
+          </div></section>
+          <section class="m-doc-details" id="aedefb83cde8365a4f8998c518e902ec3"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> IO::<wbr />StreamCompressionZLib::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aedefb83cde8365a4f8998c518e902ec3" class="m-doc-self">Close</a>(</span><span class="m-doc-wrap">) <span class="m-label m-warning">override</span></span></span>
+            </h3>
+            <p>Closes the stream and releases resouces associated with it.</p>
+<p>Returns true upon success, else false. If the return value is false, GetState will give the error code. If an <a href="class_i_o_1_1_i_stream.html" class="m-doc">IStream</a> encounters an error during operations on an open stream, it is guaranteed that you can safely call the Close function on the stream.</p>
+          </div></section>
+          <section class="m-doc-details" id="aac75b084972eaec0db4ec1888141f5b8"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="namespace_i_o.html#a93e482d5d18014e9184bfabe5a1a6e07" class="m-doc">size_<wbr />type</a> IO::<wbr />StreamCompressionZLib::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aac75b084972eaec0db4ec1888141f5b8" class="m-doc-self">GetSize</a>(</span><span class="m-doc-wrap">) const <span class="m-label m-warning">override</span></span></span>
+            </h3>
+            <p>Returns the size of the stream, which is not the same as the size of bytes remaining to be read from the stream.</p>
+<p>Returns (size_type)-2 if the stream is of indeterminate size. Returns (size_type)-1 (a.k.a. kSizeTypeError) upon error.</p>
+          </div></section>
+          <section class="m-doc-details" id="a864436642ef9bb71420309e943f5469e"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> IO::<wbr />StreamCompressionZLib::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a864436642ef9bb71420309e943f5469e" class="m-doc-self">SetSize</a>(</span><span class="m-doc-wrap"><a href="namespace_i_o.html#a93e482d5d18014e9184bfabe5a1a6e07" class="m-doc">size_<wbr />type</a> size) <span class="m-label m-warning">override</span></span></span>
+            </h3>
+            <p>Sets the size of the stream, if possible.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">size</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+<p>It is debatable whether this function should be present in <a href="class_i_o_1_1_i_stream.html" class="m-doc">IStream</a> or only in suclasses of StreamBase which are writable. For consistency with GetSize, we put the function here. But also consider that a SetSize function is not necessarily a data writing function, depending on the stream implementation.</p>
+          </div></section>
+          <section class="m-doc-details" id="ac517df93963801ba0d3472207607bb34"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> IO::<wbr />StreamCompressionZLib::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ac517df93963801ba0d3472207607bb34" class="m-doc-self">GetPosition</a>(</span><span class="m-doc-wrap"><a href="namespace_i_o.html#a3548a9e9ef60c2653c6cdba408e817fc" class="m-doc">PositionType</a> positionType = <a href="namespace_i_o.html#a3548a9e9ef60c2653c6cdba408e817fca1a06729125544cab7cee73195fc044f0" class="m-doc">PositionType::<wbr />Begin</a>) const <span class="m-label m-warning">override</span></span></span>
+            </h3>
+            <p>Gets the current read/write position within the stream.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">positionType</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+<p>The read and write positions of a stream must be the same value; you cannot have a read position that is different from a write position. However, a Stream subclass can provide such functionality if needed. Returns -1 upon error.</p>
+          </div></section>
+          <section class="m-doc-details" id="a1686c19e7d96eb0ad9aa602e22a93111"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> IO::<wbr />StreamCompressionZLib::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a1686c19e7d96eb0ad9aa602e22a93111" class="m-doc-self">SetPosition</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> distance,
+              <a href="namespace_i_o.html#a3548a9e9ef60c2653c6cdba408e817fc" class="m-doc">PositionType</a> positionType = <a href="namespace_i_o.html#a3548a9e9ef60c2653c6cdba408e817fca1a06729125544cab7cee73195fc044f0" class="m-doc">PositionType::<wbr />Begin</a>) <span class="m-label m-warning">override</span></span></span>
+            </h3>
+            <p>Sets the read/write position of the stream.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">distance</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>positionType</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+<p>If the specified position is beyond the size of a fixed stream, the position is set to the end of the stream. A writable stream subclass may provide a policy whereby setting the position beyond the end of the stream results in an increase in the stream size.</p>
+          </div></section>
+          <section class="m-doc-details" id="a17f5bc7e6a582f87f9a386e4855be9b7"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> IO::<wbr />StreamCompressionZLib::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a17f5bc7e6a582f87f9a386e4855be9b7" class="m-doc-self">GetAvailable</a>(</span><span class="m-doc-wrap">) const <span class="m-label m-warning">override</span></span></span>
+            </h3>
+            <p>Returns the number of bytes available for reading.</p>
+<p>Returns (size_type)-1 (a.k.a. kSizeTypeError) upon error. This function is non-blocking; it should return immediately.</p>
+          </div></section>
+          <section class="m-doc-details" id="abf88c52e2b807c63b2177a03abab8689"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> IO::<wbr />StreamCompressionZLib::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#abf88c52e2b807c63b2177a03abab8689" class="m-doc-self">Read</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a>* pData,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">size_<wbr />t</a> nSize) <span class="m-label m-warning">override</span></span></span>
+            </h3>
+            <p>Reads bytes from the stream given by the input count &#x27;nSize&#x27;.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pData</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>nSize</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+<p>If less then nSize bytes are available, then those bytes will be read. Returns the number of bytes read. A return value of zero means that there were no bytes to be read or no bytes were requested to be read. A return value of zero means the end of file was reached. A return value &gt; 0 but &lt; &#x27;nSize&#x27; is possible, and it does not necessarily mean that the end of the file was reached. Returns (size_type)-1 (a.k.a. kSizeTypeError) if there was an error. You can use this return value or <a href="class_i_o_1_1_i_stream.html#aa1bcbedfc21d71aadd005d3ff42642f5" class="m-doc">IStream::<wbr />GetState</a> to determine the error. Input size values equal to (size_type)-1 (a.k.a. kSizeTypeError) are not valid input. Upon error, the stream pointer is at the position it was upon the error occurrence.</p>
+          </div></section>
+          <section class="m-doc-details" id="a7f59ef9f1553a45d716c3f1511d5599d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> IO::<wbr />StreamCompressionZLib::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a7f59ef9f1553a45d716c3f1511d5599d" class="m-doc-self">Flush</a>(</span><span class="m-doc-wrap">) <span class="m-label m-warning">override</span></span></span>
+            </h3>
+            <p>Flush any non-empty stream write buffers.</p>
+<p>If the return value is false, GetState will give the error code. This function implements the flushing as per the underlying file system. The behavior of the Flush function varies with the underlying platform.</p><p>A common use of Flush is write a file to disk immediately in order to prevent the file from being corrupted if the application crashes before the file is closed. However, on desktop platforms such as Windows this strategy is unnecesary, as the Windows OS file flush doesn&#x27;t write the file to disk as might be expected. This actually is not a problem, because the Windows OS manages files outside the process and if your process crashes the OS will take care of safely closing the files. Only if the machine power is lost or if certain kinds of kernel-level crashes occur may you lose file data.<br /></p>
+          </div></section>
+          <section class="m-doc-details" id="aa325b11aff7e2569a417003192a07e11"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> IO::<wbr />StreamCompressionZLib::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aa325b11aff7e2569a417003192a07e11" class="m-doc-self">Write</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a>* pData,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">size_<wbr />t</a> nSize) <span class="m-label m-warning">override</span></span></span>
+            </h3>
+            <p>Writes bytes to the stream.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">pData</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>nSize</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+<p>If false is returned, you can use <a href="class_i_o_1_1_i_stream.html#aa1bcbedfc21d71aadd005d3ff42642f5" class="m-doc">IStream::<wbr />GetState</a> to determine the error. Upon error, the stream pointer is at the position it was upon the error occurrence.</p>
+          </div></section>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v2.js"></script>
+<script src="searchdata-v2.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>Spore ModAPI SDK for creating C++ mods for Spore. Created with <a href="https://doxygen.org/">Doxygen</a> 1.9.8 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>

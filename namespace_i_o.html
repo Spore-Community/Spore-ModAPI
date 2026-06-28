@@ -110,6 +110,14 @@
             </dt>
             <dd>Implements a fixed-size read-only stream which is a &#x27;child&#x27; of a parent stream.</dd>
             <dt>
+              class <a href="class_i_o_1_1_stream_compression_z_lib.html" class="m-doc">StreamCompressionZLib</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              class <a href="class_i_o_1_1_stream_decompression_z_lib.html" class="m-doc">StreamDecompressionZLib</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
               class <a href="class_i_o_1_1_stream_null.html" class="m-doc">StreamNull</a>
             </dt>
             <dd>Implements a &#x27;bit bucket&#x27; stream, whereby all writes to the stream succeed but do nothing and all reads from the stream succeed but write nothing to the user-supplied buffer.</dd>
@@ -191,6 +199,11 @@
               <a href="#ad94ca491ff4f9233f937843131a213f2a509820290d57f333403f490dde7316f4" class="m-doc">Local</a> = Little }</span>
             </dt>
             <dd>Defines endian-ness. This is appropriate for working with binary numerical data.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">enum <a href="#ab185a5a501678d25187503de1c6e5686" class="m-doc">CompressedFormat</a> { </span><span class="m-doc-wrap"><a href="#ab185a5a501678d25187503de1c6e5686ab7c1b5479fd0a29df7dcc54d586d9277" class="m-doc">kCompressedFormatZLib</a>,
+              <a href="#ab185a5a501678d25187503de1c6e5686a5026485e1afb9626ed674f1cf653506f" class="m-doc">kCompressedFormatGZip</a> }</span>
+            </dt>
+            <dd><span></span></dd>
           </dl>
         </section>
         <section id="typedef-members">
@@ -397,6 +410,24 @@
             <dd><span></span></dd>
             <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#ab1641d4bd626c7c432636ec73a44c0d3" class="m-doc">Addresses</a>(</span><span class="m-doc-wrap"><a href="class_i_o_1_1_stream_child.html" class="m-doc">StreamChild</a>) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">namespace</a></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#af70b7b977b1ea9d5338f083095b6c44d" class="m-doc">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_i_o_1_1_stream_compression_z_lib.html" class="m-doc">StreamCompressionZLib</a>,
+              0x30)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a6536a8b02dbc03db909dd5a0042ad803" class="m-doc">Addresses</a>(</span><span class="m-doc-wrap"><a href="class_i_o_1_1_stream_compression_z_lib.html" class="m-doc">StreamCompressionZLib</a>) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">namespace</a></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper"><a href="#af1b4b8f110ae54b59df3041aa2a34011" class="m-doc">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_i_o_1_1_stream_decompression_z_lib.html" class="m-doc">StreamDecompressionZLib</a>,
+              0x24)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ae06d1d87fb8c48ea7f6f44a8fa99384d" class="m-doc">Addresses</a>(</span><span class="m-doc-wrap"><a href="class_i_o_1_1_stream_decompression_z_lib.html" class="m-doc">StreamDecompressionZLib</a>) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">namespace</a></span>
             </dt>
             <dd><span></span></dd>
             <dt>
@@ -708,6 +739,13 @@
                 </tr>
               </tbody>
             </table>
+          </div></section>
+          <section class="m-doc-details" id="ab185a5a501678d25187503de1c6e5686"><div>
+            <h3>
+              enum IO::<wbr /><a href="#ab185a5a501678d25187503de1c6e5686" class="m-doc-self">CompressedFormat</a>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_stream_compression_z_lib_8h.html">&lt;Spore ModAPI/Spore/IO/StreamCompressionZLib.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
           </div></section>
         </section>
         <section>
@@ -1046,6 +1084,36 @@
             <h3>
               <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">namespace</a> IO::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab1641d4bd626c7c432636ec73a44c0d3" class="m-doc-self">Addresses</a>(</span><span class="m-doc-wrap"><a href="class_i_o_1_1_stream_child.html" class="m-doc">StreamChild</a>)</span></span>
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_stream_child_8h.html">&lt;Spore ModAPI/Spore/IO/StreamChild.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="af70b7b977b1ea9d5338f083095b6c44d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"> IO::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af70b7b977b1ea9d5338f083095b6c44d" class="m-doc-self">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_i_o_1_1_stream_compression_z_lib.html" class="m-doc">StreamCompressionZLib</a>,
+              0x30)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_stream_compression_z_lib_8h.html">&lt;Spore ModAPI/Spore/IO/StreamCompressionZLib.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a6536a8b02dbc03db909dd5a0042ad803"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">namespace</a> IO::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a6536a8b02dbc03db909dd5a0042ad803" class="m-doc-self">Addresses</a>(</span><span class="m-doc-wrap"><a href="class_i_o_1_1_stream_compression_z_lib.html" class="m-doc">StreamCompressionZLib</a>)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_stream_compression_z_lib_8h.html">&lt;Spore ModAPI/Spore/IO/StreamCompressionZLib.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="af1b4b8f110ae54b59df3041aa2a34011"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"> IO::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af1b4b8f110ae54b59df3041aa2a34011" class="m-doc-self">ASSERT_SIZE</a>(</span><span class="m-doc-wrap"><a href="class_i_o_1_1_stream_decompression_z_lib.html" class="m-doc">StreamDecompressionZLib</a>,
+              0x24)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_stream_compression_z_lib_8h.html">&lt;Spore ModAPI/Spore/IO/StreamCompressionZLib.h&gt;</a></div>
+            </h3>
+            <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="ae06d1d87fb8c48ea7f6f44a8fa99384d"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">namespace</a> IO::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ae06d1d87fb8c48ea7f6f44a8fa99384d" class="m-doc-self">Addresses</a>(</span><span class="m-doc-wrap"><a href="class_i_o_1_1_stream_decompression_z_lib.html" class="m-doc">StreamDecompressionZLib</a>)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_stream_compression_z_lib_8h.html">&lt;Spore ModAPI/Spore/IO/StreamCompressionZLib.h&gt;</a></div>
             </h3>
             <p><span></span></p>
           </div></section>
