@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>IO::IniFile class | Spore ModAPI SDK for creating C++ mods for Spore</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
+  <link rel="stylesheet" href="m-dark.css" />
+  <link rel="stylesheet" href="m-documentation.css" />
+  <link rel="icon" href="Spore_ModAPI_Icon.png" type="image/png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#22272e" />
+</head>
+<body>
+<header><nav id="navigation">
+  <div class="m-container">
+    <div class="m-row">
+      <a href="index.html" id="m-navbar-brand" class="m-col-t-8 m-col-m-none m-left-m"><img src="Spore_ModAPI_Icon.png" alt="" />Spore ModAPI <span class="m-thin">SDK for creating C++ mods for Spore</span></a>
+      <div class="m-col-t-4 m-hide-m m-text-right m-nopadr">
+        <a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+          <path id="m-doc-search-icon-path" d="m6 0c-3.31 0-6 2.69-6 6 0 3.31 2.69 6 6 6 1.49 0 2.85-0.541 3.89-1.44-0.0164 0.338 0.147 0.759 0.5 1.15l3.22 3.79c0.552 0.614 1.45 0.665 2 0.115 0.55-0.55 0.499-1.45-0.115-2l-3.79-3.22c-0.392-0.353-0.812-0.515-1.15-0.5 0.895-1.05 1.44-2.41 1.44-3.89 0-3.31-2.69-6-6-6zm0 1.56a4.44 4.44 0 0 1 4.44 4.44 4.44 4.44 0 0 1-4.44 4.44 4.44 4.44 0 0 1-4.44-4.44 4.44 4.44 0 0 1 4.44-4.44z"/>
+        </svg></a>
+        <a id="m-navbar-show" href="#navigation" title="Show navigation"></a>
+        <a id="m-navbar-hide" href="#" title="Hide navigation"></a>
+      </div>
+      <div id="m-navbar-collapse" class="m-col-t-12 m-show-m m-col-m-none m-right-m">
+        <div class="m-row">
+          <ol class="m-col-t-6 m-col-m-none">
+            <li><a href="pages.html">Tutorials</a></li>
+            <li><a href="namespaces.html">Namespaces</a></li>
+          </ol>
+          <ol class="m-col-t-6 m-col-m-none" start="3">
+            <li><a href="annotated.html">Classes</a></li>
+            <li><a href="files.html">Files</a></li>
+            <li class="m-show-m"><a href="#search" class="m-doc-search-icon" title="Search" onclick="return showSearch()"><svg style="height: 0.9rem;" viewBox="0 0 16 16">
+              <use href="#m-doc-search-icon-path" />
+            </svg></a></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</nav></header>
+<main><article>
+  <div class="m-container m-container-inflatable">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <h1>
+          <span class="m-breadcrumb"><a href="namespace_i_o.html">IO</a>::<wbr/></span>IniFile <span class="m-thin">class</span>
+          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_ini_file_8h.html">&lt;Spore ModAPI/Spore/IO/IniFile.h&gt;</a></div>
+        </h1>
+        <p>A class that is used to read, parse, and write INI configuration files.</p>
+        <nav class="m-block m-default">
+          <h3>Contents</h3>
+          <ul>
+            <li>
+              Reference
+              <ul>
+                <li><a href="#pub-types">Public types</a></li>
+                <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
+                <li><a href="#pub-methods">Public functions</a></li>
+                <li><a href="#pro-methods">Protected functions</a></li>
+                <li><a href="#pro-attribs">Protected variables</a></li>
+              </ul>
+            </li>
+          </ul>
+        </nav>
+<p>Stub, do not detour.</p>
+        <section id="pub-types">
+          <h2><a href="#pub-types">Public types</a></h2>
+          <dl class="m-doc">
+            <dt id="a46008685eca218d21dc7650ae0b0e0c8">
+              <span class="m-doc-wrap-bumper">enum <a href="#a46008685eca218d21dc7650ae0b0e0c8" class="m-doc-self">Options</a> { </span><span class="m-doc-wrap"><a href="#a46008685eca218d21dc7650ae0b0e0c8a2fffe5bc221ae4320debba7fbe44c4aa" class="m-doc">kOptionNone</a>,
+              <a href="#a46008685eca218d21dc7650ae0b0e0c8a5860e14b63fdada9c5ac9353b15452fa" class="m-doc">kOptionLeaveFileOpen</a> }</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a540c3daf2a1ea01342fd1ded7b2c3e76">
+              using <a href="#a540c3daf2a1ea01342fd1ded7b2c3e76" class="m-doc-self">EnumCallback_t</a> = <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a>(*)(wchar_t*, wchar_t*, void*)
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="typeless-methods">
+          <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
+          <dl class="m-doc">
+            <dt id="a3abd2e2a44bd6dc08a2a5c983fdee52f">
+              <span class="m-doc-wrap-bumper"><a href="#a3abd2e2a44bd6dc08a2a5c983fdee52f" class="m-doc-self">IniFile</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* pPath,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> optionFlags)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="afd11537f46c5931fc061a8e9ed7adbd7">
+              <span class="m-doc-wrap-bumper"><a href="#afd11537f46c5931fc061a8e9ed7adbd7" class="m-doc-self">IniFile</a>(</span><span class="m-doc-wrap"><a href="class_i_o_1_1_i_stream.html" class="m-doc">IStream</a>* pStream)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a59de71ce8261b0eac8168c4365227e22">
+              <span class="m-doc-wrap-bumper"><a href="#a59de71ce8261b0eac8168c4365227e22" class="m-doc-self">~IniFile</a>(</span><span class="m-doc-wrap">) <span class="m-label m-flat m-info">defaulted</span> <span class="m-label m-flat m-warning">final</span></span>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="pub-methods">
+          <h2><a href="#pub-methods">Public functions</a></h2>
+          <dl class="m-doc">
+            <dt id="a854520e2c7c55083e35e584c7e778705">
+              <span class="m-doc-wrap-bumper">auto <a href="#a854520e2c7c55083e35e584c7e778705" class="m-doc-self">GetOption</a>(</span><span class="m-doc-wrap"><a href="class_i_o_1_1_ini_file.html#a46008685eca218d21dc7650ae0b0e0c8" class="m-doc">Options</a> option) const -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="abc774567030ba322d497a0c1108a74b2">
+              <span class="m-doc-wrap-bumper">auto <a href="#abc774567030ba322d497a0c1108a74b2" class="m-doc-self">SetOption</a>(</span><span class="m-doc-wrap"><a href="class_i_o_1_1_ini_file.html#a46008685eca218d21dc7650ae0b0e0c8" class="m-doc">Options</a> option,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> value) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a9defaa5e5154fabc4a386d152836287c">
+              <span class="m-doc-wrap-bumper">auto <a href="#a9defaa5e5154fabc4a386d152836287c" class="m-doc-self">GetPath</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a>* <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ac2956c98093d9512284f5ff02172f3e5">
+              <span class="m-doc-wrap-bumper">auto <a href="#ac2956c98093d9512284f5ff02172f3e5" class="m-doc-self">SetPath</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* pPath) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ad9721c677517772e3369ab8909c498f7">
+              <span class="m-doc-wrap-bumper">auto <a href="#ad9721c677517772e3369ab8909c498f7" class="m-doc-self">GetStream</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">class</a> <a href="class_i_o_1_1_i_stream.html" class="m-doc">IStream</a>* <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aac48d7eaa9c6fa9b1a0b91dc4aee1fb2">
+              <span class="m-doc-wrap-bumper">auto <a href="#aac48d7eaa9c6fa9b1a0b91dc4aee1fb2" class="m-doc-self">SetStream</a>(</span><span class="m-doc-wrap"><a href="class_i_o_1_1_i_stream.html" class="m-doc">IStream</a>* pStream) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a1f3f9407312a1559f2e3784144939e45">
+              <span class="m-doc-wrap-bumper">auto <a href="#a1f3f9407312a1559f2e3784144939e45" class="m-doc-self">Close</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a90f66bc89ec6f7a644969ded45072d31">
+              <span class="m-doc-wrap-bumper">auto <a href="#a90f66bc89ec6f7a644969ded45072d31" class="m-doc-self">ReadEntry</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* pSection,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* pKey,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">class</a> eastl::basic_string&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>&gt;&amp; sValue) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a04a63486d2f02fb1cb5078b24ba422c8">
+              <span class="m-doc-wrap-bumper">auto <a href="#a04a63486d2f02fb1cb5078b24ba422c8" class="m-doc-self">ReadEntryToBuffer</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* pSection,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* pKey,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* pValue,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> nValueLength) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a3fff865b9b104bddc0eb0166e8ebbc9f">
+              <span class="m-doc-wrap-bumper">auto <a href="#a3fff865b9b104bddc0eb0166e8ebbc9f" class="m-doc-self">ReadEntryFormatted</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* pSection,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* pKey,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* pValueFormat,
+              ...) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a9ce4d13f783074ced55b477726f36cd3">
+              <span class="m-doc-wrap-bumper">auto <a href="#a9ce4d13f783074ced55b477726f36cd3" class="m-doc-self">WriteEntry</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* pSection,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* pKey,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* pValue) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ae15c3f26081a4dab939c0c2a14084efd">
+              <span class="m-doc-wrap-bumper">auto <a href="#ae15c3f26081a4dab939c0c2a14084efd" class="m-doc-self">WriteEntryFormatted</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* pSection,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* pKey,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* kValueFormat,
+              ...) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aaa5d17cbf6e8d625458a7c7f91e1b5a8">
+              <span class="m-doc-wrap-bumper">auto <a href="#aaa5d17cbf6e8d625458a7c7f91e1b5a8" class="m-doc-self">ReadBinary</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* pSection,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* pKey,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a>* pData,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> nDataLength) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a3717e60db9d0723e1f2002e76ac54cc3">
+              <span class="m-doc-wrap-bumper">auto <a href="#a3717e60db9d0723e1f2002e76ac54cc3" class="m-doc-self">WriteBinary</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* pSection,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* pKey,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a>* pData,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> nDataLength) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a5f441b08405ce6efcb5d7128096f625e">
+              <span class="m-doc-wrap-bumper">auto <a href="#a5f441b08405ce6efcb5d7128096f625e" class="m-doc-self">EnumSections</a>(</span><span class="m-doc-wrap"><a href="class_i_o_1_1_ini_file.html#a540c3daf2a1ea01342fd1ded7b2c3e76" class="m-doc">EnumCallback_<wbr />t</a> pCallback,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a>* pContext) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a7a318922414829de88a7e1caa9815a4b">
+              <span class="m-doc-wrap-bumper">auto <a href="#a7a318922414829de88a7e1caa9815a4b" class="m-doc-self">EnumEntries</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* pSection,
+              <a href="class_i_o_1_1_ini_file.html#a540c3daf2a1ea01342fd1ded7b2c3e76" class="m-doc">EnumCallback_<wbr />t</a> pCallback,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a>* pContext) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a6cdeda033e3d294eea1527f03a0153a7">
+              <span class="m-doc-wrap-bumper">auto <a href="#a6cdeda033e3d294eea1527f03a0153a7" class="m-doc-self">SectionExists</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* pSection) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="pro-methods">
+          <h2><a href="#pro-methods">Protected functions</a></h2>
+          <dl class="m-doc">
+            <dt id="aadc09f0e621ac1c89a361dc095d86ea8">
+              <span class="m-doc-wrap-bumper">auto <a href="#aadc09f0e621ac1c89a361dc095d86ea8" class="m-doc-self">Open</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> nAccessFlags) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="aa34e413b0da67fde6eef36d90baca1c7">
+              <span class="m-doc-wrap-bumper">auto <a href="#aa34e413b0da67fde6eef36d90baca1c7" class="m-doc-self">GetEncoding</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a5c279c57da604bc2e89169853e9f8994">
+              <span class="m-doc-wrap-bumper">auto <a href="#a5c279c57da604bc2e89169853e9f8994" class="m-doc-self">LoadSectionNames</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> nAccessFlags) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a9064bb88920f595ae9e4fc41d34e4759">
+              <span class="m-doc-wrap-bumper">auto <a href="#a9064bb88920f595ae9e4fc41d34e4759" class="m-doc-self">GetFileLine8To8</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">class</a> eastl::basic_string&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">char</a>&gt;&amp; sLine) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a5fb670772a6afc6f00ea3449a9dfbc03">
+              <span class="m-doc-wrap-bumper">auto <a href="#a5fb670772a6afc6f00ea3449a9dfbc03" class="m-doc-self">GetFileLine16To16</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">class</a> eastl::basic_string&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>&gt;&amp; sLine) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a1f9048a36a4e468a0f6b75cecfaff9d7">
+              <span class="m-doc-wrap-bumper">auto <a href="#a1f9048a36a4e468a0f6b75cecfaff9d7" class="m-doc-self">GetFileLine</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">class</a> eastl::basic_string&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>&gt;&amp; sLine) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="abad64c8f5913c69862fc44f06393a289">
+              <span class="m-doc-wrap-bumper">auto <a href="#abad64c8f5913c69862fc44f06393a289" class="m-doc-self">ConvertAndWriteStream</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>* pchar,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> count) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">virtual</span></span>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="pro-attribs">
+          <h2><a href="#pro-attribs">Protected variables</a></h2>
+          <dl class="m-doc">
+            <dt id="af1c4be53d4a60af85dbb2f645e07fd66">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a> <a href="#af1c4be53d4a60af85dbb2f645e07fd66" class="m-doc-self">mPath</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a1352a884363d7d889dcb3a2781893328">
+              <a href="class_i_o_1_1_file_stream.html" class="m-doc">FileStream</a> <a href="#a1352a884363d7d889dcb3a2781893328" class="m-doc-self">mFileStream</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a9eee27daf83247c17f9c3dc2cdfb8ee8">
+              <a href="class_i_o_1_1_i_stream.html" class="m-doc">IStream</a>* <a href="#a9eee27daf83247c17f9c3dc2cdfb8ee8" class="m-doc-self">mpStream</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a5d8523a9ee0df13e37c4acf586c3d513">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a5d8523a9ee0df13e37c4acf586c3d513" class="m-doc-self">mnEncodingSrc</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="acc1410f4b034a4cbacde54992f376d96">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <a href="#acc1410f4b034a4cbacde54992f376d96" class="m-doc-self">mbFileIsOpenForWriting</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ac7c9e8fadb080c9da50d8d7687cc5b76">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <a href="#ac7c9e8fadb080c9da50d8d7687cc5b76" class="m-doc-self">mbLeaveFileOpenBetweenOperations</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a274e4ca88ccd607d3899a3ea459fbfc8">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <a href="#a274e4ca88ccd607d3899a3ea459fbfc8" class="m-doc-self">mbReadEntryCacheReady</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="ac9739dd4e907bfa8f864ea41f03da1f8">
+              eastl::map&lt;eastl::basic_string&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>&gt;, <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">long</a>, eastl::less&lt;eastl::basic_string&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>&gt;&gt;&gt; <a href="#ac9739dd4e907bfa8f864ea41f03da1f8" class="m-doc-self">mSectionPositionMap</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a94f6617c573c0e4b75b046c02f31e0b1">
+              eastl::map&lt;eastl::basic_string&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>&gt;, eastl::basic_string&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>&gt;, eastl::less&lt;eastl::basic_string&lt;<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">wchar_<wbr />t</a>&gt;&gt;&gt; <a href="#a94f6617c573c0e4b75b046c02f31e0b1" class="m-doc-self">mSectionNameMap</a>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+      </div>
+    </div>
+  </div>
+</article></main>
+<div class="m-doc-search" id="search">
+  <a href="#!" onclick="return hideSearch()"></a>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-m-8 m-push-m-2">
+        <div class="m-doc-search-header m-text m-small">
+          <div><span class="m-label m-default">Tab</span> / <span class="m-label m-default">T</span> to search, <span class="m-label m-default">Esc</span> to close</div>
+          <div id="search-symbolcount">&hellip;</div>
+        </div>
+        <div class="m-doc-search-content">
+          <form>
+            <input type="search" name="q" id="search-input" placeholder="Loading &hellip;" disabled="disabled" autofocus="autofocus" autocomplete="off" spellcheck="false" />
+          </form>
+          <noscript class="m-text m-danger m-text-center">Unlike everything else in the docs, the search functionality <em>requires</em> JavaScript.</noscript>
+          <div id="search-help" class="m-text m-dim m-text-center">
+            <p class="m-noindent">Search for symbols, directories, files, pages or
+            modules. You can omit any prefix from the symbol or file path; adding a
+            <code>:</code> or <code>/</code> suffix lists all members of given symbol or
+            directory.</p>
+            <p class="m-noindent">Use <span class="m-label m-dim">&darr;</span>
+            / <span class="m-label m-dim">&uarr;</span> to navigate through the list,
+            <span class="m-label m-dim">Enter</span> to go.
+            <span class="m-label m-dim">Tab</span> autocompletes common prefix, you can
+            copy a link to the result using <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">L</span> while <span class="m-label m-dim">⌘</span>
+            <span class="m-label m-dim">M</span> produces a Markdown link.</p>
+          </div>
+          <div id="search-notfound" class="m-text m-warning m-text-center">Sorry, nothing was found.</div>
+          <ul id="search-results"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="search-v2.js"></script>
+<script src="searchdata-v2.js" async="async"></script>
+<footer><nav>
+  <div class="m-container">
+    <div class="m-row">
+      <div class="m-col-l-10 m-push-l-1">
+        <p>Spore ModAPI SDK for creating C++ mods for Spore. Created with <a href="https://doxygen.org/">Doxygen</a> 1.9.8 and <a href="https://mcss.mosra.cz/">m.css</a>.</p>
+      </div>
+    </div>
+  </div>
+</nav></footer>
+</body>
+</html>
