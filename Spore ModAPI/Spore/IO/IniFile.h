@@ -28,10 +28,10 @@ namespace IO
 		/* 08h */	virtual void SetOption(Options option, int value);
 		/* 0Ch */	virtual wchar_t const* GetPath() const;
 		/* 10h */	virtual bool SetPath(const wchar_t* pPath);
-		/* 14h */	virtual class IStream* GetStream() const;
+		/* 14h */	virtual IStream* GetStream() const;
 		/* 18h */	virtual bool SetStream(IStream* pStream);
 		/* 1Ch */	virtual bool Close();
-		/* 20h */	virtual int ReadEntry(const wchar_t* pSection, const wchar_t* pKey, class eastl::basic_string<wchar_t>& sValue);
+		/* 20h */	virtual int ReadEntry(const wchar_t* pSection, const wchar_t* pKey, eastl::basic_string<wchar_t>& sValue);
 		/* 24h */	virtual int ReadEntryToBuffer(const wchar_t* pSection, const wchar_t* pKey, wchar_t* pValue, uint32_t nValueLength);
 		// Stub, do not detour.
 		/* 28h */	virtual int ReadEntryFormatted(const wchar_t* pSection, const wchar_t* pKey, const wchar_t* pValueFormat, ...);
@@ -47,9 +47,9 @@ namespace IO
 		/* 48h */	virtual bool Open(int nAccessFlags);
 		/* 4Ch */	virtual int GetEncoding();
 		/* 50h */	virtual bool LoadSectionNames(int nAccessFlags);
-		/* 54h */	virtual bool GetFileLine8To8(class eastl::basic_string<char>& sLine);
-		/* 58h */	virtual bool GetFileLine16To16(class eastl::basic_string<wchar_t>& sLine);
-		/* 5Ch */	virtual bool GetFileLine(class eastl::basic_string<wchar_t>& sLine);
+		/* 54h */	virtual bool GetFileLine8To8(eastl::basic_string<char>& sLine);
+		/* 58h */	virtual bool GetFileLine16To16(eastl::basic_string<wchar_t>& sLine);
+		/* 5Ch */	virtual bool GetFileLine(eastl::basic_string<wchar_t>& sLine);
 		/* 60h */	virtual bool ConvertAndWriteStream(const wchar_t* pchar, uint32_t count);
 
 		/* 04h */	wchar_t mPath[260];
