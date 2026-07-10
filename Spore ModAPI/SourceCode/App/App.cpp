@@ -43,6 +43,10 @@ namespace App
 		Args(const eastl::string16& path, eastl::hash_set<eastl::string16>& dstSkippedPaths, int& dstCount),
 		Args(path, dstSkippedPaths, dstCount));
 
+	auto_METHOD(PngEncoder, bool, ReadImageData,
+		Args(IO::IStream* inputStream),
+		Args(inputStream));
+
 	auto_METHOD(PngEncoder, bool, WriteImageToStream,
 		Args(IO::IStream* stream, App::PngEncoder::Format format),
 		Args(stream, format));

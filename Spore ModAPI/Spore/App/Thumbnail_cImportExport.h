@@ -21,6 +21,7 @@ namespace App
 			kImageFormatBMP
 		};
 
+		bool ReadImageData(IO::IStream* inputStream);
 		bool WriteImageToStream(IO::IStream* outputStream, Format format);
 
 		/* 00h */	eastl::vector<int> mPixelBuf;
@@ -174,6 +175,7 @@ namespace App
 
 	namespace Addresses(PngEncoder)
 	{
+		DeclareAddress(ReadImageData);
 		DeclareAddress(WriteImageToStream);  // 0x68E660 0x68e190
 	}
 }
