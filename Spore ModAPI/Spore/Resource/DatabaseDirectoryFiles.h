@@ -36,7 +36,7 @@ namespace Resource
 		/* 0Ch */	virtual uint32_t GetDatabaseType() const override;
 		/* 10h */	virtual int GetRefCount() const override;
 		/* 14h */	virtual void Lock(bool lock) override;
-		/* 18h */	virtual bool Open(IO::AccessFlags desiredAccess = IO::AccessFlags::Read, IO::CD createDisposition = IO::CD::Default, bool arg_8 = false) override;
+		/* 18h */	virtual bool Open(IO::AccessFlags desiredAccess = IO::AccessFlags::Read, IO::CD createDisposition = IO::CD::Default, bool bAutoOpen = false) override;
 		/* 1Ch */	virtual bool Close() override;
 		/* 20h */	virtual IO::AccessFlags GetAccessFlags() const override;
 		/* 24h */	virtual bool Flush() override;

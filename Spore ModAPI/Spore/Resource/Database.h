@@ -44,7 +44,7 @@ namespace Resource
 		/* 0Ch */	virtual uint32_t GetDatabaseType() const = 0;
 		/* 10h */	virtual int GetRefCount() const = 0;
 		/* 14h */	virtual void Lock(bool lock) = 0;
-		/* 18h */	virtual bool Open(IO::AccessFlags desiredAccess = IO::AccessFlags::Read, IO::CD createDisposition = IO::CD::Default, bool arg_8 = false) = 0;
+		/* 18h */	virtual bool Open(IO::AccessFlags desiredAccess = IO::AccessFlags::Read, IO::CD createDisposition = IO::CD::Default, bool bAutoOpen = false) = 0;
 		/* 1Ch */	virtual bool Close() = 0;
 		/* 20h */	virtual IO::AccessFlags GetAccessFlags() const = 0;
 		/* 24h */	virtual bool Flush() = 0;

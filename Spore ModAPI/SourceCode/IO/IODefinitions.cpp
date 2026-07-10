@@ -220,7 +220,7 @@ namespace Resource
 	auto_METHOD_VIRTUAL_const_(DatabasePackedFile, DatabasePackedFile, uint32_t, GetDatabaseType);
 	auto_METHOD_VIRTUAL_const_(DatabasePackedFile, DatabasePackedFile, int, GetRefCount);
 	auto_METHOD_VIRTUAL_VOID(DatabasePackedFile, DatabasePackedFile, Lock, Args(bool bLock), Args(bLock));
-	auto_METHOD_VIRTUAL(DatabasePackedFile, DatabasePackedFile, bool, Open, Args(IO::AccessFlags nDesiredAccess, IO::CD nCreateDisposition, bool arg_8), Args(nDesiredAccess, nCreateDisposition, arg_8));
+	auto_METHOD_VIRTUAL(DatabasePackedFile, DatabasePackedFile, bool, Open, Args(IO::AccessFlags nDesiredAccess, IO::CD nCreateDisposition, bool bAutoOpen), Args(nDesiredAccess, nCreateDisposition, bAutoOpen));
 	auto_METHOD_VIRTUAL_(DatabasePackedFile, DatabasePackedFile, bool, Close);
 	auto_METHOD_VIRTUAL_const_(DatabasePackedFile, DatabasePackedFile, IO::AccessFlags, GetAccessFlags);
 	auto_METHOD_VIRTUAL_(DatabasePackedFile, DatabasePackedFile, bool, Flush);
@@ -540,7 +540,7 @@ namespace Resource
 	//auto_METHOD_VIRTUAL_const_(DatabaseDirectoryFiles, DatabaseDirectoryFiles, uint32_t, GetDatabaseType);
 	auto_METHOD_VIRTUAL_const_(DatabaseDirectoryFiles, DatabaseDirectoryFiles, int, GetRefCount);
 	auto_METHOD_VIRTUAL_VOID(DatabaseDirectoryFiles, DatabaseDirectoryFiles, Lock, Args(bool bLock), Args(bLock));
-	auto_METHOD_VIRTUAL(DatabaseDirectoryFiles, DatabaseDirectoryFiles, bool, Open, Args(IO::AccessFlags nDesiredAccess, IO::CD nCreateDisposition, bool arg_8), Args(nDesiredAccess, nCreateDisposition, arg_8));
+	auto_METHOD_VIRTUAL(DatabaseDirectoryFiles, DatabaseDirectoryFiles, bool, Open, Args(IO::AccessFlags nDesiredAccess, IO::CD nCreateDisposition, bool bAutoOpen), Args(nDesiredAccess, nCreateDisposition, bAutoOpen));
 	auto_METHOD_VIRTUAL_(DatabaseDirectoryFiles, DatabaseDirectoryFiles, bool, Close);
 	//auto_METHOD_VIRTUAL_const_(DatabaseDirectoryFiles, DatabaseDirectoryFiles, int, GetAccessFlags);
 	auto_METHOD_VIRTUAL_(DatabaseDirectoryFiles, DatabaseDirectoryFiles, bool, Flush);

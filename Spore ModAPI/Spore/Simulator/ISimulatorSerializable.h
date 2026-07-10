@@ -19,12 +19,14 @@
 #pragma once
 
 #include <Spore\Object.h>
-#include <Spore\Simulator\Serialization.h>
 
 #define ISimulatorSerializablePtr eastl::intrusive_ptr<Simulator::ISimulatorSerializable>
 
 namespace Simulator
 {
+	class ISerializerStream;
+	class XmlSerializer;
+
 	class ISimulatorSerializable
 		: public Object
 	{
