@@ -33,6 +33,8 @@ namespace IO
 		mPath[0] = L'\0';
 	}
 
+	IniFile::~IniFile() = default;
+
 	auto_METHOD_VIRTUAL_const(IniFile, IniFile, int, GetOption, Args(Options option), Args(option));
 	auto_METHOD_VIRTUAL_VOID(IniFile, IniFile, SetOption, Args(Options option, int value), Args(option, value));
 	auto_METHOD_VIRTUAL_const_(IniFile, IniFile, wchar_t const*, GetPath);

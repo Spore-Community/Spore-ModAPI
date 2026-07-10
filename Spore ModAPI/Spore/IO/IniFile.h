@@ -23,7 +23,7 @@ namespace IO
 		IniFile(const wchar_t* pPath, int optionFlags);
 		IniFile(IStream* pStream);
 
-		/* 00h */	virtual ~IniFile() final = default;
+		/* 00h */	virtual ~IniFile() final;
 		/* 04h */	virtual int GetOption(Options option) const;
 		/* 08h */	virtual void SetOption(Options option, int value);
 		/* 0Ch */	virtual wchar_t const* GetPath() const;

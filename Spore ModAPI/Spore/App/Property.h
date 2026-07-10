@@ -52,7 +52,10 @@ namespace App
 		BBox = 0x39,
 		// Unseen types
 		Char = 0x0002,
+		Char8 = Char,
 		WChar = 0x0003,
+		Char16 = WChar,
+		Char32 = 0x0004,
 		Int8 = 0x0005,
 		UInt8 = 0x0006,
 		Int16 = 0x0007,
@@ -61,6 +64,7 @@ namespace App
 		UInt64 = 0x000C,
 		Double = 0x000E,
 		Ptr = 0x000F,
+		String32 = 0x0014,
 		// only this one is used in Spore code, but not in files
 		Void = 0x0010,
 		IUnknownRC = 0x0011,
