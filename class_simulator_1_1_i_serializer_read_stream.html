@@ -58,6 +58,7 @@
                 <li><a href="#base-classes">Base classes</a></li>
                 <li><a href="#pub-static-attribs">Public static variables</a></li>
                 <li><a href="#pub-methods">Public functions</a></li>
+                <li><a href="#pro-methods">Protected functions</a></li>
               </ul>
             </li>
           </ul>
@@ -83,61 +84,67 @@
         <section id="pub-methods">
           <h2><a href="#pub-methods">Public functions</a></h2>
           <dl class="m-doc">
-            <dt id="ae8a9581f88f8f8ef94d65e21c9163385">
-              <span class="m-doc-wrap-bumper">auto <a href="#ae8a9581f88f8f8ef94d65e21c9163385" class="m-doc-self">func10h</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>,
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&amp; name) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
+            <dt id="a66f6c11239d67c4c927d4c2e736d5c85">
+              <span class="m-doc-wrap-bumper">auto <a href="#a66f6c11239d67c4c927d4c2e736d5c85" class="m-doc-self">Open</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1_i_serializer_database.html" class="m-doc">ISerializerDatabase</a>* pDatabase,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&amp; key) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="aeb331b2d3bff336e0115d27c3c458c64">
-              <span class="m-doc-wrap-bumper">auto <a href="#aeb331b2d3bff336e0115d27c3c458c64" class="m-doc-self">func14h</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
+            <dt id="ac9931d2a75ae820a265ff786b7327a4e">
+              <span class="m-doc-wrap-bumper">auto <a href="#ac9931d2a75ae820a265ff786b7327a4e" class="m-doc-self">Close</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="af81d790a8967c4f64415e126113ed873">
-              <span class="m-doc-wrap-bumper">auto <a href="#af81d790a8967c4f64415e126113ed873" class="m-doc-self">func18h</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
+            <dt id="abb15970518fe718428b7f61877c56c1b">
+              <span class="m-doc-wrap-bumper">auto <a href="#abb15970518fe718428b7f61877c56c1b" class="m-doc-self">IsOpen</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="aba8af9f4764e2d5534cc2a54817eaa65">
-              <span class="m-doc-wrap-bumper">auto <a href="#aba8af9f4764e2d5534cc2a54817eaa65" class="m-doc-self">func1Ch</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
+            <dt id="adcefa35a6c70173dd75cd5a91ab18b2b">
+              <span class="m-doc-wrap-bumper">auto <a href="#adcefa35a6c70173dd75cd5a91ab18b2b" class="m-doc-self">IsGood</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
             </dt>
             <dd><span></span></dd>
             <dt id="a69d9011d1254e9154f8cb225139c1739">
               <span class="m-doc-wrap-bumper">auto <a href="#a69d9011d1254e9154f8cb225139c1739" class="m-doc-self">GetRecord</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="class_resource_1_1_i_record.html" class="m-doc">Resource::<wbr />IRecord</a>* <span class="m-label m-flat m-warning">pure virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="a81960e2f32a235fe5d0256d7a9b2c846">
-              <span class="m-doc-wrap-bumper">auto <a href="#a81960e2f32a235fe5d0256d7a9b2c846" class="m-doc-self">func24h</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
+            <dt id="aee759e4092a6cafd605fd4cbf4024d39">
+              <span class="m-doc-wrap-bumper">auto <a href="#aee759e4092a6cafd605fd4cbf4024d39" class="m-doc-self">GetDatabase</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="class_simulator_1_1_i_serializer_database.html" class="m-doc">ISerializerDatabase</a>* <span class="m-label m-flat m-warning">pure virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="accc99fea6d6334e937b9e1f22f45e692">
-              <span class="m-doc-wrap-bumper">auto <a href="#accc99fea6d6334e937b9e1f22f45e692" class="m-doc-self">ReadPointer</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> castTypeID,
-              eastl::intrusive_ptr&lt;<a href="class_object.html" class="m-doc">Object</a>&gt;&amp; dst,
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
+            <dt id="a9a5081d202556ed52dec4385352a931f">
+              <span class="m-doc-wrap-bumper">auto <a href="#a9a5081d202556ed52dec4385352a931f" class="m-doc-self">ReadObjectPointer</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> castTypeID,
+              <a href="_object_8h.html#a364c2967a9338c07ddc9a3d507389b5d" class="m-doc">ObjectPtr</a>&amp; dst,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> bLoadImmediately) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="ac2c7a49cd2719b22976ace1b6b056ae6">
-              <span class="m-doc-wrap-bumper">auto <a href="#ac2c7a49cd2719b22976ace1b6b056ae6" class="m-doc-self">WritePointer</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1_i_simulator_serializable.html" class="m-doc">ISimulatorSerializable</a>* pointer) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
+            <dt id="ad1667cc0d4d791b7b8842fc9dbc50650">
+              <span class="m-doc-wrap-bumper">auto <a href="#ad1667cc0d4d791b7b8842fc9dbc50650" class="m-doc-self">ReadPointer</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1_i_simulator_serializable.html" class="m-doc">ISimulatorSerializable</a>* pointer,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> bLoadImmediately) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="aa1a96c38ca907b4f9a201a730469642e">
-              <span class="m-doc-wrap-bumper">auto <a href="#aa1a96c38ca907b4f9a201a730469642e" class="m-doc-self">func30h</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
+            <dt id="a1e74fa3c9b3dfe6959ca916b8e73c203">
+              <span class="m-doc-wrap-bumper">auto <a href="#a1e74fa3c9b3dfe6959ca916b8e73c203" class="m-doc-self">ReadProperty</a>(</span><span class="m-doc-wrap"><a href="class_app_1_1_property.html" class="m-doc">App::<wbr />Property</a>&amp; dst) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="a98f423a4f6a10d59b6eedd3ddef633c1">
-              <span class="m-doc-wrap-bumper">auto <a href="#a98f423a4f6a10d59b6eedd3ddef633c1" class="m-doc-self">func34h</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>,
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
+            <dt id="a3d6ae1cb29ccb6a446b29f48bc3f8cac">
+              <span class="m-doc-wrap-bumper">auto <a href="#a3d6ae1cb29ccb6a446b29f48bc3f8cac" class="m-doc-self">ReadRawData</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a>* pBuffer,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">size_<wbr />t</a> size) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="a1df0493ca50545fe5cca48147de71546">
-              <span class="m-doc-wrap-bumper">auto <a href="#a1df0493ca50545fe5cca48147de71546" class="m-doc-self">func38h</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>,
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
+            <dt id="a897649fda9021903f32a6162ed885dd8">
+              <span class="m-doc-wrap-bumper">auto <a href="#a897649fda9021903f32a6162ed885dd8" class="m-doc-self">GetSerializationVersion</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="ab119d115088f5acee086088ebea5bae7">
-              <span class="m-doc-wrap-bumper">auto <a href="#ab119d115088f5acee086088ebea5bae7" class="m-doc-self">func3Ch</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
+            <dt id="a37707d454f77f9d0facc12fe27aeb010">
+              <span class="m-doc-wrap-bumper">auto <a href="#a37707d454f77f9d0facc12fe27aeb010" class="m-doc-self">SetSerializationVersion</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> version) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="ae130d4238cad2ed42cf21209dc1985b9">
-              <span class="m-doc-wrap-bumper">auto <a href="#ae130d4238cad2ed42cf21209dc1985b9" class="m-doc-self">func40h</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a>) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
+          </dl>
+        </section>
+        <section id="pro-methods">
+          <h2><a href="#pro-methods">Protected functions</a></h2>
+          <dl class="m-doc">
+            <dt id="a89e8d735ef519a284a76a347bb0260a8">
+              <span class="m-doc-wrap-bumper">auto <a href="#a89e8d735ef519a284a76a347bb0260a8" class="m-doc-self">ReadPropertyByID</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> propertyID,
+              <a href="class_app_1_1_property.html" class="m-doc">App::<wbr />Property</a>&amp; dst) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
             </dt>
             <dd><span></span></dd>
           </dl>

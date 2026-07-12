@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Simulator::ClassSerializer struct | Spore ModAPI SDK for creating C++ mods for Spore</title>
+  <title>Simulator::SerializerReadStreamPrivate class | Spore ModAPI SDK for creating C++ mods for Spore</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
   <link rel="stylesheet" href="m-dark.css" />
   <link rel="stylesheet" href="m-documentation.css" />
@@ -45,7 +45,7 @@
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
         <h1>
-          <span class="m-breadcrumb"><a href="namespace_simulator.html">Simulator</a>::<wbr/></span>ClassSerializer <span class="m-thin">struct</span>
+          <span class="m-breadcrumb"><a href="namespace_simulator.html">Simulator</a>::<wbr/></span>SerializerReadStreamPrivate <span class="m-thin">class</span>
           <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_simulator_2_serialization_8h.html">&lt;Spore ModAPI/Spore/Simulator/Serialization.h&gt;</a></div>
         </h1>
         <p><span></span></p>
@@ -55,40 +55,43 @@
             <li>
               Reference
               <ul>
-                <li><a href="#pub-types">Public types</a></li>
-                <li><a href="#pub-static-attribs">Public static variables</a></li>
                 <li><a href="#typeless-methods">Constructors, destructors, conversion operators</a></li>
                 <li><a href="#pub-methods">Public functions</a></li>
                 <li><a href="#pub-attribs">Public variables</a></li>
+                <li><a href="#pro-methods">Protected functions</a></li>
               </ul>
             </li>
           </ul>
         </nav>
-        <section id="pub-types">
-          <h2><a href="#pub-types">Public types</a></h2>
-          <dl class="m-doc">
-            <dt>
-              struct <a href="struct_simulator_1_1_class_serializer_1_1_attribute_pointer.html" class="m-doc">AttributePointer</a>
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
-        <section id="pub-static-attribs">
-          <h2><a href="#pub-static-attribs">Public static variables</a></h2>
-          <dl class="m-doc">
-            <dt id="aa14b37dde4ea3d8870bb03f2d4acb7ba">
-              static <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> <a href="#aa14b37dde4ea3d8870bb03f2d4acb7ba" class="m-doc-self">CLASS_ID</a>
-            </dt>
-            <dd><span></span></dd>
-          </dl>
-        </section>
         <section id="typeless-methods">
           <h2><a href="#typeless-methods">Constructors, destructors, conversion operators</a></h2>
           <dl class="m-doc">
-            <dt id="a36e237a1250846f48bf1bf83717e0dce">
-              <span class="m-doc-wrap-bumper"><a href="#a36e237a1250846f48bf1bf83717e0dce" class="m-doc-self">ClassSerializer</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a>* pObject,
-              <a href="struct_simulator_1_1_attribute.html" class="m-doc">Attribute</a>* attributes,
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> classID = 0x1A80D26)</span>
+            <dt id="a1fb37c0c83fb230682e001717263707b">
+              <span class="m-doc-wrap-bumper"><a href="#a1fb37c0c83fb230682e001717263707b" class="m-doc-self">SerializerReadStreamPrivate</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1_i_serializer_read_stream.html" class="m-doc">ISerializerReadStream</a>&amp; readStream,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&amp; key)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a82f266decd58c268a837724a8d65b7cf">
+              <span class="m-doc-wrap-bumper"><a href="#a82f266decd58c268a837724a8d65b7cf" class="m-doc-self">SerializerReadStreamPrivate</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1_i_serializer_database.html" class="m-doc">ISerializerDatabase</a>* pDatabase,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&amp; key)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a8726d8245283eae5ebc630972bbb9013">
+              <span class="m-doc-wrap-bumper"><a href="#a8726d8245283eae5ebc630972bbb9013" class="m-doc-self">SerializerReadStreamPrivate</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1_i_serializer_read_stream.html" class="m-doc">ISerializerReadStream</a>&amp; readStream,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> nResourceType,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> nInstance,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> nGroupID)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a9bc770a235820fef6d667c48953a6470">
+              <span class="m-doc-wrap-bumper"><a href="#a9bc770a235820fef6d667c48953a6470" class="m-doc-self">SerializerReadStreamPrivate</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1_i_serializer_database.html" class="m-doc">ISerializerDatabase</a>* pDatabase,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> nResourceType,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> nInstance,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> nGroupID)</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="adf3276b466ab0560a40193df0bac2663">
+              <span class="m-doc-wrap-bumper"><a href="#adf3276b466ab0560a40193df0bac2663" class="m-doc-self">~SerializerReadStreamPrivate</a>(</span><span class="m-doc-wrap">) <span class="m-label m-flat m-warning">virtual</span></span>
             </dt>
             <dd><span></span></dd>
           </dl>
@@ -96,12 +99,16 @@
         <section id="pub-methods">
           <h2><a href="#pub-methods">Public functions</a></h2>
           <dl class="m-doc">
-            <dt id="a006f366b79276bd1a7f626147f71679a">
-              <span class="m-doc-wrap-bumper">auto <a href="#a006f366b79276bd1a7f626147f71679a" class="m-doc-self">Read</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1_i_serializer_stream.html" class="m-doc">ISerializerStream</a>* pStream) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a></span>
+            <dt id="a7ad0036dea1c5e102dee0021db65d63a">
+              <span class="m-doc-wrap-bumper">auto <a href="#a7ad0036dea1c5e102dee0021db65d63a" class="m-doc-self">IsOpen</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="ab8f22e95fe0ca787319beb153338e202">
-              <span class="m-doc-wrap-bumper">auto <a href="#ab8f22e95fe0ca787319beb153338e202" class="m-doc-self">Write</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1_i_serializer_stream.html" class="m-doc">ISerializerStream</a>* pStream) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a></span>
+            <dt id="a2df4fa3c69ca5ae23f4b232362a0a014">
+              <span class="m-doc-wrap-bumper">auto <a href="#a2df4fa3c69ca5ae23f4b232362a0a014" class="m-doc-self">SetSerializationVersion</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> version) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a></span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a19ce8129d145577155f52aa2baafe5a5">
+              <span class="m-doc-wrap-bumper">auto <a href="#a19ce8129d145577155f52aa2baafe5a5" class="m-doc-self">GetSerializationVersion</a>(</span><span class="m-doc-wrap">) const -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a></span>
             </dt>
             <dd><span></span></dd>
           </dl>
@@ -109,28 +116,24 @@
         <section id="pub-attribs">
           <h2><a href="#pub-attribs">Public variables</a></h2>
           <dl class="m-doc">
-            <dt id="a20065398d1b6d368f207e8092dceb1f0">
-              <a href="struct_simulator_1_1_class_serializer_1_1_attribute_pointer.html" class="m-doc">AttributePointer</a> <a href="#a20065398d1b6d368f207e8092dceb1f0" class="m-doc-self">attributes</a>
+            <dt id="a2d9b31d5dbbe677d901ac96d1aa607b5">
+              eastl::intrusive_ptr&lt;<a href="class_simulator_1_1_i_serializer_database.html" class="m-doc">ISerializerDatabase</a>&gt; <a href="#a2d9b31d5dbbe677d901ac96d1aa607b5" class="m-doc-self">mpDatabase</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a848d00e0b04c8be05088ecf262948a2b">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a848d00e0b04c8be05088ecf262948a2b" class="m-doc-self">count</a>
+            <dt id="afd1d0bb40409aaaeb0648a3b64f21e7a">
+              eastl::intrusive_ptr&lt;<a href="class_simulator_1_1_i_serializer_read_stream.html" class="m-doc">ISerializerReadStream</a>&gt; <a href="#afd1d0bb40409aaaeb0648a3b64f21e7a" class="m-doc-self">mpReadStream</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a827637069b80bbc4dfbbcc446b008d90">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#a827637069b80bbc4dfbbcc446b008d90" class="m-doc-self">countSerialized</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a50f9b09c80826cee0f75bbed022ba597">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> <a href="#a50f9b09c80826cee0f75bbed022ba597" class="m-doc-self">id</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="a9b4f8d65ecd3314d4c391b088624ea2e">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a>* <a href="#a9b4f8d65ecd3314d4c391b088624ea2e" class="m-doc-self">pObject</a>
-            </dt>
-            <dd><span></span></dd>
-            <dt id="afce06a673f398c907f2645718e669072">
-              <a href="struct_simulator_1_1_attribute.html" class="m-doc">Attribute</a>* <a href="#afce06a673f398c907f2645718e669072" class="m-doc-self">pAttributes</a>
+          </dl>
+        </section>
+        <section id="pro-methods">
+          <h2><a href="#pro-methods">Protected functions</a></h2>
+          <dl class="m-doc">
+            <dt id="aed0f0223852c9a21814815ed77c204b4">
+              <span class="m-doc-wrap-bumper">auto <a href="#aed0f0223852c9a21814815ed77c204b4" class="m-doc-self">openStream</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1_i_serializer_database.html" class="m-doc">ISerializerDatabase</a>* pDatabase,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> nResourceType,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> nInstance,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> nGroupID) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a></span>
             </dt>
             <dd><span></span></dd>
           </dl>
