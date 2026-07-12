@@ -723,6 +723,56 @@ namespace Simulator
 		DefineAddress(GetAllocator, SelectAddress(0x690180, 0x69de70));
 	}
 
+	namespace Addresses(SerializerReadStream)
+	{
+		DefineAddress(Open, SelectAddress(0x6903b0, 0x69e090));
+		DefineAddress(Close, SelectAddress(0x68f860, 0x69d480));
+		DefineAddress(IsOpen, SelectAddress(0x68f8b0, 0x69d4d0));
+		DefineAddress(IsGood, SelectAddress(0x5a2c00, 0x950190));
+		DefineAddress(GetRecord, SelectAddress(0x69f450, 0xfc7910));
+		DefineAddress(GetDatabase, SelectAddress(0xf5c360, 0x7f55c0));
+		DefineAddress(ReadObjectPointer, SelectAddress(0x690450, 0x69e170));
+		DefineAddress(ReadPointer, SelectAddress(0x68f8d0, 0x69d4f0));
+		DefineAddress(ReadProperty, SelectAddress(0x68f920, 0x69d540));
+		DefineAddress(ReadRawData, SelectAddress(0x68fbb0, 0x69d830));
+		DefineAddress(ReadPropertyByID, SelectAddress(0x68f5e0, 0x69d1d0));
+		DefineAddress(GetSerializationVersion, SelectAddress(0x95a4f0, 0x93b630));
+		DefineAddress(SetSerializationVersion, SelectAddress(0x1054390, 0xfcc100));
+
+		DefineAddress(Skip, SelectAddress(0x68f620, 0x69d210));
+	}
+
+	namespace Addresses(SerializerWriteStream)
+	{
+		DefineAddress(Open, SelectAddress(0x690540, 0x69e260));
+		DefineAddress(Close, SelectAddress(0x68fc30, 0x69d8e0));
+		DefineAddress(IsOpen, SelectAddress(0x68fc80, 0x69d930));
+		DefineAddress(IsGood, SelectAddress(0x68f690, 0xab2ff0));
+		DefineAddress(GetRecord, SelectAddress(0x959a00, 0xfcc1d0));
+		DefineAddress(GetDatabase, SelectAddress(0x95a4f0, 0x93b630));
+		DefineAddress(WriteObjectPointer, SelectAddress(0x68fca0, 0x69d950));
+		DefineAddress(WritePointer, SelectAddress(0x68fcd0, 0x69d980));
+		DefineAddress(WriteProperty, SelectAddress(0x68fd20, 0x69d9d0));
+		DefineAddress(WriteRawData, SelectAddress(0x68ffb0, 0x69dc60));
+		DefineAddress(WritePropertyWithID, SelectAddress(0x68f6a0, 0x69d280));
+	}
+
+	namespace Addresses(SerializerReadStreamPrivate)
+	{
+		DefineAddress(IsOpen, SelectAddress(0x685e30, 0x692e60));
+		DefineAddress(SetSerializationVersion, SelectAddress(0x685e10, 0x692e80));
+		DefineAddress(GetSerializationVersion, SelectAddress(0x685e20, 0x692e90));
+
+		DefineAddress(openStream, SelectAddress(0x686770, 0x6938d0));
+	}
+
+	namespace Addresses(SerializerWriteStreamPrivate)
+	{
+		DefineAddress(IsOpen, SelectAddress(0x685e30, 0x692e60));
+
+		DefineAddress(openStream, SelectAddress(0x686890, 0x693a70));
+	}
+
 	namespace Addresses(cGameData)
 	{
 		DefineAddress(Write, SelectAddress(0xB18430, 0xB184D0));

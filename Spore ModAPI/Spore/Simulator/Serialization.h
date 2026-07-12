@@ -12,6 +12,11 @@
 #define ISerializerWriteStreamPtr eastl::intrusive_ptr<Simulator::ISerializerWriteStream>
 #define ICOMSerializerPtr eastl::intrusive_ptr<Simulator::ICOMSerializer>
 
+#define SerializerDatabasePtr eastl::intrusive_ptr<Simulator::SerializerDatabase>
+#define SerializerReadStreamPtr eastl::intrusive_ptr<Simulator::SerializerReadStream>
+#define SerializerWriteStreamPtr eastl::intrusive_ptr<Simulator::SerializerWriteStream>
+#define COMSerializerPtr eastl::intrusive_ptr<Simulator::COMSerializer>
+
 namespace Simulator
 {
 	class ICOMSerializer;
@@ -54,13 +59,16 @@ namespace Simulator
 		/* 1Ch */	virtual bool IsGood() const = 0;
 		/* 20h */	virtual Resource::IRecord* GetRecord() const = 0;
 		/* 24h */	virtual ISerializerDatabase* GetDatabase() const = 0;
-		/* 28h */	virtual bool ReadObjectPointer(uint32_t castTypeID, ObjectPtr& dst, int) = 0;
-		/* 2Ch */	virtual bool ReadPointer(ISimulatorSerializable* pointer) = 0;
+		/* 28h */	virtual bool ReadObjectPointer(uint32_t castTypeID, ObjectPtr& dst, bool bLoadImmediately) = 0;
+		/* 2Ch */	virtual bool ReadPointer(ISimulatorSerializable* pointer, bool bLoadImmediately) = 0;
 		/* 30h */	virtual bool ReadProperty(App::Property& dst) = 0;
 		/* 34h */	virtual bool ReadRawData(void* pBuffer, size_t size) = 0;
+	protected:
+		// Deprecated.
 		/* 38h */	virtual bool ReadPropertyByID(uint32_t propertyID, App::Property& dst) = 0;
+	public:
 		/* 3Ch */	virtual uint32_t GetSerializationVersion() const = 0;
-		/* 40h */	virtual void SetSerializationVersion(uint32_t) = 0;
+		/* 40h */	virtual void SetSerializationVersion(uint32_t version) = 0;
 	};
 
 	class ISerializerWriteStream
@@ -71,7 +79,7 @@ namespace Simulator
 
 		/* 10h */	virtual bool Open(ISerializerDatabase* pDatabase, const ResourceKey& key, bool bTruncate) = 0;
 		/* 14h */	virtual bool Close() = 0;
-		/* 18h */	virtual int IsOpen() const = 0;
+		/* 18h */	virtual bool IsOpen() const = 0;
 		/* 1Ch */	virtual bool IsGood() const = 0;
 		/* 20h */	virtual Resource::IRecord* GetRecord() const = 0;
 		/* 24h */	virtual ISerializerDatabase* GetDatabase() const = 0;
@@ -79,6 +87,8 @@ namespace Simulator
 		/* 2Ch */	virtual bool WritePointer(ISimulatorSerializable* pointer) = 0;
 		/* 30h */	virtual bool WriteProperty(App::Property& src) = 0;
 		/* 34h */	virtual bool WriteRawData(void* pData, size_t size) = 0;
+	protected:
+		// Deprecated.
 		/* 38h */	virtual bool WritePropertyWithID(uint32_t propertyID, App::Property& src) = 0;
 	};
 
@@ -95,9 +105,7 @@ namespace Simulator
 			kRecordTypeID_Classes = 0x179D310
 		};
 
-		/* 08h */	virtual ~ICOMSerializer();
-
-		/* 10h */	virtual bool Open(ISerializerDatabase* pDatabase) = 0;
+		/* 10h */	virtual bool Open(ISerializerDatabase* pDatabase, int mode_DEPRECATED) = 0;
 		/* 14h */	virtual bool Close() = 0;
 		/* 18h */	virtual bool LoadClassObjects(uint32_t clientVersion) = 0;
 		/* 1Ch */	virtual bool SaveClassObjects() = 0;
@@ -217,11 +225,11 @@ namespace Simulator
 	public:
 		COMSerializer(ISerializerDatabase* pDatabase);
 
-		virtual ~COMSerializer();
 		virtual int AddRef() override;
 		virtual int Release() override;
 		virtual void* Cast(uint32_t type) const override;
-		virtual bool Open(ISerializerDatabase* pDatabase) override;
+
+		virtual bool Open(ISerializerDatabase* pDatabase, int mode_DEPRECATED) override;
 		virtual bool Close() override;
 		virtual bool LoadClassObjects(uint32_t clientVersion) override;
 		virtual bool SaveClassObjects() override;
@@ -282,7 +290,6 @@ namespace Simulator
 	public:
 		SerializerDatabase(Resource::Database* pDatabase);
 
-		virtual ~SerializerDatabase();
 		virtual int AddRef() override;
 		virtual int Release() override;
 		virtual void* Cast(uint32_t type) const override;
@@ -364,6 +371,157 @@ namespace Simulator
 		DeclareAddress(Attach);
 		DeclareAddress(GetAllocator);
 		DeclareAddress(OpenAsSerializer);
+	}
+
+	class SerializerReadStream
+		: DefaultRefCounted
+		, ISerializerReadStream
+	{
+	public:
+		SerializerReadStream();
+
+		virtual void* Cast(uint32_t type) const override;
+
+		virtual bool Open(ISerializerDatabase* pDatabase, const ResourceKey& key) override;
+		virtual bool Close() override;
+		virtual bool IsOpen() const override;
+		virtual bool IsGood() const override;
+		virtual Resource::IRecord* GetRecord() const override;
+		virtual ISerializerDatabase* GetDatabase() const override;
+		virtual bool ReadObjectPointer(uint32_t castTypeID, ObjectPtr& dst, bool bLoadImmediately) override;
+		virtual bool ReadPointer(ISimulatorSerializable* pointer, bool bLoadImmediately) override;
+		virtual bool ReadProperty(App::Property& dst) override;
+		virtual bool ReadRawData(void* pBuffer, size_t size) override;
+	protected:
+		// Deprecated.
+		virtual bool ReadPropertyByID(uint32_t propertyID, App::Property& dst) override;
+	public:
+		virtual uint32_t GetSerializationVersion() const override;
+		virtual void SetSerializationVersion(uint32_t version) override;
+
+		virtual bool Skip(const uint32_t skipCount);
+	protected:
+		/* 0Ch */	bool mbOK;
+		/* 10h */	uint32_t mVersion;
+		/* 14h */	eastl::intrusive_ptr<Resource::IRecord> mpRecord;
+		/* 18h */	eastl::intrusive_ptr<ISerializerDatabase> mpDatabase;
+	};
+	ASSERT_SIZE(SerializerReadStream, 0x1C);
+
+	namespace Addresses(SerializerReadStream)
+	{
+		DeclareAddress(Open);
+		DeclareAddress(Close);
+		DeclareAddress(IsOpen);
+		DeclareAddress(IsGood);
+		DeclareAddress(GetRecord);
+		DeclareAddress(GetDatabase);
+		DeclareAddress(ReadObjectPointer);
+		DeclareAddress(ReadPointer);
+		DeclareAddress(ReadProperty);
+		DeclareAddress(ReadRawData);
+		DeclareAddress(ReadPropertyByID);
+		DeclareAddress(GetSerializationVersion);
+		DeclareAddress(SetSerializationVersion);
+		DeclareAddress(Skip);
+	}
+
+	class SerializerWriteStream
+		: DefaultRefCounted
+		, ISerializerWriteStream
+	{
+	public:
+		SerializerWriteStream();
+
+		virtual void* Cast(uint32_t type) const override;
+
+		virtual bool Open(ISerializerDatabase* pDatabase, const ResourceKey& key, bool bTruncate) override;
+		virtual bool Close() override;
+		virtual bool IsOpen() const override;
+		virtual bool IsGood() const override;
+		virtual Resource::IRecord* GetRecord() const override;
+		virtual ISerializerDatabase* GetDatabase() const override;
+		virtual bool WriteObjectPointer(Object* pObject) override;
+		virtual bool WritePointer(ISimulatorSerializable* pointer) override;
+		virtual bool WriteProperty(App::Property& src) override;
+		virtual bool WriteRawData(void* pData, size_t size) override;
+	protected:
+		// Deprecated.
+		virtual bool WritePropertyWithID(uint32_t propertyID, App::Property& src) override;
+
+		/* 0Ch */	eastl::intrusive_ptr<Resource::IRecord> mpRecord;
+		/* 10h */	eastl::intrusive_ptr<ISerializerDatabase> mpDatabase;
+		/* 14h */	bool mbOK;
+	};
+	ASSERT_SIZE(SerializerWriteStream, 0x18);
+
+	namespace Addresses(SerializerWriteStream)
+	{
+		DeclareAddress(Open);
+		DeclareAddress(Close);
+		DeclareAddress(IsOpen);
+		DeclareAddress(IsGood);
+		DeclareAddress(GetRecord);
+		DeclareAddress(GetDatabase);
+		DeclareAddress(WriteObjectPointer);
+		DeclareAddress(WritePointer);
+		DeclareAddress(WriteProperty);
+		DeclareAddress(WriteRawData);
+		DeclareAddress(WritePropertyWithID);
+	}
+
+	class SerializerReadStreamPrivate
+	{
+	public:
+		SerializerReadStreamPrivate(ISerializerReadStream& readStream, const ResourceKey& key);
+		SerializerReadStreamPrivate(ISerializerDatabase* pDatabase, const ResourceKey& key);
+		SerializerReadStreamPrivate(ISerializerReadStream& readStream, uint32_t nResourceType, uint32_t nInstance, uint32_t nGroupID);
+		SerializerReadStreamPrivate(ISerializerDatabase* pDatabase, uint32_t nResourceType, uint32_t nInstance, uint32_t nGroupID);
+
+		virtual ~SerializerReadStreamPrivate();
+
+		bool IsOpen();
+		void SetSerializationVersion(uint32_t version);
+		uint32_t GetSerializationVersion() const;
+
+		/* 04h */	eastl::intrusive_ptr<ISerializerDatabase> mpDatabase;
+		/* 08h */	eastl::intrusive_ptr<ISerializerReadStream> mpReadStream;
+	protected:
+		bool openStream(ISerializerDatabase* pDatabase, uint32_t nResourceType, uint32_t nInstance, uint32_t nGroupID);
+	};
+	ASSERT_SIZE(SerializerReadStreamPrivate, 0xC);
+
+	namespace Addresses(SerializerReadStreamPrivate)
+	{
+		DeclareAddress(IsOpen);
+		DeclareAddress(SetSerializationVersion);
+		DeclareAddress(GetSerializationVersion);
+		DeclareAddress(openStream);
+	}
+
+	class SerializerWriteStreamPrivate
+	{
+	public:
+		SerializerWriteStreamPrivate(ISerializerWriteStream& writeStream, const ResourceKey& key);
+		SerializerWriteStreamPrivate(ISerializerDatabase* pDatabase, const ResourceKey& key);
+		SerializerWriteStreamPrivate(ISerializerWriteStream& writeStream, uint32_t nResourceType, uint32_t nInstance, uint32_t nGroupID);
+		SerializerWriteStreamPrivate(ISerializerDatabase* pDatabase, uint32_t nResourceType, uint32_t nInstance, uint32_t nGroupID);
+
+		virtual ~SerializerWriteStreamPrivate();
+
+		bool IsOpen();
+
+		/* 04h */	eastl::intrusive_ptr<ISerializerDatabase> mpDatabase;
+		/* 08h */	eastl::intrusive_ptr<ISerializerWriteStream> mpWriteStream;
+	protected:
+		bool openStream(ISerializerDatabase* pDatabase, uint32_t nResourceType, uint32_t nInstance, uint32_t nGroupID);
+	};
+	ASSERT_SIZE(SerializerWriteStreamPrivate, 0xC);
+
+	namespace Addresses(SerializerWriteStreamPrivate)
+	{
+		DeclareAddress(IsOpen);
+		DeclareAddress(openStream);
 	}
 }
 

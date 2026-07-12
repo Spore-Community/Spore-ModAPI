@@ -47,8 +47,6 @@ namespace Simulator
 
 #ifndef MODAPI_DLL_EXPORT
 
-	ICOMSerializer::~ICOMSerializer() = default;
-
 	COMSerializer::COMSerializer(ISerializerDatabase* pDatabase)
 		: mbBusyWritingClassObjects(false)
 		, mClassIDMapForWriting()
@@ -63,8 +61,6 @@ namespace Simulator
 		mpDatabase = pDatabase;
 	}
 
-	COMSerializer::~COMSerializer() = default;
-
 	int COMSerializer::AddRef()
 	{
 		return DefaultRefCounted::AddRef();
@@ -78,12 +74,13 @@ namespace Simulator
 	void* COMSerializer::Cast(uint32_t type) const
 	{
 		CLASS_CAST(ICOMSerializer);
+		CLASS_CAST(Object);
 		return nullptr;
 	}
 
 	auto_METHOD_VIRTUAL(COMSerializer, ICOMSerializer, bool, Open,
-		Args(ISerializerDatabase* pDatabase),
-		Args(pDatabase));
+		Args(ISerializerDatabase* pDatabase, int mode_DEPRECATED),
+		Args(pDatabase, mode_DEPRECATED));
 	auto_METHOD_VIRTUAL_(COMSerializer, ICOMSerializer, bool, Close);
 	auto_METHOD_VIRTUAL(COMSerializer, ICOMSerializer, bool, LoadClassObjects,
 		Args(uint32_t clientVersion),
@@ -118,8 +115,6 @@ namespace Simulator
 
 	}
 
-	SerializerDatabase::~SerializerDatabase() = default;
-
 	int SerializerDatabase::AddRef()
 	{
 		return Database::AddRef();
@@ -133,7 +128,9 @@ namespace Simulator
 	void* SerializerDatabase::Cast(uint32_t type) const
 	{
 		CLASS_CAST(ISerializerDatabase);
-		return nullptr;
+		return (type == Object::TYPE)
+			? (void*)this
+			: nullptr;
 	}
 
 	auto_METHOD_VIRTUAL_(SerializerDatabase, ISerializerDatabase, Resource::Database*, AsDatabase);
@@ -202,6 +199,175 @@ namespace Simulator
 	auto_METHOD_VIRTUAL(SerializerDatabase, SerializerDatabase, bool, OpenAsSerializer,
 		Args(bool bOpenForReading, bool bOpenForWriting),
 		Args(bOpenForReading, bOpenForWriting));
+
+	SerializerReadStream::SerializerReadStream()
+		: mbOK(true)
+		, mVersion(0)
+		, mpRecord(nullptr)
+		, mpDatabase(nullptr)
+	{
+
+	}
+
+	void* SerializerReadStream::Cast(uint32_t type) const
+	{
+		CLASS_CAST(ISerializerReadStream);
+		CLASS_CAST(Object);
+		return nullptr;
+	}
+
+	auto_METHOD_VIRTUAL(SerializerReadStream, ISerializerReadStream, bool, Open,
+		Args(ISerializerDatabase* pDatabase, const ResourceKey& key),
+		Args(pDatabase, key));
+	auto_METHOD_VIRTUAL_(SerializerReadStream, ISerializerReadStream, bool, Close);
+	auto_METHOD_VIRTUAL_const_(SerializerReadStream, ISerializerReadStream, bool, IsOpen);
+	auto_METHOD_VIRTUAL_const_(SerializerReadStream, ISerializerReadStream, bool, IsGood);
+	auto_METHOD_VIRTUAL_const_(SerializerReadStream, ISerializerReadStream, Resource::IRecord*, GetRecord);
+	auto_METHOD_VIRTUAL_const_(SerializerReadStream, ISerializerReadStream, ISerializerDatabase*, GetDatabase);
+	auto_METHOD_VIRTUAL(SerializerReadStream, ISerializerReadStream, bool, ReadObjectPointer,
+		Args(uint32_t castTypeID, ObjectPtr& dst, bool bLoadImmediately),
+		Args(castTypeID, dst, bLoadImmediately));
+	auto_METHOD_VIRTUAL(SerializerReadStream, ISerializerReadStream, bool, ReadPointer,
+		Args(ISimulatorSerializable* pointer, bool bLoadImmediately),
+		Args(pointer, bLoadImmediately));
+	auto_METHOD_VIRTUAL(SerializerReadStream, ISerializerReadStream, bool, ReadProperty,
+		Args(App::Property& dst),
+		Args(dst));
+	auto_METHOD_VIRTUAL(SerializerReadStream, ISerializerReadStream, bool, ReadRawData,
+		Args(void* pBuffer, size_t size),
+		Args(pBuffer, size));
+	auto_METHOD_VIRTUAL(SerializerReadStream, ISerializerReadStream, bool, ReadPropertyByID,
+		Args(uint32_t propertyID, App::Property& dst),
+		Args(propertyID, dst));
+	auto_METHOD_VIRTUAL_const_(SerializerReadStream, ISerializerReadStream, uint32_t, GetSerializationVersion);
+	auto_METHOD_VIRTUAL_VOID(SerializerReadStream, ISerializerReadStream, SetSerializationVersion,
+		Args(uint32_t version),
+		Args(version));
+
+	auto_METHOD_VIRTUAL(SerializerReadStream, ISerializerReadStream, bool, Skip,
+		Args(const uint32_t skipCount),
+		Args(skipCount));
+
+	SerializerWriteStream::SerializerWriteStream()
+		: mpRecord(nullptr)
+		, mpDatabase(nullptr)
+		, mbOK(true)
+	{
+
+	}
+
+	void* SerializerWriteStream::Cast(uint32_t type) const
+	{
+		CLASS_CAST(SerializerWriteStream);
+		CLASS_CAST(Object);
+		return nullptr;
+	}
+
+	auto_METHOD_VIRTUAL(SerializerWriteStream, ISerializerWriteStream, bool, Open,
+		Args(ISerializerDatabase* pDatabase, const ResourceKey& key, bool bTruncate),
+		Args(pDatabase, key, bTruncate));
+	auto_METHOD_VIRTUAL_(SerializerWriteStream, ISerializerWriteStream, bool, Close);
+	auto_METHOD_VIRTUAL_const_(SerializerWriteStream, ISerializerWriteStream, bool, IsOpen);
+	auto_METHOD_VIRTUAL_const_(SerializerWriteStream, ISerializerWriteStream, bool, IsGood);
+	auto_METHOD_VIRTUAL_const_(SerializerWriteStream, ISerializerWriteStream, Resource::IRecord*, GetRecord);
+	auto_METHOD_VIRTUAL_const_(SerializerWriteStream, ISerializerWriteStream, ISerializerDatabase*, GetDatabase);
+	auto_METHOD_VIRTUAL(SerializerWriteStream, ISerializerWriteStream, bool, WriteObjectPointer,
+		Args(Object* pObject),
+		Args(pObject));
+	auto_METHOD_VIRTUAL(SerializerWriteStream, ISerializerWriteStream, bool, WritePointer,
+		Args(ISimulatorSerializable* pointer),
+		Args(pointer));
+	auto_METHOD_VIRTUAL(SerializerWriteStream, ISerializerWriteStream, bool, WriteProperty,
+		Args(App::Property& src),
+		Args(src));
+	auto_METHOD_VIRTUAL(SerializerWriteStream, ISerializerWriteStream, bool, WriteRawData,
+		Args(void* pData, size_t size),
+		Args(pData, size));
+	auto_METHOD_VIRTUAL(SerializerWriteStream, ISerializerWriteStream, bool, WritePropertyWithID,
+		Args(uint32_t propertyID, App::Property& src),
+		Args(propertyID, src));
+
+	SerializerReadStreamPrivate::SerializerReadStreamPrivate(ISerializerDatabase* pDatabase, uint32_t nResourceType, uint32_t nInstance, uint32_t nGroupID)
+		: mpDatabase(nullptr)
+		, mpReadStream(nullptr)
+	{
+		openStream(pDatabase, nResourceType, nInstance, nGroupID);
+	}
+
+	SerializerReadStreamPrivate::SerializerReadStreamPrivate(ISerializerReadStream& readStream, uint32_t nResourceType, uint32_t nInstance, uint32_t nGroupID)
+		: SerializerReadStreamPrivate(readStream.GetDatabase(), nResourceType, nInstance, nGroupID)
+	{
+
+	}
+
+	SerializerReadStreamPrivate::SerializerReadStreamPrivate(ISerializerDatabase* pDatabase, const ResourceKey& key)
+		: SerializerReadStreamPrivate(pDatabase, key.typeID, key.instanceID, key.groupID)
+	{
+
+	}
+
+	SerializerReadStreamPrivate::SerializerReadStreamPrivate(ISerializerReadStream& readStream, const ResourceKey& key)
+		: SerializerReadStreamPrivate(readStream, key.typeID, key.instanceID, key.groupID)
+	{
+
+	}
+
+	SerializerReadStreamPrivate::~SerializerReadStreamPrivate()
+	{
+		if (mpReadStream && mpReadStream->IsOpen())
+		{
+			mpReadStream->Close();
+		}
+	}
+
+	auto_METHOD_(SerializerReadStreamPrivate, bool, IsOpen);
+	auto_METHOD_VOID(SerializerReadStreamPrivate, SetSerializationVersion,
+		Args(uint32_t version),
+		Args(version));
+	auto_METHOD_const_(SerializerReadStreamPrivate, uint32_t, GetSerializationVersion);
+
+	auto_METHOD(SerializerReadStreamPrivate, bool, openStream,
+		Args(ISerializerDatabase* pDatabase, uint32_t nResourceType, uint32_t nInstance, uint32_t nGroupID),
+		Args(pDatabase, nResourceType, nInstance, nGroupID));
+
+	SerializerWriteStreamPrivate::SerializerWriteStreamPrivate(ISerializerDatabase* pDatabase, uint32_t nResourceType, uint32_t nInstance, uint32_t nGroupID)
+		: mpDatabase(nullptr)
+		, mpWriteStream(nullptr)
+	{
+		openStream(pDatabase, nResourceType, nInstance, nGroupID);
+	}
+
+	SerializerWriteStreamPrivate::SerializerWriteStreamPrivate(ISerializerWriteStream& writeStream, uint32_t nResourceType, uint32_t nInstance, uint32_t nGroupID)
+		: SerializerWriteStreamPrivate(writeStream.GetDatabase(), nResourceType, nInstance, nGroupID)
+	{
+
+	}
+
+	SerializerWriteStreamPrivate::SerializerWriteStreamPrivate(ISerializerDatabase* pDatabase, const ResourceKey& key)
+		: SerializerWriteStreamPrivate(pDatabase, key.typeID, key.instanceID, key.groupID)
+	{
+
+	}
+
+	SerializerWriteStreamPrivate::SerializerWriteStreamPrivate(ISerializerWriteStream& writeStream, const ResourceKey& key)
+		: SerializerWriteStreamPrivate(writeStream, key.typeID, key.instanceID, key.groupID)
+	{
+
+	}
+
+	SerializerWriteStreamPrivate::~SerializerWriteStreamPrivate()
+	{
+		if (mpWriteStream && mpWriteStream->IsOpen())
+		{
+			mpWriteStream->Close();
+		}
+	}
+
+	auto_METHOD_(SerializerWriteStreamPrivate, bool, IsOpen);
+
+	auto_METHOD(SerializerWriteStreamPrivate, bool, openStream,
+		Args(ISerializerDatabase* pDatabase, uint32_t nResourceType, uint32_t nInstance, uint32_t nGroupID),
+		Args(pDatabase, nResourceType, nInstance, nGroupID));
 
 #endif
 
