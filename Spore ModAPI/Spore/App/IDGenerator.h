@@ -35,7 +35,7 @@ namespace App
 		/* 08h */	virtual void GenerateForGroup(ResourceKey& dst, uint32_t typeID, uint32_t groupID);
 
 	public:
-		/* 04h */	int field_4;  // time?
+		/* 04h */	uint32_t mnStartInstance;
 		/* 08h */	eastl::map<int, int> field_8;
 		/* 28h */	eastl::map<int, int> field_24;
 	};

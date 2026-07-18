@@ -54,29 +54,29 @@ namespace App
 		/* 9Ch */	virtual HMONITOR GetMonitor();
 
 	public:
-		/* 04h */	int field_4;  // 0xF
-		/* 08h */	int mOptions;  // 0x2A
-		/* 0Ch */	bool mIsFullscreen;
-		/* 0Dh */	bool field_D;
-		/* 0Eh */	bool field_E;
-		/* 0Fh */	bool field_F;
-		/* 10h */	bool field_10;
-		/* 11h */	bool field_11;
-		/* 14h */	int field_14;
-		/* 18h */	int field_18;
-		/* 1Ch */	bool field_1C;
-		/* 20h */	int field_20;
-		/* 24h */	eastl::string16 mCaption;
-		/* 34h */	int field_34;
-		/* 38h */	int field_38;
-		/* 3Ch */	tagRECT field_3C;
-		/* 4Ch */	bool field_4C;  // true
-		/* 4Dh */	bool field_4D;
-		/* 4Eh */	bool field_4E;
-		/* 4Fh */	bool field_4F;
-		/* 50h */	int field_50;  // 2000
-		/* 54h */	HKL mKeyboardLayout;
-		/* 58h */	int mDefaultAnsiCodeForLocale;
+		/* 04h */	uint32_t mnStyleFlags;  // 0xF
+		/* 08h */	uint32_t mnOptionFlags;  // 0x2A
+		/* 0Ch */	bool mbFullscreen;
+		/* 0Dh */	bool mbBlockInput;
+		/* 0Eh */	bool mbInMovingSizeLoop;
+		/* 0Fh */	bool mbInSizingLoop;
+		/* 10h */	bool mbInMovingLoop;
+		/* 11h */	bool mbMouseInClientArea;
+		/* 14h */	int mnLastMouseX;
+		/* 18h */	int mnLastMouseY;
+		/* 1Ch */	bool mbEnablePaint;
+		/* 20h */	uint32_t mnUpdateLockCount;
+		/* 24h */	eastl::string16 msCaption;
+		/* 34h */	uint32_t mnMinWidth;
+		/* 38h */	uint32_t mnMinHeight;
+		/* 3Ch */	tagRECT mRectDesiredClient;
+		/* 4Ch */	bool mbCursorVisible;  // true
+		/* 4Dh */	bool mbCursorShadowSupported;
+		/* 4Eh */	bool mbMouseTrailsSupported;
+		/* 4Fh */	bool mbMouseSonarSupported;
+		/* 50h */	uint32_t mnIdleTimerIntervalMs;  // 2000
+		/* 54h */	HKL mnKeyboardLayout;
+		/* 58h */	int mnDefaultAnsiCodeForLocale;
 		/* 5Ch */	IMessageManager* mpMessageServer;
 		/* 60h */	int field_60;
 		/* 64h */	int field_64;
