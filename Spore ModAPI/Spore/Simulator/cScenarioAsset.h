@@ -40,6 +40,6 @@ namespace Simulator
 
 	namespace Addresses(cScenarioAsset)
 	{
-		DefineAddress(GetThumbnail);
+		DeclareAddress(GetThumbnail);
 	}
 }
