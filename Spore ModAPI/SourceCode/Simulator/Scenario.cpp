@@ -8,6 +8,9 @@
 
 namespace Simulator
 {
+	auto_METHOD_VOID(cScenarioAsset, GetThumbnail, Args(ResourceKey& dst), Args(dst));
+
+
 	auto_METHOD_VOID(cScenarioData, Initialize, Args(bool index), Args(index));
 
 	auto_METHOD_VOID_(cScenarioData, StartHistoryEntry);

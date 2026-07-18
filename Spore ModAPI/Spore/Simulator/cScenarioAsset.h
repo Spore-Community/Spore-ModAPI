@@ -25,6 +25,11 @@ namespace Simulator
 	class cScenarioAsset
 	{
 	public:
+
+		/// Gets the ResourceKey of an asset thumbnail to display in the editor palette.
+		/// @param[out] dst The destination value that will be assigned with the ResourceKey of a thumbnail.
+		void GetThumbnail(ResourceKey& dst);
+
 		/* 00h */	ResourceKey mKey;
 		/* 0Ch */	uint32_t mMachineId;
 		/* 10h */	uint64_t mServerId;
@@ -32,4 +37,9 @@ namespace Simulator
 		/* 1Ch */	bool field_1C;
 	};
 	ASSERT_SIZE(cScenarioAsset, 0x20);
+
+	namespace Addresses(cScenarioAsset)
+	{
+		DefineAddress(GetThumbnail);
+	}
 }

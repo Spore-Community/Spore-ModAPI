@@ -53,6 +53,7 @@
 #include <Spore\Simulator\cSpaceInventoryItem.h>
 #include <Spore\Simulator\cSpaceNames.h>
 #include <Spore\Simulator\cStarRecord.h>
+#include <Spore\Simulator\cScenarioAsset.h>
 #include <Spore\Simulator\cScenarioData.h>
 #include <Spore\Simulator\cScenarioPlayMode.h>
 #include <Spore\Simulator\cScenarioResource.h>
@@ -900,6 +901,11 @@ namespace Simulator
 	namespace Addresses(cScenarioEditHistory)
 	{
 		DefineAddress(ptr, SelectAddress(0x160A850, 0x16065D8));
+	}
+
+	namespace Addresses(cScenarioAsset)
+	{
+		DefineAddress(GetThumbnail, SelectAddress(0xEF92F0, 0xF24FE0));
 	}
 
 	namespace Addresses(cScenarioData)
