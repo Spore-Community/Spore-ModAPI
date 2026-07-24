@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Terrain::cTerrainSphereRenderingChunk struct | Spore ModAPI SDK for creating C++ mods for Spore</title>
+  <title>Swarm::cDecal class | Spore ModAPI SDK for creating C++ mods for Spore</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,600i%7CSource+Code+Pro:400,400i,600" />
   <link rel="stylesheet" href="m-dark.css" />
   <link rel="stylesheet" href="m-documentation.css" />
@@ -45,8 +45,8 @@
     <div class="m-row">
       <div class="m-col-l-10 m-push-l-1">
         <h1>
-          <span class="m-breadcrumb"><a href="namespace_terrain.html">Terrain</a>::<wbr/></span>cTerrainSphereRenderingChunk <span class="m-thin">struct</span>
-          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="c_terrain_sphere_8h.html">&lt;Spore ModAPI/Spore/Terrain/cTerrainSphere.h&gt;</a></div>
+          <span class="m-breadcrumb"><a href="namespace_swarm.html">Swarm</a>::<wbr/></span>cDecal <span class="m-thin">class</span>
+          <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="c_decal_8h.html">&lt;Spore ModAPI/Spore/Swarm/cDecal.h&gt;</a></div>
         </h1>
         <p><span></span></p>
         <nav class="m-block m-default">
@@ -55,28 +55,77 @@
             <li>
               Reference
               <ul>
+                <li><a href="#derived-classes">Derived classes</a></li>
+                <li><a href="#pub-types">Public types</a></li>
                 <li><a href="#pub-attribs">Public variables</a></li>
               </ul>
             </li>
           </ul>
         </nav>
+        <section id="derived-classes">
+          <h2><a href="#derived-classes">Derived classes</a></h2>
+          <dl class="m-doc">
+            <dt>
+              struct <a href="struct_terrain_1_1c_terrain_decal.html" class="m-doc">Terrain::cTerrainDecal</a>
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
+        <section id="pub-types">
+          <h2><a href="#pub-types">Public types</a></h2>
+          <dl class="m-doc">
+            <dt id="a47bc1b61950180ac5f13b2406050d33d">
+              <span class="m-doc-wrap-bumper">enum <a href="#a47bc1b61950180ac5f13b2406050d33d" class="m-doc-self">Flags</a> { </span><span class="m-doc-wrap"><a href="#a47bc1b61950180ac5f13b2406050d33da2860a684502b273d1910edcc760b19bd" class="m-doc">kFlagEnabled</a>,
+              <a href="#a47bc1b61950180ac5f13b2406050d33da84702c22f02892012cb23a354a5503fc" class="m-doc">kMaxFlags</a> }</span>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a44a3a4f1c88e16e886fa70174497240e">
+              using <a href="#a44a3a4f1c88e16e886fa70174497240e" class="m-doc-self">FlagSet</a> = eastl::bitset&lt;1&gt;
+            </dt>
+            <dd><span></span></dd>
+          </dl>
+        </section>
         <section id="pub-attribs">
           <h2><a href="#pub-attribs">Public variables</a></h2>
           <dl class="m-doc">
-            <dt id="a830482b29a0a859a904e2f81cfa41022">
-              <a href="class_terrain_1_1c_terrain_sphere_quad.html" class="m-doc">cTerrainSphereQuad</a>* <a href="#a830482b29a0a859a904e2f81cfa41022" class="m-doc-self">mpQuad</a>
+            <dt id="a1c47243ae07f3fe46198b045a1f7357b">
+              <a href="class_transform.html" class="m-doc">Transform</a> <a href="#a1c47243ae07f3fe46198b045a1f7357b" class="m-doc-self">mTransform</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a2f51074c507ece4aec0c0128e69ad971">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a2f51074c507ece4aec0c0128e69ad971" class="m-doc-self">mMorphValue</a>
+            <dt id="a90d7a3b08e51675f3d25677e03fb57dd">
+              <a href="struct_math_1_1_vector4.html" class="m-doc">Math::<wbr />Vector4</a> <a href="#a90d7a3b08e51675f3d25677e03fb57dd" class="m-doc-self">mColorAlpha</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="a4597f869664da146caade3c505522cc0">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> <a href="#a4597f869664da146caade3c505522cc0" class="m-doc-self">mFlags</a>
+            <dt id="a99420919623e687c389cc9e2bb8ad739">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a99420919623e687c389cc9e2bb8ad739" class="m-doc-self">mTurns</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="aa033e1c6c556b555de42d191bc6dee92">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#aa033e1c6c556b555de42d191bc6dee92" class="m-doc-self">field_C</a>
+            <dt id="a16e789b687e109d5bbc8c9eddab14b24">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a16e789b687e109d5bbc8c9eddab14b24" class="m-doc-self">mAspect</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="af5b837cee916418c2cd85c3237b75afe">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#af5b837cee916418c2cd85c3237b75afe" class="m-doc-self">mRepeatU</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a488a494b047fd1c71fab325bba276d3b">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a488a494b047fd1c71fab325bba276d3b" class="m-doc-self">mRepeatV</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a3de2efafe28ee6a81ad942f68c5489b2">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a3de2efafe28ee6a81ad942f68c5489b2" class="m-doc-self">mOffsetU</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a34ae53e2ae03c205fc5f9deb28bce997">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> <a href="#a34ae53e2ae03c205fc5f9deb28bce997" class="m-doc-self">mOffsetV</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="abd4191a400b23ec32075379be4fe5071">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> <a href="#abd4191a400b23ec32075379be4fe5071" class="m-doc-self">mLayer</a>
+            </dt>
+            <dd><span></span></dd>
+            <dt id="a661da1a09eefea8db1e74c728ff9e61d">
+              <a href="class_swarm_1_1c_decal.html#a44a3a4f1c88e16e886fa70174497240e" class="m-doc">FlagSet</a> <a href="#a661da1a09eefea8db1e74c728ff9e61d" class="m-doc-self">mFlags</a>
             </dt>
             <dd><span></span></dd>
           </dl>
