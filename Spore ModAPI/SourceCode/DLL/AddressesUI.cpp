@@ -39,6 +39,7 @@ namespace UI
 	namespace Addresses(ScrollFrameVertical)
 	{
 		DefineAddress(Create, SelectAddress(0x807C40, 0x8076F0));
+		DefineAddress(Update, SelectAddress(0x7E04D0, 0x807780));
 	}
 
 	namespace Addresses(cSPUITextZoom)

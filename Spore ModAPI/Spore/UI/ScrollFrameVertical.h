@@ -15,10 +15,13 @@ namespace UI
 #endif
 
 		static UTFWin::IWindow* Create(const char16_t* pLayoutName, IWindowPtr& dstContent, bool = true);
+		static bool Update(UTFWin::IWindow* pScrollFrameVertical, bool = false);
+
 	};
 
 	namespace Addresses(ScrollFrameVertical)
 	{
 		DeclareAddress(Create);
+		DeclareAddress(Update);
 	}
 }
