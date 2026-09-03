@@ -78,6 +78,9 @@ namespace Simulator
 		/// Makes this empire the owner of the given star. It will emit a kMsgStarOwnershipChanged message.
 		void AddStarOwnership(cStarRecord* star);
 
+		/// Called when the empire loses its last system.
+		void Destroy();
+
 		/// Captures a star system for a specific empire. This can only be used when the star belongs to another empire.
 		/// For any kind of star, use cEmpire::AddStarOwnership
 		/// @param pStarRecord The star system to capture.
@@ -142,6 +145,7 @@ namespace Simulator
 		DeclareAddress(UpdateAndGetColor);  // 0xC325F0 0xC32E30
 		DeclareAddress(AddStarOwnership);  // 0xC33AB0 0xC34300
 		DeclareAddress(RequireHomePlanet);  // 0xC30F90 0xC31890
+		DeclareAddress(Destroy);  // 0xC33C30 0xC34480
 	}
 
 }

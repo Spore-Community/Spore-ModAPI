@@ -369,6 +369,7 @@ namespace Simulator
 		DefineAddress(UpdateAndGetColor, SelectAddress(0xC325F0, 0xC32E30));
 		DefineAddress(AddStarOwnership, SelectAddress(0xC33AB0, 0xC34300));
 		DefineAddress(RequireHomePlanet, SelectAddress(0xC30F90, 0xC31890));
+		DefineAddress(Destroy, SelectAddress(0xC33C30, 0xC34480));
 	}
 
 	namespace Addresses(cEnergyRepairToolStrategy)
