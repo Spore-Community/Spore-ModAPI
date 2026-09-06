@@ -280,15 +280,19 @@ public class ImportSporeSDK extends GhidraScript {
         }
     }
 
-    private static GenericCallingConvention getCallingConvention(String text) {
+    // Maps the XML's CONVENTION attribute to the name Ghidra's compiler specs use.
+    // The deprecated FunctionDefinition.setGenericCallingConvention stores the bare enum
+    // name ("thiscall"), which no compiler spec recognises, so the definition reads as an
+    // unknown convention and the this-in-ECX branch in createParameters never runs.
+    private static String getCallingConvention(String text) {
         switch (text)
         {
-            case "cdecl": return GenericCallingConvention.cdecl;
-            case "fastcall": return GenericCallingConvention.fastcall;
-            case "stdcall": return GenericCallingConvention.stdcall;
-            case "thiscall": return GenericCallingConvention.thiscall;
-            case "vectorcall": return GenericCallingConvention.vectorcall;
-            case "unknown": return GenericCallingConvention.unknown;
+            case "cdecl": return CompilerSpec.CALLING_CONVENTION_cdecl;
+            case "fastcall": return CompilerSpec.CALLING_CONVENTION_fastcall;
+            case "stdcall": return CompilerSpec.CALLING_CONVENTION_stdcall;
+            case "thiscall": return CompilerSpec.CALLING_CONVENTION_thiscall;
+            case "vectorcall": return CompilerSpec.CALLING_CONVENTION_vectorcall;
+            case "unknown": return CompilerSpec.CALLING_CONVENTION_unknown;
             default: return null;
         }
     }
@@ -574,7 +578,15 @@ public class ImportSporeSDK extends GhidraScript {
 		}
 	}
 
+    // The signature carries the convention the XML declared. Use it when the compiler spec
+    // knows it; otherwise keep whatever the function already has (after auto-analysis that
+    // is "unknown").
     private static String getCallingConvention(Function function, FunctionSignature signature, CompilerSpec compilerSpec) {
+		String name = signature.getCallingConventionName();
+		if (name != null && !signature.hasUnknownCallingConventionName()
+				&& compilerSpec.getCallingConvention(name) != null) {
+			return name;
+		}
 		return function.getCallingConventionName();
 	}
 
@@ -712,12 +724,17 @@ public class ImportSporeSDK extends GhidraScript {
 		if (element.hasAttribute("CONVENTION")) {
 			callingConvention = element.getAttribute("CONVENTION");
 		}
-		GenericCallingConvention convention = getCallingConvention(callingConvention);
+		String convention = getCallingConvention(callingConvention);
 		if (convention == null)
 		{
-			throw new IllegalArgumentException("Unknown calling convention '" + convention + "' in function " + path + "/" + name);
+			throw new IllegalArgumentException("Unknown calling convention '" + callingConvention + "' in function " + path + "/" + name);
 		}
-		fd.setGenericCallingConvention​(convention);
+		try {
+			fd.setCallingConvention(convention);
+		}
+		catch (InvalidInputException e) {
+			throw new IllegalArgumentException("Calling convention '" + convention + "' rejected for function " + path + "/" + name, e);
+		}
 
 		XmlTreeNode node = root.getChild("RETURN_TYPE");
 		if (node != null) {
