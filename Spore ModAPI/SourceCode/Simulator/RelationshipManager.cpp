@@ -45,6 +45,10 @@ namespace Simulator
 
 	auto_METHOD(cRelationshipManager, float, GetRelationshipEventValue, Args(uint32_t id1, uint32_t id2, uint32_t eventId), Args(id1, id2, eventId));
 
+	auto_METHOD(cRelationshipManager, float, CalculateRelationship, Args(uint32_t id1, uint32_t id2, bool useCachedValue), Args(id1, id2, useCachedValue));
+
+	auto_METHOD(cRelationshipManager, float, CalculateRelationshipAbsolute, Args(uint32_t id1, uint32_t id2, bool useCachedValue), Args(id1, id2, useCachedValue));
+
 	bool cRelationshipManager::IsAtWar(uint32_t politicalID1, uint32_t politicalID2) {
 		return CALL(GetAddress(cRelationshipManager, IsAtWar2), bool, Args(cRelationshipManager*, uint32_t, uint32_t), Args(this, politicalID1, politicalID2));
 	}

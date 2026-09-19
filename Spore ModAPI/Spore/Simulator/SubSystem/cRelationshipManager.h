@@ -157,6 +157,23 @@ namespace Simulator
 			if (it != mRelationships.end()) { return &(it->second); } { return nullptr; }
 		}
 
+
+		/// Calculates the relationship value between two political entities, which is the sum of all the relationship events between the entities.
+		/// The value is capped between 10.0f and -10.0f.
+		/// @param politicalID1
+		/// @param politicalID2
+		/// @param useCachedValue If true, uses a cached value instead of performing the sum.
+		/// @returns The relationship value between the two political entities, capped between 10.0f and -10.0f.
+		float CalculateRelationship(uint32_t politicalID1, uint32_t politicalID2, bool useCachedValue);
+
+		/// Calculates the relationship value between two political entities, that being the sum of all the relationship events between the entities.
+		/// Unlike CalculateRelationship(), the value is not capped.
+		/// @param politicalID1
+		/// @param politicalID2
+		/// @param useCachedValue If true, uses a cached value instead of performing the sum.
+		/// @returns The relationship value between the two political entities.
+		float CalculateRelationshipAbsolute(uint32_t politicalID1, uint32_t politicalID2, bool useCachedValue);
+
 	public:
 		/* 10h */	float field_10;
 		/* 14h */	float field_14;
@@ -205,5 +222,7 @@ namespace Simulator
 		DeclareAddress(ApplyRelationship);
 		DeclareAddress(RelationshipExists);
 		DeclareAddress(GetRelationshipEventValue);
+		DeclareAddress(CalculateRelationship); // 0xCFFF60 0xD00950
+		DeclareAddress(CalculateRelationshipAbsolute); // 0xD04CC0 0xD05A60
 	}
 }

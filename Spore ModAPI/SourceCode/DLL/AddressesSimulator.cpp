@@ -549,6 +549,8 @@ namespace Simulator
 		DefineAddress(ApplyRelationship, SelectAddress(0xD054E0, 0xD06280));
 		DefineAddress(RelationshipExists, SelectAddress(0xD010C0, 0xD01B90));
 		DefineAddress(GetRelationshipEventValue, SelectAddress(0xD010F0, 0xD01BC0));
+		DefineAddress(CalculateRelationship, SelectAddress(0xCFFF60, 0xD00950));
+		DefineAddress(CalculateRelationshipAbsolute, SelectAddress(0xD04CC0, 0xD05A60));
 	}
 
 	namespace Addresses(cGameBehaviorManager) 
