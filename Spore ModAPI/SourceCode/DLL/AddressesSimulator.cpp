@@ -370,6 +370,7 @@ namespace Simulator
 		DefineAddress(AddStarOwnership, SelectAddress(0xC33AB0, 0xC34300));
 		DefineAddress(RequireHomePlanet, SelectAddress(0xC30F90, 0xC31890));
 		DefineAddress(Destroy, SelectAddress(0xC33C30, 0xC34480));
+		DefineAddress(GetWeaponryLevel, SelectAddress(0xC31000, 0xC31900));
 	}
 
 	namespace Addresses(cEnergyRepairToolStrategy)

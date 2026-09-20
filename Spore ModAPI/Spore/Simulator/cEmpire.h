@@ -81,6 +81,15 @@ namespace Simulator
 		/// Called when the empire loses its last system.
 		void Destroy();
 
+		/// Returns the empire's weaponry level, which determines the 'level' of the empire.
+		/// If `mWeaponry` is greater or equal than 0, that cached value is returned directly.
+		/// Otherwise, the level is calculated from the empire's number of star systems, using the
+		/// thresholds defined in `spaceshipWeaponEmpireSize` (SpaceCombat.prop), the result is then
+		/// cached in `mWeaponry` before being returned.
+		/// The Grox empire always has a weaponry level of 5.
+		/// @returns The empire's weaponry level.
+		int GetWeaponryLevel();
+
 		/// Captures a star system for a specific empire. This can only be used when the star belongs to another empire.
 		/// For any kind of star, use cEmpire::AddStarOwnership
 		/// @param pStarRecord The star system to capture.
@@ -107,8 +116,7 @@ namespace Simulator
 		/* C4h */	ResourceKey mCaptainKey;
 		/* D0h */	int mEmpireMoney;
 		/* D4h */	char mTravelDistance;  // 3
-		//TODO sub_C31000 GetEmpireTier ?
-		/* D8h */	int field_D8;  // -1  //TODO empire size? Related with combat tuning, check loc_C31039
+		/* D8h */	int mWeaponry;  // -1
 		/* DCh */	float field_DC;
 		/* E0h */	float field_E0;
 		/* E4h */	float field_E4;
@@ -146,6 +154,7 @@ namespace Simulator
 		DeclareAddress(AddStarOwnership);  // 0xC33AB0 0xC34300
 		DeclareAddress(RequireHomePlanet);  // 0xC30F90 0xC31890
 		DeclareAddress(Destroy);  // 0xC33C30 0xC34480
+		DeclareAddress(GetWeaponryLevel); // 0xC31000 0xC31900
 	}
 
 }

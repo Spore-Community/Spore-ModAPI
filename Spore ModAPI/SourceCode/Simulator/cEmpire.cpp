@@ -36,6 +36,8 @@ namespace Simulator
 
 	auto_METHOD_VOID_(cEmpire, Destroy);
 
+	auto_METHOD_(cEmpire, int, GetWeaponryLevel);
+
 	cStarRecord* cEmpire::GetHomeStarRecord() {
 		if (mHomeStar.internalValue != -1) {
 			return StarManager.GetStarRecord(mHomeStar);
