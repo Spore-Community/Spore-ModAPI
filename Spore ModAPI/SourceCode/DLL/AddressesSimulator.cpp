@@ -1184,6 +1184,7 @@ namespace Simulator
 		DefineAddress(SetRareAsFound, SelectAddress(0x1040820, 0x103FBB0));
 		DefineAddress(GenerateNPCStore, SelectAddress(0x103F560, 0x103E8F0));
 		DefineAddress(CreateTradingObject, SelectAddress(0x103B470, 0x103A490));
+		DefineAddress(BuildSpiceCommodities, SelectAddress(0x0103D650, 0x0103C950));
 	}
 
 	namespace Addresses(cScenarioEditModeDisplayStrategy) {

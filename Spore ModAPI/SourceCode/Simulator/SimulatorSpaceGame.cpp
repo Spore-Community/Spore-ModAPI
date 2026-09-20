@@ -62,5 +62,7 @@ namespace Simulator
 	auto_METHOD_VOID(cSpaceTrading, CreateTradingObject,
 		Args(cSpaceInventoryItemPtr& dst, const ResourceKey& itemID, int itemCount, float itemCost),
 		Args(dst, itemID, itemCount, itemCost));
+
+	auto_METHOD_VOID_(cSpaceTrading, BuildSpiceCommodities);
 }
 #endif

@@ -97,6 +97,11 @@ namespace Simulator
 		/// @param itemCost Cost of the object
 		void CreateTradingObject(cSpaceInventoryItemPtr& dst, const ResourceKey& itemID, int itemCount, float itemCost);
 
+		/// Populates `mSpices` with the resource keys of every `.prop` file in the `GroupIDs::SpaceTrading_` group
+		/// whose `spaceTradingType` is set to `spice`.
+		/// Has no effect if `mSpices` is not empty.
+		void BuildSpiceCommodities();
+
 	public:
 		struct RareGroup {
 			/* 00h */	uint32_t mGroupID;
@@ -134,5 +139,6 @@ namespace Simulator
 		DeclareAddress(SetRareAsFound);  // 0x1040820 0x103FBB0
 		DeclareAddress(GenerateNPCStore);  // 0x103F560 0x103E8F0
 		DeclareAddress(CreateTradingObject);  // 0x103B470 0x103A490
+		DeclareAddress(BuildSpiceCommodities); //  0x0103D650 0x0103C950
 	}
 }
