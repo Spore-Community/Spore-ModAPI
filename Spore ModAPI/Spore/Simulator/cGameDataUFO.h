@@ -133,6 +133,14 @@ namespace Simulator
 		DeclareAddress(Initialize);  // 0xC3D8D0 0xC3E210
 	}
 
+	/// Spawns a new UFO instance of the given type and assigns it to the empire with the given politicalID.
+	/// It will have full AI, show up on the minimap, and have the color of the corresponding empire.
+	/// @param type
+	/// @param politicalID
+	/// @param modelKey Resource key of a UFO model, the spawned UFO will use this model.
+	/// @returns
+	cGameDataUFO* SpawnUFO(UfoType type, const uint32_t& politicalID, const ResourceKey& modelKey);
+
 	/// Creates a new UFO instance of the given type and assigned to the specified empire.
 	/// It will call cGameDataUFO::Initialize(), which sets up the necessary tools and AI.
 	/// @param type
@@ -144,4 +152,5 @@ namespace Simulator
 namespace Addresses(Simulator)
 {
 	DeclareAddress(CreateUFO);  // 0x102BB50 0x102AC60
+	DeclareAddress(SpawnUFO);  // 0x102BBB0 0x102ACC0
 }

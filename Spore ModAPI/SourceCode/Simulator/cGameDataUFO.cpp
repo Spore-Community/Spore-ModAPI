@@ -26,5 +26,9 @@ namespace Simulator
 	auto_METHOD_VOID(cGameDataUFO, Initialize, Args(UfoType type, cEmpire* empire), Args(type, empire));
 
 	auto_STATIC_METHOD(Simulator, cGameDataUFO*, CreateUFO, Args(UfoType type, cEmpire* empire), Args(type, empire));
+
+	auto_STATIC_METHOD(Simulator, cGameDataUFO*, SpawnUFO, 
+		Args(UfoType type, const uint32_t& politicalID, const ResourceKey& modelKey), 
+		Args(type, politicalID, modelKey));
 }
 #endif

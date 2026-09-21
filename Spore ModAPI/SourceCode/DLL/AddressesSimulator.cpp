@@ -152,6 +152,7 @@ namespace Addresses(Simulator)
 	DefineAddress(sCreatureGameUnlockCategoriesCount, SelectAddress(0x1587278, 0x1583298));
 
 	DefineAddress(CreateUFO, SelectAddress(0x102BB50, 0x102AC60));
+	DefineAddress(SpawnUFO, SelectAddress(0x102BBB0, 0x102ACC0));
 
 	DefineAddress(SpawnNpcTribe, SelectAddress(0xC92860, 0xC932F0));
 	DefineAddress(sTribeFishHotSpots_ptr, SelectAddress(0x157EB90 ,0x157ABB0));
