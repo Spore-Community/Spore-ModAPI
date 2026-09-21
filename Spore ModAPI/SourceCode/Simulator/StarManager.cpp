@@ -123,6 +123,18 @@ namespace Simulator
 		Args(cStarRecord* pStarRecord, StarRequestFilter* pFilter, bool arg),
 		Args(pStarRecord, pFilter, arg));
 
+	auto_METHOD_VOID(cStarManager, GetDefaultTerrainThemeFlora, 
+		Args(const ResourceKey& planetTerrainKey, eastl::vector<ResourceKey>& plantSpecies),
+		Args(planetTerrainKey, plantSpecies));
+
+	auto_METHOD_VOID(cStarManager, PickPlantSpecies,
+		Args(const eastl::vector<ResourceKey>& speciesIDs, int tScore, int numFullRows, int numFullColumns, bool fillAllSlots, eastl::vector<ResourceKey>& selections),
+		Args(speciesIDs, tScore, numFullRows, numFullColumns, fillAllSlots, selections));
+
+	auto_METHOD_VOID(cStarManager, PickAnimalSpecies,
+		Args(const eastl::vector<ResourceKey>& speciesIDs, int tScore, int numFullRows, int numHerbivoreSlots, int numCarnivoreSlots, eastl::vector<ResourceKey>& selections),
+		Args(speciesIDs, tScore, numFullRows, numHerbivoreSlots, numCarnivoreSlots, selections));
+
 	auto_STATIC_METHOD(cStarManager, bool, StarGenerationMessageHandler,
 		Args(uint32_t messageId, Swarm::Components::DistributeEffectMessageData* pDistributeData, StarType starType),
 		Args(messageId, pDistributeData, starType));

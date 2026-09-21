@@ -258,6 +258,42 @@ namespace Simulator
 		/// @param useMaxPlanets If true, spawn the maximum amount of planets.
 		void GeneratePlanetsForStar(cStarRecord* pStarRecord, StarRequestFilter* pFilter, bool useMaxPlanets);
 
+		/// Gets the complete flora ecosystem associated with `planetTerrainKey`, or an arbitrary one if the terrain key doesn't have one.
+		/// @param planetTerrainKey
+		/// @param[out] plantSpecies Output vector with the flora for the terrain key: 3 big flora, 3 medium flora, and 3 small flora.
+		void GetDefaultTerrainThemeFlora(const ResourceKey& planetTerrainKey, eastl::vector<ResourceKey>& plantSpecies);
+
+		/// Picks the flora to use for a planet's food web from `speciesIDs`, according to the given parameters, and returns the result in `selections`.
+		/// @param speciesIDs Vector of 9 flora (3 big, 3 medium, 3 small) obtained from GetDefaultTerrainThemeFlora, from which `selections` is populated.
+		/// @param tScore Terrascore of the planet the flora is being chosen for, caps the number of flora placed into `selections`.
+		/// @param numFullRows Number between 0 and `tScore`, for each full row, one flora of each size (big, medium, small) is added to `selections`.
+		/// @param numFullColumns Number between 0 and 3, number of flora filling the uppermost row of the food web.
+		/// @param fillAllSlots If true, all 9 flora from `speciesIDs` are placed into `selections`, ignoring the other parameters.
+		/// @param[out] selections Output vector with the flora that were picked.
+		void PickPlantSpecies(
+			const eastl::vector<ResourceKey>& speciesIDs,
+			int tScore,
+			int numFullRows,
+			int numFullColumns,
+			bool fillAllSlots,
+			eastl::vector<ResourceKey>& selections);
+
+		/// Picks the animal species to use for a planet's food web from `speciesIDs`, according to the given parameters, and returns the result in `selections`.
+		/// @param speciesIDs Vector of 9 animals (6 herbivores, 3 carnivores) obtained from a previous call to PickAnimalSpecies, 
+		/// from which `selections` is populated, if empty, the species are sourced elsewhere.
+		/// @param tScore Terrascore of the planet the species are being chosen for, caps the number of species placed into `selections`.
+		/// @param numFullRows Number between 0 and `tScore`, for each full row, 2 herbivores and 1 carnivore are added to `selections`.
+		/// @param numHerbivoreSlots Number between 0 and 2, number of herbivores filling the uppermost row of the food web.
+		/// @param numCarnivoreSlots Number between 0 and 1, number of carnivores filling the uppermost row of the food web.
+		/// @param[out] selections Output vector with the species that were picked.
+		void PickAnimalSpecies(
+			const eastl::vector<ResourceKey>& speciesIDs, 
+			int tScore, 
+			int numFullRows, 
+			int numHerbivoreSlots, 
+			int numCarnivoreSlots, 
+			eastl::vector<ResourceKey>& selections);
+
 		/// Method used by the galaxy generation effect to create the cStarRecord instances. This method is the handler of the corresponding
 		/// `kMsgGalaxyGenerate...` messages, such as SimulatorMessages::kMsgGalaxyGenerateBlackHole. The method generates
 		/// one cStarRecord for every entry in the `pDistributeData` object.
@@ -347,6 +383,9 @@ namespace Simulator
 		DeclareAddress(GenerateSolSystem);  // 0xBB1A00, 0xBB2BF0
 		DeclareAddress(RequirePlanetsForStar);  // 0xBB3AA0 0xBB4C90
 		DeclareAddress(GeneratePlanetsForStar);  // 0xBB30B0 0xBB42A0
+		DeclareAddress(GetDefaultTerrainThemeFlora); //0xBABFF0 0xBAD210
+		DeclareAddress(PickPlantSpecies); // 0xBAB7A0, 0xBAC9C0
+		DeclareAddress(PickAnimalSpecies); // 0xBABC40 0xBACE60
 	}
 
 	namespace Addresses(cSpaceTradeRouteManager)
