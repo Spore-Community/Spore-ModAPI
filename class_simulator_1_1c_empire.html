@@ -131,6 +131,14 @@
               <span class="m-doc-wrap-bumper">auto <a href="#a65cbf3fe6f1bea0064ea867b455fe830" class="m-doc-self">AddStarOwnership</a>(</span><span class="m-doc-wrap"><a href="class_simulator_1_1c_star_record.html" class="m-doc">cStarRecord</a>* star) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a></span>
             </dt>
             <dd>Makes this empire the owner of the given star. It will emit a kMsgStarOwnershipChanged message.</dd>
+            <dt id="aa7502eb02156e3bf733bb0819469d094">
+              <span class="m-doc-wrap-bumper">auto <a href="#aa7502eb02156e3bf733bb0819469d094" class="m-doc-self">Destroy</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a></span>
+            </dt>
+            <dd>Called when the empire loses its last system.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ae1af20c3962e669baa74e650e2ef0502" class="m-doc">GetWeaponryLevel</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a></span>
+            </dt>
+            <dd>Returns the empire&#x27;s weaponry level, which determines the &#x27;level&#x27; of the empire.</dd>
             <dt id="a3a9c8996c8e1adc7cfec11f8f09b51c8">
               <span class="m-doc-wrap-bumper">auto <a href="#a3a9c8996c8e1adc7cfec11f8f09b51c8" class="m-doc-self">AddRef</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">pure virtual</span></span>
             </dt>
@@ -212,8 +220,8 @@
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">char</a> <a href="#a0e3b457932885471ab314cce2936ebcf" class="m-doc-self">mTravelDistance</a>
             </dt>
             <dd><span></span></dd>
-            <dt id="aee279c8d968597bc6e70df6e7f85d332">
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#aee279c8d968597bc6e70df6e7f85d332" class="m-doc-self">field_D8</a>
+            <dt id="ab32f2ee22a5e1f05c5da3ddc833dbd91">
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <a href="#ab32f2ee22a5e1f05c5da3ddc833dbd91" class="m-doc-self">mWeaponry</a>
             </dt>
             <dd><span></span></dd>
             <dt id="ac6caca204ebdde74ac32082c81c47c12">
@@ -296,6 +304,21 @@
             </h3>
             <p>Calculates and returns the identity color of the empire, based on the <code>mIDColorID</code> field.</p>
 <p>ColorIDs equal or greater than <code>0x53DBCF1</code> are cached, and <code>colorID - 0x53DBCF1</code> is an index to the real color stored in <code>animations~!ui.prop</code> in <code>IdentityColors</code> property. <code>0x53DBCF1</code> is special and uses the empire species identity color, instead of the color on the list. If the ID less than <code>0x53DBCF1</code>, the color will be recalculated, cached, and the ID will be updated.</p>
+          </div></section>
+          <section class="m-doc-details" id="ae1af20c3962e669baa74e650e2ef0502"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> Simulator::<wbr />cEmpire::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ae1af20c3962e669baa74e650e2ef0502" class="m-doc-self">GetWeaponryLevel</a>(</span><span class="m-doc-wrap">)</span></span>
+            </h3>
+            <p>Returns the empire&#x27;s weaponry level, which determines the &#x27;level&#x27; of the empire.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <tfoot>
+                <tr>
+                  <th style="width: 1%">Returns</th>
+                  <td>The empire&#x27;s weaponry level.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>If <code>mWeaponry</code> is greater or equal than 0, that cached value is returned directly. Otherwise, the level is calculated from the empire&#x27;s number of star systems, using the thresholds defined in <code>spaceshipWeaponEmpireSize</code> (SpaceCombat.prop), the result is then cached in <code>mWeaponry</code> before being returned. The Grox empire always has a weaponry level of 5.</p>
           </div></section>
         </section>
       </div>

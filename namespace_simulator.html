@@ -2916,6 +2916,12 @@
             </dt>
             <dd><span></span></dd>
             <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a7d1f3ce6cfabd68e7b739023ae74ebe4" class="m-doc">SpawnUFO</a>(</span><span class="m-doc-wrap"><a href="namespace_simulator.html#a275b9181c60a664d8e1d56328862cb6e" class="m-doc">UfoType</a> type,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a>&amp; politicalID,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&amp; modelKey) -&gt; <a href="class_simulator_1_1c_game_data_u_f_o.html" class="m-doc">cGameDataUFO</a>*</span>
+            </dt>
+            <dd>Spawns a new UFO instance of the given type and assigns it to the empire with the given politicalID.</dd>
+            <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#a064aa80a6eca0c70bd34061587dabdef" class="m-doc">CreateUFO</a>(</span><span class="m-doc-wrap"><a href="namespace_simulator.html#a275b9181c60a664d8e1d56328862cb6e" class="m-doc">UfoType</a> type,
               <a href="class_simulator_1_1c_empire.html" class="m-doc">cEmpire</a>* empire) -&gt; <a href="class_simulator_1_1c_game_data_u_f_o.html" class="m-doc">cGameDataUFO</a>*</span>
             </dt>
@@ -7181,6 +7187,35 @@
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="c_game_data_u_f_o_8h.html">&lt;Spore ModAPI/Spore/Simulator/cGameDataUFO.h&gt;</a></div>
             </h3>
             <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a7d1f3ce6cfabd68e7b739023ae74ebe4"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="class_simulator_1_1c_game_data_u_f_o.html" class="m-doc">cGameDataUFO</a>* Simulator::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a7d1f3ce6cfabd68e7b739023ae74ebe4" class="m-doc-self">SpawnUFO</a>(</span><span class="m-doc-wrap"><a href="namespace_simulator.html#a275b9181c60a664d8e1d56328862cb6e" class="m-doc">UfoType</a> type,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a>&amp; politicalID,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&amp; modelKey)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="c_game_data_u_f_o_8h.html">&lt;Spore ModAPI/Spore/Simulator/cGameDataUFO.h&gt;</a></div>
+            </h3>
+            <p>Spawns a new UFO instance of the given type and assigns it to the empire with the given politicalID.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">type</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>politicalID</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>modelKey</td>
+                  <td><a href="namespace_resource.html" class="m-doc">Resource</a> key of a UFO model, the spawned UFO will use this model.</td>
+                </tr>
+              </tbody>
+            </table>
+<p>It will have full <a href="namespace_simulator_1_1_a_i.html" class="m-doc">AI</a>, show up on the minimap, and have the color of the corresponding empire.</p>
           </div></section>
           <section class="m-doc-details" id="a064aa80a6eca0c70bd34061587dabdef"><div>
             <h3>

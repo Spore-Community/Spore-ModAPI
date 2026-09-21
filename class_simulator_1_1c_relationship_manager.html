@@ -171,6 +171,18 @@
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> politicalID2) -&gt; <a href="class_simulator_1_1c_relationship_data.html" class="m-doc">cRelationshipData</a>*</span>
             </dt>
             <dd>Returns the <a href="class_simulator_1_1c_relationship_data.html" class="m-doc">cRelationshipData</a> between 2 political entities.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#affc678e42c4c0d33317c8291cb97e4b3" class="m-doc">CalculateRelationship</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> politicalID1,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> politicalID2,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> useCachedValue) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a></span>
+            </dt>
+            <dd>Calculates the relationship value between two political entities, which is the sum of all the relationship events between the entities.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a5fcd3c329bcd80ed7f64ecf63085d58b" class="m-doc">CalculateRelationshipAbsolute</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> politicalID1,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> politicalID2,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> useCachedValue) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a></span>
+            </dt>
+            <dd>Calculates the relationship value between two political entities, that being the sum of all the relationship events between the entities.</dd>
           </dl>
         </section>
         <section id="pub-attribs">
@@ -546,6 +558,74 @@
             </h3>
             <p>Returns the <a href="class_simulator_1_1c_relationship_data.html" class="m-doc">cRelationshipData</a> between 2 political entities.</p>
 <p>NOTE: order of the IDs does not matter.</p>
+          </div></section>
+          <section class="m-doc-details" id="affc678e42c4c0d33317c8291cb97e4b3"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> Simulator::<wbr />cRelationshipManager::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#affc678e42c4c0d33317c8291cb97e4b3" class="m-doc-self">CalculateRelationship</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> politicalID1,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> politicalID2,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> useCachedValue)</span></span>
+            </h3>
+            <p>Calculates the relationship value between two political entities, which is the sum of all the relationship events between the entities.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">politicalID1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>politicalID2</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>useCachedValue</td>
+                  <td>If true, uses a cached value instead of performing the sum.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The relationship value between the two political entities, capped between 10.0f and -10.0f.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>The value is capped between 10.0f and -10.0f.</p>
+          </div></section>
+          <section class="m-doc-details" id="a5fcd3c329bcd80ed7f64ecf63085d58b"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">float</a> Simulator::<wbr />cRelationshipManager::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a5fcd3c329bcd80ed7f64ecf63085d58b" class="m-doc-self">CalculateRelationshipAbsolute</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> politicalID1,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> politicalID2,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> useCachedValue)</span></span>
+            </h3>
+            <p>Calculates the relationship value between two political entities, that being the sum of all the relationship events between the entities.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">politicalID1</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>politicalID2</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>useCachedValue</td>
+                  <td>If true, uses a cached value instead of performing the sum.</td>
+                </tr>
+              </tbody>
+              <tfoot>
+                <tr>
+                  <th>Returns</th>
+                  <td>The relationship value between the two political entities.</td>
+                </tr>
+              </tfoot>
+            </table>
+<p>Unlike <a href="class_simulator_1_1c_relationship_manager.html#affc678e42c4c0d33317c8291cb97e4b3" class="m-doc">CalculateRelationship()</a>, the value is not capped.</p>
           </div></section>
         </section>
       </div>

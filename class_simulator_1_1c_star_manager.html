@@ -191,6 +191,29 @@
               <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> useMaxPlanets) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a></span>
             </dt>
             <dd>Generates the planets for a star record.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a9a10e2226625976a4e8e1c7dcc969aff" class="m-doc">GetDefaultTerrainThemeFlora</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&amp; planetTerrainKey,
+              eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; plantSpecies) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a></span>
+            </dt>
+            <dd>Gets the complete flora ecosystem associated with <code>planetTerrainKey</code>, or an arbitrary one if the terrain key doesn&#x27;t have one.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#af82ad13c1b358a93c6fd3536473a531e" class="m-doc">PickPlantSpecies</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; speciesIDs,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> tScore,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> numFullRows,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> numFullColumns,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> fillAllSlots,
+              eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; selections) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a></span>
+            </dt>
+            <dd>Picks the flora to use for a planet&#x27;s food web from <code>speciesIDs</code>, according to the given parameters, and returns the result in <code>selections</code>.</dd>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#aff5268464242fc59f6aa23a06ef7998e" class="m-doc">PickAnimalSpecies</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; speciesIDs,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> tScore,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> numFullRows,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> numHerbivoreSlots,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> numCarnivoreSlots,
+              eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; selections) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a></span>
+            </dt>
+            <dd>Picks the animal species to use for a planet&#x27;s food web from <code>speciesIDs</code>, according to the given parameters, and returns the result in <code>selections</code>.</dd>
           </dl>
         </section>
         <section id="pub-attribs">
@@ -748,6 +771,112 @@
               </tbody>
             </table>
 <p>Planet records are not generated when the galaxy is generated; instead, they are only created the first time the star is discovered. This function will create a number of planets between properties <code>numPlanetsMin</code> and <code>numPlanetsMax</code> from <code>mpSolarSystemPropList</code>. This function changes the <a href="class_simulator_1_1c_star_record.html#ada1612b86754c1105b16de2f848ee7b6" class="m-doc">cStarRecord::<wbr />mPlanetCount</a> of the star, but it does NOT add the planets to the star planets vector.</p>
+          </div></section>
+          <section class="m-doc-details" id="a9a10e2226625976a4e8e1c7dcc969aff"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a> Simulator::<wbr />cStarManager::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a9a10e2226625976a4e8e1c7dcc969aff" class="m-doc-self">GetDefaultTerrainThemeFlora</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&amp; planetTerrainKey,
+              eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; plantSpecies)</span></span>
+            </h3>
+            <p>Gets the complete flora ecosystem associated with <code>planetTerrainKey</code>, or an arbitrary one if the terrain key doesn&#x27;t have one.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">planetTerrainKey</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>plantSpecies&nbsp;<span class="m-label m-flat m-warning">out</span></td>
+                  <td>Output vector with the flora for the terrain key: 3 big flora, 3 medium flora, and 3 small flora.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="af82ad13c1b358a93c6fd3536473a531e"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a> Simulator::<wbr />cStarManager::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#af82ad13c1b358a93c6fd3536473a531e" class="m-doc-self">PickPlantSpecies</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; speciesIDs,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> tScore,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> numFullRows,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> numFullColumns,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> fillAllSlots,
+              eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; selections)</span></span>
+            </h3>
+            <p>Picks the flora to use for a planet&#x27;s food web from <code>speciesIDs</code>, according to the given parameters, and returns the result in <code>selections</code>.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">speciesIDs</td>
+                  <td>Vector of 9 flora (3 big, 3 medium, 3 small) obtained from GetDefaultTerrainThemeFlora, from which <code>selections</code> is populated.</td>
+                </tr>
+                <tr>
+                  <td>tScore</td>
+                  <td>Terrascore of the planet the flora is being chosen for, caps the number of flora placed into <code>selections</code>.</td>
+                </tr>
+                <tr>
+                  <td>numFullRows</td>
+                  <td>Number between 0 and <code>tScore</code>, for each full row, one flora of each size (big, medium, small) is added to <code>selections</code>.</td>
+                </tr>
+                <tr>
+                  <td>numFullColumns</td>
+                  <td>Number between 0 and 3, number of flora filling the uppermost row of the food web.</td>
+                </tr>
+                <tr>
+                  <td>fillAllSlots</td>
+                  <td>If true, all 9 flora from <code>speciesIDs</code> are placed into <code>selections</code>, ignoring the other parameters.</td>
+                </tr>
+                <tr>
+                  <td>selections&nbsp;<span class="m-label m-flat m-warning">out</span></td>
+                  <td>Output vector with the flora that were picked.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
+          <section class="m-doc-details" id="aff5268464242fc59f6aa23a06ef7998e"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a> Simulator::<wbr />cStarManager::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#aff5268464242fc59f6aa23a06ef7998e" class="m-doc-self">PickAnimalSpecies</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; speciesIDs,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> tScore,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> numFullRows,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> numHerbivoreSlots,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> numCarnivoreSlots,
+              eastl::vector&lt;<a href="struct_resource_key.html" class="m-doc">ResourceKey</a>&gt;&amp; selections)</span></span>
+            </h3>
+            <p>Picks the animal species to use for a planet&#x27;s food web from <code>speciesIDs</code>, according to the given parameters, and returns the result in <code>selections</code>.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">speciesIDs</td>
+                  <td>Vector of 9 animals (6 herbivores, 3 carnivores) obtained from a previous call to PickAnimalSpecies, from which <code>selections</code> is populated, if empty, the species are sourced elsewhere.</td>
+                </tr>
+                <tr>
+                  <td>tScore</td>
+                  <td>Terrascore of the planet the species are being chosen for, caps the number of species placed into <code>selections</code>.</td>
+                </tr>
+                <tr>
+                  <td>numFullRows</td>
+                  <td>Number between 0 and <code>tScore</code>, for each full row, 2 herbivores and 1 carnivore are added to <code>selections</code>.</td>
+                </tr>
+                <tr>
+                  <td>numHerbivoreSlots</td>
+                  <td>Number between 0 and 2, number of herbivores filling the uppermost row of the food web.</td>
+                </tr>
+                <tr>
+                  <td>numCarnivoreSlots</td>
+                  <td>Number between 0 and 1, number of carnivores filling the uppermost row of the food web.</td>
+                </tr>
+                <tr>
+                  <td>selections&nbsp;<span class="m-label m-flat m-warning">out</span></td>
+                  <td>Output vector with the species that were picked.</td>
+                </tr>
+              </tbody>
+            </table>
           </div></section>
         </section>
         <section>
