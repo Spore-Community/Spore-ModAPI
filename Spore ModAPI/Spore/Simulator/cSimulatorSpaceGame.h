@@ -76,7 +76,7 @@ namespace Simulator
 		/* 4Ch */	bool field_4C;
 		/* 4Dh */	bool field_4D;
 		/* 4Eh */	bool field_4E;
-		/* 4Fh */	short _padding_;
+		/* 4Fh */	char _padding_;
 		/* 50h */	eastl::bitset<5> mTransitioning;
 		/* 54h */	cSimPlanetHighLODPtr mpHighLODPlanetSim;
 		/* 58h */	App::MessageListenerData mMessageListenerData;
