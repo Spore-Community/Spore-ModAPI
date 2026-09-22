@@ -334,6 +334,12 @@
     <ClInclude Include="Spore\Graphics\cCubeMapIndex.h" />
     <ClInclude Include="Spore\IO\IniFile.h" />
     <ClInclude Include="Spore\IO\StreamCompressionZLib.h" />
+    <ClInclude Include="Spore\Movie\cMovieLetterbox.h" />
+    <ClInclude Include="Spore\Movie\cMoviePlayInfo.h" />
+    <ClInclude Include="Spore\Movie\cMovieRecordInfo.h" />
+    <ClInclude Include="Spore\Movie\MovieSystem.h" />
+    <ClInclude Include="Spore\RenderWare\ILayer.h" />
+    <ClInclude Include="Spore\RenderWare\RenderStats.h" />
     <ClInclude Include="Spore\Swarm\cDecal.h" />
     <ClInclude Include="Spore\Terrain\cTerrainDecal.h" />
     <ClInclude Include="Spore\Terrain\cTerrainSphereDecal.h" />
@@ -954,6 +960,7 @@
     <ClInclude Include="Spore\UTFWin\WinTreeView.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="SourceCode\DLL\AddressesMovie.cpp" />
     <ClCompile Include="SourceCode\DLL\AddressesOpenSSL.cpp" />
     <ClCompile Include="SourceCode\Allocator.cpp" />
     <ClCompile Include="SourceCode\Anim\Animations.cpp" />
@@ -1021,6 +1028,8 @@
     <ClCompile Include="SourceCode\Graphics\RenderTargets.cpp" />
     <ClCompile Include="SourceCode\Graphics\GeneratedMesh.cpp" />
     <ClCompile Include="SourceCode\IO\IniFile.cpp" />
+    <ClCompile Include="SourceCode\Movie\cMovieLetterbox.cpp" />
+    <ClCompile Include="SourceCode\Movie\MovieSystem.cpp" />
     <ClCompile Include="SourceCode\OpenSSL.cpp" />
     <ClCompile Include="SourceCode\Pollinator\Pollinator.cpp" />
     <ClCompile Include="SourceCode\RenderWare\Raster.cpp" />

@@ -228,3 +228,8 @@ int RefCountTemplateAtomic::Release()
 	}
 	return mnRefCount;
 }
+
+
+IRefCount::~IRefCount()
+{
+}

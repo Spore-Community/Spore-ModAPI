@@ -175,6 +175,16 @@ protected:
 	int mnRefCount;
 };
 
+class IRefCount
+{
+public:
+	virtual int AddRef() = 0;
+	virtual int Release() = 0;
+	virtual ~IRefCount();
+
+	static const uint32_t TYPE = 0xAE9CB0FA;
+};
+
 ///////////////////////////////////
 //// INTERNAL IMPLEMENENTATION ////
 ///////////////////////////////////

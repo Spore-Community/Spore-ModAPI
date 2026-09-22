@@ -18,6 +18,7 @@
 ****************************************************************************/
 #include <Spore\RenderWare\RWHeader.h>
 #include <Spore\RenderWare\CompiledState.h>
+#include <Spore\RenderWare\ILayer.h>
 
 namespace RenderWare
 {
@@ -43,5 +44,10 @@ namespace RenderWare
 			return true;
 		}
 		return false;
+	}
+
+
+	ILayer::~ILayer()
+	{
 	}
 }
