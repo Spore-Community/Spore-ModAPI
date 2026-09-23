@@ -21,9 +21,9 @@ namespace Movie
 	{
 	}
 
-	auto_METHOD_VIRTUAL_VOID(MovieSystem, RenderWare::ILayer, DrawLayer,
-		Args(uint32_t flags, uint32_t layerNumber, const void* const* viewer, RenderWare::RenderStats* stats),
-		Args(flags, layerNumber, viewer, stats)
+	auto_METHOD_VIRTUAL_VOID(MovieSystem, Graphics::ILayer, DrawLayer,
+		Args(int flags, int layerIndex, App::cViewer** viewers, Graphics::RenderStatistics& statistics),
+		Args(flags, layerIndex, viewers, statistics)
 	);
 
 

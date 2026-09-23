@@ -338,8 +338,6 @@
     <ClInclude Include="Spore\Movie\cMoviePlayInfo.h" />
     <ClInclude Include="Spore\Movie\cMovieRecordInfo.h" />
     <ClInclude Include="Spore\Movie\MovieSystem.h" />
-    <ClInclude Include="Spore\RenderWare\ILayer.h" />
-    <ClInclude Include="Spore\RenderWare\RenderStats.h" />
     <ClInclude Include="Spore\Swarm\cDecal.h" />
     <ClInclude Include="Spore\Terrain\cTerrainDecal.h" />
     <ClInclude Include="Spore\Terrain\cTerrainSphereDecal.h" />

@@ -7,14 +7,14 @@ namespace Graphics
 	struct RenderStatistics
 	{
 		// related with total render time
-		/* 00h */	float field_0;
-		/* 04h */	float field_4;
-		/* 08h */	float field_8;
-		/* 0Ch */	float field_C;
-		/* 10h */	float field_10;
+		/* 00h */	float msPerFrame;
+		/* 04h */	float fps;
+		/* 08h */	float msPerFrameSmoothed;
+		/* 0Ch */	float fpsSmoothed;
+		/* 10h */	float renderTime;
 		/* 14h */	int numLayersRendered;
-		/* 18h */	int field_18;
-		/* 1Ch */	int field_1C;
+		/* 18h */	int numJobs;
+		/* 1Ch */	int numJobsQueued;
 		/* 20h */	int numVerticesRendered;
 		/* 24h */	int numIndicesRendered;
 		/* 28h */	int numDrawCalls;

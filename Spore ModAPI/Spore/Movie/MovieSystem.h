@@ -1,7 +1,9 @@
 #pragma once
 
 #include <Spore\Internal.h>
-#include <Spore\RenderWare\ILayer.h>
+#include <Spore\ResourceKey.h>
+#include <Spore\Graphics\ILayer.h>
+#include <Spore\Graphics\RenderStatistics.h>
 #include <Spore\Movie\cMoviePlayInfo.h>
 #include <Spore\Movie\cMovieRecordInfo.h>
 
@@ -33,7 +35,7 @@ namespace Movie
 	ASSERT_SIZE(IMovieSystem, 0x4);
 
 	class MovieSystem
-		: public RenderWare::ILayer
+		: public Graphics::ILayer
 		, public IMovieSystem
 	{
 	public:
@@ -44,7 +46,7 @@ namespace Movie
 		virtual int AddRef() override;
 		virtual int Release() override;
 
-		virtual void DrawLayer(uint32_t flags, uint32_t layerNumber, const void* const* viewer, RenderWare::RenderStats* stats) override;
+		virtual void DrawLayer(int flags, int layerIndex, App::cViewer** viewers, Graphics::RenderStatistics& statistics) override;
 
 		virtual bool Init() override;
 		virtual bool Shutdown() override;

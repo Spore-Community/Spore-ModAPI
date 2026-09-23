@@ -2319,12 +2319,6 @@
     <ClInclude Include="Spore\Movie\MovieSystem.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Spore\RenderWare\ILayer.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Spore\RenderWare\RenderStats.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SourceCode\Allocator.cpp">
