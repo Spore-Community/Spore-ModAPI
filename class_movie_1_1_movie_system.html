@@ -67,9 +67,9 @@
           <h2><a href="#base-classes">Base classes</a></h2>
           <dl class="m-doc">
             <dt>
-              class <a href="class_render_ware_1_1_i_layer.html" class="m-doc">RenderWare::ILayer</a>
+              class <a href="class_graphics_1_1_i_layer.html" class="m-doc">Graphics::ILayer</a>
             </dt>
-            <dd><span></span></dd>
+            <dd>This interfaces defines a layer that is rendered every game loop, by callings its <a href="class_graphics_1_1_i_layer.html#ae4812c7ed39d6dcaf98088c7ae5211b0" class="m-doc">ILayer::<wbr />DrawLayer()</a> method.</dd>
             <dt>
               class <a href="class_movie_1_1_i_movie_system.html" class="m-doc">IMovieSystem</a>
             </dt>
@@ -105,13 +105,13 @@
               <span class="m-doc-wrap-bumper">auto <a href="#a4c5c1fb5125cec17252d3012e5469f0c" class="m-doc-self">Release</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> <span class="m-label m-flat m-warning">override</span></span>
             </dt>
             <dd><span></span></dd>
-            <dt id="aabe98a096cdce9bf6a920fb842e7a885">
-              <span class="m-doc-wrap-bumper">auto <a href="#aabe98a096cdce9bf6a920fb842e7a885" class="m-doc-self">DrawLayer</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> flags,
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">uint32_<wbr />t</a> layerNumber,
-              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a> <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a>*<a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">const</a>* viewer,
-              <a href="struct_render_ware_1_1_render_stats.html" class="m-doc">RenderWare::<wbr />RenderStats</a>* stats) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a> <span class="m-label m-flat m-warning">override</span></span>
+            <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#ab6fbbefff62fe1df8ea5b49a8b0094ae" class="m-doc">DrawLayer</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> flags,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> layerIndex,
+              <a href="class_app_1_1c_viewer.html" class="m-doc">App::<wbr />cViewer</a>** viewers,
+              <a href="struct_graphics_1_1_render_statistics.html" class="m-doc">Graphics::<wbr />RenderStatistics</a>&amp; statistics) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a> <span class="m-label m-flat m-warning">override</span></span>
             </dt>
-            <dd><span></span></dd>
+            <dd>Renders this layer.</dd>
             <dt id="a63d767c09a71dffa610b119e53cc2dc9">
               <span class="m-doc-wrap-bumper">auto <a href="#a63d767c09a71dffa610b119e53cc2dc9" class="m-doc-self">Init</a>(</span><span class="m-doc-wrap">) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">bool</a> <span class="m-label m-flat m-warning">override</span></span>
             </dt>
@@ -183,6 +183,41 @@
             </dt>
             <dd><span></span></dd>
           </dl>
+        </section>
+        <section>
+          <h2>Function documentation</h2>
+          <section class="m-doc-details" id="ab6fbbefff62fe1df8ea5b49a8b0094ae"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a> Movie::<wbr />MovieSystem::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#ab6fbbefff62fe1df8ea5b49a8b0094ae" class="m-doc-self">DrawLayer</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> flags,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> layerIndex,
+              <a href="class_app_1_1c_viewer.html" class="m-doc">App::<wbr />cViewer</a>** viewers,
+              <a href="struct_graphics_1_1_render_statistics.html" class="m-doc">Graphics::<wbr />RenderStatistics</a>&amp; statistics) <span class="m-label m-warning">override</span></span></span>
+            </h3>
+            <p>Renders this layer.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">flags</td>
+                  <td>The flags this layer was registered with, combined with the global render flags.</td>
+                </tr>
+                <tr>
+                  <td>layerIndex</td>
+                  <td>The layer index this layer was registered with.</td>
+                </tr>
+                <tr>
+                  <td>viewers</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>statistics</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+          </div></section>
         </section>
       </div>
     </div>
