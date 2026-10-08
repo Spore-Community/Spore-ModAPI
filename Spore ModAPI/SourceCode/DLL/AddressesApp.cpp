@@ -416,8 +416,8 @@ namespace App
 
 	namespace Addresses(PngEncoder)
 	{
-		DefineAddress(ReadImageData, SelectAddress(0x682470, 0x68eb40));
-		DefineAddress(WriteImageToStream, SelectAddress(0x68E660, 0x68e190));
+		DefineAddress(ReadImageData, SelectAddress(0x68F010, 0x68EB40));
+		DefineAddress(WriteImageToStream, SelectAddress(0x68E660, 0x68E190));
 		DefineAddressAlias(EncodePNG, WriteImageToStream);
 	}
 

@@ -683,103 +683,103 @@ namespace Simulator
 
 	namespace Addresses(COMSerializer)
 	{
-		DefineAddress(Open, SelectAddress(0x6902d0, 0x69dfc0));
-		DefineAddress(Close, SelectAddress(0x691910, 0x69f940));
-		DefineAddress(LoadClassObjects, SelectAddress(0x691240, 0x69f1d0));
-		DefineAddress(SaveClassObjects, SelectAddress(0x691af0, 0x69fb90));
-		DefineAddress(Write, SelectAddress(0x692440, 0x6a05f0));
-		DefineAddress(Read, SelectAddress(0x6924f0, 0x6a06a0));
+		DefineAddress(Open, SelectAddress(0x69E200, 0x69DFC0));
+		DefineAddress(Close, SelectAddress(0x69FB90, 0x69F940));
+		DefineAddress(LoadClassObjects, SelectAddress(0x69F420, 0x69F1D0));
+		DefineAddress(SaveClassObjects, SelectAddress(0x69FDE0, 0x69FB90));
+		DefineAddress(Write, SelectAddress(0x6A0840, 0x6A05F0));
+		DefineAddress(Read, SelectAddress(0x6A08f0, 0x6A06A0));
 
-		DefineAddress(GetCRC, SelectAddress(0x690d40, 0x69ec20));
-		DefineAddress(reset, SelectAddress(0x6911d0, 0x69f160));
-		DefineAddress(onSetSPSerializable, SelectAddress(0x691ff0, 0x6a0110));
-		DefineAddress(onGetSPSerializable, SelectAddress(0x690bb0, 0x69e9e0));
-		DefineAddress(loadSingleObject, SelectAddress(0x6921e0, 0x6a0360));
+		DefineAddress(GetCRC, SelectAddress(0x69EE70, 0x69EC20));
+		DefineAddress(reset, SelectAddress(0x69F3B0, 0x69F160));
+		DefineAddress(onSetSPSerializable, SelectAddress(0x6A0360, 0x6A0110));
+		DefineAddress(onGetSPSerializable, SelectAddress(0x69EC30, 0x69E9E0));
+		DefineAddress(loadSingleObject, SelectAddress(0x6A05B0, 0x6A0360));
 	}
 
 	namespace Addresses(SerializerDatabase)
 	{
-		DefineAddress(AsDatabase, SelectAddress(0x8fac50, 0x7f3190));
-		DefineAddress(GetCOMSerializer, SelectAddress(0x5a6210, 0x985d70));
-		DefineAddress(OpenReadStream, SelectAddress(0x690640, 0x69e3a0));
-		DefineAddress(CloseReadStream, SelectAddress(0x68f6e0, 0x69d2c0));
-		DefineAddress(LoadClassObjects, SelectAddress(0x690190, 0x69de80));
-		DefineAddress(OpenWriteStream, SelectAddress(0x6906d0, 0x69e470));
-		DefineAddress(CloseWriteStream, SelectAddress(0x68f6e0, 0x69d2c0));
-		DefineAddress(SaveClassObjects, SelectAddress(0x6901b0, 0x69dea0));
-		DefineAddress(HasKey, SelectAddress(0x6907d0, 0x69e5d0));
-		DefineAddress(GetPercentageCompletion, SelectAddress(0x109ffe0, 0xc06490));
-		DefineAddress(SetPercentageCompletion, SelectAddress(0x68f710, 0x69d2f0));
-		DefineAddress(OpenAsSerializer, SelectAddress(0x690230, 0x69df20));
+		DefineAddress(AsDatabase, SelectAddress(0x7F36C0, 0x7F3190));
+		DefineAddress(GetCOMSerializer, SelectAddress(0x5AC900, 0x985D70));
+		DefineAddress(OpenReadStream, SelectAddress(0x69E5F0, 0x69E3A0));
+		DefineAddress(CloseReadStream, SelectAddress(0x69D510, 0x69D2C0));
+		DefineAddress(LoadClassObjects, SelectAddress(0x69E0C0, 0x69DE80));
+		DefineAddress(OpenWriteStream, SelectAddress(0x69E6C0, 0x69E470));
+		DefineAddress(CloseWriteStream, SelectAddress(0x69D510, 0x69D2C0));
+		DefineAddress(SaveClassObjects, SelectAddress(0x69E0E0, 0x69DEA0));
+		DefineAddress(HasKey, SelectAddress(0x69E820, 0x69E5D0));
+		DefineAddress(GetPercentageCompletion, SelectAddress(0xFD9B40, 0xC06490));
+		DefineAddress(SetPercentageCompletion, SelectAddress(0x69D540, 0x69D2F0));
+		DefineAddress(OpenAsSerializer, SelectAddress(0x69E160, 0x69DF20));
 
-		DefineAddress(Initialize, SelectAddress(0x6901d0, 0x69dec0));
-		DefineAddress(Dispose, SelectAddress(0x6901e0, 0x69ded0));
-		DefineAddress(GetDatabaseType, SelectAddress(0x6900a0, 0x69dd90));
-		DefineAddress(GetRefCount, SelectAddress(0x68f800, 0x69d3f0));
-		DefineAddress(Lock, SelectAddress(0x6900b0, 0x69dda0));
-		DefineAddress(Open, SelectAddress(0x6900c0, 0x69ddb0));
-		DefineAddress(Close, SelectAddress(0x6902a0, 0x69df90));
-		DefineAddress(GetAccessFlags, SelectAddress(0x6900d0, 0x69ddc0));
-		DefineAddress(Flush, SelectAddress(0x6900f0, 0x69dde0));
-		DefineAddress(GetLocation, SelectAddress(0x690100, 0x69ddf0));
-		DefineAddress(SetLocation, SelectAddress(0x690110, 0x69de00));
-		DefineAddress(GetKeyList, SelectAddress(0x690120, 0x69de10));
-		DefineAddress(OpenRecord, SelectAddress(0x690130, 0x69de20));
-		DefineAddress(GetOpenCount, SelectAddress(0x690140, 0x69de30));
-		DefineAddress(CloseRecord, SelectAddress(0x690150, 0x69de40));
-		DefineAddress(DeleteRecord, SelectAddress(0x690160, 0x69de50));
-		DefineAddress(Attach, SelectAddress(0x690170, 0x69de60));
-		DefineAddress(GetAllocator, SelectAddress(0x690180, 0x69de70));
+		DefineAddress(Initialize, SelectAddress(0x69E100, 0x69DEC0));
+		DefineAddress(Dispose, SelectAddress(0x69E110, 0x69DED0));
+		DefineAddress(GetDatabaseType, SelectAddress(0x69DFD0, 0x69DD90));
+		DefineAddress(GetRefCount, SelectAddress(0x69D630, 0x69D3F0));
+		DefineAddress(Lock, SelectAddress(0x69DFE0, 0x69DDA0));
+		DefineAddress(Open, SelectAddress(0x69DFF0, 0x69DDB0));
+		DefineAddress(Close, SelectAddress(0x69E1D0, 0x69DF90));
+		DefineAddress(GetAccessFlags, SelectAddress(0x69E000, 0x69DDC0));
+		DefineAddress(Flush, SelectAddress(0x69E020, 0x69DDE0));
+		DefineAddress(GetLocation, SelectAddress(0x69E030, 0x69DDF0));
+		DefineAddress(SetLocation, SelectAddress(0x69E040, 0x69DE00));
+		DefineAddress(GetKeyList, SelectAddress(0x69E050, 0x69DE10));
+		DefineAddress(OpenRecord, SelectAddress(0x69E060, 0x69DE20));
+		DefineAddress(GetOpenCount, SelectAddress(0x69E070, 0x69DE30));
+		DefineAddress(CloseRecord, SelectAddress(0x69E080, 0x69DE40));
+		DefineAddress(DeleteRecord, SelectAddress(0x69E090, 0x69DE50));
+		DefineAddress(Attach, SelectAddress(0x69E0A0, 0x69DE60));
+		DefineAddress(GetAllocator, SelectAddress(0x69E0B0, 0x69DE70));
 	}
 
 	namespace Addresses(SerializerReadStream)
 	{
-		DefineAddress(Open, SelectAddress(0x6903b0, 0x69e090));
-		DefineAddress(Close, SelectAddress(0x68f860, 0x69d480));
-		DefineAddress(IsOpen, SelectAddress(0x68f8b0, 0x69d4d0));
-		DefineAddress(IsGood, SelectAddress(0x5a2c00, 0x950190));
-		DefineAddress(GetRecord, SelectAddress(0x69f450, 0xfc7910));
-		DefineAddress(GetDatabase, SelectAddress(0xf5c360, 0x7f55c0));
-		DefineAddress(ReadObjectPointer, SelectAddress(0x690450, 0x69e170));
-		DefineAddress(ReadPointer, SelectAddress(0x68f8d0, 0x69d4f0));
-		DefineAddress(ReadProperty, SelectAddress(0x68f920, 0x69d540));
-		DefineAddress(ReadRawData, SelectAddress(0x68fbb0, 0x69d830));
-		DefineAddress(ReadPropertyByID, SelectAddress(0x68f5e0, 0x69d1d0));
-		DefineAddress(GetSerializationVersion, SelectAddress(0x95a4f0, 0x93b630));
-		DefineAddress(SetSerializationVersion, SelectAddress(0x1054390, 0xfcc100));
+		DefineAddress(Open, SelectAddress(0x69E2E0, 0x69E090));
+		DefineAddress(Close, SelectAddress(0x69D6C0, 0x69D480));
+		DefineAddress(IsOpen, SelectAddress(0x69D710, 0x69D4D0));
+		DefineAddress(IsGood, SelectAddress(0xF03310, 0x950190));
+		DefineAddress(GetRecord, SelectAddress(0x80E390, 0xFC7910));
+		DefineAddress(GetDatabase, SelectAddress(0x6BD860, 0x7F55C0));
+		DefineAddress(ReadObjectPointer, SelectAddress(0x69E3C0, 0x69E170));
+		DefineAddress(ReadPointer, SelectAddress(0x69D730, 0x69D4F0));
+		DefineAddress(ReadProperty, SelectAddress(0x69D780, 0x69D540));
+		DefineAddress(ReadRawData, SelectAddress(0x69DA70, 0x69D830));
+		DefineAddress(ReadPropertyByID, SelectAddress(0x69D410, 0x69D1D0));
+		DefineAddress(GetSerializationVersion, SelectAddress(0x923C40, 0x93B630));
+		DefineAddress(SetSerializationVersion, SelectAddress(0x980680, 0xFCC100));
 
-		DefineAddress(Skip, SelectAddress(0x68f620, 0x69d210));
+		DefineAddress(Skip, SelectAddress(0x69D450, 0x69D210));
 	}
 
 	namespace Addresses(SerializerWriteStream)
 	{
-		DefineAddress(Open, SelectAddress(0x690540, 0x69e260));
-		DefineAddress(Close, SelectAddress(0x68fc30, 0x69d8e0));
-		DefineAddress(IsOpen, SelectAddress(0x68fc80, 0x69d930));
-		DefineAddress(IsGood, SelectAddress(0x68f690, 0xab2ff0));
-		DefineAddress(GetRecord, SelectAddress(0x959a00, 0xfcc1d0));
-		DefineAddress(GetDatabase, SelectAddress(0x95a4f0, 0x93b630));
-		DefineAddress(WriteObjectPointer, SelectAddress(0x68fca0, 0x69d950));
-		DefineAddress(WritePointer, SelectAddress(0x68fcd0, 0x69d980));
-		DefineAddress(WriteProperty, SelectAddress(0x68fd20, 0x69d9d0));
-		DefineAddress(WriteRawData, SelectAddress(0x68ffb0, 0x69dc60));
-		DefineAddress(WritePropertyWithID, SelectAddress(0x68f6a0, 0x69d280));
+		DefineAddress(Open, SelectAddress(0x69E4B0, 0x69E260));
+		DefineAddress(Close, SelectAddress(0x69DB20, 0x69D8E0));
+		DefineAddress(IsOpen, SelectAddress(0x69DB70, 0x69D930));
+		DefineAddress(IsGood, SelectAddress(0x69D4C0, 0xAB2FF0));
+		DefineAddress(GetRecord, SelectAddress(0x985FB0, 0xFCC1D0));
+		DefineAddress(GetDatabase, SelectAddress(0x923C40, 0x93B630));
+		DefineAddress(WriteObjectPointer, SelectAddress(0x69DB90, 0x69D950));
+		DefineAddress(WritePointer, SelectAddress(0x69DBC0, 0x69D980));
+		DefineAddress(WriteProperty, SelectAddress(0x69DC10, 0x69D9D0));
+		DefineAddress(WriteRawData, SelectAddress(0x69DEA0, 0x69DC60));
+		DefineAddress(WritePropertyWithID, SelectAddress(0x69D4D0, 0x69D280));
 	}
 
 	namespace Addresses(SerializerReadStreamPrivate)
 	{
-		DefineAddress(IsOpen, SelectAddress(0x685e30, 0x692e60));
-		DefineAddress(SetSerializationVersion, SelectAddress(0x685e10, 0x692e80));
-		DefineAddress(GetSerializationVersion, SelectAddress(0x685e20, 0x692e90));
+		DefineAddress(IsOpen, SelectAddress(0x6930D0, 0x692E60));
+		DefineAddress(SetSerializationVersion, SelectAddress(0x692E80, 0x692E80));
+		DefineAddress(GetSerializationVersion, SelectAddress(0x6930C0, 0x692E90));
 
-		DefineAddress(openStream, SelectAddress(0x686770, 0x6938d0));
+		DefineAddress(openStream, SelectAddress(0x693A10, 0x6938D0));
 	}
 
 	namespace Addresses(SerializerWriteStreamPrivate)
 	{
-		DefineAddress(IsOpen, SelectAddress(0x685e30, 0x692e60));
+		DefineAddress(IsOpen, SelectAddress(0x6930D0, 0x692E60));
 
-		DefineAddress(openStream, SelectAddress(0x686890, 0x693a70));
+		DefineAddress(openStream, SelectAddress(0x693BB0, 0x693A70));
 	}
 
 	namespace Addresses(cGameData)
@@ -913,7 +913,7 @@ namespace Simulator
 
 	namespace Addresses(cScenarioAsset)
 	{
-		DefineAddress(GetThumbnail, SelectAddress(0xEF92F0, 0xF24FE0));
+		DefineAddress(GetThumbnail, SelectAddress(0xF253C0, 0xF24FE0));
 	}
 
 	namespace Addresses(cScenarioData)

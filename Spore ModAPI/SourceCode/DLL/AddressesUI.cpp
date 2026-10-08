@@ -39,7 +39,7 @@ namespace UI
 	namespace Addresses(ScrollFrameVertical)
 	{
 		DefineAddress(Create, SelectAddress(0x807C40, 0x8076F0));
-		DefineAddress(Update, SelectAddress(0x7E04D0, 0x807780));
+		DefineAddress(Update, SelectAddress(0x807CD0, 0x807780));
 	}
 
 	namespace Addresses(cSPUITextZoom)
@@ -50,7 +50,7 @@ namespace UI
 
 	namespace Addresses(cSPUIPropertyLayout)
 	{
-		DefineAddress(SetProperty, SelectAddress(0x801640, 0x828d10));
+		DefineAddress(SetProperty, SelectAddress(0x8291F0, 0x828D10));
 	}
 
 	namespace Addresses(GameSettings)
