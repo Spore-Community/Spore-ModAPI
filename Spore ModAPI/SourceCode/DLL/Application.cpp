@@ -124,61 +124,7 @@ void CreateLogFile() {
 	_time64(&ModAPI::logFileStartTime);
 
 	wchar_t log_path_buf[MAX_PATH] = { 0 };
-
-	// try to find parent process
-	PROCESSENTRY32 processEntry = { 0 };
-	processEntry.dwSize = sizeof(PROCESSENTRY32);
-	const int pid = GetCurrentProcessId();
-	HANDLE toolHelpHandle = CreateToolhelp32Snapshot(TH32CS_SNAPPROCESS, 0);
-	bool foundParentProccess = false;
-	bool hasParentProcessPath = false;
-	DWORD parentProcessId = 0;
-
-	if (toolHelpHandle != INVALID_HANDLE_VALUE &&
-		Process32First(toolHelpHandle, &processEntry))
-	{
-		do
-		{
-			if (processEntry.th32ProcessID == pid)
-			{
-				parentProcessId = processEntry.th32ParentProcessID;
-				foundParentProccess = true;
-				break;
-			}
-		} while (Process32Next(toolHelpHandle, &processEntry));
-	}
-
-	// attempt to retrieve the module file path
-	if (foundParentProccess && parentProcessId != 0)
-	{
-		HANDLE parentProcessHandle = OpenProcess(PROCESS_QUERY_INFORMATION | PROCESS_VM_READ, FALSE, parentProcessId);
-		if (parentProcessHandle != INVALID_HANDLE_VALUE)
-		{
-			if (GetModuleFileNameExW(parentProcessHandle, 0, log_path_buf, _countof(log_path_buf)) != 0)
-			{
-				hasParentProcessPath = true;
-			}
-			CloseHandle(parentProcessHandle);
-		}
-	}
-
-	// when we've found the parent process, ensure we have an allowed filename
-	// currently, only the launcher kit & SMM are allowed
-	if (hasParentProcessPath)
-	{
-		if (wcsstr(log_path_buf, L"Spore ModAPI Launcher.exe") == nullptr &&
-			wcsstr(log_path_buf, L"Launch Spore.exe") == nullptr)
-		{
-			hasParentProcessPath = false;
-		}
-	}
-
-	// when we don't have the parent process' path,
-	// fallback to the executable path
-	if (!hasParentProcessPath)
-	{
-		GetModuleFileNameW(nullptr, log_path_buf, _countof(log_path_buf));
-	}
+	GetModuleFileNameW(nullptr, log_path_buf, _countof(log_path_buf));
 
 	eastl::string16 log_path;
 	log_path.reserve(MAX_PATH);
