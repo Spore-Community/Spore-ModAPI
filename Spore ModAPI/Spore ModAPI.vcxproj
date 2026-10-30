@@ -48,7 +48,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v145</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -340,6 +340,7 @@
     <ClInclude Include="Spore\Movie\cMoviePlayInfo.h" />
     <ClInclude Include="Spore\Movie\cMovieRecordInfo.h" />
     <ClInclude Include="Spore\Movie\MovieSystem.h" />
+    <ClInclude Include="Spore\SSL\CertStream.h" />
     <ClInclude Include="Spore\Swarm\cDecal.h" />
     <ClInclude Include="Spore\Terrain\cTerrainDecal.h" />
     <ClInclude Include="Spore\Terrain\cTerrainSphereDecal.h" />
@@ -995,6 +996,7 @@
     <ClCompile Include="SourceCode\DLL\AddressesSimulator.cpp" />
     <ClCompile Include="SourceCode\DLL\AddressesSkinner.cpp" />
     <ClCompile Include="SourceCode\DLL\AddressesSporepedia.cpp" />
+    <ClCompile Include="SourceCode\DLL\AddressesSSL.cpp" />
     <ClCompile Include="SourceCode\DLL\AddressesSwarm.cpp" />
     <ClCompile Include="SourceCode\DLL\AddressesTerrain.cpp" />
     <ClCompile Include="SourceCode\DLL\AddressesUI.cpp" />
@@ -1099,6 +1101,7 @@
     <ClCompile Include="SourceCode\Sporepedia\Assetbrowser.cpp" />
     <ClCompile Include="SourceCode\Sporepedia\AssetData.cpp" />
     <ClCompile Include="SourceCode\Sporepedia\Shopper.cpp" />
+    <ClCompile Include="SourceCode\SSL\CertStream.cpp" />
     <ClCompile Include="SourceCode\Swarm\Effects.cpp" />
     <ClCompile Include="SourceCode\Swarm\SwarmManager.cpp" />
     <ClCompile Include="SourceCode\Clock.cpp" />
