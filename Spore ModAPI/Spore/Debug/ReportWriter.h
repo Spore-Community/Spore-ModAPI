@@ -15,7 +15,7 @@ namespace Debug
 		/* 14h */ // TODO
 		/* 18h */ bool BeginSection(const char* name);
 		/* 1Ch */ void EndSection(void);
-		/* 20h */ bool WriteText(const char* text);
+		/* 20h */ bool WriteText(const char* text, bool newLine);
 		/* 24h */ bool WriteFormatted(const char* text);
 		/* 28h */ bool WriteKeyValue(const char* key, const char* value);
 		/* 2Ch */ bool WriteKeyValueFormatted(const char* key, const char* value);

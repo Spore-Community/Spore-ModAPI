@@ -5,6 +5,8 @@
 #include <Spore\Debug\ReportWriter.h>
 #include <Spore\ModAPI.h>
 
+#include <Psapi.h>
+
 typedef LONG(WINAPI* RtlGetVersionPtr)(PRTL_OSVERSIONINFOW);
 
 member_detour(WriteSystemInfoDetour, Debug::ReportWriter, bool(void))
@@ -173,12 +175,64 @@ member_detour(WriteApplicationInfoDetour, Debug::ReportWriter, bool(void))
 	}
 };
 
+member_detour(WriteModuleListDetour, Debug::ReportWriter, bool(void))
+{
+	bool detoured(void)
+	{
+		HMODULE hModules[256];
+		DWORD cbNeeded = 0;
+		HANDLE hProcess;
+		char fileName[MAX_PATH] = { 0 };
+		char fileNameBuffer[MAX_PATH] = { 0 };
+		char filePath[MAX_PATH] = { 0 };
+		char buffer[2048] = { 0 };
+		MODULEINFO moduleInfo = { 0 };
+
+		hProcess = GetCurrentProcess();
+		if (hProcess == nullptr)
+		{
+			WriteText("Failed to retrieve process handle.", true);
+			return false;
+		}
+
+		if (EnumProcessModules(hProcess, hModules, sizeof(hModules), &cbNeeded))
+		{
+			for (size_t i = 0; i < (cbNeeded / sizeof(HMODULE)); i++)
+			{
+				if (!GetModuleInformation(hProcess, hModules[i], &moduleInfo, sizeof(moduleInfo)))
+				{
+					// skip modules for which we can't get module information
+					continue;
+				}
+
+				if (!GetModuleBaseNameA(hProcess, hModules[i], fileNameBuffer, sizeof(fileNameBuffer)))
+				{
+					strncpy_s(fileNameBuffer, sizeof(fileNameBuffer), "<unknown>", 10);
+				}
+				sprintf_s(fileName, sizeof(fileName), "\"%s\"", fileNameBuffer);
+
+				if (!GetModuleFileNameExA(hProcess, hModules[i], filePath, sizeof(filePath)))
+				{
+					strncpy_s(filePath, sizeof(filePath), "<unknown>", 10);
+				}
+
+				sprintf_s(buffer, sizeof(buffer), "base 0x%08x size 0x%08x entry 0x%08x %-48s \"%s\"",
+					(UINT32)moduleInfo.lpBaseOfDll, (UINT32)moduleInfo.SizeOfImage, (UINT32)moduleInfo.EntryPoint, fileName, filePath);
+				WriteText(buffer, true);
+			}
+		}
+
+		return true;
+	}
+};
+
 
 long DebugReportWriterOverride::AttachDetour()
 {
 	long result = 0;
 	result |= WriteSystemInfoDetour::attach(Address(ModAPI::ChooseAddress(0x0091f480, 0x0091f1c0)));
 	result |= WriteApplicationInfoDetour::attach(Address(ModAPI::ChooseAddress(0x0091f850, 0x0091f590)));
+	result |= WriteModuleListDetour::attach(Address(ModAPI::ChooseAddress(0x0091fd10, 0x0091fa50)));
 	return result;
 }
 #endif

@@ -27,7 +27,7 @@ namespace Debug
 	auto_METHOD_(ReportWriter, bool, CloseReport);
 	auto_METHOD(ReportWriter, bool, BeginSection, Args(const char* name), Args(name));
 	auto_METHOD_(ReportWriter, void, EndSection);
-	auto_METHOD(ReportWriter, bool, WriteText, Args(const char* text), Args(text));
+	auto_METHOD(ReportWriter, bool, WriteText, Args(const char* text, bool newLine), Args(text, newLine));
 	auto_METHOD(ReportWriter, bool, WriteFormatted, Args(const char* text), Args(text));
 	auto_METHOD(ReportWriter, bool, WriteKeyValue, Args(const char* key, const char* value), Args(key, value));
 	auto_METHOD(ReportWriter, bool, WriteKeyValueFormatted, Args(const char* key, const char* value), Args(key, value));
