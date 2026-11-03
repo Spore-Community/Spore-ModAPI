@@ -69,7 +69,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug DLL|Win32'">
-    <IncludePath>..\Detours\include\;$(ProjectDir);$(VC_IncludePath);$(WindowsSDK_IncludePath);..\EASTL-3.02.01\test\packages\EABase\include\Common;..\EASTL-3.02.01\test\packages\EAAssert\include;..\EASTL-3.02.01\test\packages\EAStdC\include;..\EASTL-3.02.01\include;..\Detours\include\</IncludePath>
+    <IncludePath>..\Detours\include\;$(ProjectDir);$(VC_IncludePath);$(WindowsSDK_IncludePath);..\EASTL-3.02.01\test\packages\EABase\include\Common;..\EASTL-3.02.01\test\packages\EAAssert\include;..\EASTL-3.02.01\test\packages\EAStdC\include;..\EASTL-3.02.01\include;..\Detours\include\;.\3rdParty\zydis</IncludePath>
     <TargetName>SporeModAPI</TargetName>
     <OutDir>..\dll\Debug\</OutDir>
     <IntDir>..\dll\</IntDir>
@@ -83,7 +83,7 @@
     <IntDir>..\lib\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release DLL|Win32'">
-    <IncludePath>..\Detours\include\;$(ProjectDir);$(VC_IncludePath);$(WindowsSDK_IncludePath);..\EASTL-3.02.01\test\packages\EABase\include\Common;..\EASTL-3.02.01\test\packages\EAAssert\include;..\EASTL-3.02.01\test\packages\EAStdC\include;..\EASTL-3.02.01\include;E:\Detours\include\</IncludePath>
+    <IncludePath>..\Detours\include\;$(ProjectDir);$(VC_IncludePath);$(WindowsSDK_IncludePath);..\EASTL-3.02.01\test\packages\EABase\include\Common;..\EASTL-3.02.01\test\packages\EAAssert\include;..\EASTL-3.02.01\test\packages\EAStdC\include;..\EASTL-3.02.01\include;.\3rdParty\zydis;</IncludePath>
     <TargetName>SporeModAPI</TargetName>
     <OutDir>..\dll\Release\</OutDir>
     <IntDir>..\dll\</IntDir>
@@ -100,7 +100,7 @@
     <ClCompile>
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
-      <PreprocessorDefinitions>WIN32;SDK_BUILD_VER=$(SDK_BUILD_VER);EXECUTABLE_TYPE=$(EXECUTABLE_TYPE);_DEBUG;_WINDOWS;_USRDLL;MODAPI_DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;SDK_BUILD_VER=$(SDK_BUILD_VER);EXECUTABLE_TYPE=$(EXECUTABLE_TYPE);_DEBUG;_WINDOWS;_USRDLL;MODAPI_DLL_EXPORT;ZYDIS_STATIC_BUILD;ZYDIS_DISABLE_ENCODER;ZYDIS_DISABLE_AVX512;ZYDIS_DISABLE_KNC;ZYDIS_DISABLE_SEGMENT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <DisableSpecificWarnings>4351</DisableSpecificWarnings>
       <PreprocessToFile>false</PreprocessToFile>
@@ -146,7 +146,7 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;SDK_BUILD_VER=$(SDK_BUILD_VER);EXECUTABLE_TYPE=$(EXECUTABLE_TYPE);NDEBUG;_WINDOWS;_USRDLL;MODAPI_DLL_EXPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>WIN32;SDK_BUILD_VER=$(SDK_BUILD_VER);EXECUTABLE_TYPE=$(EXECUTABLE_TYPE);NDEBUG;_WINDOWS;_USRDLL;MODAPI_DLL_EXPORT;ZYDIS_STATIC_BUILD;ZYDIS_DISABLE_ENCODER;ZYDIS_DISABLE_AVX512;ZYDIS_DISABLE_KNC;ZYDIS_DISABLE_SEGMENT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
       <DisableSpecificWarnings>4351</DisableSpecificWarnings>
       <WholeProgramOptimization>false</WholeProgramOptimization>
@@ -184,6 +184,10 @@
       <OptimizeReferences>true</OptimizeReferences>
     </Link>
   </ItemDefinitionGroup>
+  <ItemGroup Condition="'$(Configuration)|$(Platform)'=='Release DLL|Win32' Or '$(Configuration)|$(Platform)'=='Debug DLL|Win32'">
+    <ClInclude Include="3rdParty\zydis\Zydis.h" />
+    <ClCompile Include="3rdParty\zydis\Zydis.c" />
+  </ItemGroup>
   <ItemGroup>
     <ClInclude Include="EASTL\algorithm.h" />
     <ClInclude Include="EASTL\allocator.h" />

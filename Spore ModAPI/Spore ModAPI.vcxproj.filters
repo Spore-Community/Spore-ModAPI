@@ -2328,6 +2328,9 @@
     <ClInclude Include="Spore\SSL\CertStream.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="3rdParty\zydis\Zydis.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SourceCode\Allocator.cpp">
@@ -2847,6 +2850,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SourceCode\DLL\AddressesSSL.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="3rdParty\zydis\Zydis.c">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
