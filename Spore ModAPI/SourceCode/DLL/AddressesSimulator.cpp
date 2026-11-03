@@ -1159,6 +1159,7 @@ namespace Simulator
 		DefineAddress(GetCurrentAdvectInfo, SelectAddress(0xE594F0, 0xE58EF0));
 		DefineAddress(GetNextAdvectID, SelectAddress(0xE59430, 0xE58E30));
 		DefineAddress(CreateCellObject, SelectAddress(0xE74F60, 0xE74A20));
+		DefineAddress(OverwriteCellCollisionSpheres, SelectAddress(0xE843C0, 0xE83E30));
 		DefineAddress(MovePlayerToMousePosition, SelectAddress(0xE5BD90, 0xE5B790));
 		DefineAddress(GetScaleDifferenceWithPlayer, SelectAddress(0xE57940, 0xE57340));
 		DefineAddress(ShouldNotAttack, SelectAddress(0xE57A60, 0xE57460));
