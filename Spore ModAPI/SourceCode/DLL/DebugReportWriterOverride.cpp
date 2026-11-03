@@ -6,6 +6,7 @@
 #include <Spore\ModAPI.h>
 
 #include <Psapi.h>
+#include <Zydis.h>
 
 typedef LONG(WINAPI* RtlGetVersionPtr)(PRTL_OSVERSIONINFOW);
 
@@ -226,6 +227,52 @@ member_detour(WriteModuleListDetour, Debug::ReportWriter, bool(void))
 	}
 };
 
+member_detour(WriteDisassemblyDetour, Debug::ReportWriter, bool(DWORD start, size_t size, DWORD eip))
+{
+	bool detoured(DWORD start, size_t size, DWORD eip)
+	{
+		__try
+		{
+			char buffer[256] = { 0 };
+			char* formatBuffer;
+			ZyanU64 runtime_address = (ZyanU64)start;
+			ZyanU8* data = (ZyanU8*)start;
+
+			ZyanUSize offset = 0;
+			ZydisDisassembledInstruction instruction;
+			while (ZYAN_SUCCESS(ZydisDisassembleIntel(
+				/* machine_mode:    */ ZYDIS_MACHINE_MODE_LEGACY_32,
+				/* runtime_address: */ runtime_address,
+				/* buffer:          */ data + offset,
+				/* length:          */ size - offset,
+				/* instruction:     */ &instruction
+			)))
+			{
+				if (eip != 0 && runtime_address == eip)
+				{
+					formatBuffer = "%08x => %s";
+					eip = 0;
+				}
+				else
+				{
+					formatBuffer = "%08x    %s";
+				}
+
+				sprintf_s(buffer, sizeof(buffer), formatBuffer, (uint32_t)runtime_address, instruction.text);
+				WriteText(buffer, true);
+
+				offset += instruction.info.length;
+				runtime_address += instruction.info.length;
+			}
+		}
+		__except (EXCEPTION_EXECUTE_HANDLER)
+		{
+			// ignore exceptions
+		}
+
+		return true;
+	}
+};
 
 long DebugReportWriterOverride::AttachDetour()
 {
@@ -233,6 +280,7 @@ long DebugReportWriterOverride::AttachDetour()
 	result |= WriteSystemInfoDetour::attach(Address(ModAPI::ChooseAddress(0x0091f480, 0x0091f1c0)));
 	result |= WriteApplicationInfoDetour::attach(Address(ModAPI::ChooseAddress(0x0091f850, 0x0091f590)));
 	result |= WriteModuleListDetour::attach(Address(ModAPI::ChooseAddress(0x0091fd10, 0x0091fa50)));
+	result |= WriteDisassemblyDetour::attach(Address(ModAPI::ChooseAddress(0x0091f950, 0x0091f690)));
 	return result;
 }
 #endif
