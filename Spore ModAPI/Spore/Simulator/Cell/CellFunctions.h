@@ -43,6 +43,11 @@ namespace Simulator
 			Math::Quaternion* pTargetOrientation = nullptr, 
 			int = 0);
 
+		/// Allows you to overwrite the collision spheres for cells.
+		/// @param outCount
+		/// @param outRecords
+		/// @param resourceKey
+		void OverwriteCellCollisionSpheres(int* outCount, unsigned char* outRecords, ResourceKey * resourceKey);
 
 		void MovePlayerToMousePosition(float deltaTime);
 
@@ -104,6 +109,7 @@ namespace Simulator
 		DeclareAddress(GetCurrentAdvectInfo);  // 0xE594F0 0xE58EF0
 		DeclareAddress(GetNextAdvectID);  // 0xE59430 0xE58E30
 		DeclareAddress(CreateCellObject);  // 0xE74F60 0xE74A20
+		DeclareAddress(OverwriteCellCollisionSpheres); // 0xE83E30 0xe843c0
 		DeclareAddress(MovePlayerToMousePosition);  // 0xE5BD90 0xE5B790
 		DeclareAddress(GetScaleDifferenceWithPlayer);  // 0xE57940 0xE57340
 		DeclareAddress(ShouldNotAttack);  // 0xE57A60 0xE57460
