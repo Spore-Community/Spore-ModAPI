@@ -632,6 +632,11 @@
             </dt>
             <dd><span></span></dd>
             <dt>
+              <span class="m-doc-wrap-bumper">auto <a href="#a6127678954dbc1e588666edac6b011f9" class="m-doc">IncreasePlayerFood</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> dnaCount,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">char</a> dietType) -&gt; <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a></span>
+            </dt>
+            <dd>Increase the players progress by dnaCount.</dd>
+            <dt>
               <span class="m-doc-wrap-bumper">auto <a href="#abac8cc6f2fb3c6da58262c5651800eae" class="m-doc">GetScaleDifferenceWithPlayer</a>(</span><span class="m-doc-wrap"><a href="struct_simulator_1_1_cell_1_1c_cell_object_data.html" class="m-doc">cCellObjectData</a>* otherCell) -&gt; <a href="namespace_simulator_1_1_cell.html#aadbbb8a46e30a48dd8994f517848cea8" class="m-doc">ScaleDifference</a></span>
             </dt>
             <dd>Returns scale difference between the given cell and the player cell, telling whether it is smaller, larger or the same scale (level).</dd>
@@ -1936,6 +1941,30 @@
               <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_cell_functions_8h.html">&lt;Spore ModAPI/Spore/Simulator/Cell/CellFunctions.h&gt;</a></div>
             </h3>
             <p><span></span></p>
+          </div></section>
+          <section class="m-doc-details" id="a6127678954dbc1e588666edac6b011f9"><div>
+            <h3>
+              <span class="m-doc-wrap-bumper"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">void</a> Simulator::<wbr />Cell::<wbr /></span><span class="m-doc-wrap"><span class="m-doc-wrap-bumper"><a href="#a6127678954dbc1e588666edac6b011f9" class="m-doc-self">IncreasePlayerFood</a>(</span><span class="m-doc-wrap"><a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">int</a> dnaCount,
+              <a href="_object_8h.html#a2e82adf9870bdb442cdcf2b3e01315b2" class="m-doc">char</a> dietType)</span></span>
+              <div class="m-doc-include m-code m-inverted m-text-right"><span class="cp">#include</span> <a class="cpf" href="_cell_functions_8h.html">&lt;Spore ModAPI/Spore/Simulator/Cell/CellFunctions.h&gt;</a></div>
+            </h3>
+            <p>Increase the players progress by dnaCount.</p>
+            <table class="m-table m-fullwidth m-flat">
+              <thead>
+                <tr><th colspan="2">Parameters</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td style="width: 1%">dnaCount</td>
+                  <td></td>
+                </tr>
+                <tr>
+                  <td>dietType</td>
+                  <td></td>
+                </tr>
+              </tbody>
+            </table>
+<p>dnaCount is the progress bar progress. Not the currency. dietType is how the food is counted on the timeline. If its 0, Spore counts it as meat. And if its not 0, its counted as a plant.</p>
           </div></section>
           <section class="m-doc-details" id="abac8cc6f2fb3c6da58262c5651800eae"><div>
             <h3>
