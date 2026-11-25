@@ -51,6 +51,12 @@ namespace Simulator
 
 		void MovePlayerToMousePosition(float deltaTime);
 
+		/// Increase the players progress by dnaCount. dnaCount is the progress bar progress. Not the currency.
+		/// dietType is how the food is counted on the timeline. If its 0, Spore counts it as meat. And if its not 0, its counted as a plant.
+		/// @param dnaCount
+		/// @param dietType
+		void IncreasePlayerFood(int dnaCount, char dietType);
+
 		/// Returns scale difference between the given cell and the player cell,
 		/// telling whether it is smaller, larger or the same scale (level).
 		/// @param otherCell
@@ -111,6 +117,7 @@ namespace Simulator
 		DeclareAddress(CreateCellObject);  // 0xE74F60 0xE74A20
 		DeclareAddress(OverwriteCellCollisionSpheres); // 0xE83E30 0xe843c0
 		DeclareAddress(MovePlayerToMousePosition);  // 0xE5BD90 0xE5B790
+		DeclareAddress(IncreasePlayerFood);  // 0xE7D370 0xE7CE10
 		DeclareAddress(GetScaleDifferenceWithPlayer);  // 0xE57940 0xE57340
 		DeclareAddress(ShouldNotAttack);  // 0xE57A60 0xE57460
 		DeclareAddress(GetDamageAmount);  // 0xE58F80 0xE58980

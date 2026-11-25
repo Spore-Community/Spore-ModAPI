@@ -95,6 +95,10 @@ namespace Simulator
 		auto_STATIC_METHOD_VOID(Cell, MovePlayerToMousePosition,
 			Args(float a0), Args(a0));
 
+		auto_STATIC_METHOD_VOID(Cell, IncreasePlayerFood,
+			Args(int dnaCount, char dietType),
+			Args(dnaCount, dietType));
+
 		auto_STATIC_METHOD(Cell, ScaleDifference, GetScaleDifferenceWithPlayer,
 			Args(cCellObjectData* a0), Args(a0));
 

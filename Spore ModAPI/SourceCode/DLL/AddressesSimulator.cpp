@@ -1161,6 +1161,7 @@ namespace Simulator
 		DefineAddress(CreateCellObject, SelectAddress(0xE74F60, 0xE74A20));
 		DefineAddress(OverwriteCellCollisionSpheres, SelectAddress(0xE843C0, 0xE83E30));
 		DefineAddress(MovePlayerToMousePosition, SelectAddress(0xE5BD90, 0xE5B790));
+		DefineAddress(IncreasePlayerFood, SelectAddress(0x00E7D370, 0x00E7CE10));
 		DefineAddress(GetScaleDifferenceWithPlayer, SelectAddress(0xE57940, 0xE57340));
 		DefineAddress(ShouldNotAttack, SelectAddress(0xE57A60, 0xE57460));
 		DefineAddress(GetDamageAmount, SelectAddress(0xE58F80, 0xE58980));
